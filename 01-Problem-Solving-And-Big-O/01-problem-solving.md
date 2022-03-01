@@ -123,11 +123,11 @@ We should consider:
 
 * **Nominal Edge Cases**
   * In this example we could give a list and number which does contain a contiguous sublist which adds up to the given number.
-  * For example:  [1, 2, 3, 4] and 7 would return 2 because [1, 2] adds up to 7.
+  * For example:  [1, 2, 3, 4] and 7 would return 2 because [3, 4] adds up to 7.
 * **Negative Edge Case**
   * In this example we can give a list and a number in which the list does **not** contain a contiguous sublist which adds up to the given number.
-    * For example: [1, 2, 3, 4] and 8 would need to return *something* to indicate that there is no contiguous sublist which adds up to the given number.
-  * Another Negative Edge Case input would be an array and given number for which there is no valid sublist which adds up to the given value.
+    * For example: [1, 2, 3, 4] and 11 would need to return *something* to indicate that there is no contiguous sublist which adds up to the given number.
+  * Another Negative Edge Case input would be a list entirely composed of numbers larger than the given positive integer
     * For example: [6, 7] and 1 would return *something* to indicate there is no contiguous sublist which adds up to the given number.
 * **Positive Edge Case**
   * This would be an input on the edge of what is possible which returns a valid length of a contiguous sublist.

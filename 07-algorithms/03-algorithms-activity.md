@@ -6,44 +6,51 @@ Our goal is to introduce types of algorithms and practice using dynamic programm
 
 ## Review Heaps Project
 
+We will start by reviewing student solutions to the [Heaps](../06-heaps/02-heaps-exercise-checkpoint.md) project.
 
+- How did we implement `heap_up`?
+- How did we implement `heap_down`?
+- Did we use recursion?
 
-## Review Algorithsm Project
+## Review Algorithms Project
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 
 ### !challenge
 
 * type: multiple-choice
-* id: 12f78e2a-8ed5-440f-bc0e-25405df7a563
-* title: What is an abstract data type?
+* id: 512ee510-1a21-45c3-9ef9-4eee8f21ad11
+* title: 1st iteration of QuickSort?
 * points: 1
-* topics: abstract data types
+* topics: divide-and-conquer
 
 ##### !question
 
-What is an abstract data type?
+The [QuickSort]() algorithm takes an unsorted list, selects a specific element as a "pivot" and then partitions the list placing elements smaller than the pivot to the left of the pivot and elements larger than the pivot to the right of the pivot.  Then Quicksort is called recursively on the left and right partitions.
+
+What type of Algorithm is Quicksort?
+
 
 ##### !end-question
 
 ##### !options
 
-* A data structure that operates in a First-In-First-Out (FIFO) manner
-* A data structure that operates in a Last-In-First-Out (LIFO) manner
-* A data structure that is defined by the operations it performs and not a specific implementation
-* A data structure that only exists mathematically
+* `Divide and Conquer`
+* `Greedy`
+* `Dynamic Programming`
+* `Exponential`
 
 ##### !end-options
 
 ##### !answer
 
-* A data structure that is defined by the operations it performs and not a specific implementation
+Notice that Quicksort breaks the list into two smaller lists and sorts each of those lists.  This is a Divide and Conquer algorithm.
 
 ##### !end-answer
 
 ##### !hint
 
-Remember that both stacks & queues are abstract data types and they can be implemented a variety of ways.
+We are breaking the larger list into two smaller lists and sorting each.
 
 ##### !end-hint
 
@@ -56,7 +63,7 @@ Remember that both stacks & queues are abstract data types and they can be imple
 ### !challenge
 
 * type: multiple-choice
-* id: f87cff6d-22d6-4e86-a3f6-aa5d50957e80
+* id: 0bd5d043-4e3a-4281-85fa-bc5afb5b650e
 * title: A Stack performs in a ______ manner.
 * points: 1
 * topics: stacks

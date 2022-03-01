@@ -128,9 +128,17 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: 7d6fef7e-76cf-4b9d-b36f-8e07df812c4b
+        Path: /05-hash-tables/class-lesson.instructor.md
+      -
         Type: Lesson
         UID: b1b69d98-9fb4-4b91-9eb1-2cfbcf4d1046
         Path: /05-hash-tables/01-hash-tables.md
+      -
+        Type: Lesson
+        UID: 69cc9cfc-ad29-4b4d-afe3-5c7b4786aa08
+        Path: /05-hash-tables/03-hash-tables-activity.md
       -
         Type: Checkpoint
         UID: a39c4928-599f-43b9-9b01-9637439502bf
@@ -143,9 +151,17 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Instructor
+        UID: 629e6be6-fc8f-4da0-ac88-ac88cf4ab39a
+        Path: /06-heaps/class-lesson.instructor.md
+      -
         Type: Lesson
         UID: 4a7e9b34-203d-44c5-ae25-86f815f85576
         Path: /06-heaps/01-heaps.md
+      -
+        Type: Lesson
+        UID: bc09fa82-9c69-4783-bd1c-8361148f58d5
+        Path: /06-heaps/03-Heaps-Activity.md
       -
         Type: Checkpoint
         UID: 824d3954-8e7f-472e-9878-426197b86f6f

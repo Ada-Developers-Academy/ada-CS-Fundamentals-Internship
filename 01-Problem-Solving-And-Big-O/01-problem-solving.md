@@ -1,5 +1,7 @@
 # Problem Solving
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=0471a830-aa32-4937-bb42-ae4c0144813e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Objectives
 
 By the end of this lesson we should be able to:
@@ -121,14 +123,15 @@ In general it's most helpful to develop a few examples which will test the bouna
 
 We should consider:
 
-* **Nominal Edge Cases**
+* **Nominal Cases**
   * In this example we could give a list and number which does contain a contiguous sublist which adds up to the given number.
   * For example:  [1, 2, 3, 4] and 7 would return 2 because [3, 4] adds up to 7.
 * **Negative Edge Case**
   * In this example we can give a list and a number in which the list does **not** contain a contiguous sublist which adds up to the given number.
     * For example: [1, 2, 3, 4] and 11 would need to return *something* to indicate that there is no contiguous sublist which adds up to the given number.
-  * Another Negative Edge Case input would be a list entirely composed of numbers larger than the given positive integer
-    * For example: [6, 7] and 1 would return *something* to indicate there is no contiguous sublist which adds up to the given number.
+  * Another Negative Edge Case input would include an array of numbers all larger than the given positive integer.
+    * For example: [6, 7] and 5 would return *something* to indicate there is no contiguous sublist which adds up to the given number.
+  * Yet another negative edge-case would consist of an empty list.
 * **Positive Edge Case**
   * This would be an input on the edge of what is possible which returns a valid length of a contiguous sublist.
   * For example: [1] and 1 would return 1 because [1] is a contiguous sublist which adds up to 1.

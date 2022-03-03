@@ -24,7 +24,7 @@ Students can be a bit shy, but you can contact specific students ahead of time a
 
 ### !end-callout
 
-## Algorithmic Strategies Introduction - 10 minutes
+## Algorithmic Strategies Introduction - 20 minutes
 
 Then follow the 1st part of the [activity](./01-algorithms.md) reviewing divide & conquer, greedy algorithms and dynamic programming and answer questions about the coding examples.
 
@@ -46,7 +46,7 @@ Remember to:
 
 [Word Break](https://replit.com/@adadev/Word-break)
 
-## Coding Activity - 45 minutes
+## Coding Activity - 30 minutes
 
 Break students into breakout rooms to practice the replit. The replit has a suggested solution in pseudocode which is a good chance for students to discuss how to convert it to code.
 

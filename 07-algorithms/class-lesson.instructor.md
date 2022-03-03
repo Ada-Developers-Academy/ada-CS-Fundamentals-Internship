@@ -26,7 +26,7 @@ Students can be a bit shy, but you can contact specific students ahead of time a
 
 ## Algorithmic Strategies Introduction - 10 minutes
 
-Then follow the 1st part of the [activity](./01-stacks-and-queues.md) reviewing divide & conquer, greedy algorithms and dynamic programming and answer questions about the coding examples.
+Then follow the 1st part of the [activity](./01-algorithms.md) reviewing divide & conquer, greedy algorithms and dynamic programming and answer questions about the coding examples.
 
 Specifically reinforce:
 

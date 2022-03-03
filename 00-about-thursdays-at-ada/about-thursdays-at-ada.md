@@ -9,7 +9,7 @@ In Computer Science fundamentals students learn the following concepts and data 
 - [Queues](../04-Stacks-And-Queues/01-stacks-and-queues.md)
 - [Hash Tables](../05-hash-tables/01-hash-tables.md)
 - [Heaps](../06-heaps/01-heaps.md)
-- [Alogorithm categories](../07-algorithms/algorithms.md) such as Divide & Conquer, Dynamic Programming and Greedy Algorithms.
+- [Alogorithm categories](../07-algorithms/01-algorithms.md) such as Divide & Conquer, Dynamic Programming and Greedy Algorithms.
 - [Graphs](../08-graphs/graphs.md)
 
 ### Reverse Classroom

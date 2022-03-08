@@ -172,15 +172,23 @@ Standards:
     UID: ccdccab2-b7f3-42d8-977d-955a58ce9d05
     SuccessCriteria:
       - success criteria
-    ContentFiles:
+    ContentFiles:    
+      -
+        Type: Instructor
+        UID: 64e03908-4499-483c-aa4a-2d9851caee59
+        Path: /07-algorithms/class-lesson.instructor.md
       -
         Type: Lesson
         UID: a76dfc02-3b54-459c-bf72-66a072b26119
-        Path: /07-algorithms/algorithms.md
+        Path: /07-algorithms/01-algorithms.md
+      -
+        Type: Lesson
+        UID: 543b816f-7dce-410f-924d-3bfaf489510d
+        Path: /07-algorithms/03-algorithms-activity.md
       -
         Type: Checkpoint
         UID: 92514af3-c487-40cb-acbc-8b62d864be82
-        Path: /07-algorithms/algorithms-checkpoint.md
+        Path: /07-algorithms/02-algorithms-checkpoint.md
   -
     Title: Graphs
     Description: Graph Data Structures & Algorithms

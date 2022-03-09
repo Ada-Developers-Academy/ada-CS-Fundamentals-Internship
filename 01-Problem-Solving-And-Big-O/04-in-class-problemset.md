@@ -33,11 +33,11 @@ In this problem lets:
 1.  Understand the problem
 1.  Come up with example input/outputs beyond those given
 1.  Test cases:
-  - Postive and Negative Edge cases
-  - Nominal case
+    - Postive and Negative Edge cases
+    - Nominal case
 1. Analyze the solution
-  - Time Complexity
-  - Space Complexity
+    - Time Complexity
+    - Space Complexity
 
 ## Activity - 30 min
 

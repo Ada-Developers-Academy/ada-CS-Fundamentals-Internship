@@ -168,6 +168,8 @@ Walkthrough with:
 
 In the next activity we will examine deleting a node in a BST.
 
+- [Delete Node](https://replit.com/@adadev/bst-practice-delete#README.md)
+
 Use drawings to illustrate the 4 scenarios.
 
 1.  The Tree is empty (root is None).
@@ -180,7 +182,6 @@ Use drawings to illustrate the 4 scenarios.
 1.  The node to delete is greater than the root
     - root.right = delete_node on right subtree
 
-- [Delete Node](https://replit.com/@adadev/bst-practice-delete#README.md)
 
 ## Activity - Group Work Linked List Methods
 
@@ -195,6 +196,14 @@ In small groups of 3-4, **one student** will *fork* the given replit and then sh
 As a team complete the method in the replit.
 
 If you finish early, you can depart the session or work on the project, with instructor support available.
+
+### !callout-success
+
+## Pay Attention to the InOrder Traversal
+
+Could you use the inorder traversal to help you solve the problem?
+
+### !end-callout
 
 ### !callout-secondary
 

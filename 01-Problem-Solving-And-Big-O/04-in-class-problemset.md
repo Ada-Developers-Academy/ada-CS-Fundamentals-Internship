@@ -18,7 +18,7 @@ We will review class expectaions and norms.  Specifically reviewing the followin
 
 ### Office Hours
 
-We do have TAs available for office hours.  Chris also has office hours on Friday & Saturday.  Chris can also schedule one day of office hours specifically for your campus.
+We have TAs available for office hours.  Chris also has office hours on Friday & Saturday.  Chris can also schedule one day of office hours specifically for your campus.
 
 ## Questions on Problem Solving & Big O - 15 minutes
 

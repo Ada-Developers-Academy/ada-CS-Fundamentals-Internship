@@ -2,15 +2,50 @@
 
 ## Goal
 
-Our goal is to practice taking a problem, analyzing it, and then refactoring it to improve the solution. 
+Our goal is to
 
-## Activity Instructions
+- Learn class norms and processes
+- practice taking a problem, analyzing it, and then refactoring it to improve the solution
+
+## Class Norms and Processes - 10 min
+
+We will review class expectaions and norms.  Specifically reviewing the following:
+
+- Calendar
+- Project Assignments
+- Class Participation
+- Attendance
+
+### Office Hours
+
+We do have TAs available for office hours.  Chris also has office hours on Friday & Saturday.  Chris can also schedule one day of office hours specifically for your campus.
+
+## Questions on Problem Solving & Big O
+
+What questions do you have on this unit?
+
+## Sample Problem - 30 minutes
+
+- [Longest substring with `k` distinct chars](https://replit.com/@adadev/longest-substring-with-k-chars#README.md)
+
+In this problem lets:
+
+1.  Understand the problem
+1.  Come up with example input/outputs beyond those given
+1.  Test cases:
+  - Postive and Negative Edge cases
+  - Nominal case
+1. Analyze the solution
+  - Time Complexity
+  - Space Complexity
+
+## Activity - 30 min
 
 - [Activity Replit](https://replit.com/@adadev/two-sum-II#README.md)
 
 ### Getting Started
 
-In small groups of 3-4, **one student** will *fork* the given replit and then share a collaboration link with the rest of the team. 
+In small groups of 3-4, **one student** will *fork* the given replit and then share a collaboration link with the rest of the team.
 
 ### Read The Markdown Document
 
@@ -26,8 +61,6 @@ Read through the solution and analyze the time/space complexity.  Fill in the ti
 * type: multiple-choice
 * id: 7785c9bb-d328-4325-a6d9-70a42e540bec
 * title: What is the time complexity of the initial solution?
-<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
-<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
 
 ##### !question
 

@@ -171,14 +171,14 @@ In the next activity we will examine deleting a node in a BST.
 Use drawings to illustrate the 4 scenarios.
 
 1.  The Tree is empty (root is None).
-  - return None
+    - return None
 1.  The node to delete is the root
-  - Insert the right subtree into the left subtree
-  - Return the left subtree
+    - Insert the right subtree into the left subtree
+    - Return the left subtree
 1.  The node to delete is less than the root
-  - root.left = delete_node on left subtree
+    - root.left = delete_node on left subtree
 1.  The node to delete is greater than the root
-  - root.right = delete_node on right subtree
+    - root.right = delete_node on right subtree
 
 - [Delete Node](https://replit.com/@adadev/bst-practice-delete#README.md)
 

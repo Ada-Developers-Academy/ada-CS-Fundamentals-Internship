@@ -88,13 +88,12 @@ However the arithmetic solution will run faster as it does not require a loop wh
 
 If we timed our code we could observe how long it takes to run.
 
-|  n 	|  Loop-based solution 	|  Arithmetic solution 	|
-|---	|---	|---    |
-|   1000000	| 0.036s  	| ~0s      |
-|   10000000	|   0.30s	|  ~0s     |
-|   10000000	|   2.99s	|  ~0s     |
-|   10000000	|   30.03s	|  ~0s     |
-
+|  n  |  Loop-based solution  |  Arithmetic solution  |
+|--- |--- |---    |
+|   1000000 | 0.036s   | ~0s      |
+|   10000000 |   0.30s |  ~0s     |
+|   10000000 |   2.99s |  ~0s     |
+|   10000000 |   30.03s |  ~0s     |
 
 Looking at the timing results of the two functions we can see that the arithmetic solution is *much* faster. This is because the arithmetic solution performs much fewer operations and the number of operations does not change when `n` becomes large. On the other hand the loop-based solution performs a coorespondingly larger number of operations as `n` increases. Notice that as `n` increased tenfold, the number of seconds it took to run the loop-based solution increased by an approximate factor of ten.
 
@@ -110,7 +109,7 @@ However timing our code, while helpful, is not enough. This is because:
 * Computers vary in speed and accuracy, so the amount of time the program takes to run on one computer would be different from another.
 * Other factors outside of our code timing results can vary between executions.
 
-We could try to count the number of operations performed by our code, but high level languages often obscure the number of operations performed. For example, in Python the number of operations performed by a library function is not easily accessible. 
+We could try to count the number of operations performed by our code, but high level languages often obscure the number of operations performed. For example, in Python the number of operations performed by a library function is not easily accessible.
 
 Instead as computer scientists we have developed Big O notation as a way to formalize a rough estimate of the number of how the number of operations *change* as the size of the input increases.
 
@@ -137,7 +136,7 @@ So for these **constant time** algorithms we say the algorithm has a **constant 
 
 #### Linear Time Complexity
 
-On the other hand some algorithms will take an amount of time proportional to changes in the size of the input. A good example is our loop based function. If the input size doubles, the function will take roughly twice as long to run. 
+On the other hand some algorithms will take an amount of time proportional to changes in the size of the input. A good example is our loop based function. If the input size doubles, the function will take roughly twice as long to run.
 
 ```py
 def add_from_1_to_n(n):
@@ -195,12 +194,12 @@ def minimum_sub_list_length(numbers, target):
     return min_length
 ```
 
-When we encounter nested loops, we multiply the time complexity of the inner loop by the number of iterations of the outer loop. 
+When we encounter nested loops, we multiply the time complexity of the inner loop by the number of iterations of the outer loop.
 
 So in this case:
 
 * If we multiply the number of iteration on the outer loop by the inner loop: `(n * (n-1))` = `(n^2 - n)`
-* We can drop the less significant term `n` because `n^2` will dominate the result. 
+* We can drop the less significant term `n` because `n^2` will dominate the result.
 * We end up with a time complexity of `O(n^2)`.
 
 This is called a **quadratic time complexity** or `O(n^2)`.
@@ -232,7 +231,7 @@ def binary_search(test_array, value):
 
 A logarithm is a quantity representing the power to which a fixed number (the base) must be raised to produce a given number. For example the log with base 2 of 8 is 3 (2^3 = 8)  The log of base 10 of 10000 is 4 (10^4 = 10000).
 
-See below. 
+See below.
 
 ![Log example](images/problem-solving__log-example.png)
 
@@ -279,19 +278,19 @@ Notice with each iteration the size of the input involved in the search (`low` t
 
 In the worst case scenario, the algorithm will take the following number of iterations given the input of size `n`:
 
-|   n	|   Number of iterations	|
-|---	|---	|
-|   8	|   3	|
-|   16	|   4	|
-|   32	|   5	|
-|   64	|   6	|
+|   n |   Number of iterations |
+|--- |--- |
+|   8 |   3 |
+|   16 |   4 |
+|   32 |   5 |
+|   64 |   6 |
 
 *Table. Number of iterations for each input size.*
 
 In general:
 
 * If the size of the input is *divided* by some value with each iteration, the time complexity involves a logarithm with a base equal to the divisor.
-* By far, the most common logarithmic base is 2 because our algorithms often, like binary search, divide the input size by two with each iteration. 
+* By far, the most common logarithmic base is 2 because our algorithms often, like binary search, divide the input size by two with each iteration.
   * Often we drop the base of the logarithm on the assumption that it is 2.
   * For Big-O notation, we do not need to indicate the base.
 
@@ -305,7 +304,7 @@ We will occassionally encounter algorithms that have other time complexities. La
 
 ### Space Complexity
 
-Space complexity measures the amount of memory an algorithm uses as it runs. Sometimes it can be called *auxiliary space* or *extra space* required by the algorithm beyond the space required by the input. 
+Space complexity measures the amount of memory an algorithm uses as it runs. Sometimes it can be called *auxiliary space* or *extra space* required by the algorithm beyond the space required by the input.
 
 The rules with regard to space complexity are:
 
@@ -446,3 +445,4 @@ Some general rules to use when thinking about time and space complexity:
 * [Hackernoon What does the time complexity O(log n) actually mean?](https://hackernoon.com/what-does-the-time-complexity-o-log-n-actually-mean-45f94bb5bfbf)
 * [Colt Steele Big O](https://cs.slides.com/colt_steele/big-o-notation)
 * [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
+* [Python Wiki on Time Complexity](https://wiki.python.org/moin/TimeComplexity)

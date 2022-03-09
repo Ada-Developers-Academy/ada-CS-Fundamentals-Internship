@@ -153,13 +153,19 @@ Why linked lists?
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-## Livecode - Project Introduction
+## Livecode
+
+### Project Introduction
 
 As a class we will check out  the [project](./03-linked-list-checkpoint.md) and work through a couple of the methods.  The purpose is to gain familiarity with the project and to learn how to write Linked List code.
 
-## Activity - Group Work Linked List Methods
+### Sample Interview Problem Livecode
 
 - [Activity Replit](https://replit.com/@adadev/linked-list-practice#README.md)
+
+## Activity - Group Work Linked List Methods
+
+After the class livecode working on rotating a linked list, we will break into groups to work on the Palindrome Linked List method.
 
 ### Getting Started
 

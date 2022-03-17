@@ -211,50 +211,6 @@ A Linked List because you can add and remove elements from the ends in constant 
 </details>
 -->
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-- type: multiple-choice
-- id: cae155eb-d333-4b05-8906-a320759bec4d
-- title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
-- points: 1
-- topics: linked-lists
-
-##### !question
-
-You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
-
-##### !end-question
-
-##### !options
-
-- Array
-- LinkedList
-- Either
-
-##### !end-options
-
-##### !answer
-
-- Either
-
-##### !end-answer
-
-<!-- other optional sections -->
-##### !hint
-
-Either could work as finding an element will take O(n) for an unordered list in both cases.  Granted removing an element in a LinkedList will take O(1) vs O(n) for an Array.
-
-##### !end-hint
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
 <!--
 <details>
 <summary>You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?</summary>

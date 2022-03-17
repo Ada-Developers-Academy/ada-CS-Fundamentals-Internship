@@ -53,12 +53,12 @@ Both Arrays & Linked Lists are linear data structures and both have a clearly de
 
 Big-O For Linked Lists & Arrays
 
-| Operation 	| Linked Lists 	|  Array 	|
-|---	|---	|---	|
+| Operation  | Linked Lists  |  Array  |
+|--- |--- |--- |
 | access | O(n) | O(1) |
 | search | O(n) | O(n) |
 | insertion | O(1) | O(n) |
-| deletion | O(1) 	| O(1) |
+| deletion | O(1)  | O(1) |
 
 As you can see above, Linked Lists perform in constant time to insert values into or remove values from a list, because it only requires a few reference to be changed.  Arrays, on the other hand, can require shifting numerous elements into new indices with each insertion or deletion.
 
@@ -83,11 +83,11 @@ Arrays have the following advantages:
 
 ### !challenge
 
-* type: multiple-choice
-* id: 30585bca-c0e3-434f-b3cd-2f804b183c69
-* title: Suppose you have an online store and need to lookup and access product descriptions by an id (index) number.  What would you pick, LinkedList or Array?
-* points: 1
-* topics: linked-lists
+- type: multiple-choice
+- id: 30585bca-c0e3-434f-b3cd-2f804b183c69
+- title: Suppose you have an online store and need to lookup and access product descriptions by an id (index) number.  What would you pick, LinkedList or Array?
+- points: 1
+- topics: linked-lists
 
 ##### !question
 
@@ -97,15 +97,15 @@ Suppose you have an online store and need to lookup and access product descripti
 
 ##### !options
 
-* Array
-* LinkedList
-* Either
+- Array
+- LinkedList
+- Either
 
 ##### !end-options
 
 ##### !answer
 
-* Array
+- Array
 
 ##### !end-answer
 
@@ -117,11 +117,11 @@ Suppose you have an online store and need to lookup and access product descripti
 
 ### !challenge
 
-* type: multiple-choice
-* id: 88936263-eb5f-47dd-bce9-0d80c70dbbcb
-* title: You need to look up orders by customer name and the list is maintained in order by the customer name.  What would you pick, LinkedList or Array?
-* points: 1
-* topics: linked-lists
+- type: multiple-choice
+- id: 88936263-eb5f-47dd-bce9-0d80c70dbbcb
+- title: You need to look up orders by customer name and the list is maintained in order by the customer name.  What would you pick, LinkedList or Array?
+- points: 1
+- topics: linked-lists
 
 ##### !question
 
@@ -131,15 +131,15 @@ You need to look up orders by customer name and the list is maintained in order 
 
 ##### !options
 
-* Array
-* LinkedList
-* Either
+- Array
+- LinkedList
+- Either
 
 ##### !end-options
 
 ##### !answer
 
-* Array
+- Array
 
 ##### !end-answer
 
@@ -152,7 +152,6 @@ You need to look up orders by customer name and the list is maintained in order 
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-
 <!-- <details>
 <summary>You need to look up orders by customer name and the list is maintained in order by the customer name.  What would you pick, LinkedList or Array?</summary>
   
@@ -160,17 +159,16 @@ An Array because you can search for elements in an Array using binary search O(l
 </details>
 -->
 
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
-* type: multiple-choice
-* id: c3414dc3-b344-45c5-9f7f-bbb0f074e134
-* title: You need to regularly add orders to the end of a list and remove orders from the front to process them.  What would you pick, LinkedList or Array?
-* points: 1
-* topics: linked-lists
+- type: multiple-choice
+- id: c3414dc3-b344-45c5-9f7f-bbb0f074e134
+- title: You need to regularly add orders to the end of a list and remove orders from the front to process them.  What would you pick, LinkedList or Array?
+- points: 1
+- topics: linked-lists
 
 ##### !question
 
@@ -180,20 +178,20 @@ You need to regularly add orders to the end of a list and remove orders from the
 
 ##### !options
 
-* Array
-* LinkedList
-* Either
+- Array
+- LinkedList
+- Either
 
 ##### !end-options
 
 ##### !answer
 
-* LinkedList
+- LinkedList
 
 ##### !end-answer
 
 <!-- other optional sections -->
-##### !hint 
+##### !hint
 
 A Linked List because you can add and remove elements from the ends in constant time O(1) vs an Array where you have to shift all elements over causing it to run in O(n) time.
 
@@ -213,17 +211,16 @@ A Linked List because you can add and remove elements from the ends in constant 
 </details>
 -->
 
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
-* type: multiple-choice
-* id: f6905284-acff-486f-9206-4e49ed1877d0
-* title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
-* points: 1
-* topics: linked-lists
+- type: multiple-choice
+- id: f6905284-acff-486f-9206-4e49ed1877d0
+- title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
+- points: 1
+- topics: linked-lists
 
 ##### !question
 
@@ -233,20 +230,20 @@ You need to regularly look up students from an unordered list and remove them fr
 
 ##### !options
 
-* Array
-* LinkedList
-* Either
+- Array
+- LinkedList
+- Either
 
 ##### !end-options
 
 ##### !answer
 
-* Either
+- Either
 
 ##### !end-answer
 
 <!-- other optional sections -->
-##### !hint 
+##### !hint
 
 Either could work as finding an element will take O(n) for an unordered list in both cases.  Granted removing an element in a LinkedList will take O(1) vs O(n) for an Array.
 
@@ -266,17 +263,16 @@ Either could work as finding an element will take O(n) for an unordered list in 
 </details>
 -->
 
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
-* type: multiple-choice
-* id: 2932b843-cb6b-46de-b419-ac90ad59cc29
-* title: Your low memory capacity smart lightbulb needs to store a list of data.  What would you pick, LinkedList or Array?
-* points: 1
-* topics: linked-lists
+- type: multiple-choice
+- id: 2932b843-cb6b-46de-b419-ac90ad59cc29
+- title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
+- points: 1
+- topics: linked-lists
 
 ##### !question
 
@@ -286,15 +282,15 @@ You need to regularly look up students from an unordered list and remove them fr
 
 ##### !options
 
-* Array
-* LinkedList
-* Either
+- Array
+- LinkedList
+- Either
 
 ##### !end-options
 
 ##### !answer
 
-* LinkedList
+- LinkedList
 
 ##### !end-answer
 
@@ -465,7 +461,6 @@ Consider when a node is removed from a Linked List:
 ![Removing a node](images/linked-list-remove-node.png)
 <!-- source:  https://stackoverflow.com/questions/41474163/singly-linked-list-remove -->
 
-
 When no variable refers to a node (holding 99 in the image above) the Python garbage collector will eventually return the memory to the operating system.
 
 ```python
@@ -499,12 +494,12 @@ void removeFirst(struct node **headRef) {
 
 ### !challenge
 
-* type: code-snippet
-* language: python3.6
-* id: aadddd4b-2b3d-4c47-8f38-ec8f24f91d90
-* title: Merge Two Sorted Linked Lists
-* points: 1
-* topics: python, linked-list, interview-problem-easy
+- type: code-snippet
+- language: python3.6
+- id: aadddd4b-2b3d-4c47-8f38-ec8f24f91d90
+- title: Merge Two Sorted Linked Lists
+- points: 1
+- topics: python, linked-list, interview-problem-easy
 
 ##### !question
 
@@ -515,10 +510,10 @@ Example input and output:
 |--|--|
 |`list_a = 5->13->15` <br> `list_b = 6->9->20` | `5->6->9->13->15->20`|
 
-There are many cases to deal with: 
+There are many cases to deal with:
 
-* Either `a` or `b` may be empty initially
-* During processing either `a` or `b` may run out first
+- Either `a` or `b` may be empty initially
+- During processing either `a` or `b` may run out first
 
 You may be destructive with the original two lists.
 

@@ -225,7 +225,7 @@ Either could work as finding an element will take O(n) for an unordered list in 
 ### !challenge
 
 - type: multiple-choice
-- id: 2932b843-cb6b-46de-b419-ac90ad59cc29
+- id: cae155eb-d333-4b05-8906-a320759bec4d
 - title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
 - points: 1
 - topics: linked-lists
@@ -246,14 +246,14 @@ You need to regularly look up students from an unordered list and remove them fr
 
 ##### !answer
 
-- LinkedList
+- Either
 
 ##### !end-answer
 
 <!-- other optional sections -->
 ##### !hint
 
-A Linked List because it does not require the items to be adjacent and will only use as much memory as it requires in the moment.
+Either could work as finding an element will take O(n) for an unordered list in both cases.  Granted removing an element in a LinkedList will take O(1) vs O(n) for an Array.
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->

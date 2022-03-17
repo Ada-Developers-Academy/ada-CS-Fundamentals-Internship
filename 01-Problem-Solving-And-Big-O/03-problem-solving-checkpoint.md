@@ -84,7 +84,6 @@ def only_even_elements(array):
 
 ##### !end-answer
 
-
 ### !end-challenge
 
 ### !challenge
@@ -126,7 +125,6 @@ def only_even_elements(array):
 
 ##### !end-answer
 
-
 ### !end-challenge
 
 ### !challenge
@@ -150,6 +148,7 @@ def sum_digits(n):
     
     return total
 ```
+
 ##### !end-question
 
 ##### !options
@@ -357,7 +356,6 @@ What are the time complexities of the two solutions?  Are there any hidden neste
 
 ### !end-challenge
 
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -428,10 +426,9 @@ Does the time/space complexity change with your solution?
 
 ##### !end-placeholder
 
-
 ### !end-challenge
 
-## Optional Exercise!
+## Optional Exercise
 
 ### !challenge
 
@@ -444,11 +441,11 @@ Does the time/space complexity change with your solution?
 
 ##### !question
 
-The following solution **works**, but it is not efficient.  Try to improve it using the [sliding window](https://stackoverflow.com/questions/8269916/what-is-sliding-window-algorithm-examples) technique.
+The following solution **works**, but it is not efficient.  Try to improve it.
 
 A string s is nice if, for every letter of the alphabet that s contains, it appears both in uppercase and lowercase. For example, "abABB" is nice because 'A' and 'a' appear, and 'B' and 'b' appear. However, "abA" is not because 'b' appears, but 'B' does not.
 
-Write a function `longest_nice_substring(s)`. Given a string `s`, return the longest contiguous substring of `s` that is nice. If there are multiple substrings tied for the longest, return the substring of the earliest occurrence. 
+Write a function `longest_nice_substring(s)`. Given a string `s`, return the longest contiguous substring of `s` that is nice. If there are multiple substrings tied for the longest, return the substring of the earliest occurrence.
 
 If there are none, return an empty string.
 

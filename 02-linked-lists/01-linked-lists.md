@@ -217,7 +217,7 @@ A Linked List because you can add and remove elements from the ends in constant 
 ### !challenge
 
 - type: multiple-choice
-- id: f6905284-acff-486f-9206-4e49ed1877d0
+- id: cae155eb-d333-4b05-8906-a320759bec4d
 - title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
 - points: 1
 - topics: linked-lists
@@ -495,8 +495,8 @@ void removeFirst(struct node **headRef) {
 ### !challenge
 
 - type: code-snippet
-- language: python3.6
 - id: aadddd4b-2b3d-4c47-8f38-ec8f24f91d90
+- language: python3.6
 - title: Merge Two Sorted Linked Lists
 - points: 1
 - topics: python, linked-list, interview-problem-easy

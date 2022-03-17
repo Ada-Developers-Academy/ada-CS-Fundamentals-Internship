@@ -263,6 +263,50 @@ Either could work as finding an element will take O(n) for an unordered list in 
 
 <!-- ======================= END CHALLENGE ======================= -->
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+- type: multiple-choice
+- id: 2932b843-cb6b-46de-b419-ac90ad59cc29
+- title: You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
+- points: 1
+- topics: linked-lists
+
+##### !question
+
+You need to regularly look up students from an unordered list and remove them from the list.  What would you pick a LinkedList or an Array?
+
+##### !end-question
+
+##### !options
+
+- Array
+- LinkedList
+- Either
+
+##### !end-options
+
+##### !answer
+
+- LinkedList
+
+##### !end-answer
+
+<!-- other optional sections -->
+##### !hint
+
+A Linked List because it does not require the items to be adjacent and will only use as much memory as it requires in the moment.
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 <!--
 <details>
 <summary>Your low memory capacity smart lightbulb needs to store a list of data.  What would you pick, LinkedList or Array?</summary>
@@ -445,158 +489,6 @@ void removeFirst(struct node **headRef) {
   }
 }
 ```
-
-## Challenge Problem
-
-### !challenge
-
-- type: code-snippet
-- id: aadddd4b-2b3d-4c47-8f38-ec8f24f91d90
-- language: python3.6
-- title: Merge Two Sorted Linked Lists
-- points: 1
-- topics: python, linked-list, interview-problem-easy
-
-##### !question
-
-Write a `sorted_merge()` function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order. `sorted_merge()` should return the new list. The new list should be made by splicing together the nodes of the first two lists.
-
-Example input and output:
-| input | output |
-|--|--|
-|`list_a = 5->13->15` <br> `list_b = 6->9->20` | `5->6->9->13->15->20`|
-
-There are many cases to deal with:
-
-- Either `a` or `b` may be empty initially
-- During processing either `a` or `b` may run out first
-
-You may be destructive with the original two lists.
-
-##### !end-question
-
-##### !placeholder
-
-```py
-class ListNode:
-    def __init__(self, value, next = None):
-        self.value = value
-        self.next = next
-    
-    def __repr__(self):
-        return f"ListNode({self.value})"
-    def __str__(self):
-        answer = []
-        current = self
-        while current is not None:
-            answer.append(f"{current.value}")
-            current = current.next
-        
-        return "->".join(answer)
-
-def sorted_merge(list_a, list_b):
-    '''
-    INPUT: list_a: the head reference of a sorted linked list
-            list_b: the head reference of a sorted linked list
-    OUTPUT: the head reference of a sorted linked list that is the result of merging list_a and list_b
-    '''
-    pass
-```
-
-##### !end-placeholder
-
-##### !tests
-
-```py
-import unittest
-from main import *
-
-class TestSortedMerge(unittest.TestCase):
-    def test_two_empty_lists(self):
-        # Arrange
-        list_a = None
-        list_b = None
-        # Act
-        result = sorted_merge(list_a, list_b)
-
-        # Assert
-        self.assertEqual(result, None)
-
-    def test_one_empty_list(self):
-        # Arrange
-        list_a = ListNode(1)
-        list_a.next = ListNode(2)
-        list_b = None
-        # Act
-        result = sorted_merge(list_a, list_b)
-
-        # Assert
-        self.assertEqual(result.__str__(), "1->2")
-    
-    def test_another_one_empty_list(self):
-        # Arrange
-        list_b = ListNode(1)
-        list_b.next = ListNode(2)
-        list_a = None
-        # Act
-        result = sorted_merge(list_a, list_b)
-
-        # Assert
-        self.assertEqual(result.__str__(), "1->2")
-
-    def test_one_short_one_long_list(self):
-        # Arrange
-        list_a = ListNode(1)
-        list_a.next = ListNode(6)
-        list_b = ListNode(5)
-        list_b.next = ListNode(10)
-        list_b.next.next = ListNode(15)
-        # Act
-        result = sorted_merge(list_a, list_b)
-
-        # Assert
-        self.assertEqual(result.__str__(), "1->5->6->10->15")
-
-    def test_one_long_one_short_list(self):
-        # Arrange
-        list_b = ListNode(1)
-        list_b.next = ListNode(6)
-        list_a = ListNode(5)
-        list_a.next = ListNode(10)
-        list_a.next.next = ListNode(15)
-        # Act
-        result = sorted_merge(list_a, list_b)
-
-        # Assert
-        self.assertEqual(result.__str__(), "1->5->6->10->15")
-    
-
-    def test_two_longish_lists(self):
-        # Arrange
-        list_a = ListNode(1)
-        list_a.next = ListNode(6)
-        list_a.next.next = ListNode(27)
-        list_a.next.next.next = ListNode(30)
-        list_b = ListNode(5)
-        list_b.next = ListNode(10)
-        list_b.next.next = ListNode(15)
-        list_b.next.next.next = ListNode(29)
-        # Act
-        result = sorted_merge(list_a, list_b)
-
-        # Assert
-        self.assertEqual(result.__str__(), "1->5->6->10->15->27->29->30")
-```
-
-##### !end-tests
-
-##### !hint
-
-This is actually quite similar to [merging two sorted arrays](https://www.geeksforgeeks.org/merge-two-sorted-arrays/).  The only difference is that the two lists are linked lists.
-
-##### !end-hint
-
-### !end-challenge
 
 [Problem Source: mycodeschool](https://www.youtube.com/user/mycodeschool)
 

@@ -42,6 +42,43 @@ Standards:
   
     Title: Linked Lists
     Description: Linked Lists
+    UID: 99e15249-af35-4824-b3f8-69cd8de7e69b
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 3812cba2-a199-4eb5-b8a5-8ed3f43f0143
+        Path: /linked-lists/intro-to-linked-lists.md
+      -
+        Type: Lesson
+        UID: f42a56a2-5c5e-4508-816c-881dcb6bb8a8
+        Path: /linked-lists/object-oriented-design.md
+      -
+        Type: Lesson
+        UID: 0f3e2dc1-b082-42dd-892f-c981a6e8102f
+        Path: /linked-lists/get_search.md
+      -
+        Type: Lesson
+        UID: ffbc9a00-c281-4ee3-8049-f5408b36ca90
+        Path: /linked-lists/deletion.md
+      -
+        Type: Lesson
+        UID: 6063a334-bfb5-4623-a7ab-f84dba7d3cb0
+        Path: /linked-lists/more_methods.md
+      -
+        Type: Lesson
+        UID: 97340b83-2c7b-4fe8-9f2f-729fc6f13cbe
+        Path: /linked-lists/supplemental-linked-lists.md
+      -
+        Type: Checkpoint
+        UID: b159f8b9-aa30-42e5-9340-cbb432a01c77
+        Path: /linked-lists/linked-list-project.checkpoint.md
+  
+  -
+  
+    Title: Linked Lists
+    Description: Linked Lists
     UID: 8e6f54bf-41e8-41d6-9a03-dca103bf15ed
     SuccessCriteria:
       - success criteria

@@ -1,7 +1,9 @@
 # Object Oriented Design of a Linked List
 
 ## Overview
-The Node class encapsulates each individual 
+In Python, linked lists are not a built-in data type. So how might we represent linked lists? Classes provide a mechanism for us to define our own linked list data type. 
+
+Linked lists are a collection of nodes. A node is also a data structure that is not built in to Python. Thus, in order to represent a linked list, we will first want to define a Node class that represents a single element in a linked list. We can then define a LinkedList class that represents an ordered collection of individual Node objects. 
 
 ## Node Class
 

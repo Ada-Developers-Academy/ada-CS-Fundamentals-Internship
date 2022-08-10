@@ -5,6 +5,17 @@ In Python, linked lists are not a built-in data type. So how might we represent 
 
 Linked lists are a collection of nodes. A node is also a data structure that is not built in to Python. Thus, in order to represent a linked list, we will first want to define a Node class that represents a single element in a linked list. We can then define a LinkedList class that represents an ordered collection of individual Node objects. 
 
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
+
+## Linked Lists in Other Languages
+
+Many languages, such as [Java](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html), offer standard implementations of linked lists. Packages such as [CPython's `llist`](https://pythonhosted.org/llist/) can also be used to avoid needing to implement your own linked list in Python.
+
+Still, knowing the basics of how linked lists are implemented can help us better understand how and when to use them!
+
+### !end-callout
+
 ## Node Class
 
 The Node class encapsulates each individual element of the linked list. It is comprised of an attribute that stores data and an attribute that stores the next node in the chain. It provides an interface for the LinkedList class we will create to handle the data and link nodes together.
@@ -163,7 +174,7 @@ Encapsulation allows data structures to be designed _abstractly_, meaning the im
 * type: code-snippet
 * language: python3.6
 * id: a9c61442-b23f-44c3-8b05-eae600e286dc
-* title: implement get_first
+* title: implement get_firstg
 * points: 1
 * 
 ##### !question

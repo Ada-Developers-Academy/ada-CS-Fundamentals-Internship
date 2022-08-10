@@ -1,6 +1,9 @@
 # Object Oriented Design of a Linked List
 
-### Node Class
+## Overview
+The Node class encapsulates each individual 
+
+## Node Class
 
 The Node class encapsulates each individual element of the linked list. It is comprised of an attribute that stores data and an attribute that stores the next node in the chain. It provides an interface for the LinkedList class we will create to handle the data and link nodes together.
 
@@ -75,7 +78,7 @@ You might also consider passing in default values for `next` and `prev`.
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-### LinkedList Class
+## LinkedList Class
 
 The LinkedList class has a single attribute `head` which stores a reference to the first node in the list. Our constructor initializes `head` to `None` so that when a new LinkedList is initialized, we are creating an empty list.  
 

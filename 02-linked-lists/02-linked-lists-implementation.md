@@ -1,12 +1,22 @@
 # Object Oriented Design of a Linked List
 
-### Encapsulation
+## Overview
+In Python, linked lists are not a built-in data type. So how might we represent linked lists? Classes provide a mechanism for us to define our own linked list data type. 
 
-When designing a data structure like a linked list, we typically want our design to include not just our linked nodes but also methods that operate on our linked list, such as methods to add nodes, delete nodes, or get the length of the linked list. Bundling together multiple pieces of data and methods that operate on that data is called __encapsulation__, and you may already be familiar with it in the form of classes. 
+Linked lists are a collection of nodes. A node is also a data structure that is not built in to Python. Thus, in order to represent a linked list, we will first want to define a Node class that represents a single element in a linked list. We can then define a LinkedList class that represents an ordered collection of individual Node objects. 
 
-Encapsulation also enables us to design our data structure as __abstract__, meaning that the implementation of the data structure is hidden. This allows the internal implementation of the data structure to change without affecting user functionality. As a result, the designer could switch a linked list into an array list without the user needing to know. They could also transition from a singly linked list into a doubly linked list without impacting users. 
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
 
-### Node Class
+## Linked Lists in Other Languages
+
+Many languages, such as [Java](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html), offer standard implementations of linked lists. Packages such as [CPython's `llist`](https://pythonhosted.org/llist/) can also be used to avoid needing to implement your own linked list in Python.
+
+Still, knowing the basics of how linked lists are implemented can help us better understand how and when to use them!
+
+### !end-callout
+
+## Node Class
 
 The Node class encapsulates each individual element of the linked list. It is comprised of an attribute that stores data and an attribute that stores the next node in the chain. It provides an interface for the LinkedList class we will create to handle the data and link nodes together.
 
@@ -81,7 +91,7 @@ You might also consider passing in default values for `next` and `prev`.
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-### LinkedList Class
+## LinkedList Class
 
 The LinkedList class has a single attribute `head` which stores a reference to the first node in the list. Our constructor initializes `head` to `None` so that when a new LinkedList is initialized, we are creating an empty list.  
 
@@ -147,6 +157,14 @@ def add_first(self, value):
 ```
 
 <!--TODO: Add challenge question adding node for a doubly linked list-->
+
+### Encapsulation
+
+When designing data structures, our design will typically group together multiple pieces of data as well as methods that operate on our data structure. For example with our LinkedList class above, we group together the `head` attribute with our operations `add_first`, `get_first`, `add_last`, `get_last`, and `get_at_index`.
+
+Bundling together multiple pieces of data and methods that operate on that data is called _encapsulation_. In fact, every time we create a class, we are encapsulating data.  
+
+Encapsulation allows data structures to be designed _abstractly_, meaning the implementation of the data structure is hidden. This allows the internal implementation of the data structure to change without affecting user functionality. As a result, the designer could switch a linked list into an array list without the user needing to know. They could also transition from a singly linked list into a doubly linked list without impacting users. 
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->

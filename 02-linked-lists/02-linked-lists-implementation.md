@@ -174,7 +174,7 @@ Encapsulation allows data structures to be designed _abstractly_, meaning the im
 * type: code-snippet
 * language: python3.6
 * id: a9c61442-b23f-44c3-8b05-eae600e286dc
-* title: implement get_firstg
+* title: implement get_first
 * points: 1
 * 
 ##### !question

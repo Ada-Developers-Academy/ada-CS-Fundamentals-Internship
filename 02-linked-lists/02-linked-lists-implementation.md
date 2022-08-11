@@ -162,7 +162,7 @@ def add_first(self, value):
 
 When designing data structures, our design will typically group together multiple pieces of data as well as methods that operate on our data structure. For example with our LinkedList class above, we group together the `head` attribute with our operations `add_first`, `get_first`, `add_last`, `get_last`, and `get_at_index`.
 
- Bundling together multiple pieces of data and methods that operate on that data is called _encapsulation_. In fact, every time we create a class, we are encapsulating data.  
+Bundling together multiple pieces of data and methods that operate on that data is called _encapsulation_. In fact, every time we create a class, we are encapsulating data.  
 
 Encapsulation allows data structures to be designed _abstractly_, meaning the implementation of the data structure is hidden. This allows the internal implementation of the data structure to change without affecting user functionality. As a result, the designer could switch a linked list into an array list without the user needing to know. They could also transition from a singly linked list into a doubly linked list without impacting users. 
 

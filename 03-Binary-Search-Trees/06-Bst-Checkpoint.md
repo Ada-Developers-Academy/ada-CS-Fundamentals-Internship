@@ -84,7 +84,7 @@ Your PR link goes here.
 ### !challenge
 
 * type: paragraph
-* id: c2735bca-226b-4c2f-b2c9-636331c7e677
+* id: 77241216-4aff-4926-928e-676ab1d23d28
 * title: Time complexity
 <!-- * points: [0] (optional, the number of points for scoring as a checkpoint) -->
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
@@ -119,7 +119,7 @@ Optimal solution is O(n)
 ### !challenge
 
 * type: paragraph
-* id: 92baf44f-9ec9-4a83-af9a-191b281988fa
+* id: cba1579e-e4ed-4ffb-b452-71ad99b6a316
 * title: Space complexity
 <!-- * points: [0] (optional, the number of points for scoring as a checkpoint) -->
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->

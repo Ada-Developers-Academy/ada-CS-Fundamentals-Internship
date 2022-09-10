@@ -15,7 +15,7 @@ We want students to:
 
 Start off the lesson by welcoming students to the class and note attendance. You can use the Airtable to record attendance The [C16 Airtable](https://airtable.com/appkfPQ769uxQLSei/tbl6oiA8ZG1wKUonM/viwgf4wesbLFMlg1L?blocks=hide) is linked.
 
-Then follow the 1st part of the [activity](./02-linked-list-activity.md) reviewing where linked lists are useful (when you need to add/remove to the front/rear of a list).  
+Then follow the 1st part of the [activity](./05-linked-list-activity.md) reviewing where linked lists are useful (when you need to add/remove to the front/rear of a list).  
 
 ## Livecode - 20 minutes
 

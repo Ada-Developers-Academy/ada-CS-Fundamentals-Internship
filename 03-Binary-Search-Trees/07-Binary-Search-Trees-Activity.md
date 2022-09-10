@@ -156,7 +156,7 @@ Why BSTs?
 
 ## Livecode - Project Introduction
 
-As a class we will check out  the [project](./02-Bst-checkpoint.md) and work through a couple of the methods.  The purpose is to gain familiarity with the project and to learn how to write Binary Search Tree code.
+As a class we will check out  the [project](./06-Bst-checkpoint.md) and work through a couple of the methods.  The purpose is to gain familiarity with the project and to learn how to write Binary Search Tree code.
 
 Walkthrough with:
 

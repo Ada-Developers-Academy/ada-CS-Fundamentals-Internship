@@ -1,20 +1,12 @@
 ---
 Standards:
   -
-    Title: Thursdays at Ada Norms
-    Description: Expectations for our sessions
+    Title: About CS Fundamentals for Job Seekers
+    Description: Expectations for the course
     UID: 88fccfa1-fe50-4434-8834-6efdf422f247
     SuccessCriteria:
       - success criteria
     ContentFiles:
-      -
-        Type: Instructor
-        UID: 560d5d4e-4c3d-438b-8b52-7bbb2b209d4c
-        Path: /00-about-thursdays-at-ada/thursdays-at-ada.instructor.md
-      -
-        Type: Lesson
-        UID: bcc6309e-3453-4aea-9b22-ef8e09c2b09e
-        Path: /00-about-thursdays-at-ada/norms.md
       -
         Type: Lesson
         UID: 0d492a6b-c9d8-492d-910e-219ff5ea80ae

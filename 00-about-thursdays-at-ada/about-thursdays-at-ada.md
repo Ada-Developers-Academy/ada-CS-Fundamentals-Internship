@@ -1,6 +1,8 @@
-## CS Fundamentals
+# CS Fundamentals
 
-In Computer Science fundamentals students learn the following concepts and data structures:
+# Content Overview
+
+As of C17, CS Fundamentals students learn the following concepts and data structures:
 
 - [Linked Lists](../02-linked-lists/01-linked-lists.md)
 - [Binary Search Trees](../03-Binary-Search-Trees/01-Ordered-Collections-Of-Data.md)
@@ -8,9 +10,12 @@ In Computer Science fundamentals students learn the following concepts and data 
 - [Graphs: Dijkstra](../09-graphs-p2/01-graphs-review.md)
 - [Algorithms](../07-algorithms/algorithms.md) such as Divide & Conquer, Dynamic Programming & Greedy Algorithms
 
-### Reverse Classroom
+These topics have been pared down from previous to shift CS Fundamentals from a general data structures and algorithms course to a course focused on strengthening students' technical interviewing skills. 
 
-CS Fundamentals is taught in a [flipped-classroom](https://omerad.msu.edu/index.php?option=com_content&view=article&id=162:what-why-and-how-to-implement-a-flipped-classroom-model&catid=27:teaching) style. Students are assigned a week prior to review a markdown lesson with accompanying video lesson and slides. In class students are expected to ask questions, review concepts, and work on exercises in groups. Students are also given time to engage in a mock interview with a peer.
+Learn lessons focus on conceptual understanding and implementation of the topic with guided video solutions to the major problem set questions. In addition, in class activities and mock interview pair practice provide students with opportunities for practical application of Learn topics with an interview readiness focus. We encourage folks to leverage these resources and collaborate with their peers in their continued self study and interview practice.
+
+The lesson on Dijkstra's Algorithm is currently scheduled for release on October 6, 2022. The lesson Algorithms is currently scheduled for release on October 20, 2022. Mock interview questions, activities, and recorded review sessions will be added to the resources listed below on a rolling basis through January. Release dates are subject to change as the curriculum team balances the needs of multiple programs and cohorts. 
+
 
 ### CS Fun Recorded Sessions
 

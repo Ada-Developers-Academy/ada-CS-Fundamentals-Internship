@@ -119,7 +119,7 @@ class TestPython1(unittest.TestCase):
 <br>
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<!-- Insert link to video explanation here -->
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=42ac2142-176c-4846-8b69-af1d012341bf&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ### !end-hint
 
@@ -350,7 +350,7 @@ class TestPython1(unittest.TestCase):
 <br>
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<!-- Insert link to video explanation here -->
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=77eefecf-346b-4fe5-8b31-af1d0123414e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ### !end-hint 
 
@@ -469,6 +469,10 @@ class TestPython1(unittest.TestCase):
             1. Call helper with `visited`, `graph`, and the `neighbor`
 <br>
 What we're essentially doing here is replacing the explicit creation of a stack and taking advantage of the recursive call stack.
+
+Still feeling stuck? Check this video walkthrough of the solution.
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=25b3e12d-bc1a-40a5-b60c-af1d01234183&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ##### !end-hint 
 

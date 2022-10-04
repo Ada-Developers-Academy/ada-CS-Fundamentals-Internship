@@ -23,7 +23,9 @@ The `ListNode` class was used in a larger `LinkedList` class which maintained a 
 
 Binary search trees have a _non-linear structure_. In a binary search tree each node has pointers to two other nodes in the data structure. We refer to these pointers as the _child_ nodes of the original _parent_ node. We label each of the parent node's two children as the `left` and `right` children or pointers. Collectively, we can refer to a parent node's children as _siblings_.
 
-A binary search tree's `left` and `right` child nodes must maintain special properties. The `left` child must have a `key` that is less than or equal to the `key` of its parent node. The `right` child must have a `key`  that is greater than or equal to that of its parent node.
+A binary search tree's `left` and `right` child nodes must maintain special properties. The `left` child must have a `key` that is less than the `key` of its parent node. The `right` child must have a `key`  that is greater than or equal to that of its parent node.
+
+Quick note for when a new node's `key` is equal to a `key` already present in the binary search tree: the person(s) who implemented the binary search tree has the choice to decide which subtree (`left` or `right`) to add the new node. The most important consideration here is _consistency_. In this lesson, please assume when a new node has a `key` equal to a `key` already present in the binary search tree then that new node is added to the *right* subtree of the node with which it shares a `key`.
 
 ### !callout-info
 
@@ -311,7 +313,7 @@ Still feeling stuck? Check this video walkthrough of the solution.
 
 ### Insertion
 
- New nodes as they are added are placed to the left of a given node if they are less than or equal to the current node, and to the right if they are greater than the current node. 
+ New nodes as they are added are placed to the left of a given node if they are less than the current node, and to the right if they are greater than or equal to the current node. 
 
 ![Tree Insert operation visualization](./images/Binary-search-trees__insert-into-tree.gif)
 

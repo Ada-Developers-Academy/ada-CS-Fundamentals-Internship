@@ -10,7 +10,7 @@ As of C17, CS Fundamentals students learn the following concepts and data struct
 - [Graphs: Dijkstra](../09-graphs-p2/01-graphs-review.md)
 - [Algorithms](../07-algorithms/algorithms.md) such as Divide & Conquer, Dynamic Programming & Greedy Algorithms
 
-These topics have been pared down from previous to shift CS Fundamentals from a general data structures and algorithms course to a course focused on strengthening students' technical interviewing skills. 
+These topics have been pared down from previous versions of Ada's CS Fundamentals in Internship course to shift CS Fundamentals from a general data structures and algorithms course to a course focused on strengthening students' technical interviewing skills. 
 
 Learn lessons focus on conceptual understanding and implementation of the topic with guided video solutions to the major problem set questions. In addition, in class activities and mock interview pair practice provide students with opportunities for practical application of Learn topics with an interview readiness focus. We encourage folks to leverage these resources and collaborate with their peers in their continued self study and interview practice.
 

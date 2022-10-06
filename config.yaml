@@ -92,7 +92,7 @@ Standards:
         Path: /03-Binary-Search-Trees/07-Binary-Search-Trees-Activity.md
   -
     Title: Graphs
-    Description: Graph Data Structures & Algorithms
+    Description: Graph Data Structures & Algorithms - Breadth First Search & Depth First Search
     UID: b0d74464-2678-44a8-a4ff-dc74350e7114
     SuccessCriteria:
       - success criteria
@@ -117,6 +117,29 @@ Standards:
         Type: Checkpoint
         UID: 69125c14-dc13-4099-a556-bc5c360fcf19
         Path: /08-graphs/05-graphs.checkpoint.md
+  -
+    Title: Graphs Continued
+    Description: Graph Data Structures & Algorithms - Dijkstra's
+    UID: 37e5c085-d3c7-4905-867e-90bd70a14ceb
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: a1c9e6cf-0bb8-4d02-bd5e-bda148023dd9
+        Path: /09-graphs-p2/01-graphs-review.md
+      -
+        Type: Lesson
+        UID: a0b4d6af-65fb-4d82-bd37-0f952f9c3b92
+        Path: /09-graphs-p2/02-dijkstra.md
+      -
+        Type: Lesson
+        UID: b11a0602-959e-42a2-9670-e7d126e9d98c
+        Path: /09-graphs-p2/03-graphs-2-activity.md
+      -
+        Type: Checkpoint
+        UID: 8c91fa27-f355-4db9-90f4-7082611d9a54
+        Path: /09-graphs-p2/04-graphs-2.checkpoint.md
   -
     Title: Algorithms
     Description: Divide & Conquer, Greedy and Dynamic Programming

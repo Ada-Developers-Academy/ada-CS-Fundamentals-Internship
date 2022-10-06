@@ -140,10 +140,10 @@ Standards:
         Type: Lesson
         UID: a0b4d6af-65fb-4d82-bd37-0f952f9c3b92
         Path: /09-graphs-p2/02-dijkstra.md
-      # -
-      #   Type: Checkpoint
-      #   UID: 69125c14-dc13-4099-a556-bc5c360fcf19
-      #   Path: /08-graphs/05-graphs.checkpoint.md
+      -
+        Type: Checkpoint
+        UID: 50ae7c81-6d5a-42d2-b9e9-dd0ffd05451e
+        Path: /09-graphs-p2/04-graphs-2.checkpoint.md
   -
     Title: Algorithms
     Description: Divide & Conquer, Greedy and Dynamic Programming

@@ -6,7 +6,7 @@ In Computer Science fundamentals students learn the following concepts and data 
 - [Binary Search Trees](../03-Binary-Search-Trees/01-Ordered-Collections-Of-Data.md)
 - [Graphs: BFS & DFS](../08-graphs/01-graphs.md)
 - [Graphs: Dijkstra](../09-graphs-p2/01-graphs-review.md)
-- [Algorithms](../07-algorithms/algorithms.md) such as Divide & Conquer, Dynamic Programming & Greedy Algorithms
+- [Algorithms](../07-algorithms/01-algorithms.md) such as Divide & Conquer, Dynamic Programming & Greedy Algorithms
 
 ### Reverse Classroom
 

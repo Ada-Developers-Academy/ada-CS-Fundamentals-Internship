@@ -158,7 +158,7 @@ Standards:
       -
         Type: Lesson
         UID: a76dfc02-3b54-459c-bf72-66a072b26119
-        Path: /07-algorithms/algorithms.md
+        Path: /07-algorithms/01-algorithms.md
       -
         Type: Checkpoint
         UID: 92514af3-c487-40cb-acbc-8b62d864be82

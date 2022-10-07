@@ -9,6 +9,7 @@ By the end of this lesson you should be able to:
 - Further explain time and space complexity
 - Explain the term algorithm
 - Explain three categories of algorithms _greedy_, _divide and conquer_ and _dynamic programming_
+- Explain the sliding window technique
 
 ## Video Lesson
 

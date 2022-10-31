@@ -27,5 +27,5 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 
 ### Thursdays at Ada Quick Links
 - [Thursdays at Ada Overview Calendar](https://drive.google.com/file/d/1iQuNpFJ73xROlf-PZevYyWR_x1ZFImbk/view?usp=sharing)
-- [Mock Interview Questions](https://replit.com/@adadev?path=folder/CS%20Fun/CS%20Fun%20Mock%20Interview%20Problems)
+- [Mock Interview Questions](https://docs.google.com/document/d/19TxHyWTjgYEv739zVJnbcyiIYDzf2zEpgmYkYUwO4C0/edit?usp=sharing)
 - [In Class Activities](https://replit.com/@adadev?path=folder/CS%20Fun/CS%20Fun%20Activities)

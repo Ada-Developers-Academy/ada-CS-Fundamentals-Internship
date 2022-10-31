@@ -2,8 +2,7 @@
 
 | Logistics             | Details                                         |
 | --------------------- | ----------------------------------------        |
-| Project details       | https://github.com/Ada-C16/dynamic-programming  |
-| JS Version            | https://github.com/Ada-C16/dynamic-programming-js  |
+| Project details       | [https://github.com/ada-c17/Newman-Conway-Sequence](https://github.com/ada-c17/Newman-Conway-Sequence)  |
 | Should you fork this? | Yes (Check project details)                     |
 | Submission method     | Learn                                           |
 
@@ -14,8 +13,8 @@
 
 * type: testable-project
 * id: da54c4ff-3e53-47f0-a193-5a90bfb10f0c
-* title: Dynamic Programming
-* upstream: https://github.com/Ada-C16/dynamic-programming
+* title: Newman-Conway Sequence
+* upstream: https://github.com/ada-c17/Newman-Conway-Sequence
 * validate_fork: false
 * points: 0
 * topics: dynamic programming
@@ -47,7 +46,7 @@ Link to your repo
 ### !challenge
 
 * type: short-answer
-* id: 5efc145b-099d-405e-a8bd-6e16085c9343
+* id: 2051740d-e33a-4ed6-9393-45606e510215
 * title: Link to your PR
 * points: 3
 * topics: dynamic programming
@@ -79,37 +78,56 @@ Your PR link goes here.
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-## Optional JS Version
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: paragraph
+* id: 51273afe-e024-4ce7-b2c2-d42ea88ce81a
+* title: Time complexity
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
+
+##### !question
+
+What is the time complexity of your solution? Remember to define your variables.
+
+##### !end-question
+
+##### !placeholder
+
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
-* type: testable-project
-* id: b80c955f-0cee-4508-948c-368d92463cac
-* title: Optional JavaScript Version
-* upstream: https://github.com/Ada-C16/dynamic-programming-js
-* validate_fork: true
-* points: 0
-* topics: dynamic programming
+* type: paragraph
+* id: 27d02ac7-2559-4e41-8b67-9345f097489d
+* title: space complexity
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question
 
-Add a link to your fork of the [JavaScript version](https://github.com/Ada-C16/dynamic-programming-js)
+What is the space complexity of your solution? Remember to define your variables.
 
 ##### !end-question
 
 ##### !placeholder
 
-Add a link to your fork of the dynamic-programming-js repo.
-
 ##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
 
 ### !end-challenge
 

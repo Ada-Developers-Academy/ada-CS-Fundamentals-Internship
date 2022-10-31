@@ -6,7 +6,8 @@ We have observed that a breadth first search traversal of a tree allows us to fi
 
 With a weighted graph, finding the shortest path between two nodes looks slightly different. We consider the weight of each edge to be the 'length' or 'distance' of the edge. We calculate the total length of a path by summing the weights of all the edges that make up at the path.
 
-Below are two versions of the same graph: the version on the left is unweighted and the version on the right is unweighted.
+Below are two versions of the same graph: the version on the left is unweighted and the version on the right is weighted.
+
 
 Say we want to find the shortest path from Node B to Node D. In the unweighted graph, the shortest path would be along the direct edge from B to D for a path of length 1. 
 
@@ -74,7 +75,9 @@ Node D has two unvisited edges, one to Node C and one to Node F. Notice that bot
 
 For example, from the work we did in Step 2, we know the cost to get from our start node to node D is 3. The weight of the edge from Node D to C is also 3. 3 + 3 = 6 which is less than the current estimate of infinity so we revise our estimate of the minimum cost to travel from Node A to Node C to be 6. 
 
-We add Node B to the list of visited nodes and update the queue with all Node B's unvisited neighbors.
+
+We add Node D to the list of visited nodes and update the queue with all Node D's unvisited neighbors.
+
 
 ```
 current: D
@@ -212,8 +215,8 @@ The following pseudocode implementation of Dijkstra's assumes that we are provid
     - loop through all the current node's neighbors
         - if the neighbor has not yet been visited:
             - calculate distance from start node to neighbor via current node
-            - If calculated distance < distance[neighbor]
-                - distance[neighbor] = caclulated distance
+            - If calculated distance < distances[neighbor]
+                - distances[neighbor] = caclulated distance
                 - previous[neighbor] = current_node
             - queue.append(neighbor)
 - Return the previous and distances list
@@ -256,7 +259,7 @@ The graph `g` is given as an adjacency matrix where `adj_matrix[i][j]` has a val
 
 Return a dictionary that has two keys:
   - `previous` whose value is a list of the previous nodes in the shortest path from node `s` to the `i`th node
-  - `distances` whose value is the distance/cost of the shortest path from node `s` to e in the the graph `g`.
+  - `distances` whose value is a list of the distance/cost of the shortest path from node `s` to the `i`th node in the graph `g`.
 
 Example Input:
 ```python

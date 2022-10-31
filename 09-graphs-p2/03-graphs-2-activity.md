@@ -10,7 +10,7 @@ As a class we will introduce the interview problem, discuss test cases, why Dijk
 
 You can view the problem here: [Cheapest Flight Activity Repl](https://replit.com/@adadev/graphs-p2-practice)
 
-### Breakout Rooms - Number of Provinces Part 2
+### Breakout Rooms - Cheapest Flight 
 
 In small groups of 3-4 students, implement Cheapest Flights in the replit. Get as far as you can, asking for instructor assistance when needed. You _do not_ need to finish the problem completely. 
 

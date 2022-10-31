@@ -8,7 +8,7 @@ As of C17, CS Fundamentals students learn the following concepts and data struct
 - [Binary Search Trees](../03-Binary-Search-Trees/01-Ordered-Collections-Of-Data.md)
 - [Graphs: BFS & DFS](../08-graphs/01-graphs.md)
 - [Graphs: Dijkstra](../09-graphs-p2/01-graphs-review.md)
-- [Algorithms](../07-algorithms/algorithms.md) such as Divide & Conquer, Dynamic Programming & Greedy Algorithms
+- [Algorithms](../07-algorithms/01-algorithms.md) such as Divide & Conquer, Dynamic Programming & Greedy Algorithms
 
 These topics have been pared down from previous versions of Ada's CS Fundamentals in Internship course to shift CS Fundamentals from a general data structures and algorithms course to a course focused on strengthening students' technical interviewing skills. 
 

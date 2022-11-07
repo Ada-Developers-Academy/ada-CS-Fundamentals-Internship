@@ -322,7 +322,10 @@ class TestChallenge(unittest.TestCase):
 
 <!-- other optional sections -->
 #### !hint 
-<!-- Feeling stuck? Watch the video solution below? -->
+Feeling stuck? Take a look at the video solution below! 
+<br>
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3815b463-50b3-45df-9e06-af380186ca4f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 #### !end-hint
 ##### !explanation
 

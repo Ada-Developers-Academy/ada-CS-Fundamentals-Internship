@@ -10,12 +10,59 @@ We will go over the following questions as a class. This activity does not need 
 ### !challenge
 
 * type: multiple-choice
+* id: 96750004-7b44-4ba8-ba09-9eda975603fd
+* title: Minimum Operations to Make the Array Increasing
+
+##### !question
+**Section B**
+Suppose you are given the following question:
+
+You are given an array of integers `nums`. In one operation, you can choose an element of the array and increment it by 1.
+
+Return the minimum number of operations needed to make `nums` strictly increasing.
+
+An array `nums` is strictly increasing if `nums[i] < nums[i + 1] for all 0 <= i < nums.length - 1`. An array of length 1 is trivially strictly increasing.
+
+
+**Which of the following algorithmic approaches would best suit this problem?**
+##### !end-question
+
+##### !options
+
+a| Divide & Conquer
+b| Greedy
+c| Dynamic Programming
+
+##### !end-options
+
+##### !answer
+
+b|
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
 * id: 810bdf9b-b261-41bb-848b-4766a2392450
 * title: Gas Stations
 <!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
 <!-- * topics: [python, pandas] (Checkpoints only. optional the topics for analyzing points) -->
 
 ##### !question
+**Section A**
 
 Suppose you are given the following question:
 
@@ -108,7 +155,7 @@ Suppose you are given the following question:
 
 Given an array of integers `nums` sorted in ascending order, find the starting and ending position of a given `target` value as a tuple.
 
-If the garget is not found in the array, return (-1,-1)
+If the target is not found in the array, return (-1,-1)
 
 **Which of the following algorithmic approaches would best suit this problem?**
 ##### !end-question
@@ -141,9 +188,10 @@ As a class, we will pick 1-2 problems to solve (as time allows).
 
 We will first attempt to solve the problems as a small group, then come back to talk through any sticking points and work through possible solutions as a class. 
 
-[gas station](https://replit.com/@adadev/gas-station#main.py)
-[shortest common supersequence](https://replit.com/@adadev/shortest-common-supersequence#main.py)
-[find the first and last position of an element](https://replit.com/@adadev/first-and-last#main.py)
+[Section A: Gas Station](https://replit.com/@adadev/gas-station#main.py) <br>
+[Section B: Minimum Operations](https://replit.com/@adadev/minimum-operations#README.md) <br>
+[Shortest Common Supersequence](https://replit.com/@adadev/shortest-common-supersequence#main.py) <br>
+[Find the First and Last Position of an Element](https://replit.com/@adadev/first-and-last#main.py)
 
 ### Small Group Work
 

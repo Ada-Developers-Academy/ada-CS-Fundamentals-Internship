@@ -191,7 +191,7 @@ We will first attempt to solve the problems as a small group, then come back to 
 [Section A: Gas Station](https://replit.com/@adadev/gas-station#main.py) <br>
 [Section B: Minimum Operations](https://replit.com/@adadev/minimum-operations#README.md) <br>
 [Shortest Common Supersequence](https://replit.com/@adadev/shortest-common-supersequence#main.py) <br>
-[Find the First and Last Position of an Element](https://replit.com/@adadev/first-and-last#main.py)
+[Find the First and Last Position of an Element](https://replit.com/@adadev/first-and-last-section-b#divide_and_conquer/find_first_and_last.py)
 
 ### Small Group Work
 

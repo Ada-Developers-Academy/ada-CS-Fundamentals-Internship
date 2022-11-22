@@ -187,4 +187,14 @@ Standards:
         Type: Checkpoint
         UID: 92514af3-c487-40cb-acbc-8b62d864be82
         Path: /07-algorithms/08-algorithms-checkpoint.md
-
+  -
+    Title: Crash Course Lessons
+    Description: Video lesson and slides for Crash Courses such as OOP, Recursion, etc
+    UID: f0732f6d-faca-45cf-9b59-80164d61d5cb
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: a96035b8-5483-4151-a37c-a88e4f12a4ef
+        Path: /11-crash-courses/01-oop.md

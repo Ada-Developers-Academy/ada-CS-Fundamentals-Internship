@@ -258,7 +258,7 @@ Computer Science was initially pioneered in western cultures where people read l
 
 A breadth first search traversal, like depth first search traversals, begins at the root node of the tree. It then examines each node level by level, meaning the root's direct children are examined, then the root's grandchildren, and so on and so forth.  
 
-To implement breadth first search, we use a [queue](../02-linked-lists/03-linked-lists-stacks-queues.md), which is a linear ordered collection of data which adds and removes elements according to a first-in first-out (FIFO) principle similar to a queue or line of people in real life: the first element added to the queue is the first to be removed from the queue.
+To implement breadth first search, we use a [queue](../02-linked-lists/04-linked-lists-stacks-queues.md), which is a linear ordered collection of data which adds and removes elements according to a first-in first-out (FIFO) principle similar to a queue or line of people in real life: the first element added to the queue is the first to be removed from the queue.
 
 Pseudocode for the algorithm is as follows:
 

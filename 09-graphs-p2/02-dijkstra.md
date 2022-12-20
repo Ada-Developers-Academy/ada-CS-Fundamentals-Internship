@@ -224,7 +224,7 @@ The following pseudocode implementation of Dijkstra's assumes that we are provid
 ### !callout-info
 
 ## Priority Queues
-You may recall that when we first introduced [queues](../02-linked-lists/03-linked-lists-stacks-queues.md), we said queues remove elements in first-in-first-out (FIFO) order. 
+You may recall that when we first introduced [queues](../02-linked-lists/04-linked-lists-stacks-queues.md), we said queues remove elements in first-in-first-out (FIFO) order. 
 
 <break>
 

@@ -41,24 +41,28 @@ Standards:
         Path: /02-linked-lists/01-linked-lists.md
       -
         Type: Lesson
+        UID: 1622f195-c5bf-4c9e-ab13-f245ed963cc4
+        Path: /02-linked-lists/02-linked-lists-oop.md
+      -
+        Type: Lesson
         UID: 0c78e210-d831-41dd-956b-973aa151d904
-        Path: /02-linked-lists/02-linked-lists-implementation.md
+        Path: /02-linked-lists/03-linked-lists-implementation.md
       -
         Type: Lesson
         UID: 444cda30-ac77-4abd-858b-9db81b6f601d
-        Path: /02-linked-lists/03-linked-lists-stacks-queues.md
+        Path: /02-linked-lists/04-linked-lists-stacks-queues.md
       -
         Type: Lesson
         UID: 0d3a9473-199c-430d-bc55-43fc09fd50ff
-        Path: /02-linked-lists/04-linked-lists-supplemental-concepts.md
+        Path: /02-linked-lists/05-linked-lists-supplemental-concepts.md
       -
         Type: Lesson
         UID: 330c92d7-3591-4a85-a290-ae522fc31621
-        Path: /02-linked-lists/05-linked-list-activity.md
+        Path: /02-linked-lists/06-linked-list-activity.md
       -
         Type: Checkpoint
         UID: e1d0e2c0-acb2-436a-b329-8c3da5155443
-        Path: /02-linked-lists/06-linked-list-checkpoint.md
+        Path: /02-linked-lists/07-linked-list-checkpoint.md
   -
     Title: Binary Search Trees
     Description: Binary Search Trees
@@ -198,3 +202,7 @@ Standards:
         Type: Lesson
         UID: a96035b8-5483-4151-a37c-a88e4f12a4ef
         Path: /11-crash-courses/01-oop.md
+      -
+        Type: Lesson
+        UID: d778bd33-7350-4ea9-9730-720d24d547cd
+        Path: /11-crash-courses/02-recursion.md

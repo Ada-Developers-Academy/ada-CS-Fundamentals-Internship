@@ -27,8 +27,13 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 - [Thursdays at Ada Guide](https://drive.google.com/file/d/1Vz_NIgcPUqJlR9d1ZYUW8y3lJNVL_Xfl/view?usp=sharing)
 - [Thursdays at Ada Office Hours Guide](https://docs.google.com/document/d/12gi9oNXoXWvpJPANPbKE_KAvCJ9dwVNSkXmht5H0M84/edit?usp=sharing)
 - [Career Development Post Session Document](https://docs.google.com/document/d/1smwDoWvg1GUZjkxj4-CNSIDZpsbvwzBPHHXj5BQn748/edit?usp=sharing)
+<<<<<<< HEAD
 - [Request Instructor Feedback on your Project Submission](https://forms.gle/8Y73jxau5T9kR8Q37)
 - [CS Fundamentals Self Study Guide](https://docs.google.com/document/d/1Q5hpP5k4aNA3rTZB7_FkY8ZcxKldU_kkF21ssF5gMFE/edit?usp=sharing)
+=======
+- [CS Fundamentals Self Study Guide](https://docs.google.com/document/d/1Q5hpP5k4aNA3rTZB7_FkY8ZcxKldU_kkF21ssF5gMFE/edit?usp=sharing)
+- [Request Instructor Feedback on your Project Submission](https://forms.gle/8Y73jxau5T9kR8Q37)
+>>>>>>> 82c0b6743fa01aadcc10682716a6b047c334ae06
 
 #### Section A
 - [Section A Thursdays at Ada Overview Calendar](https://drive.google.com/file/d/1iQuNpFJ73xROlf-PZevYyWR_x1ZFImbk/view?usp=sharing)

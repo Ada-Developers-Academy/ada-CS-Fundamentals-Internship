@@ -205,12 +205,42 @@ Think of the end of the array as the top of the stack - new elements are appende
 ### !end-callout
 
 Below we can see the call stack for our `sum_zero_to_n` recursive implementation. With each recursive function call, a new element or frame is added to the top of the stack. When we reach our base case, we finally stop adding recursive calls to the stack and `sum_zero_to_n(0)` finishes executing in full. It returns `0` and gets popped off the stack. We then go back to our previous recursive call `sum_zero_to_n(1)` and finish executing this function call by combining `1` (n) with the result of our base case. It gets removed from the stack and we continue the pattern with the next element at the top of the stack until the stack is empty and we have the answer to `sum_zero_to_n(5)`!
+
 ![sum_zero_to_n call stack](images/call-stack-sum-zero-to-n.gif)
 
 
 ### Multiple Base Cases
 
-Fibonacci is a good example here. 
+Recursive functions can have multiple stopping conditions. In other words, they can have multiple base cases. 
+
+Consider a recursive implementation to find the nth number in the Fibonacci series. 
+
+Recall that Fibonacci is a naturally recursive sequence of numbers in which the nth number in the series is the sum of the previous two numbers in the series. Mathematically we express this as: _F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2<sub>_.
+
+But if we need to sum the previous two Fibonacci numbers to find the nth Fibonacci number, how do we handle the first two Fibonacci numbers in the series for which there are no two previous numbers?
+
+These numbers are given or pre-defined. The 0th and 1st numbers in the Fibonacci series thus each represent a base case in our recursive implementation. They can't be represented in terms of a previous number in the sequence, we must directly give the program the answer.
+
+```python
+def fibonacci(n):
+    # base case 1: find the 0th number in fibonacci series
+    if n == 0:
+        return 0
+    # base case 2: find the 1st number in fibonacci series
+    if n == 1:
+        return 1
+    # recursive case: otherwise fibonacci(n) is the sum of previous two numbers in series
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+
+Note that in the case of Fibonacci, we could to handle our two base cases using only one conditional statement with the following refactor:
+
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
 
 ### Multiple Recursive Cases
 Name in a phone book example 

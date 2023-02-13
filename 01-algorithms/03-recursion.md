@@ -490,7 +490,42 @@ Creating a helper function with extra parameters is a common technique used to d
 
 ## Call Stack and Memory
 
+Recursive solutions to problems often use more auxiliary space than their iterative counterparts. This is because of the space they take up in the call stack.
+
+Going back to our example of `sum_zero_to_n`, the iterative solution makes just one additional function call (it calls the `range` function) while the recursive function makes n-1 function calls. As a result the iterative solution takes O(1) space while the recursive solution takes O(n) space. 
+
+<details>
+<summary>Iterative Implementation</summary>
+<pre>
+<code>
+def sum_zero_to_n_iterative(n):
+    sum = 0
+    for num in range(n+1):
+        sum += num
+    return sum
+</pre>
+</code>
+</details>
+
+<details>
+<summary>Recursive Implementaiton</summary>
+<pre>
+<code>
+def sum_zero_to_n_recursive(n):
+    # base case
+    if n == 0:
+        return 0
+    # recursive case
+    else:
+        return n + sum_zero_to_n_recursive(n-1)
+</code>
+</pre>
+</details>
+
+When considering the Big O of recursive algorithms, we should always remember to account for the size of the recursive call stack. 
 
 ## Summary
 
+Recursion is a technique that allows us to repeatedly execute the body of a function by having the function call itself. Recursive functions use base cases to stop the cylce of recursive calls and recursive cases to call the function on smaller subproblems. It is possible to have multiple base cases and/or multiple recursive cases in a single recursive function. We can combine the results of recursive calls to find the solution to an overall problem.
 
+Programs track a chain of function calls using the call stack. Each function call added to the call stack takes up memory, so we must account for the size of the call stack a recursive function creates when calculating its space complexity. 

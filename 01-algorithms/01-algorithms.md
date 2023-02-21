@@ -217,7 +217,7 @@ Write your solution and then look below to see a sample solution.
 * type: code-snippet
 * language: python3.6
 * id: 4dc81336-1c2d-421e-8fe8-27326736b2e3
-* title: Duplicates with K Problem
+* title: Duplicates within K Problem
 * points: 1
 * topics: python, lists, hashtables
 
@@ -451,7 +451,7 @@ Instead of storing a list of all indices associated with a value, we only store 
 
   ```py
     
-  def duplicates_within_k(numbers):
+  def duplicates_within_k(numbers, k):
     '''
     INPUT: list of integers and integer k
     OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance

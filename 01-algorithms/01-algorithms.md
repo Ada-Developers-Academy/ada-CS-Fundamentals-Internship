@@ -199,7 +199,7 @@ Feeling stuck often means you've found a subproblem you need to solve!
 
 Sample subproblems could be:
 
-1.  Finding all sublists of size `k`.
+1.  Finding all sublists of size `k+1`. An element + the next k elements in the list means each sublist we are interested in sublists of size `k+1`.
 2.  Determining if a single sublist has duplicate elements.
 
 ##### !end-explanation
@@ -314,7 +314,7 @@ A sample solution could be:
       # initialize a second pointer to track end of subarray
       j = i + 1
       # initialize a variable to k
-      # will help make sure our subarray stays within size k
+      # will help make sure our subarray stays within size k + 1
       dist_remaining = k
       
       # while we are within k distance from i
@@ -363,7 +363,7 @@ A sample solution could be:
       # initialize a second pointer to track end of subarray
       j = i + 1
       # initialize a variable to k
-      # will help make sure our subarray stays within size k
+      # will help make sure our subarray stays within size k + 1
       dist_remaining = k
       
       # while we are within k distance from i
@@ -397,7 +397,7 @@ In the sample solution above we are using a nested loop to repeatedly traverse t
 
 Is it possible that an alternative approach can help us achieve simpler or more efficient code? Recall that for this problem we came up with the following subproblems:
 
-1. Finding all subarrays of size k
+1. Finding all subarrays of size `k + 1`
 2. Determining whether a single subarray contains duplicates
 
 In our current approach we work through a single subarray and check as we move through that subarray whether it contains duplicates. Then we repeat the process with the next subarray. 
@@ -431,7 +431,7 @@ To make our hash table, we'll only have to look at each element in the list once
 In our refactor we can start by creating a dictionary that maps sums to indices. We track the following values:
 
 * `elt_to_idx_map` - dictionary mapping element values from the input list to their corresponding indices 
-* 
+  
 Then we can repeat this algorithm for each index in the list:
 
 1. Check if the element already exists in the dictionary
@@ -484,7 +484,7 @@ Instead of storing a list of all indices associated with a value, we only store 
   ```
 </details>
 
-This solution now makes only one pass through the list, meaning as the input array grows, the solution will perform better compared to our original solution.
+This solution now makes only one pass through the list, meaning as the input array grows, the solution will perform better compared to our original solution. The video lesson contains a more detailed walkthrough of the sample refactored solution above.
 
 ## Summary
 

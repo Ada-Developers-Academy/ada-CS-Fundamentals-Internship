@@ -1,11 +1,6 @@
 # Introduction to Algorithms
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=2619c3c1-e6d5-48a1-a199-aad7014dcc4e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-<!--update video-->
-
-
-**Note** This video lesson covers algorithms content as it was written for cohorts C16 and prior. Significant changes have been made, and the above videos do not fully align with the updated lesson content. However, they do provide a good general overview of divide and conquer, greedy, and dynamic programming for those who prefer video lessons.
-
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=97e5271b-1f70-4acf-ae40-afb1005116f5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
 
@@ -27,10 +22,7 @@ After skimming all of the topics, go back and do a closer read of topics you nee
 
 ### !end-callout
 
-## Video Lesson
 
-
-- [Slide Deck used for C16](https://docs.google.com/presentation/d/1V4ycrfl3dbL0IbRHqK3ytU45VyMJQNHhyxpc3Ti2e28/edit?usp=sharing)
 
 ## What is an Algorithm?
 
@@ -287,7 +279,7 @@ class TestPython1(unittest.TestCase):
 Start by solving each subproblem. Then see if you combine the solutions to each subproblem to come up with an overall solution. 
 
 Still feeling stuck? Try watching the video walkthrough of a sample solution below:
-<!-- Insert video solution -->
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0300a58b-3411-466b-89b4-afb1000e153b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ##### !end-hint 
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->

@@ -1,13 +1,13 @@
 ## CS Fundamentals
 
-In Computer Science fundamentals students learn the following concepts and data structures:
+In Computer Science Fundamentals students learn the following concepts and data structures:
 
 
 - [Algorithmic Approaches](../01-algorithms/01-algorithms.md)
 - [Linked Lists](../02-linked-lists/01-linked-lists.md)
 - [Binary Search Trees](../03-Binary-Search-Trees/01-Ordered-Collections-Of-Data.md)
 - [Graphs: BFS & DFS](../04-graphs/01-graphs.md)
-- [Graphs: Dijkstra](../05-dijkstras/01-graphs-review.md)
+- [Graphs: Dijkstra's Algorithm](../05-dijkstras/01-graphs-review.md)
 
 ### Reverse Classroom
 
@@ -25,9 +25,13 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 ### Thursdays at Ada Quick Links
 
 #### General Resources
-- [Thursdays at Ada Guide](https://drive.google.com/file/d/1Vz_NIgcPUqJlR9d1ZYUW8y3lJNVL_Xfl/view?usp=sharing)
-- [Thursdays at Ada Office Hours Guide](https://docs.google.com/document/d/12gi9oNXoXWvpJPANPbKE_KAvCJ9dwVNSkXmht5H0M84/edit?usp=sharing)
-- [Career Development Post Session Document](https://docs.google.com/document/d/1smwDoWvg1GUZjkxj4-CNSIDZpsbvwzBPHHXj5BQn748/edit?usp=sharing)
+- [Internship Guide](https://drive.google.com/file/d/1mAkodI0l6nZBFwpX3tRQG1bNEb7C3tS2/view?usp=share_link)
+- [Thursdays at Ada Guide](https://drive.google.com/file/d/1GCwVbRDpdeAagMan-XIPRScxgHr4b7tR/view?usp=sharing)
+- [Thursdays at Ada Section Assignments](https://drive.google.com/file/d/1VC7A6J3MV3tbBJUdmW_KwngVfNrM9r_z/view?usp=share_link)
+- [Ada Intern Resource Library](https://drive.google.com/drive/folders/1PgOMAmsgIkNEumuJvJmGQJ_uH5rIhCh6?usp=sharing)
+- [CS Fundamentals Office Hours Guide](https://docs.google.com/document/d/12gi9oNXoXWvpJPANPbKE_KAvCJ9dwVNSkXmht5H0M84/edit?usp=sharing)
+- [CSM Internship Office Hours | Visitor Expectations](https://drive.google.com/file/d/1Hvyi-KmveH81CH3EoJNnhJYuzOimn4dQ/view?usp=share_link)
+- [Career Development Post Session Document](https://docs.google.com/document/d/1pILXmhfj0Dt8qdvEZbjc1seDbly01c2QeO9oPBWYvM0/edit)
 - [Your Study Plan Template](https://docs.google.com/document/d/1uCUKu9sZLUSbxsUVobnf8d2EaudXIQxqFpSRhhYE2jU/edit?usp=sharing)
 - [Submit an Alteration to Your Study Plan](https://docs.google.com/forms/d/e/1FAIpQLSeBxKIJUhkQ9li3ZOmsSnqlQ38xnBhLEYO8Bnh2CkJkf8i3Ww/viewform?usp=sf_link)
 

@@ -306,7 +306,7 @@ Recursive functions can have multiple stopping conditions. In other words, they 
 
 Consider a recursive implementation to find the nth number in the Fibonacci series. Recall that Fibonacci is a naturally recursive sequence of numbers in which the nth number in the series is the sum of the previous two numbers in the series. Mathematically we express this as: _F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2<sub>_.
 
-But if we need to sum the previous two Fibonacci numbers to find the nth Fibonacci number, how do we handle the first two Fibonacci numbers in the series for which there two previous numbers do not exist?
+But if we need to sum the previous two Fibonacci numbers to find the nth Fibonacci number, how do we handle the first two Fibonacci numbers in the series for which the two previous numbers do not exist?
 
 These numbers are given or pre-defined. The 0th and 1st numbers in the Fibonacci series thus each represent a separate base case in our recursive implementation. They can't be represented in terms of a previous number in the sequence, we must directly give the program the answer.
 

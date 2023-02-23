@@ -378,7 +378,7 @@ Play around with this code yourself: [recursive binary search](https://replit.co
 
 However with this function, we also have two recursive cases:
 - If the value at the middle of the list is bigger than the value we are searching for, we want to run `binary_search` again on the _left_ half of the list
-- If the value at the middle of the list is less than or equal to the value we are searching for, we want to run `binary_search` gain on the _right_ half of the list
+- If the value at the middle of the list is less than to the value we are searching for, we want to run `binary_search` gain on the _right_ half of the list
 
 Multiple recursive cases allow us to select which subproblem we recurse on in different scenarios. We no longer have to follow the same recursive pattern with every recursive function call as we did with `sum_zero_to_n` and `fibonacci`. 
 

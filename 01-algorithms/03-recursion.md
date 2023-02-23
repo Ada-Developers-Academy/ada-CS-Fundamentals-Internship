@@ -11,7 +11,7 @@
 |---        |---         |
 | Recursion | A problem solving technique in which a function calls itself repeatedly on smaller versions of the original input to solve the overall problem|
 | Bottom-Up | An approach to problem solving where smaller subproblems are solved, then combined to find a complete solution | 
-| Top-Down  | An approach to problem solving where in whichthe problem is solved by breaking apart the overall problem into smaller subproblems |
+| Top-Down  | An approach to problem solving where in which the problem is solved by breaking apart the overall problem into smaller subproblems |
 
 ## Overview
 

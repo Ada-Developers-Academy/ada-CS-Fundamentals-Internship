@@ -258,7 +258,7 @@ def sum_zero_to_n_recursive(n):
 
 ## 'Base Case' in the Iterative Solution
 
-Notice that when we implemented this function iteratively we still had to directly tell our program what the sum is when n is 0. We do this by setting our accumulator variable `sum` to 0. Otherwise, we have no initial value to sum with the subsequent numbers we iterate over. In the case that the input passed into the function is 0, the iterative solution will just return the intial value of `sum` which is also 0. 
+Notice that when we implemented this function iteratively we still had to directly tell our program what the sum is when n is 0. We do this by setting our accumulator variable `sum` to 0. Otherwise, we have no initial value to sum with the subsequent numbers we iterate over. In the case that the input passed into the function is 0, the iterative solution will just return the initial value of `sum` which is also 0. 
 
 ### !end-callout
 

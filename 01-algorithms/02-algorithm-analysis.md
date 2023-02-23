@@ -188,7 +188,7 @@ the person's name lies. (This is a binary search for a person's name.)
 Indeed, the classical example of a logarithmic problem is binary search:
 
 ```py
-def mystery_function(numbers, value):
+def binary_search(numbers, value):
     low = 0
     high = len(numbers) - 1
     while low <= high:
@@ -495,7 +495,7 @@ Space complexity measures the amount of memory an algorithm uses as it runs. Som
 The rules with regard to space complexity are:
 
 * Most single-value variables take up constant space.
-  * booleans, numbers, floats, etc
+  * booleans, integers, floats, etc
   * Sometimes these are called *primitives*
 * Strings take up O(n) space where n is the string length
 * Lists take up O(n) space where n is the list length

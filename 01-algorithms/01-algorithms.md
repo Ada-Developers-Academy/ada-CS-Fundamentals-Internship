@@ -279,7 +279,7 @@ class TestPython1(unittest.TestCase):
 Start by solving each subproblem. Then see if you combine the solutions to each subproblem to come up with an overall solution. 
 
 Still feeling stuck? Try watching the video walkthrough of a sample solution below:
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0300a58b-3411-466b-89b4-afb1000e153b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0300a58b-3411-466b-89b4-afb1000e153b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ##### !end-hint 
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->

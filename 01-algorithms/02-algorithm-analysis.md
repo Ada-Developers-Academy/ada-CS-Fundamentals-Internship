@@ -116,29 +116,28 @@ In general, whenever we do operations that are sequential (one after another) we
 Often we encounter algorithms which involve nested loops. For example the code below contains a for loop which runs n times and a loop nested inside of it which runs, worst-case, n-1 times where n is the length of `numbers`.
 
 ```py
-  def zero_sum_subarray(numbers):
-    if not numbers:
-      return []
+def duplicates_within_k(numbers, k):
+    lst_length = len(numbers)
 
-    subarrays = []
-
-    for i in range(len(numbers)):
-      current_subarray = []
-      subarray_sum = 0
-      for j in range(i, len(numbers)):
-        current_subarray.append(numbers[j])
-        subarray_sum += numbers[j] 
-        if subarray_sum == 0:
-          subarrays.append(current_subarray.copy())
-
-    return subarrays
+    if lst_length < 2 or k == 0:
+      return False
+    
+    for i in range(lst_length):
+      j = i + 1
+      dist_remaining = k
+      while dist_remaining > 0 and j < lst_length:
+        if numbers[i] == numbers[j]:
+          return True
+        j += 1
+        dist_remaining -= 1
+    return False
 ```
 
 When we encounter nested loops or other nested operations, we multiply the time complexity of the inner loop by the number of iterations of the outer loop. 
 
 So in this case:
 
-* If we multiply the number of iterations the outer loop does by the number of iterations the inner loop does we have `(n * (n-1))` which is equivalent to `(n^2 - n)`.
+* If we multiply the number of iterations the outer loop does by the number of iterations the inner loop does in the worst case we have `(n * (n-1))` which is equivalent to `(n^2 - n)`.
 * We can drop the less significant term `n` because `n^2` will dominate the result. 
 * We end up with a time complexity of `O(n^2)`.
 
@@ -189,7 +188,7 @@ the person's name lies. (This is a binary search for a person's name.)
 Indeed, the classical example of a logarithmic problem is binary search:
 
 ```py
-def mystery_function(numbers, value):
+def binary_search(numbers, value):
     low = 0
     high = len(numbers) - 1
     while low <= high:
@@ -496,7 +495,7 @@ Space complexity measures the amount of memory an algorithm uses as it runs. Som
 The rules with regard to space complexity are:
 
 * Most single-value variables take up constant space.
-  * booleans, numbers, floats, etc
+  * booleans, integers, floats, etc
   * Sometimes these are called *primitives*
 * Strings take up O(n) space where n is the string length
 * Lists take up O(n) space where n is the list length

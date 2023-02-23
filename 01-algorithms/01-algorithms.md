@@ -441,6 +441,8 @@ Instead of storing a list of all indices associated with a value, we only store 
 <details style="max-width: 700px; margin: auto;">
   <summary>Click here to see a sample solution</summary>
 
+  A detailed walkthrough of this solution is included in the last video lesson.
+
   ```py
     
   def duplicates_within_k(numbers, k):

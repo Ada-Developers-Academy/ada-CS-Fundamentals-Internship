@@ -717,8 +717,3 @@ Some general rules to use when thinking about time and space complexity:
 * Accessing an element in an array or a value in a dictionary by the key is constant `O(1)`
 * In a loop the time complexity is the length of the outer loop multiplied by the time complexity of the loop body
 
-## Categories of Algorithms
-
-There are a [number of different categories of algorithms](https://s2.smu.edu/~vdebroy/cse3353/Lectures/Lecture-7/Algorithm-Types.pdf).  Each category describes the general approach to the algorithm's use in solving its particular problem.  Categories are not exclusive; an algorithm can be a member of multiple categories.  For example QuickSort can be both a divide and conquer algorithm and a randomized algorithm if it picks a random element as a pivot to sort against at each stage. Categories of algorithms can provide us with useful tips and techniques for devising algorithms to problems that fall within a category.
-
-Next, we will look at two categories:  _divide and conquer_ algorithms and _dynamic programming_ algorithms.

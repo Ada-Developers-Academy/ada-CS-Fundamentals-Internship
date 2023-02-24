@@ -52,23 +52,19 @@ Standards:
       -
         Type: Lesson
         UID: 1609881b-773a-41e3-aee7-c23c66e20d29
-        Path: /01-algorithms/02-algorithms-divide-conquer.md
+        Path: /01-algorithms/04-algorithms-divide-conquer.md
       -
         Type: Lesson
         UID: 54496b4c-78bc-46ba-92b4-53ccee97e41f
-        Path: /01-algorithms/04-algorithms-dynamic-programming.md
+        Path: /01-algorithms/05-algorithms-dynamic-programming.md
       -
         Type: Lesson
         UID: d623f94b-71bc-414b-b138-a4b0264aefcf
-        Path: /01-algorithms/05-sliding-window.md
+        Path: /01-algorithms/06-sliding-window.md
       -
         Type: Lesson
         UID: e7ac6f0e-1186-4060-8be5-29e46b2fe352
-        Path: /01-algorithms/06-algorithms-supplemental-resources.md
-      -
-        Type: Lesson
-        UID: dfba8ca5-308f-4037-ba6f-b6e8b7876770
-        Path: /01-algorithms/07-algorithms-activity.md
+        Path: /01-algorithms/07-algorithms-supplemental-resources.md
   -
   
     Title: Linked Lists

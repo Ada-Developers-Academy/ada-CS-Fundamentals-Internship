@@ -2,6 +2,8 @@
 
 ## Learning Goals
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=7e1e6107-d0c4-4224-b27f-afb30003e32e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 This lesson is intended to serve as an abbreviated walkthrough of the divide and conquer approach.
 
 This lesson does not require prior knowledge about the divide and conquer technique, however you are encouraged to re-read the Divide and Conquer lesson under the Algorithmic Strategies topic provided during classroom* if you require more details about any of the review topics mentioned here.
@@ -122,7 +124,7 @@ You may notice similarities between this algorithm and the Merge Sort algorithm 
 
 Given an integer array, find the minimum and maximum element present in it by making the minimum number of comparisons.
 
-**Try implementing the algorithm below. Spend no more than 15 minutes on this**
+**Try implementing the algorithm below. Spend no more than 15 minutes on this. If you get stuck, you may view a video solution in the Minimum and Maximum in Array video featured in the playlist.**
 
 ##### !end-question
 
@@ -263,7 +265,7 @@ Spend *no more than 15 minutes* writing a modified binary search solution to the
 Suppose we are given a sorted array of non-negative distinct integers. 
 We would like to find the smallest missing non-negative element inside of the array.
 
-**Try implementing the algorithm below. Spend no more than 15 minutes on this**
+**Try implementing the algorithm below. Spend no more than 15 minutes on this. If you get stuck, you may view a video solution in the Smallest Missing Element video featured in the playlist.**
 
 ##### !end-question
 

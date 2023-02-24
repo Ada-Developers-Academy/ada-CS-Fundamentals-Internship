@@ -11,7 +11,7 @@
 |---        |---         |
 | Recursion | A problem solving technique in which a function calls itself repeatedly on smaller versions of the original input to solve the overall problem|
 | Bottom-Up | An approach to problem solving where smaller subproblems are solved, then combined to find a complete solution | 
-| Top-Down  | An approach to problem solving where in whichthe problem is solved by breaking apart the overall problem into smaller subproblems |
+| Top-Down  | An approach to problem solving where in which the problem is solved by breaking apart the overall problem into smaller subproblems |
 
 ## Overview
 
@@ -526,6 +526,12 @@ When considering the Big O of recursive algorithms, we should always remember to
 
 ## Summary
 
-Recursion is a technique that allows us to repeatedly execute the body of a function by having the function call itself. Recursive functions use base cases to stop the cylce of recursive calls and recursive cases to call the function on smaller subproblems. It is possible to have multiple base cases and/or multiple recursive cases in a single recursive function. We can combine the results of recursive calls to find the solution to an overall problem.
+Recursion is a technique that allows us to repeatedly execute the body of a function by having the function call itself. Recursive functions use base cases to stop the cycle of recursive calls and recursive cases to call the function on smaller subproblems. It is possible to have multiple base cases and/or multiple recursive cases in a single recursive function. We can combine the results of recursive calls to find the solution to an overall problem.
 
 Programs track a chain of function calls using the call stack. Each function call added to the call stack takes up memory, so we must account for the size of the call stack a recursive function creates when calculating its space complexity. 
+
+## Categories of Algorithms
+
+There are a [number of different categories of algorithms](https://s2.smu.edu/~vdebroy/cse3353/Lectures/Lecture-7/Algorithm-Types.pdf).  Each category describes the general approach to the algorithm's use in solving its particular problem.  Categories are not exclusive; an algorithm can be a member of multiple categories.  For example QuickSort can be both a divide and conquer algorithm and a randomized algorithm if it picks a random element as a pivot to sort against at each stage. Categories of algorithms can provide us with useful tips and techniques for devising algorithms to problems that fall within a category.
+
+Next, we will look at two categories:  _divide and conquer_ algorithms and _dynamic programming_ algorithms.

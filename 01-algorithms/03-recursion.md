@@ -526,7 +526,7 @@ When considering the Big O of recursive algorithms, we should always remember to
 
 ## Summary
 
-Recursion is a technique that allows us to repeatedly execute the body of a function by having the function call itself. Recursive functions use base cases to stop the cylce of recursive calls and recursive cases to call the function on smaller subproblems. It is possible to have multiple base cases and/or multiple recursive cases in a single recursive function. We can combine the results of recursive calls to find the solution to an overall problem.
+Recursion is a technique that allows us to repeatedly execute the body of a function by having the function call itself. Recursive functions use base cases to stop the cycle of recursive calls and recursive cases to call the function on smaller subproblems. It is possible to have multiple base cases and/or multiple recursive cases in a single recursive function. We can combine the results of recursive calls to find the solution to an overall problem.
 
 Programs track a chain of function calls using the call stack. Each function call added to the call stack takes up memory, so we must account for the size of the call stack a recursive function creates when calculating its space complexity. 
 

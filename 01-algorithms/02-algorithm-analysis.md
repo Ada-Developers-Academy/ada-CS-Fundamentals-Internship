@@ -1,6 +1,6 @@
 # Analysis of Algorithms
 
-<!-- Video Lesson -->
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=aa72b06b-7af5-4ac7-8e60-afb20057bdf0&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
 

@@ -1,4 +1,3 @@
-
 # Supplemental Concepts
 
 ## The Call Stack

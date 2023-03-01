@@ -1,6 +1,13 @@
 # Object Oriented Design of a Linked List
 
-### Encapsulation
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=983ae6ba-cbfd-4992-a678-afb801846780&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+## Learning Goals
+- Define encapsulation
+- Design a constructor for a singly and doubly linked list node class
+- Design a constructor for a singly and doubly linked list class
+
+## Encapsulation
 
 When designing a data structure like a linked list, we typically want our design to include not just our linked nodes but also methods that operate on our linked list, such as methods to add nodes, delete nodes, or get the length of the linked list. Bundling together multiple pieces of data and methods that operate on that data is called __encapsulation__, and you may already be familiar with it in the form of classes. 
 

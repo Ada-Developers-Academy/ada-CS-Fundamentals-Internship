@@ -1,45 +1,4 @@
-
-# Supplemental Concepts
-
-## The Call Stack
-
-As methods get called in an application, the system stores the current instruction addresses, local variables etc on a stack known as the _system call stack_.  Then when a method ends, the topmost method is popped off the stack allowing the system to resume execution.
-
-![Memory Layout Diagram](images/memory-layout.png)
-
-The diagram below shows the memory used by a running application.  At the top, the text in the application, and global variables are stored.  Below them is the dyanmic data allocated.  At the bottom the system stack stores the functions called.
-
-```python
-def function_a(x):
-    y = 4
-    z = function_b(x, y)
-    print(f"The number is {z}")
-
-
-def function_b(x, y):
-  # pause application
-    return x + y
-
-x = 3
-function_a(x)
-```
-
-For the code snippet above, the stack frame at the `# pause application` line would look like this:
-
-![Stack frame example](images/call-stack.png)
-
-<!-- Graphic saved at: https://drive.google.com/file/d/1SsxrrqIIw5oYonpKzwxvXAF3lTcQmB10/view?usp=sharing -->
-
-- As the application starts the system puts the main part of the application on the stack, and then main calls `function_a`.  
-- The system saves the arguments to `function_a` onto the stack, the address to return to (Main) when the method is finished and the local variabes in `function_a`.  
-- `function_b` is called and the system saves the arguments to `function_b` onto the stack, the return address (`function_a`) and any local variables in `function_b`.  
-- When `function_b` finishes, its stack frame is popped off the stack, and the return address is used to resume `function_a`.  
-- When `function_a` finishes the same pop operation is performed and the application returns to main.  
-- When the main part of the application is finished, its stack frame is popped off and the application terminates.  
-
-
-When an error is raised, the stack is popped until the error is rescued in the current method, or the application terminates and a trace of all the elements on the stack at the time of the error is reported.
-
+# Supplemental Concepts & Resources
 
 ## Pointers & References
 
@@ -47,21 +6,21 @@ You will often hear the terms _pointer_ and _reference_ in relation to dynamic d
 
 In some languages like C/C++ you can manipulate memory addresses and memory directly.  In other languages, like Python, you have references which refer to objects in memory, but you cannot directly work with the memory addresses.
 
-An example in C++
+An example in C++:
 
 ```c++
-  int x = 5;
-  int *ptr_x;
+  int x = 5; // declare an integer variable x which is assigned value 5
+  int* ptr_x;  // declare a variable ptr_x which will be assigned the memory address of an integer variable
   ptr_x = &x;  // Assign ptr_x the value of the memory address of x.
 ```
 
-We use references in Python whenever we use a Linked List since each node _refers_ to the next node in the chain and `head` refers to the 1st node in the chain.
+We use references in Python whenever we use a Linked List since each node _refers_ to the next node in the chain and `head` refers to the first node in the chain.
 
 ![Singly Linked List](images/singly-linked-list2.png)
 
 ## Memory Leaks
 
-Is a bug in how a program manages memory.  A _memory leak_ occurs when memory that is no longer needed by the program is not released back to the operating system.  Over time, if memory is used, and not returned to the system less and less memory is available to other programs and eventually not enough memory is available to run applications.  Modern operating systems return all system memory allocated to a program when it ends.  Thus memory leaks in long-running processes like daemons can cause a system to run out of memory.
+A **memory leak** is a bug resulting from how a program manages memory.  A _memory leak_ occurs when memory that is no longer needed by the program is not released back to the operating system.  Over time, if memory is used and not returned to the system, less and less memory is available to other programs to use. Eventually, there will not be enough available memory for applications to use. When a program ends, modern operating systems will return all memory allocated to that program back to the operating system itself. For this reason, most memory leaks today occur in long-running processes like [daemons](https://www.techtarget.com/whatis/definition/daemon).
 
 In Python, the Python interpreter manages memory for developers.  Python uses a [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) system which identifies memory no longer used by the application and returns it.
 
@@ -71,7 +30,7 @@ Consider when a node is removed from a Linked List:
 <!-- source:  https://stackoverflow.com/questions/41474163/singly-linked-list-remove -->
 
 
-When no variable refers to a node (holding 99 in the image above) the Python garbage collector will eventually return the memory to the operating system.
+When there is no longer a variable to reference a given node, for example `node.next` no longer references the node with value 99 in the image above, the Python garbage collector eventually returns the memory used to store node 99 to the operating system.
 
 ```python
 def remove_first(self):
@@ -84,7 +43,7 @@ def remove_first(self):
     return value
 ```
 
-Some languages however, place memory management on the developer.  C is one such language.  These lower-level languages give a developer more flexibility and control over low-level operations, at the cost of more responsibility and a greater likelyhood of errors.
+Other languages place memory management on the developer. C is one such language. These lower-level languages give a developer more flexibility and control over low-level operations at the cost of more responsibility and a greater likelihood of errors.
 
 Removing a Node from a Linked List in C
 
@@ -103,7 +62,6 @@ void removeFirst(struct node **headRef) {
 ## Resources
 - [Past Linked List Video Lessons](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=b1664c7e-f95e-40f5-971f-ad9000fe85d8)
 - [Past Stacks & Queues Video Lessons (in depth)](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=b987fd8f-b63c-479a-a679-ad93018aecaa)
-- [Current Slide Deck Used](https://docs.google.com/presentation/d/1lJ8WJnA6qRlHAIaRAjim3kiL4nRBWT5qvFGQQIB4EL4/edit?usp=sharing)
-- [Past Slide Deck Used In Class](https://drive.google.com/file/d/0B__DV26QHsH4bFczWXBXdGtHYkE/view?usp=sharing)
+- [Past Slide Deck Used](https://docs.google.com/presentation/d/1lJ8WJnA6qRlHAIaRAjim3kiL4nRBWT5qvFGQQIB4EL4/edit?usp=sharing)
 - [Linked Lists from Geeks for Geeks](https://www.geeksforgeeks.org/data-structures/linked-list/) - Lots of articles & practice problems
-- [Stanford LinkedList Basics](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)
+- [Stanford Linked List Basics](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)

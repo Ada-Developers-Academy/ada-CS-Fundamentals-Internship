@@ -1,11 +1,6 @@
 # Linked Lists
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=b1664c7e-f95e-40f5-971f-ad9000fe85d8&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
-## Video Lesson
-
-- [Slides](https://docs.google.com/presentation/d/1wWrcROp6MX57lSyZOLjlxBXoWGJbV43WWE_Ub-GxStk/edit?usp=sharing  )
-- [Linked List Exercises](https://github.com/ada-c17/Intersection-Linked-List)
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=bfff405a-8c23-4023-8dda-afb80157d99b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
 
@@ -80,7 +75,7 @@ Doubly linked lists take up additional memory, due to the additional `previous` 
 
 Linked lists have the following advantages:
 
-- **Dynamic Size** Linked lists are of dynamic size, a linked list only uses the memory required for it's current nodes.
+- **Dynamic Size** Linked lists are of dynamic size, a linked list only uses the memory required for its current nodes.
 - **Insertion/Deletion** Because each element does not need to be adjacent in a linked list it is easier to insert or remove an element from the front of a singly linked list or either end of a doubly linked list in O(1) time.  
   - Arrays require shifting adjacent elements on insertion or deletion at the front of a list, O(n).
   - Appending to an array is an O(1) operation, unless we have filled our allotted stretch of contiguous memory, in which case the entire array will be copied to a larger piece of contiguous memory allow room for the new element making it an O(n) operation.

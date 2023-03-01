@@ -101,7 +101,8 @@ void removeFirst(struct node **headRef) {
 ```
 
 ## Resources
-
+- [Past Linked List Video Lessons](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=b1664c7e-f95e-40f5-971f-ad9000fe85d8)
+- [Past Stacks & Queues Video Lessons (in depth)](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=b987fd8f-b63c-479a-a679-ad93018aecaa)
 - [Current Slide Deck Used](https://docs.google.com/presentation/d/1lJ8WJnA6qRlHAIaRAjim3kiL4nRBWT5qvFGQQIB4EL4/edit?usp=sharing)
 - [Past Slide Deck Used In Class](https://drive.google.com/file/d/0B__DV26QHsH4bFczWXBXdGtHYkE/view?usp=sharing)
 - [Linked Lists from Geeks for Geeks](https://www.geeksforgeeks.org/data-structures/linked-list/) - Lots of articles & practice problems

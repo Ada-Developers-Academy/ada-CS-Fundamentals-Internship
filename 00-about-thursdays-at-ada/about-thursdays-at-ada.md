@@ -34,6 +34,7 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 - [Career Development Post Session Document](https://docs.google.com/document/d/1pILXmhfj0Dt8qdvEZbjc1seDbly01c2QeO9oPBWYvM0/edit)
 - [Your Study Plan Template](https://docs.google.com/document/d/1uCUKu9sZLUSbxsUVobnf8d2EaudXIQxqFpSRhhYE2jU/edit?usp=sharing)
 - [Submit an Alteration to Your Study Plan](https://docs.google.com/forms/d/e/1FAIpQLSeBxKIJUhkQ9li3ZOmsSnqlQ38xnBhLEYO8Bnh2CkJkf8i3Ww/viewform?usp=sf_link)
+- [Mock Interview Question Bank](https://docs.google.com/document/d/1SmKIpGL_z_IXhgLiaGAf3kPc_bApgH1LtIGcXVoKUHE/edit#)
 
 #### Ligers
 - [Ligers Thursdays at Ada Overview Calendar](https://calendar.google.com/calendar/u/0?cid=Y18wZmVlNmQxZWFhNzM4YWVlNzM5YTRkZjZmNmRjN2YzNzFmNmExMDkxYWFjMzlkODBhM2YzMjkyNDBlN2I4ZDBlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)

@@ -1,5 +1,7 @@
 # Supplemental Concepts & Resources
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4e47b8a3-4417-43d8-9f6a-afba015bb38c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Pointers & References
 
 You will often hear the terms _pointer_ and _reference_ in relation to dynamic data structures like linked lists.  Both terms refer to a variable which **points** to data in memory, or holds the address of another variable in memory.  The concept is similar to a home.  The home is an object in memory, while the home's address is a _reference_ which indicates where to find the home.
@@ -10,11 +12,12 @@ An example in C++:
 
 ```c++
   int x = 5; // declare an integer variable x which is assigned value 5
-  int* ptr_x;  // declare a variable ptr_x which will be assigned the memory address of an integer variable
+  int* ptr_x;  // declare a variable ptr_x which will be assigned 
+  // the memory address of an integer variable
   ptr_x = &x;  // Assign ptr_x the value of the memory address of x.
 ```
 
-We use references in Python whenever we use a Linked List since each node _refers_ to the next node in the chain and `head` refers to the first node in the chain.
+We use references in Python whenever we use a linked list since each node _refers_ to the next node in the chain and `head` refers to the first node in the chain.
 
 ![Singly Linked List](images/singly-linked-list2.png)
 
@@ -27,10 +30,10 @@ In Python, the Python interpreter manages memory for developers.  Python uses a 
 Consider when a node is removed from a Linked List:
 
 ![Removing a node](images/linked-list-remove-node.png)
-<!-- source:  https://stackoverflow.com/questions/41474163/singly-linked-list-remove -->
 
 
-When there is no longer a variable to reference a given node, for example `node.next` no longer references the node with value 99 in the image above, the Python garbage collector eventually returns the memory used to store node 99 to the operating system.
+When there is no longer a variable to reference a given node, for example `node.next` no longer references the node with value 98320 in the image above, the Python garbage collector eventually returns the memory used to store node 98320 to the operating system.
+
 
 ```python
 def remove_first(self):

@@ -2,7 +2,7 @@
 
 ## Pointers & References
 
-You will often hear the terms _pointer_ and _reference_ in relation to dynamic data structures like LinkedLists.  Both terms refer to a variable which **points** to data in memory, or holds the address of another varaible in memory.  The concept is similar to a home.  The home is an object in memory, while the home's address is a _reference_ which indicates where to find the home.
+You will often hear the terms _pointer_ and _reference_ in relation to dynamic data structures like linked lists.  Both terms refer to a variable which **points** to data in memory, or holds the address of another variable in memory.  The concept is similar to a home.  The home is an object in memory, while the home's address is a _reference_ which indicates where to find the home.
 
 In some languages like C/C++ you can manipulate memory addresses and memory directly.  In other languages, like Python, you have references which refer to objects in memory, but you cannot directly work with the memory addresses.
 

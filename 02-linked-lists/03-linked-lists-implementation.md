@@ -1,5 +1,8 @@
-
 # Linked List Methods
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=79af82f9-ef65-4b3c-899d-afba011a220b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+## Overview
 
 Many languages have linked lists as a built-in data structure or well established libraries to import linked lists. Linked lists are not built-in to Python and while there are [several options](https://www.geeksforgeeks.org/python-library-for-linked-list/) we can leverage if we are interested in utilizing a linked list it can be a useful exercise to implement some common `LinkedList` methods ourselves.
 

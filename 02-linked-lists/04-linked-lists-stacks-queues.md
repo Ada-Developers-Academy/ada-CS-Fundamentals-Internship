@@ -1,8 +1,10 @@
 # Applications of Linked Lists
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a73926ae-b5b2-4585-a66e-afba01372ede&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Overview
 
-Linked lists have a variety of practical applications. Imagine a playlist in your favorite music application. Each song in the playlist represents a node in a doubly linked list. We can add new songs onto the end of our playlist in O(1) time. As we listen to our playlist, it is very easy to replay or skip a song using our previous and next pointers. 
+Linked lists have a variety of practical applications. Imagine a playlist in your favorite music application. Each song in the playlist is represented by a node in a doubly linked list. We can add new songs onto the end of our playlist in O(1) time. As we listen to our playlist, it is very easy to replay or skip a song using our previous and next pointers. 
 
 We might also imagine the undo and redo functions of a word processor or other software. Each change to our word document is stored in a node in a doubly linked list. We can undo and redo our changes by traversing our list backwards and forwards.
 
@@ -22,13 +24,13 @@ A stack is a data structure which stores a list of data and only provides access
 
 A stack provides the following methods:
 
-- **push(item)** - This method puts an item into the stack at the top.
+- **push(item)** - This method adds an item to the top of the stack.
 - **pop** - This method removes and returns the item on the top of the stack.
 - **is_empty** - This method returns true if the stack is empty and false otherwise.
 
 A stack might also implement a `peek` method which returns, but does not remove the item on top of the stack, and a `size` method which returns the number of items currently on the stack.
 
-We can picture a stack like a stack of plates where new plates can be added and removed from the top, but cannot be removed from the middle or bottom of the structure.
+While arrays and linked lists are usually visualized horizontally, stacks tend to be visualized as vertical data structures. We can picture a stack like a stack of plates where new plates can be added and removed from the top, but cannot be removed from the middle or bottom of the structure.
 
 ![Stack Diagram](images/stack.png)
 
@@ -48,15 +50,16 @@ class Stack:
     def pop(self):
       return self.store.remove_first()
 
-    def empty(self):
+    def is_empty(self):
         return self.store.length() == 0
 ```
-Linked lists are a popular choice for stack implementations because insertion and deletion, or `push` and `pop` in the case of our stack, are O(1) operations with linked lists. However, because a stack is an ADT, our `Stack` class doesn't _have_ to be implemented with a linked list. We could later change the implementation to use an array, and the users of the class would not need to change any of their code. This is because the implementation is _hidden_ behind a public interface. The top of the stack would reference the last element in the array. 
+
+In the above example `add_first`, `remove_first`, and `length` are all methods belonging to the `LinkedList` class. Linked lists are a popular choice for stack implementations because insertion and deletion, or `push` and `pop` in the case of our stack, are O(1) operations with linked lists. However, because a stack is an ADT, our `Stack` class doesn't _have_ to be implemented with a linked list. We could later change the implementation to use an array, and the users of the class would not need to change any of their code. This is because the implementation is _hidden_ behind a public interface. The top of the stack would reference the last element in the array. 
 
 **Stack ADT**
 ![Stack ADT](images/stackADT.png)
 
-The implementation code in the diagram above could make use of any data structure - a linked list, array, or something else - so long as it implements the method to its specification.
+The implementation code in the diagram above could make use of any data structure - a linked list, array, or something else - so long as it implements each stack method to its specification.
 
 
 ## Queues
@@ -82,7 +85,7 @@ Like a stack, a queue can be implemented several ways and the implementation sho
 ```python
 class Queue:
     def __init__(self):
-        self.store = LinkedList.new
+        self.store = LinkedList()
 
     def enqueue(self, item):
         self.store.add_last(item)
@@ -94,7 +97,7 @@ class Queue:
         self.store.remove_first()
 
     def is_empty(self):
-        return self.store.empty()
+        return self.store.length() == 0
 ```
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->

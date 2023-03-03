@@ -225,7 +225,7 @@ We can break down the `search` method as follows:
   2. Otherwise, redirect `current` to reference the next node in the list
 3. Return `False` if we have looked at all nodes and still have not found any nodes that have the specified value
 
-We can visualize using this algorithm to determine whether a node with the value `19750` exists in the example list below. 
+We can visualize using this algorithm to determine whether a node with the value `91750` exists in the example list below. 
 
 ![Search returns True in Singly Linked List](images/linked-list-search.gif)
 

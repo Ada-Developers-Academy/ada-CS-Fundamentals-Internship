@@ -65,6 +65,10 @@ Standards:
         Type: Lesson
         UID: e7ac6f0e-1186-4060-8be5-29e46b2fe352
         Path: /01-algorithms/07-algorithms-supplemental-resources.md
+      -
+        Type: Lesson
+        UID: 0f52cf8b-80de-4c9f-9b98-53047d37b0a2
+        Path: /01-algorithms/08-algorithms-activity.md
   -
   
     Title: Linked Lists

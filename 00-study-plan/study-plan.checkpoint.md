@@ -47,12 +47,12 @@ c|
 * type: short-answer
 * id: 133e45ba-8173-44d4-94f5-6cc7e80d8641
 * title: Study Plan
-* points: 1
+* points: 0
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question
 
-Please submit your study plan. If you chose Option A or B, you can copy or paste that option into your copy of the personal study plan document. 
+If you chose Path C, please submit your study plan. If you chose Option A or B, you do not need to submit your study plan unless you modified the milestone deadlines. You can optionally copy and paste that option into your copy of the personal study plan document to modify as needed. 
 
 ##### !end-question
 

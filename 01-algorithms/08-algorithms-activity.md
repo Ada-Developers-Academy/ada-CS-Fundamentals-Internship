@@ -4,7 +4,7 @@
 
 We will go over the recursive solution with and without Dynamic Programming in class. 
 
-Afterwards, you will work in groups to complete an Iterative Solution using Dynamic Programming.
+Afterwards, you will work in groups to complete an iterative solution using Dynamic Programming.
 
 ### Class Livecode
 

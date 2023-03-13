@@ -135,7 +135,7 @@ Standards:
       -
         Type: Lesson
         UID: 06dea201-6230-4967-b98f-2403ab11479a
-        Path: /03-binary-search-trees/07-Binary-Search-Trees-Activity.md
+        Path: /03-binary-search-trees/05-Binary-Search-Trees-Activity.md
   -
     Title: Graphs
     Description: Graph Data Structures & Algorithms - Breadth First Search & Depth First Search

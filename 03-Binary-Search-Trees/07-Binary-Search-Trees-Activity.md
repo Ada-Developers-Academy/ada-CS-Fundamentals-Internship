@@ -6,54 +6,7 @@ Our goal is to practice using and manipulating `TreeNode` objects.
 
 ## Review Binary Search Trees Lesson
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 
-### !challenge
-
-* type: checkbox
-* id: e2bae5b6-597a-4f7d-b8c2-1bf859ef2ad2
-* title: Where are Binary Search Trees
-* points: 1
-* topics: binary-search-trees, big-o
-
-##### !question
-
-What are advantages of a balanced Binary Search Tree?
-
-##### !end-question
-
-##### !options
-
-* Fast insertion speed `O(log n)`
-* Fast removal speed `O(log n)`
-* Uses less space than a Linked List or Array
-* Fast O(1) lookup speed
-* Fast O(1) insertion to the head and tail
-* Maintains the order of elements
-
-##### !end-options
-
-##### !answer
-
-* Fast insertion speed `O(log n)`
-* Fast removal speed `O(log n)`
-* Maintains the order of elements
-
-##### !end-answer
-
-##### !hint
-
-Remember that finding things in a balanced binary search tree is essentially performing binary search. Trees do have to maintain references to the children of each parent node.
-
-This is also our first nonlinear data structure.
-
-##### !end-hint
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 
 ### !challenge
 

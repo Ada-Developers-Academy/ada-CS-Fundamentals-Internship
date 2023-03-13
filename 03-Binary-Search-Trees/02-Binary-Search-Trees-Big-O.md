@@ -1,4 +1,4 @@
-# Balancing and Big O
+# Balancing Trees
 
 ### Overview
 Before we move on to serialization of binary search trees, let's take a moment to discuss the time and space complexity of searching, insertion, and deletion. To fully understand that, we must first talk about _balancing_. 
@@ -31,46 +31,6 @@ This is an example of a balanced tree.
 On the other hand, this is an example of an unbalanced tree.
 
 ![unbalanced bst](images/unbalanced-bst.png)
-
-### !challenge
-
-* type: multiple-choice
-* id: a1703f9c-c97c-4b7a-86cf-cadb8780c77f
-* title: Balanced
-* points: 1
-* topics: bst
-
-##### !question
-
-![bst3](images/bst3.png)
-
-Is the tree balanced?
-
-##### !end-question
-
-##### !options
-
-* Yes
-* No
-* Huh?
-
-##### !end-options
-
-##### !answer
-
-* Yes
-
-##### !end-answer
-
-##### !hint
-
-In a balanced tree no sibling subtrees differ in height more than 1.  So no left-right subtrees differ in height by 1.
-
-##### !end-hint
-
-### !end-challenge
-
-
 
 The time and space complexity of operations such as search, insert, and delete depend on whether a tree is balanced or unbalanced. 
 
@@ -391,9 +351,54 @@ For this reason, computer scientists spend a lot of time focusing on ways to mai
 
 The recursive solutions to search, insertion, and deletion all have a space complexity of O(log n) for a balanced tree while the iterative implementations all have a space complexity of O(1).
 
-This is because with the recursive solutions, each recursive call of the methods adds a frame to the system's call stack. With each of these operations, we make a recursive call each time we choose to traverse a new subtree which we do O(log n) times. 
+This is because with the recursive solutions, each recursive call of the methods adds a frame to the system's [call stack](../02-linked-lists//05-linked-lists-supplemental-concepts.md). With each of these operations, we make a recursive call each time we choose to traverse a new subtree which we do O(log n) times. 
 
 In contrast, the iterative solutions make only a single call to the method regardless of the size of the tree. We don't create any additional data structures that vary with the size of the tree in any of the operations, thus time complexity is constant or O(1).
+
+
+
+### !challenge
+
+* type: checkbox
+* id: e2bae5b6-597a-4f7d-b8c2-1bf859ef2ad2
+* title: Balanced Binary Search Tree Advantages
+* points: 1
+* topics: binary-search-trees, big-o
+
+##### !question
+
+What are advantages of a balanced Binary Search Tree?
+
+##### !end-question
+
+##### !options
+
+* Fast insertion speed `O(log n)`
+* Fast removal speed `O(log n)`
+* Uses less space than a Linked List or Array
+* Fast O(1) lookup speed
+* Fast O(1) insertion to the head and tail
+* Maintains the order of elements
+
+##### !end-options
+
+##### !answer
+
+* Fast insertion speed `O(log n)`
+* Fast removal speed `O(log n)`
+* Maintains the order of elements
+
+##### !end-answer
+
+##### !hint
+
+Remember that finding things in a balanced binary search tree is essentially performing binary search. Trees do have to maintain references to the children of each parent node.
+
+This is also our first nonlinear data structure.
+
+##### !end-hint
+
+### !end-challenge
 
 ## Summary
 
@@ -415,39 +420,3 @@ We can see below a balanced Binary Search Tree provides good performance while m
 3|Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)
 4|Binary Tree (balanced)|O(log n)|O(log n)|O(log n)|O(log n)|NA|NA
 5|Hash Table|O(1)|O(1)|O(1)|O(1)|NA|NA
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-### !challenge
-
-* type: paragraph
-* id: ce50eaaf-c5c9-448e-a26e-f59e4aeba9ed
-* title: Binary Search Trees Reflection
-* points: 0
-<!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
-
-##### !question
-
-Take 5 minutes to review the above lesson and write down any questions you still have about the material. Is there anything that needs more clarification or you would like to go over again?
-
-Bring these questions to class! If reviewing this material after class, bring these questions to the #study-hall Slack channel or ask in office hours.
-
-##### !end-question
-
-##### !placeholder
-
-Ex. This lesson went a little over my head. 
-
-Ex. Is there ever a case in which we want a tree to be unbalanced?
-
-##### !end-placeholder
-
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
-
-### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->

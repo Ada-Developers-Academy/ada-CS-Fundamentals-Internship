@@ -21,7 +21,60 @@ Below is a summary of vocab that we covered in this lesson.
 
 ## Optional - Additional Exercises
 
-### Height
+
+### Short Answer Practice - Utility of Binary Search Trees
+### !challenge
+
+* type: paragraph
+* id: ca15bd85-d63b-4197-8a44-5caeecec1b54
+* title: Utility of Binary Search Trees
+
+##### !question
+
+In your own words, why are binary search trees useful? What is an example use case for binary search trees?
+
+##### !end-question
+
+##### !placeholder
+
+Why BSTs?
+
+##### !end-placeholder
+
+### !end-challenge
+
+### Short Answer Practice - Balanced Trees
+
+### !challenge
+
+* type: paragraph
+* id: e7fd45e2-ec6a-4208-9682-8766406cb43f
+* title: Why is it important for a tree to be balanced?
+* points: 1
+* topics: python, binary-search-trees
+
+##### !question
+
+Why is it so important for a binary search tree to be balanced?
+
+##### !end-question
+
+##### !placeholder
+
+Why keep a tree balanced?
+
+##### !end-placeholder
+
+##### !explanation
+
+A binary search tree maintains O(log n) time to find, add, and remove elements, *if and only if* the tree is balanced.  If the tree is not balanced then the time to find, add, and remove elements will resemble a be O(n).
+
+##### !end-explanation
+
+### !end-challenge
+
+
+### Technical Practice - Height
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -158,7 +211,7 @@ An example of a working implementation:
 ### !end-challenge
 
 
-### Removal
+### Technical Practice - Removal
 
 
 ### !challenge
@@ -445,8 +498,11 @@ def delete(self, key):
 ### !end-challenge
 
 ## Additional Resources
-
+* [C16 Video Lessons](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=ceac4982-192f-44a7-88a8-ad91016c972b)
+* [C16 Slide Deck](https://docs.google.com/presentation/d/1M1tDoYMERJKwHBOp8LEmGDLwpg1kDqtGEpsGgrvPoIU/edit?usp=sharing)
+* [Binary Search Tree Lecture using Ruby](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d9746397-8a10-43be-b1cc-aaaf00720b31)
+* [Binary Search Trees with Ruby Slide Deck](https://docs.google.com/presentation/d/1Fj0deIUswGZ3ooJMpgVUqPEaWHKTkQ1w2Ci-yf8v66M/edit?usp=sharing)
 * [MIT Open Courseware on Binary Search Trees](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-5-binary-search-trees-bst-sort/)
 * [FreeCodeCamp Binary Search Tree Algorithms for JavaScript Beginners](https://www.freecodecamp.org/news/binary-tree-algorithms-for-javascript-beginners/)
 * [Geeks for Geeks on Self-Balancing-Binary-Search-Trees](https://www.geeksforgeeks.org/self-balancing-binary-search-trees-comparisons/)
-*[Dev Genius Depth First Search Tree Traversals](https://blog.devgenius.io/dfs-depth-first-search-traversal-techniques-short-and-sweet-1e4c134babcf)
+* [Dev Genius Depth First Search Tree Traversals](https://blog.devgenius.io/dfs-depth-first-search-traversal-techniques-short-and-sweet-1e4c134babcf)

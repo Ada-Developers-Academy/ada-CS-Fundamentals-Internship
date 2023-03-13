@@ -105,6 +105,46 @@ Different types of trees will maintain different properties including but not li
 
 ### !end-callout
 
+### !challenge
+
+* type: multiple-choice
+* id: 9e97d43a-8b79-4577-9397-8739678fd1b8
+* title: What is the height of the tree illustrated below?
+* points: 1
+* topics: python, binary-search-trees
+
+##### !question
+
+What is the height of the tree illustrated below?
+
+![Unbalanced Binary Search Tree](./images/unbalanced-bst.png)
+
+##### !end-question
+
+##### !options
+
+* 1
+* 2
+* 3
+* 4
+* 5
+
+##### !end-options
+
+##### !answer
+
+* 5
+
+##### !end-answer
+
+##### !explanation
+
+The max number of nodes you can travel through on a single path is 5.
+
+##### !end-explanation
+
+### !end-challenge
+
 ### Binary Search Tree Node
 
 We can create a `TreeNode` class to encapsulate a single element or node within a binary search tree. Whereas our linked list nodes maintained a single `next` pointer, our binary search tree nodes will maintain two pointers, `left` and `right`, to reference its left and right child nodes respectively.
@@ -838,6 +878,7 @@ def delete(self, key):
     self.root = self.delete_helper(self.root, key)
 ```
 </summary>
+</details>
 
 ## Reflection
 

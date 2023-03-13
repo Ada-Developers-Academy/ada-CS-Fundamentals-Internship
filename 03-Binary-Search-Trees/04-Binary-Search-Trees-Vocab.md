@@ -155,8 +155,293 @@ An example of a working implementation:
 ```
 
 ##### !end-explanation
+### !end-challenge
 
 
+### Removal
+
+
+### !challenge
+* type: code-snippet
+* language: python3.6
+* id: e6e5ea66-d55f-4fc0-bc6f-eeda3f8106bd
+* title: Binary Search Tree Recursive Removal
+* points: 0
+
+##### !question
+
+Without looking back at the lesson's implementation, implement `delete` recursively for a binary search tree. The `key` is the key of the node the user wants to remove. If there are multiple nodes with the same key, `delete` should remove the first node in the tree with that key.
+
+##### !end-question
+
+##### !placeholder
+
+```py
+class TreeNode:
+    def __init__(self, key, val = None):
+        if val == None:
+            val = key
+        self.key = key
+        self.value = val
+        self.left = None
+        self.right = None
+class Tree:
+    def __init__(self):
+        self.root = None 
+    
+    def delete(self, key):
+        pass
+```
+
+##### !end-placeholder
+
+##### !tests
+```py
+import unittest
+from main import *
+class TreeExtended(Tree):
+    def add_helper(self, current_node, new_node):
+        if new_node.key  < current_node.key:
+            if not current_node.left:
+                current_node.left = new_node
+                return
+            self.add_helper(current_node.left, new_node)
+        else:
+            if not current_node.right:
+                current_node.right = new_node
+                return
+            self.add_helper(current_node.right, new_node)
+    def add(self, key, value = None):
+        if not self.root:
+            self.root = TreeNode(key, value)
+        else:
+            new_node = TreeNode(key, value)
+            self.add_helper(self.root, new_node)
+    def inorder_helper(self, current_node, values):
+        if not current_node:
+            return values
+        self.inorder_helper(current_node.left, values)
+        values.append({ 
+            "key": current_node.key,
+            "value": current_node.value
+        })
+        self.inorder_helper(current_node.right, values)
+        return values
+    def inorder(self):
+        values = []
+        return self.inorder_helper(self.root, values)
+class TestPython1(unittest.TestCase):
+    def setUp(self) -> None:
+        def tree_with_nodes() -> TreeExtended():
+            t = TreeExtended()
+            t.add(5, "Peter")
+            t.add(3, "Paul")
+            t.add(1, "Mary")
+            t.add(10, "Karla")
+            t.add(9, "Mae")
+            t.add(15, "Ada")
+            t.add(13, "Nate")
+            t.add(11, "Jane")
+            t.add(12, "Jenny")
+            t.add(25, "Kari")
+            return t
+        def tree_with_dupe() -> TreeExtended():
+            t = TreeExtended()
+            t.add(5, "Peter")
+            t.add(3, "Paul")
+            t.add(1, "Mary")
+            t.add(5, "Peter's Twin")
+            return t
+        
+        self.empty_tree = TreeExtended()
+        self.tree_with_nodes = tree_with_nodes()
+        self.tree_with_dupe = tree_with_dupe()
+    
+    def tearDown(self) -> None:
+        self.empty_tree = TreeExtended()
+    def test_returns_none_for_empty_tree(self):
+        self.empty_tree.delete(5)
+        self.assertEqual([], self.empty_tree.inorder())
+    
+    def test_can_remove_single_root_node(self):
+        self.empty_tree.add(5, "Peter")
+        self.empty_tree.delete(5)
+        self.assertEqual([], self.empty_tree.inorder())
+    def test_can_remove_left_leaf(self):
+        self.empty_tree.add(5, "Peter")
+        self.empty_tree.add(3, "Mary")
+        expected = [{
+            'key': 5,
+            'value': 'Peter'
+        }]
+        self.empty_tree.delete(3)
+        self.assertEqual(expected, self.empty_tree.inorder())
+    
+    def test_can_remove_right_leaf(self):
+        self.empty_tree.add(5, "Peter")
+        self.empty_tree.add(10, "Paul")
+        expected = [{
+            'key': 5,
+            'value': 'Peter'
+        }]
+        self.empty_tree.delete(10)
+        self.assertEqual(expected, self.empty_tree.inorder())
+    def test_can_remove_node_with_two_children(self):
+        self.empty_tree.add(5, "Peter")
+        self.empty_tree.add(1, "Paul")
+        self.empty_tree.add(10, "Mary")
+        expected = [
+            {
+                'key': 1,
+                'value': 'Paul'
+            },
+            {
+                'key': 10,
+                'value': 'Mary'
+            }
+        ]
+        self.empty_tree.delete(5)
+        self.assertEqual(expected, self.empty_tree.inorder())
+    def test_can_find_inorder_successor(self):
+        self.tree_with_nodes.delete(10)
+        expected = [
+            {
+                'key': 1,
+                'value': 'Mary'
+            },
+            {
+                'key': 3,
+                'value': 'Paul' 
+            },
+            {
+                'key': 5,
+                'value': 'Peter'
+            },
+            {
+                'key': 9,
+                'value': 'Mae'
+            },
+            {
+                'key': 11,
+                'value': 'Jane'
+            },
+            {
+                'key': 12,
+                'value': 'Jenny'
+            },
+            {
+                'key': 13,
+                'value': 'Nate'
+            },
+            {
+                'key': 15,
+                'value': 'Ada'
+            },
+            {
+                'key': 25,
+                'value': 'Kari'
+            }
+        ]
+        self.assertEqual(expected, self.tree_with_nodes.inorder())
+    def test_can_delete_dupe(self):
+        self.tree_with_dupe.delete(5)
+        expected = [
+            {
+                "key": 1,
+                "value": "Mary"
+            },
+            {
+                "key": 3,
+                "value": "Paul"
+            },
+            {
+                "key": 5,
+                "value": "Peter's Twin"
+            }
+        ]
+        self.assertEqual(expected, self.tree_with_dupe.inorder())
+    
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+##### !hint 
+Pseudocode
+```
+Method delete:
+    Base Case:
+        If the root is None, return None
+  
+    Recursive Case:
+        Otherwise, recur down the tree:
+            If the key is less than the current node's key, call the delete function on current node's left subtree.
+            If the key is greater than the current node's key, call the delete function on current node's right subtree.
+            If the current node is the node to be deleted:
+                If current node's left child is None:
+                    return the right child
+                If current node's right child is None:
+                    return the left child
+                Otherwise:
+                    Find the minimum node in the right subtree
+                    Set the current node equal to the minimum node
+        Return the current node
+```
+
+
+Consider creating a helper function to find the minimum node in a tree. 
+
+Still feeling stuck? Check this video walkthrough of the solution.
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5e4deb73-094d-4c97-b2db-af0e0148f7f9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+An example of a working implementation:
+
+```py
+#Helper function to find the minimum node in a tree
+def min_node(self, root):
+    # minimum node will be in last leaf in left subtree
+    # traverse left subtree
+    while root.left:
+        # continue traversal, by replacing root with left subtree
+        root = root.left
+    # return the key and the value of minimum node
+    return root.key, root.value
+def delete_helper(self, current_root, key):
+    #if key is less than current node's
+    if key < current_root.key:
+        #call delete on left subtree
+        current_root.left = self.delete_helper(current_root.left, key)
+    #if key is greater than current node's
+    elif key > current_root.key:
+        #call delete on right subtree
+        current_root.right = self.delete_helper(current_root.right, key)
+    #if we found the node to delete
+    else:
+        #if node doesn't have a left subtree
+        if not current_root.left:
+            #return the right subtree
+            return current_root.right
+        #if node doesn't have a right subtree
+        elif not current_root.right:
+            # return right subtree
+            return current_root.left
+        # if node has both left and right subtrees
+        # find the minimum node in the right subtree, and replace the deleted node with it
+        current_root.key, current_root.value = self.min_node(current_root.right)
+        # delete the minimum node in the right subtree
+        current_root.right = self.delete_helper(current_root.right, current_root.key)
+    # return the current node
+    return current_root
+def delete(self, key):
+    if not self.root:
+        return
+    self.root = self.delete_helper(self.root, key)
+```
+
+##### !end-explanation 
 ### !end-challenge
 
 ## Additional Resources

@@ -8,45 +8,7 @@ Our goal is to practice using and manipulating `TreeNode` objects.
 
 
 
-### !challenge
 
-* type: multiple-choice
-* id: 9e97d43a-8b79-4577-9397-8739678fd1b8
-* title: What is the height of the tree illustrated below?
-* points: 1
-* topics: python, binary-search-trees
-
-##### !question
-
-What is the height of the tree illustrated below?
-
-![Unbalanced Binary Search Tree](./images/unbalanced-bst.png)
-
-##### !end-question
-
-##### !options
-
-* 1
-* 2
-* 3
-* 4
-* 5
-
-##### !end-options
-
-##### !answer
-
-* 5
-
-##### !end-answer
-
-##### !explanation
-
-The max number of nodes you can travel through on a single path is 5.
-
-##### !end-explanation
-
-### !end-challenge
 
 <!-- ======================= END CHALLENGE ======================= -->
 

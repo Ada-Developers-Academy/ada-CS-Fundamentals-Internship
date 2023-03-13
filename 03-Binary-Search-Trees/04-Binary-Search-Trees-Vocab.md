@@ -19,6 +19,147 @@ Below is a summary of vocab that we covered in this lesson.
 | Depth-First Traversal 	|  An algorithm for traversing or searching a tree. The algorithm starts at the root node and explores as far as possible along each branch before backtracking.	| | A depth-first traversal looks like a mouse exploring a maze in that it goes as far down one path before backtracking when encountering dead ends. |
 | Breadth-first traversal 	|  An algorithm for searching a tree data structure for a node that satisfies a given property. It starts at the tree root and explores all nodes at the present depth prior to moving on to the nodes at the next depth level. 	| | I printed out the tree level-by-level so I had to perform a breadth-first traversal. |
 
+## Additional Challenge Exercises
+
+### Height
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: a8078856-e772-4e3f-9267-6bbeb006ee5d
+* title: Binary Search Tree Recursive Height
+* points: 0
+
+##### !question
+
+Implement a recursive `height` function for a binary search tree. The function should return the height of the tree. Note that the tree may not be balanced. 
+
+##### !end-question
+
+##### !placeholder
+
+```py
+class TreeNode:
+    def __init__(self, key, val = None):
+        if val == None:
+            val = key
+
+        self.key = key
+        self.value = val
+        self.left = None
+        self.right = None
+
+class Tree:
+    def __init__(self):
+        self.root = None
+    
+    def height(self):
+        # implement using recursion
+        pass
+```
+
+##### !end-placeholder
+
+##### !tests
+```py
+import unittest
+from main import *
+
+class TreeExtended(Tree):
+
+    def add_helper(self, current_node, new_node):
+        if new_node.key  < current_node.key:
+            if not current_node.left:
+                current_node.left = new_node
+                return
+            self.add_helper(current_node.left, new_node)
+        else:
+            if not current_node.right:
+                current_node.right = new_node
+                return
+            self.add_helper(current_node.right, new_node)
+
+    def add(self, key, value = None):
+        if not self.root:
+            self.root = TreeNode(key, value)
+        else:
+            new_node = TreeNode(key, value)
+            self.add_helper(self.root, new_node)
+
+class TestPython1(unittest.TestCase):
+  def setUp(self) -> None:
+
+    def tree_with_nodes() -> TreeExtended():
+        t = TreeExtended()
+        t.add(5, "Peter")
+        t.add(3, "Paul")
+        t.add(1, "Mary")
+        t.add(10, "Karla")
+        t.add(15, "Ada")
+        t.add(25, "Kari")
+        return t
+    
+    self.empty_tree = TreeExtended()
+    self.tree_with_nodes = tree_with_nodes()
+    
+  def tearDown(self) -> None:
+      self.empty_tree = TreeExtended()
+
+  def test_height_of_empty_tree_is_zero(self):
+    self.assertEqual(0,self.empty_tree.height())
+  
+  def test_height_of_one_node_tree_is_one(self):
+    self.empty_tree.add(5, "Peter")
+
+    self.assertEqual(1, self.empty_tree.height())
+
+  def test_height_of_many_node_tree(self):
+    self.assertEqual(4, self.tree_with_nodes.height())
+
+    self.tree_with_nodes.add(2, "pasta")
+    self.tree_with_nodes.add(2.5, "bread")
+    self.assertEqual(5, self.tree_with_nodes.height())
+
+```
+
+##### !end-tests
+
+<!-- other optional sections -->
+##### !hint
+Pseudocode:
+```
+If the current node is nil return 0
+
+Otherwise return 1 plus the maximum of the heights of the right and left subtrees
+```
+
+Still feeling stuck? Check this video walkthrough of the solution.
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=996e137b-e4f2-460e-a2e8-af0e01521de6&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+##### !end-hint
+##### !explanation 
+An example of a working implementation:
+```py
+    def height_helper(self, current_node):
+        if not current_node:
+            return 0
+
+        return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
+    
+    def height(self):
+        return self.height_helper(self.root)
+```
+
+##### !end-explanation
+
+
+### !end-challenge
 
 ## Additional Resources
 

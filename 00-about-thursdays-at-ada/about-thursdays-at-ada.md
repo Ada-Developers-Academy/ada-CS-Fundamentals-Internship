@@ -17,7 +17,8 @@ CS Fundamentals is taught in a [flipped-classroom](https://omerad.msu.edu/index.
 
 All the CS Fundamentals and Career Services online sessions are recorded in Panopto.
 
-- [CS Fundamentals Class Lesson Recordings](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=85008c14-9981-42fe-8950-afc0016af8e9)
+- [CS Fundamentals Panopto Recordings](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%222887f2f4-b902-4379-8a39-adf101338f83%22)
+- [CS Fundamentals Class Lesson Recordings](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=8419e18e-9305-4b6a-8500-af0b01332bda)
 - [Career Services Class Lesson Recordings](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=2887f2f4-b902-4379-8a39-adf101338f83)
 
 

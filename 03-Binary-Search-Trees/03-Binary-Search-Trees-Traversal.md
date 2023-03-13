@@ -105,6 +105,8 @@ Option A uses an undefined variable `my_queue` and Option C uses a method `new()
 
 Using the [`deque` documentation](https://docs.python.org/3/library/collections.html#collections.deque) as a reference, which of the following options would add `3` to a queue `q` then remove an element from the queue?
 
+Assume the queue is empty to start and the user will commit to using the same operations to add and remove elements going forward.
+
 ##### !end-question
 
 ##### !options

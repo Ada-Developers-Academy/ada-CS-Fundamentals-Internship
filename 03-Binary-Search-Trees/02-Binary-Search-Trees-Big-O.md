@@ -236,7 +236,7 @@ Worst-case you have to travel to the last node in the chain and since there are 
 
 ##### !question
 
-What if you added 4 nodes and kept the tree unbalanced. How many comparisons would you need to make?
+What if you added 4 nodes and kept the tree unbalanced. How many comparisons would you need to make in the worst-case scenario?
 
 ##### !end-question
 

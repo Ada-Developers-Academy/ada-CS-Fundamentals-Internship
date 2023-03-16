@@ -115,27 +115,27 @@ Standards:
       -
         Type: Instructor
         UID: e153ec41-477e-43fb-bf6d-0173e24aec85
-        Path: /03-binary-search-trees/bst.instructor.md
+        Path: /03-Binary-Search-Trees/bst.instructor.md
       -
         Type: Lesson
         UID: 05732e84-1354-4349-8c71-173460093f9b
-        Path: /03-binary-search-trees/01-Binary-Search-Trees.md
+        Path: /03-Binary-Search-Trees/01-Binary-Search-Trees.md
       -
         Type: Lesson
         UID: c7d8f1dc-2d74-4892-a2ab-69fbd3418ee3
-        Path: /03-binary-search-trees/02-Binary-Search-Trees-Big-O.md
+        Path: /03-Binary-Search-Trees/02-Binary-Search-Trees-Big-O.md
       -
         Type: Lesson
         UID: 80747284-c3bb-4753-8c1b-9eb0bb834687
-        Path: /03-binary-search-trees/03-Binary-Search-Trees-Traversal.md
+        Path: /03-Binary-Search-Trees/03-Binary-Search-Trees-Traversal.md
       -
         Type: Lesson
         UID: 1f189042-63dd-4075-9de9-4ca60a3fa5aa
-        Path: /03-binary-search-trees/04-Binary-Search-Trees-Resources.md
+        Path: /03-Binary-Search-Trees/04-Binary-Search-Trees-Resources.md
       -
         Type: Lesson
         UID: 06dea201-6230-4967-b98f-2403ab11479a
-        Path: /03-binary-search-trees/05-Binary-Search-Trees-Activity.md
+        Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity.md
   -
     Title: Graphs
     Description: Graph Data Structures & Algorithms - Breadth First Search & Depth First Search

@@ -236,7 +236,7 @@ Worst-case you have to travel to the last node in the chain and since there are 
 
 ##### !question
 
-What if you added 4 nodes and kept the tree unbalanced. How many comparisons would you need to make?
+What if you added 4 nodes and kept the tree unbalanced. How many comparisons would you need to make in the worst-case scenario?
 
 ##### !end-question
 
@@ -355,150 +355,50 @@ This is because with the recursive solutions, each recursive call of the methods
 
 In contrast, the iterative solutions make only a single call to the method regardless of the size of the tree. We don't create any additional data structures that vary with the size of the tree in any of the operations, thus time complexity is constant or O(1).
 
-## Height
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
-
-We can see that tree balancing and tree height have a close relationship. 
-
-To find the height we need to count how many levels of nodes there are in a tree. 
 
 
 ### !challenge
 
-* type: code-snippet
-* language: python3.6
-* id: a8078856-e772-4e3f-9267-6bbeb006ee5d
-* title: Binary Search Tree Recursive Height
+* type: checkbox
+* id: e2bae5b6-597a-4f7d-b8c2-1bf859ef2ad2
+* title: Balanced Binary Search Tree Advantages
 * points: 1
+* topics: binary-search-trees, big-o
 
 ##### !question
 
-Implement a recursive `height` function for a binary search tree. The function should return the height of the tree.
+What are advantages of a balanced Binary Search Tree?
 
 ##### !end-question
 
-##### !placeholder
+##### !options
 
-```py
-class TreeNode:
-    def __init__(self, key, val = None):
-        if val == None:
-            val = key
+* Fast insertion speed `O(log n)`
+* Fast removal speed `O(log n)`
+* Uses less space than a Linked List or Array
+* Fast O(1) lookup speed
+* Fast O(1) insertion to the head and tail
+* Maintains the order of elements
 
-        self.key = key
-        self.value = val
-        self.left = None
-        self.right = None
+##### !end-options
 
-class Tree:
-    def __init__(self):
-        self.root = None
-    
-    def height(self):
-        # implement using recursion
-        pass
-```
+##### !answer
 
-##### !end-placeholder
+* Fast insertion speed `O(log n)`
+* Fast removal speed `O(log n)`
+* Maintains the order of elements
 
-##### !tests
-```py
-import unittest
-from main import *
+##### !end-answer
 
-class TreeExtended(Tree):
-
-    def add_helper(self, current_node, new_node):
-        if new_node.key  < current_node.key:
-            if not current_node.left:
-                current_node.left = new_node
-                return
-            self.add_helper(current_node.left, new_node)
-        else:
-            if not current_node.right:
-                current_node.right = new_node
-                return
-            self.add_helper(current_node.right, new_node)
-
-    def add(self, key, value = None):
-        if not self.root:
-            self.root = TreeNode(key, value)
-        else:
-            new_node = TreeNode(key, value)
-            self.add_helper(self.root, new_node)
-
-class TestPython1(unittest.TestCase):
-  def setUp(self) -> None:
-
-    def tree_with_nodes() -> TreeExtended():
-        t = TreeExtended()
-        t.add(5, "Peter")
-        t.add(3, "Paul")
-        t.add(1, "Mary")
-        t.add(10, "Karla")
-        t.add(15, "Ada")
-        t.add(25, "Kari")
-        return t
-    
-    self.empty_tree = TreeExtended()
-    self.tree_with_nodes = tree_with_nodes()
-    
-  def tearDown(self) -> None:
-      self.empty_tree = TreeExtended()
-
-  def test_height_of_empty_tree_is_zero(self):
-    self.assertEqual(0,self.empty_tree.height())
-  
-  def test_height_of_one_node_tree_is_one(self):
-    self.empty_tree.add(5, "Peter")
-
-    self.assertEqual(1, self.empty_tree.height())
-
-  def test_height_of_many_node_tree(self):
-    self.assertEqual(4, self.tree_with_nodes.height())
-
-    self.tree_with_nodes.add(2, "pasta")
-    self.tree_with_nodes.add(2.5, "bread")
-    self.assertEqual(5, self.tree_with_nodes.height())
-
-```
-
-##### !end-tests
-
-<!-- other optional sections -->
 ##### !hint
-Pseudocode:
-```
-If the current node is nil return 0
 
-Otherwise return 1 plus the maximum of the heights of the right and left subtrees
-```
+Remember that finding things in a balanced binary search tree is essentially performing binary search. Trees do have to maintain references to the children of each parent node.
 
-Still feeling stuck? Check this video walkthrough of the solution.
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=996e137b-e4f2-460e-a2e8-af0e01521de6&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+This is also our first nonlinear data structure.
 
 ##### !end-hint
-##### !explanation 
-An example of a working implementation:
-```py
-    def height_helper(self, current_node):
-        if not current_node:
-            return 0
-
-        return max(self.height_helper(current_node.left), self.height_helper(current_node.right)) + 1
-    
-    def height(self):
-        return self.height_helper(self.root)
-```
-
-##### !end-explanation
-
 
 ### !end-challenge
-
-<!-- ======================= END CHALLENGE ======================= -->
 
 ## Summary
 

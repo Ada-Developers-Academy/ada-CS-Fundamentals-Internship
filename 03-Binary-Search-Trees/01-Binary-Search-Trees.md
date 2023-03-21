@@ -1,5 +1,6 @@
 # Binary Search Trees
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a2007d27-80eb-4d19-a549-afcc004a1759&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
 
@@ -18,7 +19,7 @@ Students should be able to:
 
 ## Overview
 
-We commonly encounter problems which require us to maintain ordered collections of data. This could be a list of students by name, jobs to process by priority, or a collection of accounts by username. 
+We commonly encounter problems which require us to maintain ordered collections of data. This could be maintaining a list of students ordered alphabetically by name, maintaining a list of jobs to process in priority order, or maintaining a collection of accounts ordered alphabetically by username. 
 
 When dealing with an ordered collection of data, we need to consider the time and space complexity of the following operations:
 
@@ -49,10 +50,16 @@ The key requirements for this new data structure are:
 3. Find elements with an O(log n) time
 4. Serialize the list into a string or another data type that can be written to a file, network, or database in O(n) time or better.
 
-If need 1 & 2 are maintained, an array will struggle to add and delete items. A linked list will require O(n) for all 4 operations because it has to traverse the sorted list to do anything.
+ If we maintain a list of items in order, an array will struggle to add and delete items in less than O(n) unless the element is added/deleted from the end of the array. A linked list will require O(n) for all 4 operations because it has to traverse the sorted list to do anything.
 
 A new non-linear data structure, a *binary search tree*, offers us a solution.
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
 
+## What does order mean?
+Requirement 1 - maintaining a list of items in order - means the data structure should maintain elements in the user's desired order. For example, say the data structure maintains an ordered  of fruits. If the user wants the fruit to be ordered apple, banana, orange, the data structure should maintain that order. But if the user instead wants the fruit to be ordered orange, apple, banana instead, the data structure should support this alternative ordering. The data structure should not always order elements from least to greatest as sorting a list of integers would give us.
+
+### !end-callout
 ### Consider A Nonlinear Structure
 
 Binary search trees have a _non-linear structure_. Whereas each node in a (singly) linked list maintains a pointer to one other node in a linked list, each node in a binary search tree has pointers to two other nodes in the data structure. We refer to these pointers as the _child_ nodes of the original _parent_ node. We label each of the parent node's two children as the `left` and `right` children or pointers. Collectively, we can refer to a parent node's children as _siblings_. The parent node can be thought of as similar to the `prev` pointer in a doubly linked list; however, unlike a linked list, tree nodes do not generally maintain a pointer to their parent/previous node. 
@@ -147,7 +154,7 @@ Our `TreeNode` class also maintains both `key` and `value` attributes.  The `Tre
 ```python
 class TreeNode:
     def __init__(self, key, val = None):
-        if val == None:
+        if val is None:
             val = key
 
         self.key = key
@@ -169,6 +176,16 @@ class Tree:
                   # node in the Tree
     # Tree methods go here...
 ```
+
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-secondary
+
+## Instantiating TreeNode and Tree Objects
+
+To see an example of instantiating a new TreeNode and Tree object, see the associated video lesson (Binary Search Tree Classes - CSF0301-3).
+
+### !end-callout
+
 
 The next step is to implement our four methods for ordered collections of data: search, insert, delete, and serialize.
 
@@ -255,7 +272,7 @@ Spend no more then 15 minutes working through this independently. Use the hints 
 ```py
 class TreeNode:
     def __init__(self, key, val = None):
-        if val == None:
+        if val is None:
             val = key
 
         self.key = key
@@ -438,7 +455,7 @@ Spend no more then 15 minutes working through this independently. Use the hints 
 ```py
 class TreeNode:
     def __init__(self, key, val = None):
-        if val == None:
+        if val is None:
             val = key
 
         self.key = key
@@ -617,7 +634,7 @@ Spend no more then 15 minutes working through this independently. Use the hints 
 ```py
 class TreeNode:
     def __init__(self, key, val = None):
-        if val == None:
+        if val is None:
             val = key
 
         self.key = key
@@ -817,7 +834,7 @@ Method delete:
         Return the current node
 ```
 
-As an optional extra chanllenge, you can attempt to implement `delete`  yourself. Our recursive solution to the `delete` method is below. 
+As an optional extra challenge, you can attempt to implement `delete`  yourself in the [Resources lesson](./04-Binary-Search-Trees-Resources.md) of this topic. Our recursive solution to the `delete` method is below. 
 
 <details>
 <summary> Binary Search Tree Deletion </summary>

@@ -50,7 +50,7 @@ The key requirements for this new data structure are:
 3. Find elements with an O(log n) time
 4. Serialize the list into a string or another data type that can be written to a file, network, or database in O(n) time or better.
 
- If we maintain a list of items in order, an array will struggle to add and delete items in less than O(n) unless the element is added/deleted from the end of the array. A linked list will require O(n) for all 4 operations because it has to traverse the sorted list to do anything.
+ If we maintain a list of items in order, an array will struggle to add and delete items in less than O(n) time unless the element is added/deleted from the end of the array. A linked list will require O(n) time for all 4 operations because it has to traverse the sorted list to do anything.
 
 A new non-linear data structure, a *binary search tree*, offers us a solution.
 <!-- available callout types: info, success, warning, danger, secondary, star  -->

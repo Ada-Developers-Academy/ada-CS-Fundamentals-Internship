@@ -1,12 +1,17 @@
 # Balancing Trees
 
+## Learning Goals
+- Explain the difference between balanced and unbalanced trees
+- Explain the importance of balanced trees
+- Determine the time and space complexity of search, insert, and delete operations on both balanced and unbalanced trees
+
 ### Overview
 Before we move on to serialization of binary search trees, let's take a moment to discuss the time and space complexity of searching, insertion, and deletion. To fully understand that, we must first talk about _balancing_. 
 
 
 ### Exercise
 
-Try this exercise out on the [Binary Tree Visualizer](https://visualgo.net/en/bst).
+Try this exercise out by drawing a binary tree with pen and paper or using the [Binary Tree Visualizer](https://visualgo.net/en/bst). To make your own tree with the Binary Tree Visualizer, use the _Create_ option in the navigation bar in the bottom left corner to make an empty tree. Then use the _Insert_ function to add nodes with your desired key.  
 
 **Question**:  If you have a tree of height 5, what's the worst-case for finding a value in the tree?  What affects the number of comparisons you need to make?
 
@@ -15,8 +20,8 @@ Try this exercise out on the [Binary Tree Visualizer](https://visualgo.net/en/bs
     Open this to see our answer.
   </summary>
 
-  Worst-case, you need to make comparisons to 5 nodes before inserting.  This occurs when you need to insert a new node into a leaf.
-
+  Worst-case, you need to make comparisons to 5 nodes before finding the value you are looking for.
+  
   Worst-case:  O(h) comparisons where _h_ is the height of the tree
 </details>
 
@@ -34,7 +39,7 @@ On the other hand, this is an example of an unbalanced tree.
 
 The time and space complexity of operations such as search, insert, and delete depend on whether a tree is balanced or unbalanced. 
 
-Refer to the examples of balanced and unbalanced trees above to answer the following questions. You may also find it helpful to draw out the scenarios posed in the questions.
+Refer to the examples of balanced and unbalanced trees above to answer the questions 1 and 2 below. You may also find it helpful to draw out the scenarios posed in the questions.
 
 ### !challenge
 
@@ -116,7 +121,7 @@ Number goes here
 
 ##### !question
 
-With the [Binary Tree Visualizer](https://visualgo.net/en/bst), build a **balanced** tree with a height of 5 levels.  How many comparisons do you need to make to find a particular leaf node?
+With the [Binary Tree Visualizer](https://visualgo.net/en/bst) or pen and paper, build a **balanced** tree with a height of 5 levels.  How many comparisons do you need to make to find a particular leaf node?
 
 ##### !end-question
 
@@ -417,6 +422,7 @@ We can see below a balanced Binary Search Tree provides good performance while m
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 1|Unsorted Array|O(1)|O(n)|O(n)|O(n)|O(n)|O(1)
 2|Sorted Array|O(1)|O(log n)|O(n)|O(n)|O(n)|O(1)
-3|Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)
+3|Doubly Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)
 4|Binary Tree (balanced)|O(log n)|O(log n)|O(log n)|O(log n)|NA|NA
+5|Binary Tree (unbalanced)| O(n)|O(n)|O(n)|O(n)|NA|NA
 5|Hash Table|O(1)|O(1)|O(1)|O(1)|NA|NA

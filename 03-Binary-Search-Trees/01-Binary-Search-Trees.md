@@ -57,7 +57,7 @@ A new non-linear data structure, a *binary search tree*, offers us a solution.
 ### !callout-info
 
 ## What does order mean?
-Requirement 1 - maintaining a list of items in order - means the data structure should maintain elements in the user's desired order. For example, say the data structure maintains an ordered  of fruits. If the user wants the fruit to be ordered apple, banana, orange, the data structure should maintain that order. But if the user instead wants the fruit to be ordered orange, apple, banana instead, the data structure should support this alternative ordering. The data structure should not always order elements from least to greatest as sorting a list of integers would give us.
+Requirement 1 - maintaining a list of items in order - means the data structure should maintain elements in the user's desired order. For example, say the data structure maintains an ordered collection of fruits. If the user wants the fruit to be ordered apple, banana, orange, the data structure should maintain that order. But if the user instead wants the fruit to be ordered orange, apple, banana instead, the data structure should support this alternative ordering. The data structure should not always order elements from least to greatest as sorting a list of integers would give us.
 
 ### !end-callout
 ### Consider A Nonlinear Structure

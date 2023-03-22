@@ -1,5 +1,7 @@
 # Serializing with Tree Traversal
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=37bec376-7767-4cdb-81a6-afcd0154fd39&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 - Explain the different types of binary search tree traversals
 - Understand the implementation of the following algorithms
@@ -602,6 +604,15 @@ Otherwise, take a look at the full implementations of our three depth first trav
 </details>
 
 <!-- ======================= END CHALLENGE ======================= -->
+
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
+
+## In-Depth DFS Code Walkthrough
+
+To see the code applied to an example problem, watch [Depth First Traversals Part 4 (Preorder, Inorder Postorder Code walkthrough) - CSF0303-5](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4be6af0a-6847-434c-9a62-afcd01508186)
+
+### !end-callout
 
 ### Why So Many Methods of Traversal?
 

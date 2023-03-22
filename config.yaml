@@ -105,6 +105,10 @@ Standards:
         Type: Lesson
         UID: 0d3a9473-199c-430d-bc55-43fc09fd50ff
         Path: /02-linked-lists/05-linked-lists-supplemental-concepts.md
+      -
+        Type: Lesson
+        UID: 19b1fbf3-60b6-4a60-895c-7de1b9afe923
+        Path: /02-linked-lists/06-linked-list-activity.md
   -
     Title: Binary Search Trees
     Description: Binary Search Trees

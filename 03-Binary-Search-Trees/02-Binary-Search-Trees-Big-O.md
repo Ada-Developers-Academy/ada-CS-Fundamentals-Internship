@@ -1,12 +1,19 @@
 # Balancing Trees
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=c63daaac-decb-44ad-b239-afcd0008dbe7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+## Learning Goals
+- Explain the difference between balanced and unbalanced trees
+- Explain the importance of balanced trees
+- Determine the time and space complexity of search, insert, and delete operations on both balanced and unbalanced trees
+
 ### Overview
 Before we move on to serialization of binary search trees, let's take a moment to discuss the time and space complexity of searching, insertion, and deletion. To fully understand that, we must first talk about _balancing_. 
 
 
 ### Exercise
 
-Try this exercise out on the [Binary Tree Visualizer](https://visualgo.net/en/bst).
+Try this exercise out by drawing a binary tree with pen and paper or using the [Binary Tree Visualizer](https://visualgo.net/en/bst). To make your own tree with the Binary Tree Visualizer, use the _Create_ option in the navigation bar in the bottom left corner to make an empty tree. Then use the _Insert_ function to add nodes with your desired key.  
 
 **Question**:  If you have a tree of height 5, what's the worst-case for finding a value in the tree?  What affects the number of comparisons you need to make?
 
@@ -15,14 +22,14 @@ Try this exercise out on the [Binary Tree Visualizer](https://visualgo.net/en/bs
     Open this to see our answer.
   </summary>
 
-  Worst-case, you need to make comparisons to 5 nodes before inserting.  This occurs when you need to insert a new node into a leaf.
-
+  Worst-case, you need to make comparisons to 5 nodes before finding the value you are looking for.
+  
   Worst-case:  O(h) comparisons where _h_ is the height of the tree
 </details>
 
 ## Balanced Trees & Unbalanced Trees
 
-A tree is considered _balanced_ if the levels of any two leaves differ by at most 1.  In this way the nodes in the tree must be spread fairly evenly.
+A tree is considered _balanced_ if the height difference between the left and right subtree is at most one and both subtrees are also balanced.  In this way the nodes in the tree must be spread fairly evenly.
 
 This is an example of a balanced tree.
 
@@ -34,7 +41,7 @@ On the other hand, this is an example of an unbalanced tree.
 
 The time and space complexity of operations such as search, insert, and delete depend on whether a tree is balanced or unbalanced. 
 
-Refer to the examples of balanced and unbalanced trees above to answer the following questions. You may also find it helpful to draw out the scenarios posed in the questions.
+Refer to the examples of balanced and unbalanced trees above to answer the questions 1 and 2 below. You may also find it helpful to draw out the scenarios posed in the questions.
 
 ### !challenge
 
@@ -116,7 +123,7 @@ Number goes here
 
 ##### !question
 
-With the [Binary Tree Visualizer](https://visualgo.net/en/bst), build a **balanced** tree with a height of 5 levels.  How many comparisons do you need to make to find a particular leaf node?
+With the [Binary Tree Visualizer](https://visualgo.net/en/bst) or pen and paper, build a **balanced** tree with a height of 5 levels.  How many comparisons do you need to make to find a particular leaf node?
 
 ##### !end-question
 
@@ -303,7 +310,7 @@ O(?)
 <!-- other optional sections -->
 ##### !hint 
 
-Answer in the form of O(n), O(nlog n) or O(log n) etc
+Answer in the form of O(n), O(nlog n), O(log n), O(1), etc.
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
@@ -321,14 +328,14 @@ O(log n) when you double the number of nodes, the height increases by 1.
 
 ## Tree Balance & Time Complexity
 
-Looking at the answers to the questions above, notice that if a tree is balanced, when you move left or right, you eliminate half of the possible nodes. This means you are essentially doing **binary search.**  If the tree is unbalanced, you are performing a linear search.
+Looking at the answers to the questions above, notice that if a tree is balanced, when we move left or right to search for a given node or find the spot in the tree you want to insert or delete a node, we eliminate half of the possible nodes. This means we are essentially doing **binary search.**  If the tree is unbalanced, we are performing a linear search.
 
 Assume that we are using the binary search tree methods as we have described in the above unbalanced tree example. If all the nodes were inserted in order, the worst case time complexity for search, insertion, or deletion would be O(n) where n is the number of nodes in the tree because each node except the root would be the left child of the previous node. 
 
-When a tree is balanced, because with each step you choose to only traverse one subtree or approximately half of the original tree, the same methods would have O(log n) time complexity.
+When a tree is balanced, because with each step we choose to only traverse one subtree or approximately half of the original tree, the same methods would have O(log n) time complexity.
 
-* If a tree is unbalanced it's time complexities for searching, insertion, and deletion approach O(n).
-* If a tree is balanced it's time complexities for searching, insertion, and deletion are O(log n).
+* If a tree is unbalanced the time complexity to search, insert, or delete a node are all O(n) in the worst case.
+* If a tree is balanced the time complexity to search, insert, or delete a node are all O(log n) in the worst case.
 
 Therefore it is very important that a tree **remain balanced**. 
 
@@ -402,9 +409,9 @@ This is also our first nonlinear data structure.
 
 ## Summary
 
-In this lesson we looked at some of the advantages a binary search tree provides over a sorted array or linked list and how to find the height of a binary search tree..  Binary search trees provide an O(log n) time to add, remove and find elements because searching a tree performs a binary search.  This performance, however, depends on the tree being **balanced**.  A balanced tree has subtrees of height within 1 of each other.
+In this lesson we looked at the difference between balanced and unbalanced trees and why maintaining balance in a tree is important.  Binary search trees provide an O(log n) time to add, remove and find elements because searching a tree performs a binary search.  This performance, however, depends on the tree being **balanced**.  A balanced tree has subtrees of height within 1 of each other.
 
-In short we want to use a Binary Search Tree When:
+In short we want to use a binary search tree when:
 
 - Maintaining order is important
 - We want to maintain efficient search, insertion and deletion time complexities
@@ -417,6 +424,9 @@ We can see below a balanced Binary Search Tree provides good performance while m
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
 1|Unsorted Array|O(1)|O(n)|O(n)|O(n)|O(n)|O(1)
 2|Sorted Array|O(1)|O(log n)|O(n)|O(n)|O(n)|O(1)
-3|Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)
+3|Doubly Linked List|O(n)|O(n)|O(n)|O(n)|O(1)|O(1)
 4|Binary Tree (balanced)|O(log n)|O(log n)|O(log n)|O(log n)|NA|NA
-5|Hash Table|O(1)|O(1)|O(1)|O(1)|NA|NA
+5|Binary Tree (unbalanced)| O(n)|O(n)|O(n)|O(n)|NA|NA
+6|Hash Table* |O(1)|O(1)|O(1)|O(1)|NA|NA
+
+*Hash tables are _unordered_ collections of data

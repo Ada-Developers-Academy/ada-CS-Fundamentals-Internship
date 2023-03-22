@@ -495,7 +495,7 @@ Depth first search traversals use a _stack_, which removes elements according to
 
 We could use the `deque` library again to model a stack, but more often depth first search traversals are implemented recursively. When we use recursion, we can take advantage of our machine's call stack. Each recursive call on our current node's left and right subtrees will be added to the call stack and popped off in LIFO order so there is no need for us to create our own stack.
 
-We can look at the pseudocode for preorder to see how this looks applied to an example.
+We can look at the pseudocode for preorder to see how this looks applied to an example. Recall that preorder traversal explores the root node of the tree or subtree we want to traverse, then traverses the left subtree of that root node followed by the right subtree. 
 
 ```
 preorder(self):
@@ -505,9 +505,10 @@ preorder(self):
 preorder_helper(self, current_node, explored_nodes):
     if the tree is empty:
         return explored_nodes
+    
+    add current_node to list of explored_nodes
     call preorder_helper on left child
     call preorder_helper on right child
-    add current_node to list of explored_nodes
 
 ```
 

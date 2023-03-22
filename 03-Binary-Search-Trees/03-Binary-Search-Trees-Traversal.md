@@ -623,7 +623,7 @@ Often times, when attempting to solve a tree problem, it can be helpful to draw 
 
 So why are all the traversals left-to-right instead of right-to-left?
 
-Computer Science was initially pioneered in western cultures where people read left-to-right and so their cultural bias lead to designing traversals in that manner.  There's no inherent characteristics of binary search trees which require a left-to-right traversal.  You could create a right-to-left traversal, but for historical reasons, these are the standard binary search tree traversals.
+The field of computer science began in western cultures where people read left-to-right and so their cultural bias lead to designing traversals in that manner.  There's no inherent characteristics of binary search trees which require a left-to-right traversal.  You could create a right-to-left traversal, but for historical reasons, these are the standard binary search tree traversals.
 
 ### !end-callout
 

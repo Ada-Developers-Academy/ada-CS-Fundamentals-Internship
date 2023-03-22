@@ -330,7 +330,7 @@ An example of a working implementation:
 
 ### Depth First Traversals
 
- In a _depth first search_ (DFS) traversal we explore the children, grandchildren, and any further descendants of a node before moving to its sibling and traversing the sibling's descendants.
+ In a _depth first search_ (DFS) traversal we explore a single child, the resulting grandchildren, and any further descendants of a node before moving to its sibling and traversing the sibling's descendants. In other words, we fully explore a single subtree before traversing the second subtree.
 
 There are three standard types of depth-first traversals:
 

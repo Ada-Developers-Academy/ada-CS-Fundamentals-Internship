@@ -528,7 +528,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
             return values
 
         # Append current node to list of values
-        values.append(current_node.value)
+        values.append(current_node.val)
         # call helper function on the left child
         self.preorder_helper(current_node.left, values)     
         # call helper function on the right child   
@@ -558,7 +558,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
         # call helper function on the left child
         self.inorder_helper(current_node.left, values)
         # Append current node to list of values
-        values.append(current_node.value)     
+        values.append(current_node.val)     
         # call helper function on the right child   
         self.inorder_helper(current_node.right, values)
 
@@ -589,7 +589,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
         # call helper function on the right child   
         self.postorder_helper(current_node.right, values)
         # Append current node to list of values
-        values.append(current_node.value)
+        values.append(current_node.val)
 
         return values
 

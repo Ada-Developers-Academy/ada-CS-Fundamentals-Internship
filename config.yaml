@@ -111,7 +111,7 @@ Standards:
         Path: /02-linked-lists/06-linked-list-activity.md
   -
     Title: Binary Search Trees
-    Description: Binary Search Trees
+    Description: Binary Search Trees, Balancing Trees, Serializing with Tree Traversal, Resources
     UID: fc8d8eae-2456-4b22-9213-127d6e83dd5e
     SuccessCriteria:
       - success criteria

@@ -1,16 +1,29 @@
 # Serializing with Tree Traversal
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=37bec376-7767-4cdb-81a6-afcd0154fd39&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+## Learning Goals
+- Explain the different types of binary search tree traversals
+- Understand the implementation of the following algorithms
+  - breadth first search
+  - depth first search
+    - preorder traversal
+    - postorder traveral
+    - inorder traversal
+- Explain why it is useful to have different traversal algorithms
+- Describe the time and space complexity of binary search tree traversal algorithms
+
 ## Serialization
 
 To serialize a tree, we need to traverse the tree.  This means we need to visit each node and add it to a string or array. There are several ways to do this.
 
-A _traversal_ is an action visiting each node in a data structure such as a tree.  There are several kinds of traversals, Breadth First Traversals which visit each node level, by level and Depth First Traversals which visit a node's children before it's siblings.
+_Traversal_ is the action of visiting each node in a data structure such as a tree.  There are several kinds of traversals; two common ones are breadth first traversals which visit nodes level by level and depth first traversals which visit a node's children before its siblings.
 
 ### Breadth First Search Traversal
 
-Unlike linear data structures like arrays or linked lists which have only one logical way to traverse them, trees can be traversed in several different ways. The first way we will explore is a _breadth first search_ (BFS), also called level order traversal. When we traverse with BFS, we begin at the tree's root node. We then examine nodes level by level: the root's direct children are examined, then the root's grandchildren, and so on and so forth.  
+Unlike linear data structures such as arrays and linked lists which have only one logical way to traverse them, trees can be traversed in several different ways. The first way we will explore is a _breadth first search_ (BFS) also called level order traversal. When we traverse with BFS, we begin at the tree's root node. We then examine nodes level by level: the root's direct children are examined, then the root's grandchildren, and so on and so forth.  
 
-To implement breadth first search, we use a _queue_, which is a special type of linear ordered collection of data which adds and removes elements according to a first-in first-out (FIFO) principle similar to a queue or line of people in real life: the first element added to the queue is the first to be removed from the queue.
+To implement breadth first search, we use a _queue_, which adds and removes elements according to a first-in first-out (FIFO) principle similar to a queue or line of people in real life: the first element added to the queue is the first to be removed from the queue.
 
 
 Pseudocode for the algorithm is as follows:
@@ -319,7 +332,7 @@ An example of a working implementation:
 
 ### Depth First Traversals
 
- In a _depth first search_ (DFS) traversal you explore the children, grandchildren, and any further descendants of a node before moving to its sibling and traversing the sibling's descendants.
+ In a _depth first search_ (DFS) traversal we explore a single child, the resulting grandchildren, and any further descendants of a node before moving to its sibling and traversing the sibling's descendants. In other words, we fully explore a single subtree before traversing the second subtree.
 
 There are three standard types of depth-first traversals:
 
@@ -480,27 +493,28 @@ In what order would you hit the nodes doing an postorder traversal
 
 ### !end-challenge
 
-Depth first search traversals use a _stack_, which is a  another type of linear ordered collection of data which adds and removes elements according to a last-in first-out (LIFO) principle similar to a stack of plates. When you want to grab a plate, you normally take the topmost plate off the stack which is also the plate that was most recently added to the stack.
+Depth first search traversals use a _stack_, which removes elements according to a last-in first-out (LIFO) principle similar to a stack of plates. When we want to grab a plate, we normally take the topmost plate off the stack which is also the plate that was most recently added to the stack.
 
-We could use the `deque` library again to model a stack, but more often depth first search traversals are implemented recursively. When we use recursion, we can take advantage of our machine's call stack. Each recursive call on our current node's left and right subtrees will be added to the call stack and popped off in LIFO order so there's no need for us to create our own stack.
+We could use the `deque` library again to model a stack, but more often depth first search traversals are implemented recursively. When we use recursion, we can take advantage of our machine's call stack. Each recursive call on our current node's left and right subtrees will be added to the call stack and popped off in LIFO order so there is no need for us to create our own stack.
 
-We can look at the pseudocode for preorder to see how this looks applied to an example.
+We can look at the pseudocode for preorder to see how this looks applied to an example. Recall that preorder traversal explores the root node of the tree or subtree we want to traverse, then traverses the left subtree of that root node followed by the right subtree. 
 
 ```
-preorder():
+preorder(self):
     create an empty list to store the explored nodes
     call preorder helper on root
     
-preorder_helper(current_node, explored_nodes):
+preorder_helper(self, current_node, explored_nodes):
     if the tree is empty:
         return explored_nodes
+    
+    add current_node to list of explored_nodes
     call preorder_helper on left child
     call preorder_helper on right child
-    add current_node to list of explored_nodes
 
 ```
 
-If you are curious, you can try implementing dfs in a fork of the following replit: [BST Traversal Practice](https://replit.com/@adadev/bst-dfs-practice#binary_search_trees/dfs.py)
+If you are curious, you can try implementing inorder, preorder, and postorder by forking the following replit: [BST Traversal Practice](https://replit.com/@adadev/bst-dfs-practice#binary_search_trees/dfs.py)
 
 Otherwise, take a look at the full implementations of our three depth first traversals below. Notice how similar the code is for each.
 
@@ -516,7 +530,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
             return values
 
         # Append current node to list of values
-        values.append(current_node.value)
+        values.append(current_node.val)
         # call helper function on the left child
         self.preorder_helper(current_node.left, values)     
         # call helper function on the right child   
@@ -546,7 +560,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
         # call helper function on the left child
         self.inorder_helper(current_node.left, values)
         # Append current node to list of values
-        values.append(current_node.value)     
+        values.append(current_node.val)     
         # call helper function on the right child   
         self.inorder_helper(current_node.right, values)
 
@@ -577,7 +591,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
         # call helper function on the right child   
         self.postorder_helper(current_node.right, values)
         # Append current node to list of values
-        values.append(current_node.value)
+        values.append(current_node.val)
 
         return values
 
@@ -590,6 +604,15 @@ Otherwise, take a look at the full implementations of our three depth first trav
 </details>
 
 <!-- ======================= END CHALLENGE ======================= -->
+
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
+
+## In-Depth DFS Code Walkthrough
+
+To see the code applied to an example problem, watch [Depth First Traversals Part 4 (Preorder, Inorder, Postorder Code walkthrough) - CSF0303-5](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4be6af0a-6847-434c-9a62-afcd01508186)
+
+### !end-callout
 
 ### Why So Many Methods of Traversal?
 
@@ -611,7 +634,7 @@ Often times, when attempting to solve a tree problem, it can be helpful to draw 
 
 So why are all the traversals left-to-right instead of right-to-left?
 
-Computer Science was initially pioneered in western cultures where people read left-to-right and so their cultural bias lead to designing traversals in that manner.  There's no inherent characteristics of binary search trees which require a left-to-right traversal.  You could create a right-to-left traversal, but for historical reasons, these are the standard binary search tree traversals.
+The field of computer science began in western cultures where people read left-to-right and so their cultural bias lead to designing traversals in that manner.  There's no inherent characteristics of binary search trees which require a left-to-right traversal.  You could create a right-to-left traversal, but for historical reasons, these are the standard binary search tree traversals.
 
 ### !end-callout
 

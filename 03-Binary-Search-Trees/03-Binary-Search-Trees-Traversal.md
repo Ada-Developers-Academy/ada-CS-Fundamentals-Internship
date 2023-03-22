@@ -1,16 +1,27 @@
 # Serializing with Tree Traversal
 
+## Learning Goals
+- Explain the different types of binary search tree traversals
+- Understand the implementation of the following algorithms
+  - breadth first search
+  - depth first search
+    - preorder traversal
+    - postorder traveral
+    - inorder traversal
+- Explain why it is useful to have different traversal algorithms
+- Describe the time and space complexity of binary search tree traversal algorithms
+
 ## Serialization
 
 To serialize a tree, we need to traverse the tree.  This means we need to visit each node and add it to a string or array. There are several ways to do this.
 
-A _traversal_ is an action visiting each node in a data structure such as a tree.  There are several kinds of traversals, Breadth First Traversals which visit each node level, by level and Depth First Traversals which visit a node's children before it's siblings.
+_Traversal_ is the action of visiting each node in a data structure such as a tree.  There are several kinds of traversals; two common ones are breadth first traversals which visit nodes level by level and depth first traversals which visit a node's children before its siblings.
 
 ### Breadth First Search Traversal
 
-Unlike linear data structures like arrays or linked lists which have only one logical way to traverse them, trees can be traversed in several different ways. The first way we will explore is a _breadth first search_ (BFS), also called level order traversal. When we traverse with BFS, we begin at the tree's root node. We then examine nodes level by level: the root's direct children are examined, then the root's grandchildren, and so on and so forth.  
+Unlike linear data structures such as arrays and linked lists which have only one logical way to traverse them, trees can be traversed in several different ways. The first way we will explore is a _breadth first search_ (BFS) also called level order traversal. When we traverse with BFS, we begin at the tree's root node. We then examine nodes level by level: the root's direct children are examined, then the root's grandchildren, and so on and so forth.  
 
-To implement breadth first search, we use a _queue_, which is a special type of linear ordered collection of data which adds and removes elements according to a first-in first-out (FIFO) principle similar to a queue or line of people in real life: the first element added to the queue is the first to be removed from the queue.
+To implement breadth first search, we use a _queue_, which adds and removes elements according to a first-in first-out (FIFO) principle similar to a queue or line of people in real life: the first element added to the queue is the first to be removed from the queue.
 
 
 Pseudocode for the algorithm is as follows:

@@ -491,18 +491,18 @@ In what order would you hit the nodes doing an postorder traversal
 
 ### !end-challenge
 
-Depth first search traversals use a _stack_, which is a  another type of linear ordered collection of data which adds and removes elements according to a last-in first-out (LIFO) principle similar to a stack of plates. When you want to grab a plate, you normally take the topmost plate off the stack which is also the plate that was most recently added to the stack.
+Depth first search traversals use a _stack_, which removes elements according to a last-in first-out (LIFO) principle similar to a stack of plates. When we want to grab a plate, we normally take the topmost plate off the stack which is also the plate that was most recently added to the stack.
 
-We could use the `deque` library again to model a stack, but more often depth first search traversals are implemented recursively. When we use recursion, we can take advantage of our machine's call stack. Each recursive call on our current node's left and right subtrees will be added to the call stack and popped off in LIFO order so there's no need for us to create our own stack.
+We could use the `deque` library again to model a stack, but more often depth first search traversals are implemented recursively. When we use recursion, we can take advantage of our machine's call stack. Each recursive call on our current node's left and right subtrees will be added to the call stack and popped off in LIFO order so there is no need for us to create our own stack.
 
 We can look at the pseudocode for preorder to see how this looks applied to an example.
 
 ```
-preorder():
+preorder(self):
     create an empty list to store the explored nodes
     call preorder helper on root
     
-preorder_helper(current_node, explored_nodes):
+preorder_helper(self, current_node, explored_nodes):
     if the tree is empty:
         return explored_nodes
     call preorder_helper on left child
@@ -511,7 +511,7 @@ preorder_helper(current_node, explored_nodes):
 
 ```
 
-If you are curious, you can try implementing dfs in a fork of the following replit: [BST Traversal Practice](https://replit.com/@adadev/bst-dfs-practice#binary_search_trees/dfs.py)
+If you are curious, you can try implementing inorder, preorder, and postorder by forking the following replit: [BST Traversal Practice](https://replit.com/@adadev/bst-dfs-practice#binary_search_trees/dfs.py)
 
 Otherwise, take a look at the full implementations of our three depth first traversals below. Notice how similar the code is for each.
 

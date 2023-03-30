@@ -1,9 +1,5 @@
 # Graphs
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=09cd9474-04a2-4460-8eb8-aad8005b7065&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
-Please note that this recording is from C16 and the Graphs topic has been restructured since then. We are providing this as a resource that overviews Graphs, Breadth First Search, and Depth First Search, but it does not align perfectly with the lesson content below. There are updated mini video lessons embedded for the major subtopics at the beginning of each subtopic.
-
 ## Learning Goals
 
 By the end of this lesson we should be able to:
@@ -14,7 +10,7 @@ By the end of this lesson we should be able to:
   - Breadth First Search
   - Depth First Search
 
-## Introduction
+## Overview
 
 Graphs are a linked abstract data structure in computer science represented by a set of _nodes_ connected by what are called _edges_. Like binary search trees, graphs are a non-linear data structure. However, graphs are more general than linked lists or binary search trees. Unlike binary search trees where each node can have an edge to at most two other child nodes, in a graph each node can be connected to any number of nodes. Not every node in the graph has to have the same number of edges.
 

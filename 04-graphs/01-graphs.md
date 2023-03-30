@@ -10,13 +10,9 @@ By the end of this lesson we should be able to:
 
 - Explain a graph data structure
 - Explain how an ordered or unordered set of vertices can represent a graph
-- Write algorithms using graphs
-
-## Video Lesson
-
-- [C16 Video Lesson](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=09cd9474-04a2-4460-8eb8-aad8005b7065)
-- [C16 Accompanying Slidedeck](https://docs.google.com/presentation/d/1pIAhpb0QL7Pk93P3E-jIRbboz6UPRZOnJ2eyVU1Ga3Q/edit#slide=id.p7)
-- [Exercise](https://github.com/ada-c17/Bipartition-Graph)
+- Understand and write algorithms using graphs
+  - Breadth First Search
+  - Depth First Search
 
 ## Introduction
 

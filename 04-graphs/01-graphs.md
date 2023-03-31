@@ -12,9 +12,9 @@ By the end of this lesson we should be able to:
 
 ## Overview
 
-Graphs are a linked abstract data structure in computer science represented by a set of _nodes_ connected by what are called _edges_. Like binary search trees, graphs are a non-linear data structure. However, graphs are more general than linked lists or binary search trees. Unlike binary search trees where each node can have an edge to at most two other child nodes, in a graph each node can be connected to any number of nodes. Not every node in the graph has to have the same number of edges.
+Graphs are a linked abstract data structure in computer science represented by a set of _nodes_ connected by references called _edges_. Like binary search trees, graphs are a non-linear data structure. However, graphs are more general than linked lists or binary search trees. Unlike binary search trees where each node can have an edge to at most two other child nodes, each node in a graph can be connected to any number of other nodes. Not every node in the graph has to have the same number of edges.
 
-Another difference with graphs is that graphs do not have a set 'start' node. When we traverse a list, we always start at the `head` node. When we traverse a binary search tree, we always start at the `root` node. With a graph traversals can start and end at any node in the data structure.
+Another difference is that graphs do not have a set 'start' node. When we traverse a list, we always start at the `head` node. When we traverse a binary search tree, we always start at the `root` node. With a graph, traversals can start and end at any node in the data structure.
 
 We may think of nodes in a graph as representing some chosen entity and edges in the graphs as representing relationships between those entities. Graphs lend themselves naturally to problems like finding the cheapest way to visit all the cities below.
 
@@ -34,7 +34,7 @@ Graphs can also be used to solve problems like exam or class scheduling. For exa
 
 In the example above, each node represents a different course at Fairaday Academy. The edges represent a student taking both courses linked by the edge. To solve the problem, we would look for a way to assign courses to exam slots which are not directly connected by an edge.  
 
-Many, many problems can be represented by graphs even those not involving geographic or navigational problems.  Studying graph problems gives us another way to solve a broad sector of difficult problems.
+Many, many problems can be represented by graphs even those not involving geographic or navigational problems. Studying graph problems allows us to solve a broad sector of difficult problems.
 
 ### !callout-info
 
@@ -82,6 +82,12 @@ Weighted graphs can be useful for assigning a cost to taking one path from a nod
 We can see that it costs more to travel from Seattle to Beijing directly ($1500) than if we first travel from Seattle to Incheon and then from Incheon to Beijing ($800 + $200 = $1000). 
 
 ![Example Weighted Directed Graph Airline Flights](images/weighted-graph-flights.png)
+
+With unweighted graphs we assume that the cost/weight associated with each edge is equal. The least costly route between City A and City B is the most direct path - the path with the least number of edges.
+
+If we were to take the same graph of available flights from above but make it unweighted, the least costly route would be traveling along the edge from Seattle to Beijing which would be just a single direct flight. There is no longer a cost benefit to having a layover in Incheon. 
+
+![Example Unweighted Directed Graph Airline Flights](images/unweighted-graph-flights.png)
 
 ## How To Represent A Graph
 
@@ -330,7 +336,8 @@ Generally adjacency lists give a good balance between time and space complexity 
 
 A graph is a data structure consisting of a finite collection of _nodes_, also called _vertices_, and a collection of connections between nodes known as _edges_.  A graph can be either a _directed graph_, or an _undirected graph_.  In a directed graph, edges are not bidirectional: we may be able to travel from node A to node B, but not from node B to node A. Graphs can also have _weighted_ or _unweighted_ edges. Weighted graphs have some cost or weight assigned to each edge, making it so that the shortest, most direct path from Node A to Node B may not be the cheapest.
 
-Because graphs are non-hierarchical and do not have a set start node, it is difficult to represent graphs in the same way we usually represent linked lists and trees. Instead, there are two common methods for representing a graph data structure:
+Because graphs are non-hierarchical and do not have a set start node, it is difficult to represent graphs in the same way we usually represent linked lists and trees. Instead, there are three common methods for representing a graph data structure:
+- List of edges
 - Adjacency matrix
 - Adjacency list
 

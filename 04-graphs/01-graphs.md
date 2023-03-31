@@ -1,5 +1,7 @@
 # Graphs
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=0e2dd921-018a-4cb6-ba67-afd60139ac45&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 By the end of this lesson we should be able to:
@@ -141,8 +143,6 @@ The written lesson contains everything you need to know. However, if you are int
 
 ### List of Edges
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f67555ac-7850-47a2-ab66-af16013cca1a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
 The most basic way to store a graph is simply to maintain a list of edges for each node.  For example for the following graph that uses integers to represent each node:
 
 ![Example graph for an edge list](images/graph-edge-list.png)
@@ -168,8 +168,6 @@ It does have a major downside: to find out if any particular pair of nodes are c
 Other implementations, such as the adjacency matrix we will look at next, can improve on this time complexity.
 
 ### Adjacency Matrix
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a1caaf2a-92aa-4f38-b112-af16014a7337&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 Let's look at the same graph again.  Instead of maintaining a list of edges we could instead create a 2-dimensional matrix with _N_ rows and _N_ columns where _N_ is the number of nodes in the graph. Each row-column intersection indicates whether an edge exists between two nodes.
 
@@ -288,9 +286,6 @@ This method provides a very fast lookup time and not terrible space complexity i
 In the example above, we used a matrix of booleans where true indicates an existing edge and false indicates no edge exists connecting the two nodes. You will often see this represented as a matrix of ones and zeroes where zero indicates no edge exists and 1 indicates it does.  This has the advantage of only requiring one bit per matrix cell.  There are [some strategies](https://github.com/javolio/Bitwise-Adjacency-Matrix) to use this fact to compress the space requirements.  
 
 ### Adjacency List
-
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c50cc66a-5630-471c-a3b6-af16016041ae&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 An adjacency list provides a bit of a middle ground between a list of edges and an adjacency matrix.  Like an adjacency matrix, an adjacency list is a list of lists where each index of the outer list represents a node. However, the value at each index is an unordered list of neighboring nodes. The adjacency list can be an array or a linked list.
 

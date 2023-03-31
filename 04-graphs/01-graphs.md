@@ -130,6 +130,15 @@ While this could work, it leaves us with a problem. With linked lists and binary
 
 There is no starting node for a graph. This makes it difficult to follow the same pattern of setting up a `Graph` class that we have used for linked lists and binary search trees. Instead, we need another way to store our graph, which provides an easy way for us to start with any node.
 
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
+
+## Video Lessons Contain Extra Examples
+
+The written lesson contains everything you need to know. However, if you are interested in a walkthrough of converting graph diagrams to python and extra examples of the three types of graph representations covered below, please view the video lessons *List of Edges - CSF0401-4*, *Adjacency Matrices - CSF0401-5*, and *Adjaceny Lists - CSF0401-6*. 
+
+### !end-callout
+
 ### List of Edges
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f67555ac-7850-47a2-ab66-af16013cca1a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>

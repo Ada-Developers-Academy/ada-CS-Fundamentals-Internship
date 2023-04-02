@@ -1,8 +1,6 @@
 # Graphs
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=09cd9474-04a2-4460-8eb8-aad8005b7065&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
-Please note that this recording is from C16 and the Graphs topic has been restructured since then. We are providing this as a resource that overviews Graphs, Breadth First Search, and Depth First Search, but it does not align perfectly with the lesson content below. There are updated mini video lessons embedded for the major subtopics at the beginning of each subtopic.
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=0e2dd921-018a-4cb6-ba67-afd60139ac45&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
 
@@ -10,19 +8,15 @@ By the end of this lesson we should be able to:
 
 - Explain a graph data structure
 - Explain how an ordered or unordered set of vertices can represent a graph
-- Write algorithms using graphs
+- Understand and write algorithms using graphs
+  - Breadth First Search
+  - Depth First Search
 
-## Video Lesson
+## Overview
 
-- [C16 Video Lesson](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=09cd9474-04a2-4460-8eb8-aad8005b7065)
-- [C16 Accompanying Slidedeck](https://docs.google.com/presentation/d/1pIAhpb0QL7Pk93P3E-jIRbboz6UPRZOnJ2eyVU1Ga3Q/edit#slide=id.p7)
-- [Exercise](https://github.com/ada-c17/Bipartition-Graph)
+Graphs are a linked abstract data structure in computer science represented by a set of _nodes_ connected by references called _edges_. Like binary search trees, graphs are a non-linear data structure. However, graphs are more general than linked lists or binary search trees. Unlike binary search trees where each node can have an edge to at most two other child nodes, each node in a graph can be connected to any number of other nodes. Not every node in the graph has to have the same number of edges.
 
-## Introduction
-
-Graphs are a linked abstract data structure in computer science represented by a set of _nodes_ connected by what are called _edges_. Like binary search trees, graphs are a non-linear data structure. However, graphs are more general than linked lists or binary search trees. Unlike binary search trees where each node can have an edge to at most two other child nodes, in a graph each node can be connected to any number of nodes. Not every node in the graph has to have the same number of edges.
-
-Another difference with graphs is that graphs do not have a set 'start' node. When we traverse a list, we always start at the `head` node. When we traverse a binary search tree, we always start at the `root` node. With a graph traversals can start and end at any node in the data structure.
+Another difference is that graphs do not have a set 'start' node. When we traverse a list, we always start at the `head` node. When we traverse a binary search tree, we always start at the `root` node. With a graph, traversals can start and end at any node in the data structure.
 
 We may think of nodes in a graph as representing some chosen entity and edges in the graphs as representing relationships between those entities. Graphs lend themselves naturally to problems like finding the cheapest way to visit all the cities below.
 
@@ -42,7 +36,7 @@ Graphs can also be used to solve problems like exam or class scheduling. For exa
 
 In the example above, each node represents a different course at Fairaday Academy. The edges represent a student taking both courses linked by the edge. To solve the problem, we would look for a way to assign courses to exam slots which are not directly connected by an edge.  
 
-Many, many problems can be represented by graphs even those not involving geographic or navigational problems.  Studying graph problems gives us another way to solve a broad sector of difficult problems.
+Many, many problems can be represented by graphs even those not involving geographic or navigational problems. Studying graph problems allows us to solve a broad sector of difficult problems.
 
 ### !callout-info
 
@@ -91,6 +85,12 @@ We can see that it costs more to travel from Seattle to Beijing directly ($1500)
 
 ![Example Weighted Directed Graph Airline Flights](images/weighted-graph-flights.png)
 
+With unweighted graphs we assume that the cost/weight associated with each edge is equal. The least costly route between City A and City B is the most direct path - the path with the least number of edges.
+
+If we were to take the same graph of available flights from above but make it unweighted, the least costly route would be traveling along the edge from Seattle to Beijing which would be just a single direct flight. There is no longer a cost benefit to having a layover in Incheon. 
+
+![Example Unweighted Directed Graph Airline Flights](images/unweighted-graph-flights.png)
+
 ## How To Represent A Graph
 
 As called out above, we have already worked with graphs before.  With both binary search trees and linked lists we created a node class with pointers to represent the edges from one node to the next. An example `TreeNode` class is listed below.
@@ -132,9 +132,16 @@ While this could work, it leaves us with a problem. With linked lists and binary
 
 There is no starting node for a graph. This makes it difficult to follow the same pattern of setting up a `Graph` class that we have used for linked lists and binary search trees. Instead, we need another way to store our graph, which provides an easy way for us to start with any node.
 
-### List of Edges
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f67555ac-7850-47a2-ab66-af16013cca1a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+## Video Lessons Contain Extra Examples
+
+The written lesson contains everything you need to know. However, if you are interested in a walkthrough of converting graph diagrams to python and extra examples of the three types of graph representations covered below, please view the video lessons *List of Edges - CSF0401-4*, *Adjacency Matrices - CSF0401-5*, and *Adjaceny Lists - CSF0401-6*. 
+
+### !end-callout
+
+### List of Edges
 
 The most basic way to store a graph is simply to maintain a list of edges for each node.  For example for the following graph that uses integers to represent each node:
 
@@ -161,8 +168,6 @@ It does have a major downside: to find out if any particular pair of nodes are c
 Other implementations, such as the adjacency matrix we will look at next, can improve on this time complexity.
 
 ### Adjacency Matrix
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a1caaf2a-92aa-4f38-b112-af16014a7337&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 Let's look at the same graph again.  Instead of maintaining a list of edges we could instead create a 2-dimensional matrix with _N_ rows and _N_ columns where _N_ is the number of nodes in the graph. Each row-column intersection indicates whether an edge exists between two nodes.
 
@@ -282,9 +287,6 @@ In the example above, we used a matrix of booleans where true indicates an exist
 
 ### Adjacency List
 
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c50cc66a-5630-471c-a3b6-af16016041ae&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
 An adjacency list provides a bit of a middle ground between a list of edges and an adjacency matrix.  Like an adjacency matrix, an adjacency list is a list of lists where each index of the outer list represents a node. However, the value at each index is an unordered list of neighboring nodes. The adjacency list can be an array or a linked list.
 
 We can craft an adjacency list for the same graph we've been looking at like so:
@@ -338,7 +340,8 @@ Generally adjacency lists give a good balance between time and space complexity 
 
 A graph is a data structure consisting of a finite collection of _nodes_, also called _vertices_, and a collection of connections between nodes known as _edges_.  A graph can be either a _directed graph_, or an _undirected graph_.  In a directed graph, edges are not bidirectional: we may be able to travel from node A to node B, but not from node B to node A. Graphs can also have _weighted_ or _unweighted_ edges. Weighted graphs have some cost or weight assigned to each edge, making it so that the shortest, most direct path from Node A to Node B may not be the cheapest.
 
-Because graphs are non-hierarchical and do not have a set start node, it is difficult to represent graphs in the same way we usually represent linked lists and trees. Instead, there are two common methods for representing a graph data structure:
+Because graphs are non-hierarchical and do not have a set start node, it is difficult to represent graphs in the same way we usually represent linked lists and trees. Instead, there are three common methods for representing a graph data structure:
+- List of edges
 - Adjacency matrix
 - Adjacency list
 

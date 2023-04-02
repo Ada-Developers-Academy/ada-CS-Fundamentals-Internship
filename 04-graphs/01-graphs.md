@@ -316,7 +316,7 @@ The examples we used above used numeric identifications for nodes. But what if w
 
 ```python
 adjacency_list_with_dict = {
-        "Seattle": ["Los Angelos", "Topeka"],
+        "Seattle": ["Los Angeles", "Topeka"],
         "Los Angeles": ["Seattle", "Denver", "San Diego"],
         "Topeka": ["Seattle"],
         "Denver": ["Los Angeles", "Dallas"],

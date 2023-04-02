@@ -142,7 +142,7 @@ Standards:
         Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity.md
   -
     Title: Graphs
-    Description: Graph Data Structures & Algorithms - Breadth First Search & Depth First Search
+    Description: Graphs, Representing Graphs, Graphs Algorithms, Resources
     UID: b0d74464-2678-44a8-a4ff-dc74350e7114
     SuccessCriteria:
       - success criteria
@@ -153,16 +153,20 @@ Standards:
         Path: /04-graphs/01-graphs.md
       -
         Type: Lesson
+        UID: 97afeb52-3626-4cec-95ca-e19171f6d3b8
+        Path: /04-graphs/02-representing-graphs.md
+      -
+        Type: Lesson
         UID: 2c83a545-e3fb-4f7f-bd88-3493883e9fa0
-        Path: /04-graphs/02-graphs-algorithms.md
+        Path: /04-graphs/03-graphs-algorithms.md
       -
         Type: Lesson
         UID: b7554bcb-53aa-4db8-b447-1c2e4145b1e0
-        Path: /04-graphs/03-graphs-resources.md
+        Path: /04-graphs/04-graphs-resources.md
       -
         Type: Lesson
         UID: 96fcef62-30b0-4be7-8a63-c4002a53b0e2
-        Path: /04-graphs/04-graphs-activity.md
+        Path: /04-graphs/05-graphs-activity.md
   -
     Title: Dijkstra's Algorithm
     Description: Graph Data Structures & Algorithms - Dijkstra's

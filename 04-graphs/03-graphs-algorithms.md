@@ -2,9 +2,9 @@
 
 There are a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  We will look at two of the most common graph algorithms as a sample.  
 
-### Breadth-First-Search
+### Breadth First Search
 
-Like in a binary search tree a breadth-first-search in a graph is performed with a queue.  However, unlike trees, graphs often have cycles so we will need to keep track of the nodes we have visited.
+Like in a binary search tree a breadth first search in a graph is performed with a queue.  However, unlike trees, graphs often have cycles so we will need to keep track of the nodes we have visited and ensure that we only traverse nodes that have yet to be visited. Otherwise, we will get stuck in a loop visiting the same nodes in the cycle over and over again.
 
 ### !callout-info
 
@@ -15,20 +15,39 @@ In graph theory, a path that starts from a given node and ends at that same node
 
 ### !end-callout
 
-In breadth-first-search we start with a particular node and visit each node connected to the starting point in the graph starting with the closest node to the starting point and expanding outward.
+In breadth first search we start with a particular node and visit each node connected to the starting point in the graph starting with the closest node to the starting point and expanding outward.
 
 We do so by adding each of the neighbors of the starting node to a queue. Then we loop through the queue, removing the first element in the queue and adding each of its unvisited neighbors to the queue. We repeat this process until the queue is empty. 
 
 Once the queue is empty we know we have visited all nodes in the graph that are possible to reach from the starting node.
 
+![Breadth First Search](images/bfs.gif)
+
+In the above visualization, the algorithm starts its traversal from the specified start node, node 0 in this case, and expands outwards. First the algorithm visits the start node's neighbors, then the neighbor's neighbors, and so on until it has traversed every node reachable from the start node. If a neighbor has already been visited, the algorithm skips over visiting that neighbor and moves on to the next unvisited neighbor.
+
+You can also interact with a breadth first search animation on [HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/visualize/)
+
 **Breadth First Search Pseudocode Walkthrough**
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=493ecb29-6431-4e61-b918-af170141a8da&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
-You can also see breadth-first-search animated on [HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/visualize/)
+The pseudocode for breadth first search is as follows:
+```
+    - Start by grabbing the first item in the adjacency dictionary `start_node`
+    - Create an empty list called `visited`
+    - Create an empty queue `q`
+    - Add `start_node` to `q` and `visited`
+    - While `q` is not empty:
+        - Remove an element from `q` and store it in `current`
+        - Loop through each of `current`'s neighbors:
+            - If the neighbor is not in `visited`:
+                - Add the neighbor to `visited`
+                - Add the neighbor to `q`
+    - Return `visited`
+```
 
 Breadth first search is a solution in a variety of problems including:
 
-- Finding the shortest path in a graph/maze
+- Finding the shortest path in an unweighted graph/maze
 - Solving puzzle games like a [Rubik's Cube](https://www.quora.com/How-can-solving-a-Rubiks-Cube-be-framed-as-a-graph-problem)
 - Checking to see if a graph is connected
 
@@ -48,6 +67,8 @@ Breadth first search is a solution in a variety of problems including:
 ##### !question
 
 Write a function returning a list of elements representing a breadth first search of the items in `self.adjacency_dict`.
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -103,20 +124,8 @@ class TestPython1(unittest.TestCase):
 
 ##### !hint
 
-**Pseudocode**
+Refer to the pseudocode included above this question to guide your implementation. 
 
-1. Start by grabbing the first item in the adjacency dictionary `start_node`
-1. Create an empty list called `visited`
-1. Create an empty queue `q`
-1. Add `start_node` to `q` and `visited`
-1. While `q` is not empty:
-    1. Remove an element from `q` and store it in `current`
-    1. Loop through each of `current`'s neighbors:
-        1. If the neighbor is not in `visited`:
-            1. Add the neighbor to `visited`
-            1. Add the neighbor to `q`
-1. Return `visited`
-<br>
 Still feeling stuck? Check this video walkthrough of the solution.
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=42ac2142-176c-4846-8b69-af1d012341bf&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
@@ -166,7 +175,7 @@ def bfs(self):
 
 ##### !question
 
-What is the time complexity of Breadth-First-Search with N nodes and E edges.
+What is the time complexity of Breadth First Search with N nodes and E edges.
 
 ##### !end-question
 
@@ -212,7 +221,7 @@ O(N + E) is different from O(NE) because O(NE) implies that we visit each node `
 
 ##### !question
 
-What is the space complexity of Breadth-First-Search with N nodes and E edges?
+What is the space complexity of Breadth First Search with N nodes and E edges?
 
 ##### !end-question
 
@@ -247,16 +256,35 @@ In the worst-case you will need to add each node to the Queue, so the space comp
 <!-- ======================= END CHALLENGE ======================= -->
 
 
-### Depth-First-Search
+### Depth First Search
 
-Where breadth-first-search spreads out from a starting node in order of distance from the starting node, depth-first-search follows each path as far as possible before backing up and following the next closest path. For this reason we refer to depth-first-search as a _backtracking_ algorithm.
+Where breadth first search spreads out from a starting node in order of distance from the starting node, depth first search follows each path as far as possible before backing up and following the next closest path. For this reason we refer to depth first search as a _backtracking_ algorithm.
+
+![depth first search](images/dfs.gif)
+
+In the above visualization, observe that the when the algorithm reaches node 3, it visits its first neighbor 2. When node 2 is visited, depth first search chooses to next explore node 2's neighbors instead of going to visit node 3's second neighbor node 4 as breadth first search would have done. It's only when depth first search realizes that node 2's only neighbor node 1 has already been visited that it backtracks to node 3 and moves on to explore node 3's second neighbor, node 4. 
 
 **Depth First Search Pseudocode Walkthrough**
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8e2085ff-4dd1-46aa-a961-af170141a92a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
+The pseudocode for an iterative depth first search implementation is as follows:
+```
+- Start by taking the first item in the adjacency dictionary `start_node`
+- Create a Stack called `stack`
+- Create an empty list called `visited`
+- Push `start_node` onto `stack`
+- while `stack` is not empty
+    - Pop the stack and store it in `current`
+    - Add `current` to `visited`
+    - Loop through all the neighbors of `current`
+        - If they are not in `visited`
+            - Push the neighbor onto `stack`
+- Return `visited`
+```
+
 [HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/visualize/) has an excellent description and visualization of the algorithm.
 
-Depth-First-Search has a number of applications in graph problems including:
+Depth first search has a number of applications in graph problems including:
 
 - Detecting a cycle in a graph
 - Finding a path in a maze where there is only one correct path
@@ -278,6 +306,8 @@ Depth-First-Search has a number of applications in graph problems including:
 ##### !question
 
 Write a function returning a list of elements representing a depth first search of the items in `self.adjacency_dict`. Please write the function iteratively, i.e. without using recursion.
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -334,20 +364,8 @@ class TestPython1(unittest.TestCase):
 ##### !end-tests
 
 ### !hint
-**Pseudocode**
+Use the pseudocode included above this problem to guide your implementation.
 
-1. Start by grabbing the first item in the adjacency dictionary `start_node`
-1. Create a Stack called `stack`
-1. Create an empty list called `visited`
-1. Push `start_node` onto `stack`
-1. while `stack` is not empty
-    1. Pop the stack and store it in `current`
-    1. Add `current` to `visited`
-    1. Loop through all the neighbors of `current`
-        1. If they are not in `visited`
-            1. Push the neighbor onto `stack`
-1. Return `visited`
-<br>
 Still feeling stuck? Check this video walkthrough of the solution.
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=77eefecf-346b-4fe5-8b31-af1d0123414e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
@@ -386,7 +404,25 @@ def dfs(self):
 
 ### Stacks and recursion
 
-Whenever we deploy the use of a stack to solve a problem, the problem may typically be solved using recursion as well, especially if we are doing the same operation repeatedly. We can use the program's call stack to replace the explicit creation of a stack by using a recursive call. The next challenge will ask you to convert the iterative depth first search function you worked on previously to a recursive function.
+Whenever we deploy the use of a stack to solve a problem, the problem may typically be solved using recursion, especially if the problem involves doing the same operation repeatedly. We can use the program's call stack to replace the explicit creation of a stack by using a recursive call. 
+
+The pseudocode for the recursive implementation is as follows:
+```
+- For base function:
+    - Create empty list called `visited`
+    - Take the first item in the adjacency graph `first_item`
+    - Call helper function with `visited`, `self.adjacency_dict`, and `first_item`
+    - Return `visited`
+
+- For helper function (takes in `visited`, `graph`, and `node`):
+    - If `node` is not in `visited`:
+        - Append `node` to `visited`
+        - For each `neighbor` of the `node`:
+            - Call helper with `visited`, `graph`, and the `neighbor`
+```
+
+The key difference between our iterative and recursive implementations is that the explicit stack created in the iterative version is replaced by the recursive call stack.
+
 
 ### !challenge
 
@@ -399,6 +435,8 @@ Whenever we deploy the use of a stack to solve a problem, the problem may typica
 ##### !question
 
 Write a function returning a list of elements representing a depth first search of the items in `self.adjacency_dict`. Please write the function recursively.
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -455,20 +493,7 @@ class TestPython1(unittest.TestCase):
 ##### !end-tests
 
 ##### !hint
-**Pseudocode**
-1. For base function:
-    1. Create empty list called `visited`
-    1. Grab the first item in the adjacency graph `first_item`
-    1. Call helper function with `visited`, `self.adjacency_dict`, and `first_item`
-    1. Return `visited`
-
-1. For helper function (takes in `visited`, `graph`, and `node`):
-    1. If `node` is not in `visited`:
-        1. Append `node` to `visited`
-        1. For each `neighbor` of the `node`:
-            1. Call helper with `visited`, `graph`, and the `neighbor`
-<br>
-What we're essentially doing here is replacing the explicit creation of a stack and taking advantage of the recursive call stack.
+Use the pseudocode above to guide your implementation.
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
@@ -517,7 +542,7 @@ def dfs(self):
 
 ##### !question
 
-What is the time complexity of Depth-First-Search with N nodes and E edges?
+What is the time complexity of Depth First Search with N nodes and E edges?
 
 ##### !end-question
 
@@ -564,7 +589,7 @@ Since you will visit each node once, and loop through each of the edges in each 
 
 ##### !question
 
-What is the space complexity of Depth-First-Search?
+What is the space complexity of Depth First Search?
 
 ##### !end-question
 
@@ -596,14 +621,22 @@ In the worst-case you will need to add each node to the Stack, so the space comp
 ### !end-challenge
 
 <!-- ======================= END CHALLENGE ======================= -->
+## Choosing Between Traversal Algorithms
 
+How do we decide which algorithm to use? Oftentimes, problems requiring graph traversal can be solved with either breadth first search or depth first search.
+
+If we expect the solution to be relatively close to our start node, we may choose to breadth first search because it explores nodes closest to it first. Conversely, if we expect the solution to be much further away from the start node, we may choose to use depth first search. 
+
+Breadth first search will also find the shortest path in an unweighted graph because it chooses which node to visit next based on proximity (first neighbors, then the neighbor's neighbors, etc.). 
+
+Depth first search goes down one path as far as possible and only turns around and explores other possibilities only once it can't continue down the path its on. For this reason, depth first search is often used to solve problems where we want to test out different possible game outcomes or win conditions.
 
 ## Summary
 
-Two popular graph traversal algorithms are breadth-first-search (BFS) and depth-first-search (DFS). Both algorithms will visit each node and edge in the graph, but they have different methods of performing the traversal. In most cases, both BFS and DFS can be used to solve a problem. However, there are instances in which the differences in approach make one a better choice than the other. The most common use cases for each are listed below. 
+Two popular graph traversal algorithms are breadth first search (BFS) and depth first search (DFS). Both algorithms will visit each node and edge in the graph, but they have different methods of performing the traversal. In most cases, both BFS and DFS can be used to solve a problem. However, there are instances in which the differences in approach make one a better choice than the other. The most common use cases for each are listed below. 
 
-Breadth-first-search processes nodes by visiting all neighboring nodes before moving on to nodes that are neighbors of its neighbors and so-on.
-Depth-first-search processes nodes by following a path as deep as it can before backing up and following another path.
+Breadth first search processes nodes by visiting all neighboring nodes before moving on to nodes that are neighbors of its neighbors and so-on.
+Depth first search processes nodes by following a path as deep as it can before backing up and following another path.
 
 **Breadth-first-search**|**Depth-first-search**|
 :-----:|:-----:|

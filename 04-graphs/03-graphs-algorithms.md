@@ -214,7 +214,7 @@ Write a function returning a list of elements representing a breadth first searc
 
 The function should return a list of all nodes reachable from `start_node` in the order they were traversed. If the graph is empty, the function should return an empty list. 
 
-Spend no more then 20 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 20 minutes. 
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes. 
 
 ##### !end-question
 
@@ -463,12 +463,14 @@ In the worst-case you will need to add each node to the Queue, so the space comp
 
 Where breadth first search spreads out from a starting node in order of distance from the starting node, depth first search follows each path as far as possible before backing up and following the next closest path. For this reason we refer to depth first search as a _backtracking_ algorithm.
 
-We can imagine depth first search as if we were exploring a maze. Whenever there is a fork in the path, we make a choice about which fork to continue to travel down. If the fork we choose leads us to a dead-end, we turn around and go back to the most recent fork in the road, and choose one of the other options. 
-
+We can imagine depth first search as if we were exploring a maze. Whenever there is a fork in the path, we make a choice about which fork to continue to travel down. If the fork we choose leads us to a dead-end (a node without unvisited neighbors), we turn around and go back to the most recent fork in the road, and choose one of the other options. 
 
 ![depth first search](images/dfs.gif)
 
 In the above visualization, observe that the when the algorithm reaches node 3, it visits its first neighbor 2. When node 2 is visited, depth first search chooses to next explore node 2's neighbors instead of going to visit node 3's second neighbor node 4 as breadth first search would have done. It's only when depth first search realizes that node 2's only neighbor node 1 has already been visited that it backtracks to node 3 and moves on to explore node 3's second neighbor, node 4. 
+
+
+[HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/visualize/) also has an excellent description and visualization of the algorithm.
 
 **Depth First Search Pseudocode Walkthrough**
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8e2085ff-4dd1-46aa-a961-af170141a92a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
@@ -476,19 +478,19 @@ In the above visualization, observe that the when the algorithm reaches node 3, 
 The pseudocode for an iterative depth first search implementation is as follows:
 ```
 - Start by taking the first item in the adjacency dictionary `start_node`
-- Create a Stack called `stack`
-- Create an empty list called `visited`
-- Push `start_node` onto `stack`
-- while `stack` is not empty
-    - Pop the stack and store it in `current`
-    - Add `current` to `visited`
-    - Loop through all the neighbors of `current`
-        - If they are not in `visited`
-            - Push the neighbor onto `stack`
-- Return `visited`
+- Initialize an empty stack
+- Initialize an empty list to store visited nodes
+- Add the node we would like to start our traversal from to the stack
+- Add the node we would like to start our traversal from to the visited list
+- while the stack is not empty:
+    - Pop the topmost node off the stack and store it in a variable, `current`
+    - Loop through the current node's neighbors:
+        - If the neighbor has not yet been visited
+            - Push the neighbor onto the stack
+            - Add the neighbor to the list of visited nodes
+- Return list of visited nodes
 ```
 
-[HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/visualize/) has an excellent description and visualization of the algorithm.
 
 Depth first search has a number of applications in graph problems including:
 
@@ -513,7 +515,7 @@ Depth first search has a number of applications in graph problems including:
 
 Write a function returning a list of elements representing a depth first search of the items in `self.adjacency_dict`. Please write the function iteratively, i.e. without using recursion.
 
-Spend no more then 20 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 20 minutes.
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -528,7 +530,7 @@ class Graph:
     def __init__(self, adjacency_dict = {}):
         self.adjacency_dict = adjacency_dict
 
-    def dfs(self):
+    def dfs(self, start):
         pass
 ```
 
@@ -570,7 +572,7 @@ class TestPython1(unittest.TestCase):
 ##### !end-tests
 
 ### !hint
-Use the pseudocode included above this problem to guide your implementation.
+Use the pseudocode included above this problem to guide your implementation. Observe that this is the exact same pseudocode as breadth first search except we use a stack in place of queue. 
 
 Still feeling stuck? Check this video walkthrough of the solution.
 

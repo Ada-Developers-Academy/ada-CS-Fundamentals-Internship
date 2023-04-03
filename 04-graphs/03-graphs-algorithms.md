@@ -34,7 +34,8 @@ The pseudocode for breadth first search is as follows:
 ```
     - Initialize an empty list of visited nodes
     - Initialize an empty queue 
-    - Add the node we would like to start our traversal at to the queue and to visited
+    - Add the node we would like to start our traversal from to the queue 
+    - Add the node we would like to start our traversal from to visited
     - While the queue is not empty:
         - Remove an element from the queue and store it in a variable, `current`
         - Loop through each of the current node's neighbors:
@@ -57,13 +58,144 @@ If the graph is represented by a list of edges it is difficult to find a node's 
 
 Some implementations of a breadth first search may have the user pass in the node they would like the traversal to start at as a parameter. Other times, breadth first search implementations will start their traversal with a random node in the graph or the first node listed in the given graph representation.
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 911d76a6-f2c5-4f94-97b9-c1d5477c0502
+* title: Breadth First Search on a Disconnected Graph
+* points: 1
+
+##### !question
+
+Using the pseudocode included in the above lesson, if we begin our traversal from `Seattle`, what will a Breadth First Search return as its list of `visited` nodes for the following graph?
+
+```python
+    g = {
+        "Seattle": ["Portland", "Chicago"],
+        "Chicago": ["Seattle"],
+        "Portland": ["Seattle", "Kona"],
+        "Kona": ["Portland"],
+        "Miami": ["El Paso"],
+        "El Paso": ["Miami"]
+    }
+```
+![Disconnected Graph](images/disconnected-graph-example.png)
+
+##### !end-question
+
+##### !options
+
+a| `visited = ["Seattle", "Portland", "Chicago", "Kona"]`
+b| `visited = ["Seattle", "Chicago", "Portland", "Kona"]`
+c| `visited = ["Seattle", "Portland", "Chicago", "Kona", "El Paso", "Miami"]`
+d| `visited = ["Seattle", "Portland", "Chicago", "Kona", "Miami", "El Paso"]`
+
+##### !end-options
+
+##### !answer
+
+a|
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Seattle will be added to visited first because Seattle is our specified start node. So visited is `["Seattle"]`.
+
+<br>
+
+We loop through Seattle's neighbors. Since the graph is provided as an adjacency dictionary, we will loop through Seattle's neighbors in the order they are listed in the adjacency dictionary. `g["Seattle"]` is `["Portland", "Chicago"]` so we will visit Portland first, then Chicago. Our visited list is now `["Seattle", "Portland", "Chicago"]`.
+
+<br>
+
+Then we will visit Portland's neighbor Kona and our visited list becomes `["Seattle", "Portland", "Chicago", "Kona"]`. Chicago doesn't have any unvisited neighbors, so our Breadth First is finished! 
+
+<br>
+
+Miami and El Paso are never visited because a basic breadth first search only visits nodes _reachable by the start node_. There is no path in the graph from Seattle to Miami or El Paso.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 37080b8b-47fc-468d-b47a-80451f736a26
+* title: Breadth First Search on a Directed Graph
+* points: 1
+
+##### !question
+
+Using the pseudocode included in the above lesson, if we begin our traversal from `Seattle`, what will a Breadth First Search return as its list of `visited` nodes for the following graph?
+
+```python
+    g = {
+        "Seattle": ["Portland"],
+        "Chicago": ["Seattle"],
+        "Portland": ["Kona"],
+        "Kona": []
+    }
+```
+
+![Directed Graph](./images/directed-graph-example.png)
+
+##### !end-question
+
+##### !options
+
+a| `visited = ["Seattle", "Chicago", "Portland", Kona"]`
+b| `visited = ["Seattle", "Portland", "Chicago", Kona"]`
+c| `visited = ["Seattle", "Chicago", "Portland"]`
+d| `visited = ["Seattle", "Portland", "Kona"]`
+
+##### !end-options
+
+##### !answer
+
+d|
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+
+Seattle will be added to visited first because Seattle is our specified start node. So visited is `["Seattle"]`.
+
+<br>
+
+We loop through Seattle's neighbors. Since the graph is provided as an adjacency dictionary, Seattle's neighbors are represented by `g["Seattle"]` which has value `["Portland"]`.  So we will visit Portland next and our visited list becomes `["Seattle", "Portland"]`.
+<br>
+
+Then we will visit Portland's neighbor Kona and our visited list becomes `["Seattle", "Portland", "Kona"]`.
+<br>
+
+There is an edge from Chicago to Seattle but there is no edge from Seattle to Chicago. Thus, Chicago is not reachable from Seattle and will never be visited during our breadth first search.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 Breadth first search is used to solve a variety of problems including:
 
+- Checking to see if a graph is **connected** - we can get from any node in the graph to any other node in the graph
 - Finding the shortest path in an unweighted graph/maze
 - Solving puzzle games like a [Rubik's Cube](https://www.quora.com/How-can-solving-a-Rubiks-Cube-be-framed-as-a-graph-problem)
-- Checking to see if a graph is connected
-
-**Questions**
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -82,7 +214,7 @@ Write a function returning a list of elements representing a breadth first searc
 
 The function should return a list of all nodes reachable from `start_node` in the order they were traversed. If the graph is empty, the function should return an empty list. 
 
-Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes. 
+Spend no more then 20 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 20 minutes. 
 
 ##### !end-question
 
@@ -182,7 +314,7 @@ class TestPython1(unittest.TestCase):
 
 ##### !hint
 
-Refer to the pseudocode included above this question to guide your implementation. 
+Refer to the pseudocode included earlier in the topic to guide your implementation. 
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
@@ -269,7 +401,7 @@ What is the time complexity of Breadth First Search with N nodes and E edges.
 
 ##### !explanation
 
-Since we will visit each node once, and loop through each of the edges in each node the Big-O of this algorithm is O(N + E) where `N` is the number of nodes in the graph and `E` is the number of edges since each node and each edge will be explored.
+Since we will visit each node in a connected graph once, and loop through each of the edges of each visited node the Big-O of this algorithm is O(N + E) where `N` is the number of nodes in the graph and `E` is the number of edges since each node and each edge will be explored.
 
 O(N + E) is different from O(NE) because O(NE) implies that we visit each node `E` times. On the contrary, we visit each node at most one time, which is a set of operations resulting in a Big-O of O(N). We examine the edges adjacent to a node only when we visit the node, so each edge is examined at most two times, once for each of the nodes to which it is connected. This gives us a Big-O of O(2E) = O(E). Put together O(N) + O(E) and we get O(N + E).
 
@@ -331,6 +463,9 @@ In the worst-case you will need to add each node to the Queue, so the space comp
 
 Where breadth first search spreads out from a starting node in order of distance from the starting node, depth first search follows each path as far as possible before backing up and following the next closest path. For this reason we refer to depth first search as a _backtracking_ algorithm.
 
+We can imagine depth first search as if we were exploring a maze. Whenever there is a fork in the path, we make a choice about which fork to continue to travel down. If the fork we choose leads us to a dead-end, we turn around and go back to the most recent fork in the road, and choose one of the other options. 
+
+
 ![depth first search](images/dfs.gif)
 
 In the above visualization, observe that the when the algorithm reaches node 3, it visits its first neighbor 2. When node 2 is visited, depth first search chooses to next explore node 2's neighbors instead of going to visit node 3's second neighbor node 4 as breadth first search would have done. It's only when depth first search realizes that node 2's only neighbor node 1 has already been visited that it backtracks to node 3 and moves on to explore node 3's second neighbor, node 4. 
@@ -378,7 +513,7 @@ Depth first search has a number of applications in graph problems including:
 
 Write a function returning a list of elements representing a depth first search of the items in `self.adjacency_dict`. Please write the function iteratively, i.e. without using recursion.
 
-Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
+Spend no more then 20 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 20 minutes.
 
 ##### !end-question
 

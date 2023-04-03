@@ -78,7 +78,7 @@ Breadth first search is used to solve a variety of problems including:
 
 ##### !question
 
-Write a function returning a list of elements representing a breadth first search of the items in `self.adjacency_dict`. The traversal should begin with `start_node`.
+Write a function returning a list of elements representing a breadth first search of the items in the graph represented by `self.adjacency_list`. The traversal should begin with `start_node` and a return a list of all nodes reachable from `start_node` in the order they were traversed.
 
 Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 

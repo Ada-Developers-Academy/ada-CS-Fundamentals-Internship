@@ -111,13 +111,13 @@ class TestPython1(unittest.TestCase):
         adjacency_dict = {
             "Seattle": ["Portland", "Chicago"],
             "Chicago": ["Seattle"],
-            "Portland": ["Seattle", "Hawaii"],
-            "Hawaii": ["Portland"]
+            "Portland": ["Seattle", "Kona"],
+            "Kona": ["Portland"]
         }
 
         g = Graph(adjacency_dict)
 
-        answer = ["Seattle", "Portland", "Chicago", "Hawaii"]
+        answer = ["Seattle", "Portland", "Chicago", "Kona"]
         self.assertEqual(answer, g.bfs("Seattle"))
 
     def test_bfs_empty_graph(self):
@@ -130,6 +130,50 @@ class TestPython1(unittest.TestCase):
         }
         g = Graph(adjacency_dict)
         self.assertEqual(["Seattle"], g.bfs("Seattle"))
+    
+    def test_bfs_start_node_other_than_first_node(self):
+        adjacency_dict = {
+            "Seattle": ["Portland", "Chicago"],
+            "Chicago": ["Seattle"],
+            "Portland": ["Seattle", "Kona"],
+            "Kona": ["Portland"]
+        }
+
+        g = Graph(adjacency_dict)
+
+        answer = ["Chicago", "Seattle", "Portland", "Kona"]
+        self.assertEqual(answer, g.bfs("Chicago"))    
+
+
+    def test_bfs_disconnected_graph(self):
+        adjacency_dict = {
+            "Seattle": ["Portland", "Chicago"],
+            "Chicago": ["Seattle"],
+            "Portland": ["Seattle", "Kona"],
+            "Kona": ["Portland"],
+            "Miami": ["El Paso"],
+            "El Paso": ["Miami"]
+        }
+        g = Graph(adjacency_dict)
+
+        seattle_answer = ["Seattle", "Portland", "Chicago", "Kona"]
+        self.assertEqual(seattle_answer, g.bfs("Seattle"))
+
+        miami_answer = ["Miami", "El Paso"]
+        self.assertEqual(miami_answer, g.bfs("Miami"))
+
+    def test_bfs_directed_graph(self):
+        adjacency_dict = {
+            "Seattle": ["Portland"],
+            "Chicago": ["Seattle"],
+            "Portland": ["Kona"],
+            "Kona": []
+        }
+        g = Graph(adjacency_dict)
+
+        answer = ["Seattle", "Portland", "Chicago"]
+        self.assertEqual(answer, g.bfs("Seattle"))
+
 ```
 
 ##### !end-tests

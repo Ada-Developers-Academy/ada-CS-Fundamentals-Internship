@@ -78,9 +78,11 @@ Breadth first search is used to solve a variety of problems including:
 
 ##### !question
 
-Write a function returning a list of elements representing a breadth first search of the items in the graph represented by `self.adjacency_list`. The traversal should begin with `start_node` and a return a list of all nodes reachable from `start_node` in the order they were traversed.
+Write a function returning a list of elements representing a breadth first search of the items in the graph represented by `self.adjacency_list`. The traversal should begin with `start_node`. 
 
-Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
+The function should return a list of all nodes reachable from `start_node` in the order they were traversed. If the graph is empty, the function should return an empty list. 
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes. 
 
 ##### !end-question
 
@@ -171,7 +173,7 @@ class TestPython1(unittest.TestCase):
         }
         g = Graph(adjacency_dict)
 
-        answer = ["Seattle", "Portland", "Chicago"]
+        answer = ["Seattle", "Portland", "Kona"]
         self.assertEqual(answer, g.bfs("Seattle"))
 
 ```
@@ -192,23 +194,37 @@ Still feeling stuck? Check this video walkthrough of the solution.
 An example of a working implementation:
 
 ```python
+from collections import deque
+
 def bfs(self, start_node):
+    # store adjacency dictionary in variable for clarity
     graph = self.adjacency_dict
     
+    # if there are no nodes in the graph
     if len(graph) == 0:
+        # return an empty list
         return []
-        
-    queue = [start_node]
+    
+    # initialize a new queue and add start_node
+    queue = deque([start_node])
+    # initialize a list of visited nodes and add start_node
     visited = [start_node]
-        
+    
+    # while there are still nodes int he queue
     while queue:
-        current = queue.pop(0)
+        # pop node off the queue and set it as current
+        current = queue.popleft()
         
+        # loop through current's neighbors
         for neighbor in graph[current]:
+            # if the neighbor has not yet been visited
             if neighbor not in visited:
+                # add it to the list of visited nodes
+                # (we've now visited it!)
                 visited.append(neighbor)
+                # append the node to the queue so we can visit its neighbors!
                 queue.append(neighbor)
-                
+    # return list of visited nodes
     return visited
 ```
 ### !end-explanation

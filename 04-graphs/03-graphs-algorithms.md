@@ -4,7 +4,7 @@ There are a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Gr
 
 ### Breadth First Search
 
-Like in a binary search tree a breadth first search in a graph is performed with a queue.  However, unlike trees, graphs often have cycles so we will need to keep track of the nodes we have visited and ensure that we only traverse nodes that have yet to be visited. Otherwise, we will get stuck in a loop visiting the same nodes in the cycle over and over again.
+Like in a binary search tree a breadth first search (BFS) in a graph is performed with a queue.  However, unlike trees, graphs often have cycles so we will need to keep track of the nodes we have visited and ensure that we only traverse nodes that have yet to be visited. Otherwise, we will get stuck in a loop visiting the same nodes in the cycle over and over again.
 
 ### !callout-info
 
@@ -15,7 +15,7 @@ In graph theory, a path that starts from a given node and ends at that same node
 
 ### !end-callout
 
-In breadth first search we start with a particular node and visit each node connected to the starting point in the graph starting with the closest node to the starting point and expanding outward.
+In breadth first search (BFS)we start with a particular node and visit each node connected to the starting point in the graph starting with the closest node to the starting point and expanding outward.
 
 We do so by adding each of the neighbors of the starting node to a queue. Then we loop through the queue, removing the first element in the queue and adding each of its unvisited neighbors to the queue. We repeat this process until the queue is empty. 
 
@@ -32,20 +32,32 @@ You can also interact with a breadth first search animation on [HackerEarth](htt
 
 The pseudocode for breadth first search is as follows:
 ```
-    - Start by grabbing the first item in the adjacency dictionary `start_node`
-    - Create an empty list called `visited`
-    - Create an empty queue `q`
-    - Add `start_node` to `q` and `visited`
-    - While `q` is not empty:
-        - Remove an element from `q` and store it in `current`
-        - Loop through each of `current`'s neighbors:
-            - If the neighbor is not in `visited`:
-                - Add the neighbor to `visited`
-                - Add the neighbor to `q`
-    - Return `visited`
+    - Initialize an empty list of visited nodes
+    - Initialize an empty queue 
+    - Add the node we would like to start our traversal at to the queue and to visited
+    - While the queue is not empty:
+        - Remove an element from the queue and store it in a variable, `current`
+        - Loop through each of the current node's neighbors:
+            - If the neighbor has not yet been visited:
+                - Add the neighbor to the queue
+                - Add the neighbor to the list of visited nodes
+    - Return the list of visited nodes
 ```
+Notice that because the breadth first search algorithm asks us to loop through each node's neighbors, it is most convenient when the graph being traversed is represented as an adjacency list or dictionary. If graph `g` is represented as an adjacency list, we can easily access a list of node `n`'s neighbors with `g[n]`. Looping through `n`'s neighbor's would simply mean looping through each element in `g[n]`.  
 
-Breadth first search is a solution in a variety of problems including:
+![Accessing a Node's Neighbors with an Adjacency List](images/graph_neighbors_adj_list.png)
+
+If the graph is provided to us as an adjacency matrix, it is still possible to loop through the graph's neighbors. However, when `g` is changed to an adjacency matrix, note that `g[n]` is now a list of _all the nodes in the graph_ - not just node `n`'s neighbors - with `g[n][i]` indicating whether there is an edge from node `n` to node `i`. To loop through node `n`'s neighbors, we have to check the value of `g[n][i]` for all `i` in `g[n]` to determine whether `n` and `i` are neighbors. 
+
+![Accessing a Node's Neighbors with an Adjacency Matrix](images/graph_neighbors_adj_list.png)
+
+If the graph is represented by a list of edges it is difficult to find a node's neighbors because we need to search the entire list of edges for edges from node `n`. For this reason, when we are interested in performing breadth first search on a list of edges, it is common to convert the list of edges to an adjacency list or adjacency matrix. 
+
+![Accessing a Node's Neighbors with a List of Edges](images/graph_neighbors_list_of_edges.png)
+
+Some implementations of a breadth first search may have the user pass in the node they would like the traversal to start at as a parameter. Other times, breadth first search implementations will start their traversal with a random node in the graph or the first node listed in the given graph representation.
+
+Breadth first search is used to solve a variety of problems including:
 
 - Finding the shortest path in an unweighted graph/maze
 - Solving puzzle games like a [Rubik's Cube](https://www.quora.com/How-can-solving-a-Rubiks-Cube-be-framed-as-a-graph-problem)
@@ -66,7 +78,7 @@ Breadth first search is a solution in a variety of problems including:
 
 ##### !question
 
-Write a function returning a list of elements representing a breadth first search of the items in `self.adjacency_dict`.
+Write a function returning a list of elements representing a breadth first search of the items in `self.adjacency_dict`. The traversal should begin with `start_node`.
 
 Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
@@ -83,7 +95,7 @@ class Graph:
     def __init__(self, adjacency_dict = {}):
         self.adjacency_dict = adjacency_dict
 
-    def bfs(self):
+    def bfs(self, start_node):
         pass
 ```
 
@@ -106,18 +118,18 @@ class TestPython1(unittest.TestCase):
         g = Graph(adjacency_dict)
 
         answer = ["Seattle", "Portland", "Chicago", "Hawaii"]
-        self.assertEqual(answer, g.bfs())
+        self.assertEqual(answer, g.bfs("Seattle"))
 
     def test_bfs_empty_graph(self):
         g = Graph()
-        self.assertEqual([], g.bfs())
+        self.assertEqual([], g.bfs("Seattle"))
 
     def test_bfs_one_item(self):
         adjacency_dict = {
             "Seattle": []
         }
         g = Graph(adjacency_dict)
-        self.assertEqual(["Seattle"], g.bfs())
+        self.assertEqual(["Seattle"], g.bfs("Seattle"))
 ```
 
 ##### !end-tests
@@ -136,15 +148,14 @@ Still feeling stuck? Check this video walkthrough of the solution.
 An example of a working implementation:
 
 ```python
-def bfs(self):
+def bfs(self, start_node):
     graph = self.adjacency_dict
     
     if len(graph) == 0:
         return []
         
-    first_item = list(graph.keys())[0]
-    queue = [first_item]
-    visited = [first_item]
+    queue = [start_node]
+    visited = [start_node]
         
     while queue:
         current = queue.pop(0)

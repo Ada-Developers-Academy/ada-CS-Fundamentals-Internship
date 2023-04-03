@@ -279,7 +279,7 @@ For a graph _G(N, E)_, where _N_ is the number of nodes and _E_ the number of ed
 
 - **O(1)** lookup time complexity to find out if any two nodes share an edge
 - **O(N<sup>2</sup>)** space complexity to store this representation
-- **O(N)** time complexity for getting a list of all the neighbors of a node `n` because you need to read the entire row or column.
+- **O(N)** time complexity for getting a list of all the neighbors of a node `n` because you need to read the entire row or column. The _neighbors_ of a node `n` are all the nodes `n` maintains a pointer or edge to. 
 
 This method provides a very fast lookup time and not terrible space complexity if the graph is a _dense graph_ which is a graph where there are a large number of edges compared to nodes.
 

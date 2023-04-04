@@ -1,6 +1,6 @@
 ## Graph Algorithms
 
-There are a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  In this topic, we will focus on two of the most common graph algorithms - Breadth First Search and Depth First Search - because they are very commonly seen in interviews and can be used to solve a wide array fo problems.
+There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  In this topic, we will focus on two of the most common graph algorithms - Breadth First Search and Depth First Search - because they are very commonly seen in interviews and can be used to solve a wide array fo problems.
 
 ### Breadth First Search
 
@@ -323,6 +323,7 @@ Still feeling stuck? Check this video walkthrough of the solution.
 An example of a working implementation:
 
 ```python
+# place this _above_ the Graph class
 from collections import deque
 
 def bfs(self, start_node):
@@ -783,7 +784,9 @@ Still feeling stuck? Check this video walkthrough of the solution.
 An example of a working implementation:
 
 ```python
+# place this _above_ the Graph class
 from collections import deque
+
 def dfs(self, start_node):
     # store adjacency dictionary in variable for clarity
     graph = self.adjacency_dict

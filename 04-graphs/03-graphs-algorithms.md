@@ -829,7 +829,7 @@ def dfs(self, start_node):
 
 ### Stacks and recursion
 
-Whenever we use a stack to solve a problem, the problem can often also be solved using recursion, especially when solution involves doing the same operation repeatedly. We can use the program's call stack to replace the explicit creation of a stack by using a recursive call. 
+Whenever we use a stack to solve a problem, the problem can often also be solved using recursion, especially when the solution involves doing the same operation repeatedly. We can use the program's call stack to replace the explicit creation of a stack by using a recursive call. 
 
 The pseudocode for the recursive implementation is as follows:
 ```

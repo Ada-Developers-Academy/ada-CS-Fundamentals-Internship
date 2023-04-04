@@ -15,7 +15,7 @@ In graph theory, a path that starts from a given node and ends at that same node
 
 ### !end-callout
 
-In breadth first search (BFS)we start with a particular node and visit each node connected to the starting point in the graph starting with the closest node to the starting point and expanding outward.
+In breadth first search (BFS) we start with a particular node and visit each node connected to the starting point in the graph starting with the closest node to the starting point and expanding outward.
 
 We do so by adding each of the neighbors of the starting node to a queue. Then we loop through the queue, removing the first element in the queue and adding each of its unvisited neighbors to the queue. We repeat this process until the queue is empty. 
 

@@ -6,7 +6,7 @@ We will go over how to implement a recursive height function for Binary Search T
 
 ### Class Livecode
 
-Follow along in the following Replit as we livecode the driving function in class: 
+Follow along in the following Replit as we livecode the function in class: 
 * [BST Height Ligers Livecode](https://replit.com/@adadev/BST-Height-Ligers-Livecode)
 * [BST Height Tigons Livecode](https://replit.com/@adadev/BST-Height-Tigons-Livecode)
 

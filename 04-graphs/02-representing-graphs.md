@@ -1,5 +1,8 @@
 # Representing Graphs Practice
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1b0ff0b7-47eb-4103-b6c7-afda01268591&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+
 ## Graphs and Technical Interviews
 
 Graph questions are very common in technical interviews. One of the first challenges when we encounter a graph problem, is understanding how the problem is choosing to represent graphs. Feeling comfortable navigating each of the graph representations discussed in the previous lesson can help. Answer the following questions to help familiarize yourself with each graph representation. 

@@ -1,6 +1,6 @@
 ## Graph Algorithms
 
-There are a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  We will look at two of the most common graph algorithms as a sample.  
+There are a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  In this topic, we will focus on two of the most common graph algorithms - Breadth First Search and Depth First Search - because they are very commonly seen in interviews and can be used to solve a wide array fo problems.
 
 ### Breadth First Search
 
@@ -26,9 +26,6 @@ Once the queue is empty we know we have visited all nodes in the graph that are 
 In the above visualization, the algorithm starts its traversal from the specified start node, node 0 in this case, and expands outwards. First the algorithm visits the start node's neighbors, then the neighbor's neighbors, and so on until it has traversed every node reachable from the start node. If a neighbor has already been visited, the algorithm skips over visiting that neighbor and moves on to the next unvisited neighbor.
 
 You can also interact with a breadth first search animation on [HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/visualize/)
-
-**Breadth First Search Pseudocode Walkthrough**
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=493ecb29-6431-4e61-b918-af170141a8da&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 The pseudocode for breadth first search is as follows:
 ```
@@ -474,10 +471,6 @@ The order in which depth first search traverses a graph's nodes can vary signifi
 Neither depth first search nor breadth first search specifies the order in which we should explore a single node's neighbors. In most cases, we follow the order we find them in based upon the given graph representation. To access a node's neighbors in depth first search, we use the same representation-specific strategies discussed in the breadth first search section above.
 
 To explore depth first search further, [HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/visualize/) also has an excellent description and visualization of the algorithm.
-
-
-**Depth First Search Pseudocode Walkthrough**
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8e2085ff-4dd1-46aa-a961-af170141a92a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 The pseudocode for an iterative depth first search implementation is as follows:
 ```

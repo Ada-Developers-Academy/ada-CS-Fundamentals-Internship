@@ -9,7 +9,7 @@ Graph questions are very common in technical interviews. One of the first challe
 
 ## Alternative Representations
 
-Some technical interview questions can be considered graph questions, but do not provide any of the representations (list of edges, adjacency matrix, adjacency list) discussed in this lesson. Handling these cases will be discussed more through this course.
+Some technical interview questions can be considered graph questions, but do not provide any of the representations (list of edges, adjacency matrix, adjacency list) discussed in this lesson. Handling these cases will be discussed further on in this course.
 
 ### !end-callout
 

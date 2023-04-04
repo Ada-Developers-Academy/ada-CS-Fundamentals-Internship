@@ -895,7 +895,7 @@ In what order do we make recursive calls on a node's neighbors?
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation 
-Seattle is the given start node, so we make our initial call to our recursive helper function `dfs_helper("Seattle", [])` and within the recursive helper function, Seattle is added to our list of visited node. Thus visited is now assigned value `["Seattle"]`.
+Seattle is the given start node, so we make our initial call to our recursive helper function `dfs_helper("Seattle", [])` and within the recursive helper function, Seattle is added to our list of visited nodes. Thus visited now looks like `["Seattle"]`.
 
 <br>
 

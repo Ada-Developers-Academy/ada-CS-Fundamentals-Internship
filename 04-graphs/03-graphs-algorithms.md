@@ -114,7 +114,7 @@ We loop through Seattle's neighbors. Since the graph is provided as an adjacency
 
 <br>
 
-Then we will visit Portland's neighbor Kona and our visited list becomes `["Seattle", "Portland", "Chicago", "Kona"]`. Chicago doesn't have any unvisited neighbors, so our Breadth First is finished! 
+Then we will visit Portland's neighbor Kona and our visited list becomes `["Seattle", "Portland", "Chicago", "Kona"]`. Chicago doesn't have any unvisited neighbors, so our Breadth First Search is finished! 
 
 <br>
 

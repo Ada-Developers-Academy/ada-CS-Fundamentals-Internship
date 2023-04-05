@@ -17,13 +17,12 @@ In the above visualization, observe that when the algorithm reaches node 3, it a
 
 The order in which depth first search traverses a graph's nodes can vary significantly if we switch the order in which we explore a node's neighbors. For example, if our algorithm instead added node 3's neighbors to the stack in the opposite order, the algorithm would traverse node 2 before node 4. It would then realize node 2 doesn't have any unvisited neighbors and proceed directly to node 4. The order in which nodes were visited would actually be the exact same as when we performed breadth first search. 
 
-Neither depth first search nor breadth first search specifies the order in which we should explore a single node's neighbors. In most cases, we follow the order we find them in based upon the given graph representation. To access a node's neighbors in depth first search, we use the same representation-specific strategies discussed in the breadth first search section above.
+Neither depth first search nor breadth first search specifies the order in which we should explore a single node's neighbors. In most cases, we follow the order we find them in based upon the given graph representation. To access a node's neighbors in depth first search, we use the same representation-specific strategies discussed in the breadth first search lesson.
 
 To explore depth first search further, [HackerEarth](https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/visualize/) also has an excellent description and visualization of the algorithm.
 
 The pseudocode for an iterative depth first search implementation is as follows:
 ```
-- Start by taking the first item in the adjacency dictionary `start_node`
 - Initialize an empty stack
 - Initialize an empty list to store visited nodes
 - Add the node we would like to start our traversal from to the stack
@@ -36,9 +35,13 @@ The pseudocode for an iterative depth first search implementation is as follows:
             - Push the neighbor onto the stack
 - Return list of visited nodes
 ```
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
+Depth first search has a number of applications in graph problems including:
 
+- Checking if a graph is connected
+- Detecting a cycle in a graph
+- Finding a path in a maze
+- Scheduling jobs based on dependencies on other jobs
+  
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -52,7 +55,7 @@ The pseudocode for an iterative depth first search implementation is as follows:
 
 ##### !question
 
-Imagine that we change the pseudocode above to remove the line `If the node is not already in the list of visited nodes` before adding the current node to the list of visited nodes.
+Imagine that we change the pseudocode above to remove the line `If the node is not already in the list of visited nodes` before adding the current node to the list of visited nodes. See the hints section for the modified pseudocode.
 
 If we begin our traversal from `Miami`, what will this modified version of depth first search return as its list of `visited` nodes for the following graph?
 
@@ -87,6 +90,21 @@ c|
 <!-- other optional sections -->
 ##### !hint 
 Draw out what is in the stack and in the list of visited node as you walk through the modified pseudocode line by line. 
+
+The modified pseudocode is as follows:
+```
+- Start by taking the first item in the adjacency dictionary `start_node`
+- Initialize an empty stack
+- Initialize an empty list to store visited nodes
+- Add the node we would like to start our traversal from to the stack
+- while the stack is not empty:
+    - Pop the topmost node off the stack and store it in a variable, `current`
+    - Add `current` to the list of visited nodes
+    - Loop through the current node's neighbors:
+        - If the neighbor has not yet been visited
+            - Push the neighbor onto the stack
+- Return list of visited nodes
+```
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
@@ -134,7 +152,7 @@ However, there is still one El Paso remaining in the stack. So, we iterate throu
 
 ##### !question
 
-Using the iterative pseudocode included in the above lesson, if we begin our traversal from `Seattle`, what will a depth first search return as its list of `visited` nodes for the following graph?
+Using the iterative pseudocode included in the above lesson (also included in the hints section), if we begin our traversal from `Seattle`, what will a depth first search return as its list of `visited` nodes for the following graph?
 
 ```python
     g = {
@@ -164,7 +182,25 @@ b|
 ##### !end-answer
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+##### !hint 
+Consider tracking what is in the list of visited nodes when you walk through the pseudocode line by line with the given graph.
+
+The pseudocode for an iterative depth first search is as follows:
+```
+- Start by taking the first item in the adjacency dictionary `start_node`
+- Initialize an empty stack
+- Initialize an empty list to store visited nodes
+- Add the node we would like to start our traversal from to the stack
+- while the stack is not empty:
+    - Pop the topmost node off the stack and store it in a variable, `current`
+    - If the node is not already in the list of visited nodes:
+        - Add `current` to the list of visited nodes
+    - Loop through the current node's neighbors:
+        - If the neighbor has not yet been visited
+            - Push the neighbor onto the stack
+- Return list of visited nodes
+```
+##### !end-hint 
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation 
 Seattle is the given start node, so it is traversed and the list of visited nodes becomes `["Seattle"]`.
@@ -190,13 +226,7 @@ Juneau doesn't have any unvisited neighbors so we look to see if there any remai
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-Depth first search has a number of applications in graph problems including:
 
-- Checking if a graph is connected
-- Detecting a cycle in a graph
-- Finding a path in a maze where there is only one correct path
-- Scheduling jobs based on dependencies on other jobs
-  
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -381,17 +411,18 @@ Whenever we use a stack to solve a problem, the problem can often also be solved
 
 The pseudocode for the recursive implementation is as follows:
 ```
-def dfs(self, start_node):
-    - Create empty list to store visited nodes
-    - Pass list of visited nodes and `start_node` into `dfs_helper`
-    - Return list of visited nodes
+- Main function
+    def dfs(self, start_node):
+        - Create empty list to store nodes that have been visited
+        - Pass list of visited nodes and `start_node` into `dfs_helper`
+        - Return list of visited nodes
 
 - Helper function
-def dfs_helper(self, start_node, visited)
-    - If `start_node` is not in list of visited nodes
-        - Append node to visited
-        - Loop through the neighbors of the node
-            - Call dfs_helper with list of visited nodes and the neighbor as the new start node
+    def dfs_helper(self, start_node, visited)
+        - If `start_node` is not in list of visited nodes
+            - Append `start_node` to list of visited nodes
+            - Loop through `start_node`'s neighbors
+                - Call dfs_helper passing in list of visited nodes and the neighbor as the new start node
 ```
 
 The key difference between our iterative and recursive implementations is that the explicit stack created in the iterative version is replaced by the recursive call stack.
@@ -440,6 +471,24 @@ a|
 <!-- other optional sections -->
 ##### !hint
 In what order do we make recursive calls on a node's neighbors?
+
+Try drawing the call stack as you walk through the pseudocode with the given graph.
+
+DFS Recursive Pseudocode: 
+```
+- Main function
+    def dfs(self, start_node):
+        - Create empty list to store nodes that have been visited
+        - Pass list of visited nodes and `start_node` into `dfs_helper`
+        - Return list of visited nodes
+
+- Helper function
+    def dfs_helper(self, start_node, visited)
+        - If `start_node` is not in list of visited nodes
+            - Append `start_node` to list of visited nodes
+            - Loop through `start_node`'s neighbors
+                - Call dfs_helper passing in list of visited nodes and the neighbor as the new start node
+```
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation 
@@ -749,23 +798,19 @@ If we expect the solution to be relatively close to our start node, we may choos
 
 Breadth first search will also find the shortest path in an unweighted graph because it chooses which node to visit next based on proximity (first neighbors, then the neighbor's neighbors, etc.). 
 
-Depth first search goes down one path as far as possible and only turns around and explores other possibilities only once it can't continue down the path its on. For this reason, depth first search is often used to solve problems where we want to test out different possible game outcomes or win conditions.
+Depth first search goes down one path as far as possible and only turns around and explores other possibilities only once it can't continue down the path its on. For this reason, depth first search is often used to solve problems where we want to test out different possible game outcomes or win conditions. Depth first search is also used for detecting cycles in a directed graph and topological sorting. 
 
-## Summary
-
-Two popular graph traversal algorithms are breadth first search (BFS) and depth first search (DFS). Both algorithms will visit each node and edge in the graph, but they have different methods of performing the traversal. In most cases, both BFS and DFS can be used to solve a problem. However, there are instances in which the differences in approach make one a better choice than the other. The most common use cases for each are listed below. 
-
-Breadth first search processes nodes by visiting all neighboring nodes before moving on to nodes that are neighbors of its neighbors and so-on.
-Depth first search processes nodes by following a path as deep as it can before backing up and following another path.
+Problems like finding a path, checking whether a graph is bipartite, and detecting cycles in undirected graphs can be solved with both algorithms.
 
 **Breadth-first-search**|**Depth-first-search**|
 :-----:|:-----:|
 Typically implemented using a queue|Typically implemented using a stack|
 Generally requires more memory than DFS|Generally requires less memory than BFS|
-Optimal for finding the shortest distance of a path|Not optimal for finding the shortest distance|
+Optimal for finding the shortest distance of a path (unweighted)| Will not find the shortest distance of a path (unweighted)|
 
-**BFS Use Cases**|**DFS Use Cases**|
-:-----:|:-----:|
-Shortest path between two nodes|Detecting cycles in a graph|
-Testing if a graph is bipartite|Problems that require graph backtracking|
-Find all connected nodes in a graph|Topological sorting|
+## Summary
+
+Two popular graph traversal algorithms are breadth first search (BFS) and depth first search (DFS). Both algorithms can be used to visit each node and edge in a connected graph, but they have different methods of performing the traversal. Both algorithms can also be easily modified to visit every node and edge in a disconnected graph by executing the base algorithm multiple times, each time with a different start node. In most cases, both BFS and DFS can be used to solve a problem. However, there are instances in which the differences in approach make one a better choice than the other. The most common use cases for each are listed above. 
+
+Breadth first search processes nodes by visiting all neighboring nodes before moving on to nodes that are neighbors of its neighbors and so-on.
+Depth first search processes nodes by following a single path as far as it can before backing up and following another path.

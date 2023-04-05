@@ -21,3 +21,5 @@
 - [BaseCS on Graphs](https://medium.com/basecs/from-theory-to-practice-representing-graphs-cfd782c5be38)
 - [Geeks for Geeks: Graphs and its representations](https://www.geeksforgeeks.org/graph-and-its-representations/)
 - [Coursera:  Algorithms on Graphs](https://www.coursera.org/lecture/algorithms-on-graphs/representing-graphs-c4W9f)
+- [Geeks for Geeks: BFS Applications](https://www.geeksforgeeks.org/applications-of-breadth-first-traversal/)
+- [Geeks for Geeks: DFS Applications](https://www.geeksforgeeks.org/applications-of-depth-first-search/)

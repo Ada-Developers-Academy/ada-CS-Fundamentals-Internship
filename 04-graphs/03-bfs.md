@@ -1,5 +1,7 @@
 # Graph Algorithms - Breadth First Search
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=84e804c0-571e-4fc0-9709-afdb0139f1f5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Overview
 
 There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  In this topic, we will focus on two of the most common graph algorithms - Breadth First Search and Depth First Search - because they are very commonly seen in interviews and can be used to solve a wide array of problems.
@@ -49,13 +51,19 @@ Notice that because the breadth first search algorithm asks us to loop through e
 
 If the graph is provided to us as an adjacency matrix, it is still possible to loop through the graph's neighbors. However, when `g` is changed to an adjacency matrix, note that `g[n]` is now a list of _all the nodes in the graph_ - not just node `n`'s neighbors - with `g[n][i]` indicating whether there is an edge from node `n` to node `i`. To loop through node `n`'s neighbors, we have to check the value of `g[n][i]` for all `i` in `g[n]` to determine whether `n` and `i` are neighbors. 
 
-![Accessing a Node's Neighbors with an Adjacency Matrix](images/graph_neighbors_adj_list.png)
+![Accessing a Node's Neighbors with an Adjacency Matrix](images/graph_neighbors_adj_matrix.png)
 
 If the graph is represented by a list of edges it is difficult to find a node's neighbors because we need to search the entire list of edges for edges from node `n`. For this reason, when we are interested in performing breadth first search on a list of edges, it is common to convert the list of edges to an adjacency list or adjacency matrix. 
 
 ![Accessing a Node's Neighbors with a List of Edges](images/graph_neighbors_list_of_edges.png)
 
 Some implementations of a breadth first search may have the user pass in the node they would like the traversal to start at as a parameter. Other times, breadth first search implementations will start their traversal with a random node in the graph or the first node listed in the given graph representation.
+
+Breadth first search is used to solve a variety of problems including:
+
+- Checking to see if a graph is **connected**. If a graph is connected, we can get from any node in the graph to any other node in the graph
+- Finding the shortest path in an unweighted graph/maze
+- Solving puzzle games like a [Rubik's Cube](https://www.quora.com/How-can-solving-a-Rubiks-Cube-be-framed-as-a-graph-problem)
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -69,7 +77,7 @@ Some implementations of a breadth first search may have the user pass in the nod
 
 ##### !question
 
-Using the pseudocode included in the above lesson, if we begin our traversal from `Seattle`, what will a Breadth First Search return as its list of `visited` nodes for the following graph?
+Using the pseudocode included in the lesson above (also included in the hints below), if we begin our traversal from `Seattle`, what will a breadth first search return as its list of `visited` nodes for the following graph?
 
 ```python
     g = {
@@ -101,7 +109,24 @@ a|
 ##### !end-answer
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+###### !hint 
+Feeling stuck? Try documenting what is in the list of visited nodes as you walk through the pseudocode line by line.
+
+Breadth First Search Pseudocode:
+```
+    - Initialize an empty list of visited nodes
+    - Initialize an empty queue 
+    - Add the node we would like to start our traversal from to the queue 
+    - Add the node we would like to start our traversal from to visited
+    - While the queue is not empty:
+        - Remove an element from the queue and store it in a variable, `current`
+        - Loop through each of the current node's neighbors:
+            - If the neighbor has not yet been visited:
+                - Add the neighbor to the queue
+                - Add the neighbor to the list of visited nodes
+    - Return the list of visited nodes
+```
+###### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
@@ -137,7 +162,7 @@ Miami and El Paso are never visited because a basic breadth first search only vi
 
 ##### !question
 
-Using the pseudocode included in the above lesson, if we begin our traversal from `Seattle`, what will a Breadth First Search return as its list of `visited` nodes for the following graph?
+Using the pseudocode included in the lesson above (also included in the hints below), if we begin our traversal from `Seattle`, what will a breadth first search return as its list of `visited` nodes for the following graph?
 
 ```python
     g = {
@@ -168,7 +193,24 @@ d|
 ##### !end-answer
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+###### !hint 
+Feeling stuck? Try documenting what is in the list of visited nodes as you walk through the pseudocode line by line.
+
+Breadth First Search Pseudocode:
+```
+    - Initialize an empty list of visited nodes
+    - Initialize an empty queue 
+    - Add the node we would like to start our traversal from to the queue 
+    - Add the node we would like to start our traversal from to visited
+    - While the queue is not empty:
+        - Remove an element from the queue and store it in a variable, `current`
+        - Loop through each of the current node's neighbors:
+            - If the neighbor has not yet been visited:
+                - Add the neighbor to the queue
+                - Add the neighbor to the list of visited nodes
+    - Return the list of visited nodes
+```
+###### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation 
 
@@ -190,11 +232,7 @@ There is an edge from Chicago to Seattle but there is no edge from Seattle to Ch
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-Breadth first search is used to solve a variety of problems including:
 
-- Checking to see if a graph is **connected** - we can get from any node in the graph to any other node in the graph
-- Finding the shortest path in an unweighted graph/maze
-- Solving puzzle games like a [Rubik's Cube](https://www.quora.com/How-can-solving-a-Rubiks-Cube-be-framed-as-a-graph-problem)
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->

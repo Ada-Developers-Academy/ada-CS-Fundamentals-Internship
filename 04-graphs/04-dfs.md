@@ -324,7 +324,7 @@ Use the pseudocode included above this problem to guide your implementation. Obs
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=77eefecf-346b-4fe5-8b31-af1d0123414e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f8e4f1df-e53d-46f1-943e-afdb014753e4&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ### !end-hint 
 
@@ -598,7 +598,7 @@ Use the pseudocode above to guide your implementation.
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=25b3e12d-bc1a-40a5-b60c-af1d01234183&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=881ab632-e3a6-4648-ba03-afdb01475791&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ##### !end-hint 
 

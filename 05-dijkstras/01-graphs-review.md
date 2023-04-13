@@ -1,6 +1,7 @@
-## Overview of Graphs
-In the previous lesson, we talked about graphs, how to represent them, and a couple algorithms for traversing graphs. In this lesson, we'll go over a quick review of some of the learnings from the last lesson and introduce a new algorithm that can be used to solve a multitude of graph problems.
+# Graphs Review
 
+## Overview of Graphs
+In the previous topic, we talked about graphs, how to represent them, and two algorithms - breadth first search and depth first search - for traversing graphs. In this topic, we'll review and extend some key concepts from the previous topic. We'll also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
 <!-- Add more advanced review questions -->
 
 
@@ -9,24 +10,25 @@ In the previous lesson, we talked about graphs, how to represent them, and a cou
 ## Review of Breadth First Search & Depth First Search
 
 ### Breadth First Search (BFS)
-You may recall from the last lesson that the Breadth First Search (BFS) algorithm starts with a particular node and then visits each node connected to the starting point before expanding outward.
+Recall from the last lesson that the breadth first search (BFS) algorithm starts its traversal with a particular node and then visits each node connected to the starting node before expanding outward.
 
-The BFS algorithm requires us to use a queue to visit nodes in a "level-by-level" ordering by adding each of the neighbors of the starting node to the queue. We then loop through the queue, adding unvisited neighbors to the list of visited nodes as well as to the queue to be further processed.
+![Breadth First Search on an Undirected Graph](images/bfs-undirected-graph.gif)
 
-#### BFS Visualization
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=370ea67c-477d-41c7-b066-af240146d5c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+BFS uses a queue to visit nodes in order of proximity to the starting node. It accomplishes this by first adding each of the neighbors of the starting node to the queue. The algorithm then removes nodes from the queue one at a time, adding any unvisited neighbors of each node it removes to both the queue for further processing and the list of visited nodes.
 
 ### Depth First Search (DFS)
-You may also recall from the last lesson that the Depth First Search (DFS) algorithm starts at a node and then follows a path as deeply as possible before backing up and following the next path. We refer to this algorithm as a back-tracking algorithm.
+You may also recall from the last lesson that the Depth First Search (DFS) algorithm starts at a node and then follows a path as deeply as possible before backing up and following the next path. We refer to this traversal pattern as back-tracking.
 
 The DFS algorithm requires the use of a stack. The stack is used to further process nodes along the path, starting with the first node and then adding its neighbors to the stack before iterating on the nodes added to the stack.
 
 #### DFS Visualization
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=757ce80b-3cc5-4ae0-bdf1-af240146d5a0&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
-### Why BFS (kinda) allows for shortest path of an unweighted graph
+<!-- Add question -->
 
-By itself, BFS as we developed it does *not* allow for finding the shortest path of an unweighted graph. In order to retrieve the shortest path using the BFS algorithm, we would need to modify the algorithm to store the current shortest distance to the target node as well as the preceding node in the shortest path. This is essentially what Dijkstra's algorithm does, which we will learn more about in the next section. 
+### Using Breadth First Search to Find the Shortest Path in an Unweighted Graph
+
+Breadth first search can easily be adapted to find the shortest path between any two nodes in an unweighted graph. In order to retrieve the shortest path using the BFS algorithm, we would need to modify the algorithm to store the current shortest distance to the target node as well as the preceding node in the shortest path. This is essentially what Dijkstra's algorithm does, which we will learn more about in the next section. 
 
 Again, you may recall BFS visits nodes based on *proximity*. It starts by visiting nodes one edge away from the start node (its neighbors). Then it visits nodes that are two edges away from the starting node (neighbor's neighbors), etc. Therefore, the BFS algorithm can be modified to record the smallest path from an initial node to any other connected node in the graph. The big difference between Dijkstra's Algorithm and BFS is that Dijkstra's uses the *weights* of the edges to determine the next node to consider rather than just the number of edges. Again, we'll talk about Dijkstra's algorithm more in the next section.
 

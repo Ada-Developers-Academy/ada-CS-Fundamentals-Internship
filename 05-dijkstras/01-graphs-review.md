@@ -1,11 +1,22 @@
 # Graphs Review
 
 ## Overview of Graphs
-In the previous topic, we talked about graphs, how to represent them, and two algorithms - breadth first search and depth first search - for traversing graphs. In this topic, we'll review and extend some key concepts from the previous topic. We'll also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
+In the previous topic, we talked about graphs, how to represent them, and two algorithmsfor traversing graphs: breadth first search and depth first search. This topic will review and extend some key concepts from the previous topic. It will also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
 <!-- Add more advanced review questions -->
 
 
 <!-- ======================= END CHALLENGE ======================= -->
+## Graph Representations
+
+<!-- Write code to convert list of edges to adjacency matrix -->
+
+
+### Hidden Graphs
+Many interview problems can be solved as graph problems but do not actually require graphs. 
+
+
+<!-- Write code to convert graphs -->
+
 
 ## Review of Breadth First Search & Depth First Search
 
@@ -14,17 +25,18 @@ Recall from the last lesson that the breadth first search (BFS) algorithm starts
 
 ![Breadth First Search on an Undirected Graph](images/bfs-undirected-graph.gif)
 
-BFS uses a queue to visit nodes in order of proximity to the starting node. It accomplishes this by first adding each of the neighbors of the starting node to the queue. The algorithm then removes nodes from the queue one at a time, adding any unvisited neighbors of each node it removes to both the queue for further processing and the list of visited nodes.
+Breadth first search uses a queue to visit nodes in order of proximity to the starting node. It accomplishes this by first adding each of the starting node's neighbors to the queue. The algorithm then removes nodes from the queue one at a time, adding each removed node's unvisited neighbors to both the queue for further processing and the list of visited nodes as it goes along.
 
 ### Depth First Search (DFS)
-You may also recall from the last lesson that the Depth First Search (DFS) algorithm starts at a node and then follows a path as deeply as possible before backing up and following the next path. We refer to this traversal pattern as back-tracking.
+In contrast, the depth first search (DFS) algorithm starts at a particular node and then follows a continuous path of edges from that node as deeply as possible before backing up and following the next path. This pattern of traversal is also referred to as back-tracking.
 
-The DFS algorithm requires the use of a stack. The stack is used to further process nodes along the path, starting with the first node and then adding its neighbors to the stack before iterating on the nodes added to the stack.
+![Depth First Search on an Undirected Graph](images/dfs-undirected-graph.gif)
 
-#### DFS Visualization
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=757ce80b-3cc5-4ae0-bdf1-af240146d5a0&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
-<!-- Add question -->
+Depth first search requires the use of a stack. The algorithm first adds each of the starting node's neighbors to the stack. It then removes nodes from the stack one at a time in last-in-first-out order and marks the removed node as visited. It adds each removed node's unvisited neighbors to the stack and repeats the process until the stack is empty. 
+
+<!-- Add question: Is this BFS or DFS? -->
+<!-- Add quesetion: Is this BFS or DFS -->
 
 ### Using Breadth First Search to Find the Shortest Path in an Unweighted Graph
 

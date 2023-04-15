@@ -8,7 +8,115 @@ In the previous topic, we talked about graphs, how to represent them, and two al
 <!-- ======================= END CHALLENGE ======================= -->
 ## Graph Representations
 
+In the previous topic, we introduced three methods for representating graphs: list of edges, adjacency matrix, and adjacency lists. An adjacency list can also be formed with a dictionary. 
+
+### !challenge
+
+* type: multiple-choice
+* id: 36416c92-a94c-4da8-9719-c7b67bc59d3f
+* title: Graph Conversions
+* points: 1
+
+##### !question
+```python
+list_of_edges = 
+[
+[1,2],
+[2,3],
+[2,4],
+[3,4],
+[1,5],
+[1,4],
+[4,6],
+[3,6]
+]
+```
+Choose the adjacency matrix that represents the same graph as the list of edges above. The list of edges represents an _undirected_ and _unweighted_ graph. 
+##### !end-question
+
+##### !options
+
+a| ```python
+    adj_matrix = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 0, 1, 1, 0],
+        [1, 1, 0, 0, 0, 0, 0],
+        [0, 0, 1, 0, 1, 1, 1],
+        [0, 1, 1, 1, 0, 1, 1],
+        [0, 1, 0, 0, 0, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1]
+    ]
+b| ```python
+    adj_matrix = [
+        [0, 0, 1, 1, 0, 0, 0],
+        [0, 0, 1, 0, 1, 1, 0],
+        [0, 1, 0, 1, 1, 0, 0],
+        [0, 0, 1, 0, 1, 0, 1],
+        [0, 1, 1, 1, 0, 0, 1],
+        [0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0]
+    ]
+c| ```python
+    adj_matrix = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 1, 0, 1, 1, 0],
+        [0, 1, 0, 1, 1, 0, 0],
+        [0, 0, 1, 0, 1, 0, 1],
+        [0, 1, 1, 1, 0, 0, 1],
+        [0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 0, 0]
+    ]
+##### !end-options
+
+##### !answer
+
+c|
+
+##### !end-answer
+
+<!-- other optional sections -->
+##### !hint 
+Consider using the list of edges to draw out the graph on a piece of paper. Then convert the drawing to an adjacency matrix. 
+
+<details>
+<summary>See our drawing of the graph below</summary>
+<div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFgMkiiMTE&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFgMkiiMTE&#x2F;view?utm_content=DAFgMkiiMTE&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">dijkstra-q1-graph</a> 
+
+Watch the graph be drawn:
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7d3983a7-0f67-4782-88d7-afe50161ada7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+In Option A, the last row has index 6 and therefore represents edges stemming from node 6. Each element of row 6 is a `1` indicating that node 6 has an edge to every other node in the graph, however the list of edges indicates node 6 is only connected to two other nodes in the graph, nodes 3 and 4.
+
+In Option B, `adj_matrix[0][2]` and `adj_matrix[0][3]` indicates there is an edge from node 0 to node 2 and from node 0 to node 3 but that is not reflected in the list of edges. 
+
+In Option C, each row-column intersection can also be found in the list of edges. Therefore, the answer is C.
+
+See the video below for an example of translating the list of edges to an adjacency matrix. 
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8ae40a35-a45c-4424-977d-afe5015ea21e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+##### !end-explanation 
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 <!-- Write code to convert list of edges to adjacency matrix -->
+
+### Representing Weighted Graphs
+
+
 
 
 ### Hidden Graphs

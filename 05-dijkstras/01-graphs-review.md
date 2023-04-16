@@ -116,17 +116,83 @@ See the video below for an example of translating the list of edges to an adjace
 
 ### Representing Weighted Graphs
 
+We can also represent weighted graphs with slight alterations to the same formats.
+
+#### List of Edges
+With a list of edges, we simply add a third value to each edge list representing the weight of that edge.
+
+![weighted graph](images/weighted-graph.png)
+
+For example, the following list represents the weighted graph above as a list of edges:
+
+```py
+list_of_edges = [
+    [1, 2, 10],
+    [1, 3, 30],
+    [3, 4, 20]
+]
+```
+
+#### Adjacency Matrix
+
+With an adjacency matrix, we can use the value of each row-column interesection in the matrix represents the weight of each edge. Generally, values of 0 are still used to indicate the absence of an edge. However, if we wanted to allow for edges with zero or negative values, we could use a value like `None` to represent the absence of an edge.
+
+![weighted graph](images/weighted-graph.png)
+
+Below is an example matrix of the above graph. Notice that in this graph we use a zero value to indicate the absence of an edge.
+
+![weighted adjacency  matrix](images/weighted-adj-matrix.png)
+
+The above weighted matrix can be represented in Python as follows:
+
+```py
+adj_matrix = [
+    [0, 0, 0, 0, 0],
+    [0, 0, 10, 30, 0],
+    [0, 10, 0, 0, 0],
+    [0, 30, 0, 0, 20],
+    [0, 0, 0, 20, 0]
+]
+```
 
 
+#### Adjacency List
+With an adjacency list, tuples are commonly used to pair each destination node in a source node's edge list with the edge weight. 
+
+![weighted graph](images/weighted-graph.png)
+
+```py
+adj_list = [
+    [],
+    [(2, 10), (3, 30)],
+    [(1, 10)],
+    [(1, 30), (4, 20)],
+    [(3,20)]
+]
+```
+Other data structures such as lists and dictionaries can also be used as an alternative to tuples to pair the destination node with the edge weight
+
+If we wanted to represent the same graph as an adjacency dictionary, it would look like the following:
+
+```py
+adj_dict = {
+    1: [(2, 10), (3, 30)],
+    2: [(1, 10)],
+    3: [(1, 30), (4, 20)],
+    4: [(3, 20)]
+}
+```
 
 ### Hidden Graphs
-Many interview problems can be solved as graph problems but do not actually require graphs. 
 
+Many interview problems can be solved as graph problems are not clearly defined as graph problems and will not give you a list of edges, adjacency list, or adjacency matrix. 
+
+These 
 
 <!-- Write code to convert graphs -->
 
 
-## Review of Breadth First Search & Depth First Search
+## Breadth First Search & Depth First Search Review
 
 ### Breadth First Search (BFS)
 Recall from the last lesson that the breadth first search (BFS) algorithm starts its traversal with a particular node and then visits each node connected to the starting node before expanding outward.
@@ -143,7 +209,6 @@ In contrast, the depth first search (DFS) algorithm starts at a particular node 
 
 Depth first search requires the use of a stack. The algorithm first adds each of the starting node's neighbors to the stack. It then removes nodes from the stack one at a time in last-in-first-out order and marks the removed node as visited. It adds each removed node's unvisited neighbors to the stack and repeats the process until the stack is empty. 
 
-<!-- Add question: Is this BFS or DFS? -->
 <!-- Add quesetion: Is this BFS or DFS -->
 
 ### Using Breadth First Search to Find the Shortest Path in an Unweighted Graph

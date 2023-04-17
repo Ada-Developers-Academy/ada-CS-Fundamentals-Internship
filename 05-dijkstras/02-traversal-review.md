@@ -74,7 +74,7 @@ Breadth first search would visit `apple`'s three neighbors - `guava`, `lychee`, 
 
 ### Using Breadth First Search to Find the Shortest Path in an Unweighted Graph
 
-Breadth first search can easily be adapted to find the shortest path between any two nodes in an **unweighted** graph. Again, recall that breadth first search visits nodes based on *proximity*. It starts by visiting nodes one edge away from the start node (its neighbors). Then it visits nodes that are two edges away from the starting node (neighbor's neighbors), etc. Therefore, the BFS algorithm can be modified to record the smallest path from an initial node to any other connected node in the graph. 
+Breadth first search can easily be adapted to find the shortest path between any two nodes in an **unweighted** graph. The length of a path in an unweighted graph is the number of edges it takes to travel from the source node to the destination node. Again, recall that breadth first search visits nodes based on *proximity*. It starts by visiting nodes one edge away from the start node (its neighbors). Then it visits nodes that are two edges away from the starting node (neighbor's neighbors), etc. Therefore, the BFS algorithm can be modified to record the smallest path from an initial node to any other connected node in the graph. 
 
 In order to retrieve the shortest path from the start node to any other node in the graph, we would need to modify breadth first search to store the current shortest distance to the target node as well as the preceding node in the shortest path. The preceding node may also be referred to as the parent node. 
 

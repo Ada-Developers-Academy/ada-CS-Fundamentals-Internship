@@ -192,7 +192,7 @@ Observe that the cost to get from Node A to Node D is the cost to get from Node 
 
 ![Previous Node in a Graph Example](./images/dijkstra-subpath.png)
 
-This observation illustrates that when calculating the costs of a path between two non-neighboring nodes as we may need to do in Dijkstra's requires us to know the previous node of the end node in the path that we are looking at. As a result, when implementing Djikstra's algorithm it can be useful for us to keep track of each node's previous node along its minimum cost path.
+When calculating the cost of a path between two non-neighboring nodes, it helps to know the penultimate node along that path. As a result, when implementing Djikstra's algorithm it is useful for us to keep track of each node's previous node along its minimum cost path.
 
 
 The following pseudocode implementation of Dijkstra's assumes that we are provided with a graph and a starting node.

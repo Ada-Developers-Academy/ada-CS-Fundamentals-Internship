@@ -186,13 +186,13 @@ The process outlined above can be generalized as pseudocode.
 
 Before jumping into the pseudocode, observe that to find the cost of a path from Node A to a non-neighboring node D, we needed to know the cost of travelling from Node A to Node D's direct neighbor along that path.
 
-In the example below, say we want to find the cost of the path from Node A to Node D. Node D's neighbor along that path is Node C. We could also say that Node C is the _previous_ node along that path. 
+In the example below, say we want to find the cost of the path from Node A to Node D. Node D's neighbor along that path is Node C. We could also say that Node C is the _previous_ or _parent_ node along that path. 
 
 Observe that the cost to get from Node A to Node D is the cost to get from Node A to Node C plus the cost to get from Node D to Node C. 
 
 ![Previous Node in a Graph Example](./images/dijkstra-subpath.png)
 
-When calculating the cost of a path between two non-neighboring nodes, it helps to know the penultimate node along that path. As a result, when implementing Djikstra's algorithm it is useful for us to keep track of each node's previous node along its minimum cost path.
+When calculating the cost of a path between two non-neighboring nodes, it helps to know the penultimate node along that path. As a result, when implementing Djikstra's algorithm it is useful for us to keep track of each node's parent node along its minimum cost path.
 
 
 The following pseudocode implementation of Dijkstra's assumes that we are provided with a graph and a starting node.
@@ -219,6 +219,8 @@ The following pseudocode implementation of Dijkstra's assumes that we are provid
 - Return the previous and distances list
 
 ```
+
+We could alternatively use dictionaries instead of lists to represent `distances` and `previous`. This is particularly useful when our nodes have non-numeric values. 
 
 <!-- available callout types: info, success, warning, danger, secondary, star  -->
 ### !callout-info

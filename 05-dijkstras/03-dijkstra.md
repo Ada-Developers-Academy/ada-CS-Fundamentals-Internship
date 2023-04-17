@@ -213,7 +213,7 @@ The following pseudocode implementation of Dijkstra's assumes that we are provid
         - if the neighbor has not yet been visited:
             - calculate distance from start node to neighbor via current node
             - If calculated distance < distances[neighbor]
-                - distances[neighbor] = caclulated distance
+                - distances[neighbor] = calculated distance
                 - previous[neighbor] = current_node
             - queue.append(neighbor)
 - Return the previous and distances list
@@ -280,7 +280,7 @@ Output:
     }
 ```
 
-
+ Spend no more then 15-20 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15-20 minutes.
 
 ##### !end-question
 

@@ -462,7 +462,10 @@ class TestPython1(unittest.TestCase):
 
 Use the pseudocode in the section above to guide your implementation.
 
-When pushing an item to `heapq`, use a tuple of the form `(priority, node_index)`. The node's cost/distance should be  the priority. 
+The [basic examples section of the heapq documentation](https://docs.python.org/3/library/heapq.html#basic-examples) is a good resource for learning how to define a new heap as well as how to push and pop elements on/off the heap. 
+
+When pushing an item to `heapq`, pass a tuple of the form `(priority, node_index)` to the `heappush` function. The node's cost/distance should be the priority. 
+
 
 Still feeling stuck? Watch the video solution walkthrough below. 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d511a32d-c85c-4994-9e73-af23004ca554&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>

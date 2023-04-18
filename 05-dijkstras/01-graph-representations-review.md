@@ -135,7 +135,7 @@ list_of_edges = [
 
 #### Adjacency Matrix
 
-With an adjacency matrix, we can use the value of each row-column interesection in the matrix represents the weight of each edge. Generally, values of 0 are still used to indicate the absence of an edge. However, if we wanted to allow for edges with zero or negative values, we could use a value like `None` to represent the absence of an edge.
+With an adjacency matrix, we can use the value of each row-column intersection in the matrix to represent the weight of each edge. Generally, values of 0 are still used to indicate the absence of an edge. However, if we wanted to allow for edges with zero or negative values, we could use a value like `None` to represent the absence of an edge.
 
 ![weighted graph](images/weighted-graph.png)
 

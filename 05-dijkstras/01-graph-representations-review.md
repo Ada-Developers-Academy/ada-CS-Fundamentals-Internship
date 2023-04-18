@@ -1,7 +1,7 @@
 # Graph Representations Review
 
 ## Overview of Graphs
-In the previous topic, we talked about graphs, how to represent them, and two algorithmsfor traversing graphs: breadth first search and depth first search. This topic will review and extend some key concepts from the previous topic. It will also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
+In the previous topic, we talked about graphs, how to represent them, and two algorithms for traversing graphs: breadth first search and depth first search. This topic will review and extend some key concepts from the previous topic. It will also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
 <!-- Add more advanced review questions -->
 
 

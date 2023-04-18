@@ -213,7 +213,7 @@ grid = [
 ```
 <!-- Add image of the islands -->
 
-Notice that values of `1` in the grid represent land; values of `1` do not represent the presence of an edge between the row and column index nodes, therefore `grid` is not an adjacency matrix. Also notice that the grid we are given is _not_ a square matrix. An adjacency matrix will always be a square `nxn` matrix wher `n` is the number of nodes in the graph. Even though the problem does not provide us with a graph representation we are familiar with, we can still transform the grid into a graph. 
+Notice that values of `1` in the grid represent land; values of `1` do not represent the presence of an edge between the row and column index nodes, therefore `grid` is not an adjacency matrix. Also notice that the grid we are given is _not_ a square matrix. An adjacency matrix will always be a square `nxn` matrix where `n` is the number of nodes in the graph. Even though the problem does not provide us with a graph representation we are familiar with, we can still transform the grid into a graph. 
 
 We can think of the overall grid as our graph with each value in the grid representing a potential node. Each node has four potential neighbors: the values one left, right, up, or down of it. 
 

@@ -84,7 +84,7 @@ In the above visualization, we have two additional lists. The indices of each li
 
 The distance to the start node `distance[0]` is initialized to 0 to indicate that the distance from the start node to itself is zero. The initial distance to all other nodes in the `distance` list is set to infinity to indicate the algorithm has not yet found a path to these nodes.
 
-As the algorithm traverses new nodes, it updates the distance from the start node to the new node. The distance to a new node will be the distance to its parents node plues one. For example, node 6's parent node is node 5. `distance[5]` is `2` indicating that we have to travel along two edges to get from the start node 0 to node 5. Node 6 is node 5's neighbor, therefore the distance from node 0 to node 6 must be `2 + 1 =  3`. 
+As the algorithm traverses new nodes, it updates the distance from the start node to the new node. The distance to a new node will be the distance to its parents node plus one. For example, node 6's parent node is node 5. `distance[5]` is `2` indicating that we have to travel along two edges to get from the start node 0 to node 5. Node 6 is node 5's neighbor, therefore the distance from node 0 to node 6 must be `2 + 1 =  3`. 
 
 We can use the final `parents` list to trace the path from the start node to other nodes in the graph.
 

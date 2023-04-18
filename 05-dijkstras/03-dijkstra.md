@@ -614,7 +614,7 @@ def dijkstra(g, s):
     Combining this with our for loop from point 1, our overall time complexity for Dijkstra's is now O(N + E).
 
 4. _Popping the current node off the priority queue_
-    Like `heappush`, popping a node off the priority queue with `heappop` is also a logarithmic operation. Our priority queue will have at most `E` elements in it, making `heappop` an `O(log(E))`  within our Dijkstra's implementation. 
+    Like `heappush`, popping a node off the priority queue with `heappop` is also a logarithmic operation. Our priority queue will have at most `E` elements in it, making `heappop` an `O(log(E))` operation within our Dijkstra's implementation. 
 
     Because this operation is nested within our while loop from point 3 which has time complexity `O(E)` we now have that an overall time complexity of `O(N + Elog(E))` for Dijkstra's. 
 

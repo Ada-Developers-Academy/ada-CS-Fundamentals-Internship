@@ -181,12 +181,16 @@ Standards:
       -
         Type: Lesson
         UID: a1c9e6cf-0bb8-4d02-bd5e-bda148023dd9
-        Path: /05-dijkstras/01-graphs-review.md
+        Path: /05-dijkstras/01-graph-representations-review.md
+      -
+        Type: Lesson
+        UID: 401e07cc-abf5-46a4-880f-b61ced1dc235
+        Path: /05-dijkstras/02-traversal-review.md
       -
         Type: Lesson
         UID: a0b4d6af-65fb-4d82-bd37-0f952f9c3b92
-        Path: /05-dijkstras/02-dijkstra.md
+        Path: /05-dijkstras/03-dijkstra.md
       -
         Type: Lesson
         UID: b11a0602-959e-42a2-9670-e7d126e9d98c
-        Path: /05-dijkstras/03-graphs-2-activity.md
+        Path: /05-dijkstras/04-dijkstras-activity.md

@@ -7,7 +7,7 @@ In Computer Science Fundamentals students learn the following concepts and data 
 - [Linked Lists](../02-linked-lists/01-linked-lists.md)
 - [Binary Search Trees](../03-Binary-Search-Trees/01-Binary-Search-Trees.md)
 - [Graphs: BFS & DFS](../04-graphs/01-graphs.md)
-- [Graphs: Dijkstra's Algorithm](../05-dijkstras/01-graphs-review.md)
+- [Graphs: Dijkstra's Algorithm](../05-dijkstras/01-graph-representations-review.md)
 
 ### Reverse Classroom
 

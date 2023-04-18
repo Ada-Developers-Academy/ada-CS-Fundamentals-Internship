@@ -2,17 +2,17 @@
 
 ## Overview 
 
-We have observed that a breadth first search traversal of a tree allows us to find the shortest path between any two nodes in an unweighted graph. In an unweighted graph, the length of a path is equal to the number of the edges in the path.
+We have observed that a breadth first search traversal allows us to find the shortest path between any two nodes in an unweighted graph. In an unweighted graph, the length of a path is equal to the number of the edges in the path.
 
-With a weighted graph, finding the shortest path between two nodes looks slightly different. We consider the weight of each edge to be the 'length' or 'distance' of the edge. We calculate the total length of a path by summing the weights of all the edges that make up at the path.
+With a weighted graph, finding the shortest path between two nodes looks slightly different. The weight of an edge is equivalent to the 'length' or 'distance' of the edge. The total length of a path is calculated by summing the weights of all the edges that make up at the path. The shortest path is also sometimes referred to as the minimum cost path where an edge's weight is equivalent to its cost.
 
 Below are two versions of the same graph: the version on the left is unweighted and the version on the right is weighted.
+
+![Weighted v Unweighted Graph Comparison](./images/weighted-v-unweighted.png)
 
 Say we want to find the shortest path from Node B to Node D. In the unweighted graph, the shortest path would be along the direct edge from B to D for a path of length 1. 
 
 However, in the weighted graph, we see the shortest path from Node B to Node D travels from Node B to Node A, from Node A to Node C, and finally from Node C to Node D. The combined length of the path is the sum of the corresponding edges: 2 + 1 + 1 = 4. Because the edge directly between Node B to Node D has a weight or length of 10, it is considered a longer path even though it is a more direct route. 
-
-![Weighted v Unweighted Graph Comparison](./images/weighted-v-unweighted.png)
 
 Because of the change in how we calculate shortest paths when weighted edges exist, we are not able to use breadth first search to find the shortest path in weighted graphs. We need a new algorithm: Dijkstra's. 
 
@@ -186,13 +186,13 @@ The process outlined above can be generalized as pseudocode.
 
 Before jumping into the pseudocode, observe that to find the cost of a path from Node A to a non-neighboring node D, we needed to know the cost of travelling from Node A to Node D's direct neighbor along that path.
 
-In the example below, say we want to find the cost of the path from Node A to Node D. Node D's neighbor along that path is Node C. We could also say that Node C is the _previous_ node along that path. 
+In the example below, say we want to find the cost of the path from Node A to Node D. Node D's neighbor along that path is Node C. We could also say that Node C is the _previous_ or _parent_ node along that path. 
 
 Observe that the cost to get from Node A to Node D is the cost to get from Node A to Node C plus the cost to get from Node D to Node C. 
 
 ![Previous Node in a Graph Example](./images/dijkstra-subpath.png)
 
-This observation illustrates that when calculating the costs of a path between two non-neighboring nodes as we may need to do in Dijkstra's requires us to know the previous node of the end node in the path that we are looking at. As a result, when implementing Djikstra's algorithm it can be useful for us to keep track of each node's previous node along its minimum cost path.
+When calculating the cost of a path between two non-neighboring nodes, it helps to know the penultimate node along that path. As a result, when implementing Djikstra's algorithm it is useful for us to keep track of each node's parent node along its minimum cost path.
 
 
 The following pseudocode implementation of Dijkstra's assumes that we are provided with a graph and a starting node.
@@ -213,12 +213,14 @@ The following pseudocode implementation of Dijkstra's assumes that we are provid
         - if the neighbor has not yet been visited:
             - calculate distance from start node to neighbor via current node
             - If calculated distance < distances[neighbor]
-                - distances[neighbor] = caclulated distance
+                - distances[neighbor] = calculated distance
                 - previous[neighbor] = current_node
             - queue.append(neighbor)
 - Return the previous and distances list
 
 ```
+
+We could alternatively use dictionaries instead of lists to represent `distances` and `previous`. This is particularly useful when our nodes have non-numeric values. 
 
 <!-- available callout types: info, success, warning, danger, secondary, star  -->
 ### !callout-info
@@ -278,7 +280,7 @@ Output:
     }
 ```
 
-
+ Spend no more then 15-20 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15-20 minutes.
 
 ##### !end-question
 
@@ -462,7 +464,10 @@ class TestPython1(unittest.TestCase):
 
 Use the pseudocode in the section above to guide your implementation.
 
-When pushing an item to `heapq`, use a tuple of the form `(priority, node_index)`. The node's cost/distance should be  the priority. 
+The [basic examples section of the heapq documentation](https://docs.python.org/3/library/heapq.html#basic-examples) is a good resource for learning how to define a new heap as well as how to push and pop elements on/off the heap. 
+
+When pushing an item to `heapq`, pass a tuple of the form `(priority, node_index)` to the `heappush` function. The node's cost/distance should be the priority. 
+
 
 Still feeling stuck? Watch the video solution walkthrough below. 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d511a32d-c85c-4994-9e73-af23004ca554&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>

@@ -548,7 +548,7 @@ The time complexity of Dijkstra's algorithm depends on how the given graph is re
 
 #### Time Complexity with an Adjacency Matrix
 
-Open the drop down menu below to see our implementation of Dijkstra's algorithm when provided an adjacency matrix `g` and a start node `s`. Each non-constant operation is annotated and will be discussed in further detail below. 
+Open the drop down menu below to see a sample implementation of Dijkstra's algorithm when provided an adjacency matrix `g` and a start node `s`. Each non-constant operation is annotated and will be discussed in further detail below. 
 
 <details>
 <summary>Sample Implementation of Dijkstra's Algorithm</summary>

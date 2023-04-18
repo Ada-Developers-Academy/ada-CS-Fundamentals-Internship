@@ -1,14 +1,19 @@
 # Breadth First Search & Depth First Search Review
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ba690cac-996d-4ed7-85d1-afe801636229&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
-### Breadth First Search (BFS)
+## Learning Goals
+- Understand the patterns breadth first search and depth first search use to traverse a graph
+- Explain how breadth first search can be used to find the shortest path in an unweighted graph
+
+## Breadth First Search (BFS)
 Recall from the last lesson that the breadth first search algorithm starts its traversal with a particular node and then visits each node connected to the starting node before expanding outward.
 
 ![Breadth First Search on an Undirected Graph](images/bfs-undirected-graph.gif)
 
 Breadth first search uses a queue to visit nodes in order of proximity to the starting node. It accomplishes this by first adding each of the starting node's neighbors to the queue. The algorithm then removes nodes from the queue one at a time, adding each removed node's unvisited neighbors to both the queue for further processing and the list of visited nodes as it goes along.
 
-### Depth First Search (DFS)
+## Depth First Search (DFS)
 In contrast, the depth first search (DFS) algorithm starts at a particular node and then follows a continuous path of edges from that node as deeply as possible before backing up and following the next path. This pattern of traversal is also referred to as back-tracking.
 
 ![Depth First Search on an Undirected Graph](images/dfs-undirected-graph.gif)
@@ -72,7 +77,7 @@ Breadth first search would visit `apple`'s three neighbors - `guava`, `lychee`, 
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-### Using Breadth First Search to Find the Shortest Path in an Unweighted Graph
+## Using Breadth First Search to Find the Shortest Path in an Unweighted Graph
 
 Breadth first search can easily be adapted to find the shortest path between any two nodes in an **unweighted** graph. The length of a path in an unweighted graph is the number of edges it takes to travel from the source node to the destination node. Again, recall that breadth first search visits nodes based on *proximity*. It starts by visiting nodes one edge away from the start node (its neighbors). Then it visits nodes that are two edges away from the starting node (neighbor's neighbors), etc. Therefore, the BFS algorithm can be modified to record the smallest path from an initial node to any other connected node in the graph. 
 

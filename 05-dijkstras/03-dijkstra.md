@@ -152,7 +152,7 @@ costs/distances:
 ```
 
 ![Dijkstra's Walkthrough Part 7](./images/dijkstras-7.png)
-Step 7. Now we are visiting our final unvisited node, F. Like Node C, Node F has no unvisited neighbors.
+Step 7. Now we are visiting our final unvisited node, F. Like Node B, Node F has no unvisited neighbors.
 
 We simply mark it as visited and then we are done! Our list of costs/distances now represents the minimum cost to travel from Node A to every node in the graph.
 
@@ -543,18 +543,98 @@ def dijkstra(g, s):
 
 ### Time Complexity
 
-The time complexity of Dijkstra's algorithm depends on how the graph given is represented. 
+The time complexity of Dijkstra's algorithm depends on how the given graph is represented and how we handle our priority queue. We'll first examine the time complexity with our implementation where an adjacency matrix is passed in, then look at factors that may alter the overall time complexity of Dijkstra's algorithm. 
 
-When we use an adjacency matrix as above, the input is of size O(N^2) where N is the number of nodes in the graph. In the solution above, notice that overall the priority queue we loop over should hold each of the nodes in the graph once for an overall time complexity of O(N). 
 
-Inside the while loop, we have an inner for loop to help us access the current node's neighbors.Because the graph is an adjacency matrix, the for loop needs to loop through all N nodes and check if each is a neighbor of the current node. The loop therefore has a time complexity of O(N) making the overall time complexity O(N^2).
+#### Time Complexity with an Adjacency Matrix
 
-You may notice that inside the inner for loop there is a `heappush` operation that happens to be an O(logN) operation. However, because of the conditional this operation is contained within, we only actually execute `heappush` about once per node in the graph so it doesn't increase our overall time complexity. 
+Open the drop down menu below to see a sample implementation of Dijkstra's algorithm when provided an adjacency matrix `g` and a start node `s`. Each non-constant operation is annotated and will be discussed in further detail below. 
 
-If the graph is instead provided as an adjacency list, then it is no longer necessary to loop through each node in the graph every time we want to find the neighbors of a particular node. The neighbors can be accessed in O(1) time with `adjacency_list[node_index]`. As a result, the overall traversal is O(N+E) where N is the number of nodes in the graph and E is the number of edges. For each edge we may do our `heappush` operation which is O(log n), so the overall time complexity is O((N+E)logN)
+<details>
+<summary>Sample Implementation of Dijkstra's Algorithm</summary>
+
+Below is our implementation of Dijkstra's algorithm which solves the coding exercise posed above. In this implementation, the graph `g` is an adjacency matrix. 
+
+```py
+# N - number of nodes in graph g
+# E - number of edges in graph g
+def dijkstra(g, s):
+    distances = []
+    previous = []
+    visited = set()
+
+    pq = []
+    
+    # 1. loops through each node in graph - O(N)
+    for node in g:
+        distances.append(float('inf'))
+        previous.append(None)
+
+    if g:
+        # 2. push start node onto an empty queue - O(1)
+        heapq.heappush(pq, (0, s))
+        
+        distances[s] = 0
+    
+    # 3. pq will have at most E elements added to it 
+    # over the course of the traversal - O(E)
+    while len(pq) > 0:
+        # 4. popping from a priority queue with
+        # at most E elements, O(log(E))
+        _, current = heapq.heappop(pq)
+        visited.add(current)
+        # 5. loop through each node in a row
+        # of the adjacency matrix g - O(N)
+        for neighbor in range(len(g[current])):
+            edge_weight = g[current][neighbor]
+            if edge_weight > 0 and neighbor not in visited:
+                temp_distance = distances[current] + edge_weight
+                if temp_distance < distances[neighbor]:
+                    distances[neighbor] = temp_distance
+                    previous[neighbor] = current
+                    # 6. push an element onto a priority queue that will 
+                    # have a maximum of E elements - O(log(E))
+                    heapq.heappush(pq, (distances[neighbor], neighbor))
+    return {
+        'previous': previous,
+        'distances': distances
+    }
+```
+</details>
+
+1. _Initializing the `distances` and `previous` lists_
+    The first non-constant time operation we encounter in the above implementation of Dijkstra's is when we initialize our `distances` and `previous` lists. To set all initial distances to infinity and all initial previous nodes to `None`, we must loop through each node in the graph, giving us an `O(N)` time complexity where `N` is the number of nodes in the graph. 
+
+2. _Adding the start node to an empty priority queue_
+    In most cases, the `heappush` operation is a logarithmic operation (see the bottom of this section for further explanation). However, this is a special case because we know that the priority queue is empty. Pushing a node onto an empty priority queue (also known as a heap), is a constant time `O(1)` operation and does not affect the overall time complexity of Dijkstra's.  
+
+3. _Iterating over the priority queue_
+    When evaluating the time complexity for Dijkstra's algorithm, one important observation is that it is possible to add more than `N` nodes to our priority queue, where `N` is the number of nodes in the graph. Recall that if a neighbor is unvisited, we add a node and the cost to reach that node following the current path we are exploring to the priority queue. If there exist multiple paths from the start node to a particular node, it is possible that we will add that particular node to the priority queue multiple times - one for each possible path to the node - before we ever explore the node itself. In the worst case, for each edge (neighbor) we traverse, we add the edge's destination node to the priority queue. Therefore, in the worst-case, the priority queue will have `O(E)` elements added to it in total where E is the number of edges in the graph. This means that our loop will iterate `O(E)` times in the worst case.
+
+    Combining this with our for loop from point 1, our overall time complexity for Dijkstra's is now O(N + E).
+
+4. _Popping the current node off the priority queue_
+    Like `heappush`, popping a node off the priority queue with `heappop` is also a logarithmic operation. Our priority queue will have at most `E` elements in it, making `heappop` an `O(log(E))` operation within our Dijkstra's implementation. 
+
+    Because this operation is nested within our while loop from point 3 which has time complexity `O(E)` we now have that an overall time complexity of `O(N + Elog(E))` for Dijkstra's. 
+
+5. _Looping through the current node's neighbors_
+    Next we loop through the current node's neighbors. To loop through a node `i`'s neighbors in our adjacency matrix `g`, we have to loop through every value in the row `g[i]`. Recall that each row has `N` elements, one for each node in the graph. Therefore the time complexity of this loop is `O(N)`. 
+
+    This is nested within our `O(E)` while loop from point 3, but in series with the previous point giving us an overall time complexity of `O(N + Elog(E) + NE)`. 
+
+6. _Adding nodes to the priority queue_
+    Adding nodes to a priority queue that will in the worst case have a size of `E` is an `O(log(E))` operation. While this is nested within our two existing loops, we only add a node to our priority queue _if_ the node is a neighbor of the current node. The maximum times a node can be a neighbor is `E` times so we will perform this operation at most `E` times. Therefore adding nodes to the priority queue will be an `O(Elog(E))` operation. 
+
+    This gives us an overall time complexity of `O(N + Elog(E) + NE + Elog(E))` for Dijkstra's.
+
+7. _Simplifying the time complexity_
+    With time complexity, we drop coefficients and non-dominant terms. `O(N + Elog(E) + NE + Elog(E))` can be reduced to `O(N + NE + 2Elog(E))`. We drop the 2 and have `O(N + NE + Elog(E))`. 
+
+    Looking at the three remaining terms, `N` is certainly less than `NE`, so we can drop the less dominant term `N` from overall time complexity. Without knowing exact values for `N` and `E` it's not possible to tell whether `NE` or `Elog(E)` will be the dominant term, so we say that the final overall time complexity for Dijkstra's is `O(NE + Elog(E))`.
+
 <!-- available callout types: info, success, warning, danger, secondary, star  -->
 ### !callout-secondary
-
 ## Why are heapq operations O(logn)?
 
 A priority queue or heap is a type of binary tree, somewhat similar to a binary search tree but with different properties to organize nodes. Each time we perform a `heappop` or `heappush` operation, the methods traverse the tree. At each node they decide to look at either the left or right subtree, halving the remaining section of the tree they need to traverse making it an O(logN) operation.
@@ -564,6 +644,33 @@ A priority queue or heap is a type of binary tree, somewhat similar to a binary 
 If interested, you can read more about the time complexity of the `heapq` module [here](https://medium.com/plain-simple-software/python-heapq-use-cases-and-time-complexity-ee7cbb60420f)
 ### !end-callout
 
+
+#### Time Complexity with an Adjacency List
+
+If the graph is instead provided as an adjacency list, then it is no longer necessary to loop through each node in the graph every time we want to find the neighbors of a particular node. The neighbors can be accessed in O(1) time with `adjacency_list[node_index]`. This changes the overall time complexity. 
+
+Our outer while loop `while len(pq) > 0` will still iterate at most `E` times because our priority queue will have `O(E)` elements added to it in the worst case. If we alter our implementation slightly to only loop through the current node's neighbors if the current node has not been visited already, our inner for loop will also iterate a maximum of `E` times over the course of the algorithm's traversal. This is because it will traverse each node's edges (loop through each node's neighbors) exactly once, giving us `O(E)` time complexity.  
+
+The overall time complexity for the combined loops will be `O(2E)` which is reduced to `O(E)`. The time complexity is _not_ `O(E^2)` because in practice, the algorithm is not looping through every edge in the list `E` for each of the `E` nodes we pop off the priority queue. 
+
+For each of the `E` edges we traverse, we may push another node onto the priority queue which is an `O(log(E))` operation. Therefore the overall time complexity with an adjacency list is `O(N + Elog(E))`. The `N` stems from the for loop we use to initialize the `distances` and `previous` list. Because we don't know how large `E` and `N` are relative to each other, we cannot say either is the dominant term. 
+
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
+
+## Alternative Priority Queues
+
+Most evaluations of Dijkstra's time complexity on the internet assume the priority queue has a method called `decrease_key`. This method allows the user to change the priority of an existing value in the queue in `O(log(N))` time where `N` is the size of the priority queue.
+
+<br>
+
+`heapq`  is the most commonly used library in Python for a priority queue. However, it does not include the `decrease_key` method. If the `decrease_key` method were available to us, we could easily update a node's priority every time we found a shorter path to a node already in our priority queue. This would make our priority queue have length `N`  in the worst case where `N` is the number of nodes in the graph.
+
+<br> 
+
+Because our priority queue would now be of length `N`, the time complexity for Dijkstra's when given an adjacency matrix would be reduced to `O(N^2 + Elog(N))`. The time complexity for Dijkstra's when given an adjacency list would be reduced to `O((N+E)log(N))`. 
+
+### !end-callout
 
 ### Space Complexity 
 Regardless of how the graph is represented, our `previous`, `distances`, and `visited` lists will remain the same. Each will hold at most N elements where N is the number of nodes in the graph. As a result, the overall space complexity of Dijkstra's is O(N).

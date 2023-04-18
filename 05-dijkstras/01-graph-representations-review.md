@@ -1,8 +1,14 @@
 # Graph Representations Review
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4dc5b752-b78e-4639-9e12-afe8013083dd&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Overview of Graphs
 In the previous topic, we talked about graphs, how to represent them, and two algorithms for traversing graphs: breadth first search and depth first search. This topic will review and extend some key concepts from the previous topic. It will also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
-<!-- Add more advanced review questions -->
+
+## Learning Goals
+- Understand how to use lists of edges, adjacency matrices, and adjacency lists to represent graph data structures
+- Understand how to use lists of edges, adjacency matrices, and adjacency lists to represent weighted graphs
+- Understand how to frame 'grid' problems as graphs
 
 
 <!-- ======================= END CHALLENGE ======================= -->
@@ -119,7 +125,7 @@ See the video below for an example of translating the list of edges to an adjace
 We can also represent weighted graphs with slight alterations to the same formats.
 
 #### List of Edges
-With a list of edges, we simply add a third value to each edge list representing the weight of that edge.
+With a list of edges, we simply add a third value to each edge list representing the weight of that edge. Each edge in the graph is now represented as a list of the form `[source_node, destination_node, weight]`.
 
 ![weighted graph](images/weighted-graph.png)
 
@@ -187,7 +193,7 @@ adj_dict = {
 
 Many interview problems can be solved using graph theory even though they are not explicitly framed as graph problems. Problems in this category usually do not provide the graph as a list of edges, adjacency list, or adjacency matrix. Instead, it is on you as the interviewee to think about how you can transform the given information into a graph.
 
-One common scenario is a problem in which we are given a 2D matrix or grid. This matrix is **not** an adjacency matrix. In an adjacency matrix, each value in the matrix represents either the presence or absence of an _edge_ between two nodes in the graph. In these 'hidden graph' problems, each value in the matrix represents a _node_ in the graph.
+One common scenario is a 'grid problem' in which we are given a 2D matrix or grid. This matrix is **not** an adjacency matrix. In an adjacency matrix, each value in the matrix represents either the presence or absence of an _edge_ between two nodes in the graph. In these 'hidden graph' problems, each value in the matrix represents a _node_ in the graph.
 
 Consider the following problem:
  
@@ -219,10 +225,10 @@ We can think of the overall grid as our graph with each value in the grid repres
 
 We can refine our graph to say that only pieces of land (`1`s) are actual nodes in the graph. Each of its four potential neighbors are actual neighbors if they have a value of `1`. That is to say, there is an edge between two `1`s if they are adjacent. 
 
-Imagining the graph in this way, we can pseudocode the following solution:
+Now we have framed our problem as a graph, but can we solve it using graph traversal algorithms? Yes! Notice that the problem is now to find connected components within a graph. Breadth first search and depth first search can both find connected nodes within a graph. Framing the problem in this way, we can pseudocode the following solution:
 
 ```
-- Create a variable `num_islands` to track the number of islands by one
+- Create a variable `num_islands` to track the number of islands found
 - Create a list of visited values
 - Iterate through each value in the grid
     - If the value is land and has not yet been visited
@@ -233,11 +239,10 @@ Imagining the graph in this way, we can pseudocode the following solution:
               and right of the current value
                 - If the potential neighbor has a value `1` and is unvisited add
                   it to the queue/stack
-    - Add the value to list of visited values
 - Return `num_islands`
 ```
 
-Recall that breadth first search and depth first search in their most basic form only find _connected_ elements in a graph, so BFS/DFS will be performed multiple times, one for each island. You can try solving this problem on [Leetcode](https://leetcode.com/problems/number-of-islands/)
+Recall that breadth first search and depth first search in their most basic form only find _connected_ elements in a graph, so BFS/DFS will be performed multiple times, one for each island. You can try solving this problem on [Leetcode](https://leetcode.com/problems/number-of-islands/).
 
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->

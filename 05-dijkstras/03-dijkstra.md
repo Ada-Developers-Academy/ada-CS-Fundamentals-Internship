@@ -653,7 +653,7 @@ Our outer while loop `while len(pq) > 0` will still iterate at most `E` times be
 
 The overall time complexity for the combined loops will be `O(2E)` which is reduced to `O(E)`. The time complexity is _not_ `O(E^2)` because in practice, the algorithm is not looping through every edge in the list `E` for each of the `E` nodes we pop off the priority queue. 
 
-For each of the `E` edges we traverse, we may push another node onto the priority queue which is an `O(log(E))` operation. Therefore the overall time complexity with an adjacency list is `O(N + Elog(E))`. The `N` stems from the for loop we use to initialize the `distances` and `previous` list. Because we don't how large `E` and `N` are relative to each other, we cannot say either is the dominant term. 
+For each of the `E` edges we traverse, we may push another node onto the priority queue which is an `O(log(E))` operation. Therefore the overall time complexity with an adjacency list is `O(N + Elog(E))`. The `N` stems from the for loop we use to initialize the `distances` and `previous` list. Because we don't know how large `E` and `N` are relative to each other, we cannot say either is the dominant term. 
 
 <!-- available callout types: info, success, warning, danger, secondary, star  -->
 ### !callout-info

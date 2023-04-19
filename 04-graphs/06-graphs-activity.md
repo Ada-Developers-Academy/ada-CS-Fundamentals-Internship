@@ -1,23 +1,27 @@
-# Activity:  Problem Solving
+# Livecode & Activity
 
-## Goal
+## Number of Provinces
 
-Our goal is to practice using breadth first search and depth first search to solve graph problems.
+We will go over how to implement a solution for the Number of Provinces problem.
 
-## Livecode - Number of Provinces
+### Class Livecode
 
-As a class we will walk through solving the Number of Provinces problem. 
-
-If you would like to follow along the livecode, you can fork the Repl here: [Graph Activity Repl](https://replit.com/@adadev/graphs-practice#README.md)
-
-### Breakout Rooms - Number of Provinces Part 2
-
-In small groups of 3-4 students, re-implement the problem in the replit using the opposite approach that we used during the group livecode in class (either BFS or DFS).
-
-**One student** should *fork* the following Repl and share the collaboration link with the rest of the team. If you coded along with the livecode, comment out the class solution before beginning your small group solution. [Graph Activity Repl](https://replit.com/@adadev/graphs-practice)
+Follow along in the following Replit as we livecode the function in class: 
+* [Number of Provinces Ligers Livecode](https://replit.com/@adadev/Number-of-Provinces-Ligers-Livecode)
+* [Number of Provinces Tigons Livecode](https://replit.com/@adadev/Number-of-Provinces-Tigons-Livecode)
 
 
-#### Exercise
+### Small Group Work: Graph Variations Activities
 
-If you finish early, you can take an early break or get started on the project with instructor support in the main room available.
+For your small group activity,  you will work on one of the graph variation activities.
 
+- Spend twenty minutes with your breakout room implementing a solution. 
+- One person in the group should fork the replit and share a link with the rest of the group.
+- If your entire group is feeling stuck, start by discussing how you would solve the function using pen and paper.
+- If your entire group is still feeling lost, discuss what is making you feel stuck and ask an instructor to come to your room for help!
+- After small group work, we will come back together as a class to work through a solution together, as time allows. Groups may ask questions, share where they got stuck, and/or share out their solutions.
+
+Fork one of the following Replits to work on in small groups: 
+* [Convert Graph](https://replit.com/@adadev/Convert-Graph-Activity)
+* [DFS with Adjacency Matrix](https://replit.com/@adadev/dfs-with-adjacency-matrix)
+* [Repeat BFS](https://replit.com/@adadev/Repeat-BFS-Activity)

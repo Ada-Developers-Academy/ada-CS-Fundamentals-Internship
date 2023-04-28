@@ -169,7 +169,7 @@ Using the pseudocode included in the lesson above (also included in the hints be
         "Seattle": ["Portland"],
         "Chicago": ["Seattle"],
         "Portland": ["Kona"],
-        "Kona": []
+        "Kona": ["Portland"]
     }
 ```
 

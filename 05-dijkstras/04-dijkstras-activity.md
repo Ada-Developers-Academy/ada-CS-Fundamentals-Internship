@@ -16,7 +16,7 @@ Follow along in the following Replit as we livecode the function in class:
 
 In small groups of 3-4 students, pseudocode a solution to the Cheapest Flights problem in the replit. Get as far as you can, asking for instructor assistance when needed. You _do not_ need to finish the pseudocode or implement the problem. 
 
-**One student** should *fork* the following Repl and share the collab oration link with the rest of the team. If you coded along with the livecode, comment out the class solution before beginning your small group solution. [Cheapest Flight Activity Repl](https://replit.com/@adadev/Minimum-Effort-Path-Activitye)
+**One student** should *fork* the following Repl and share the collab oration link with the rest of the team. If you coded along with the livecode, comment out the class solution before beginning your small group solution. [Cheapest Flight Activity Repl](https://replit.com/@adadev/Minimum-Effort-Path-Activity)
 
 
 #### Exercise

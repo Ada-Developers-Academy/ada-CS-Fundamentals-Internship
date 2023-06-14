@@ -55,5 +55,5 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 
 
 #### Study Hall Zoom
-- The [thursdays.adadev.org](https://thursdays.adadev.org) is available for intern use as a study hall and community space. 
-- Host Key: 471379
+- The [http://accel-study-hall.adadev.org/](http://accel-study-hall.adadev.org/) is available for intern use as a study hall and community space. 
+- Host Key: 283986

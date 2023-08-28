@@ -480,7 +480,7 @@ By making problem solving a process we can reduce stress and improve our ability
 
 ## Should I Be Concerned if I Couldn't Come Up with a Solution Myself?
 
-As you move through the Thursdays at Ada curriculum, you will be asked to attempt many interview practice problems, many of which you may not be able to solve quickly or independently. 
+As you move through the unit curriculum, you will be asked to attempt many interview practice problems, many of which you may not be able to solve quickly or independently. 
 
 That's okay! Part of the learning process for interviewing includes attempting and 'failing' problems, especially when you're first learning new material. Your progress may be slow and incremental. If you need to use provided and/or outside resources to come to a full solution, focus on understanding the _techniques_ used in the solution. You can bring these techniques with you to help solve future programming problems. 
 

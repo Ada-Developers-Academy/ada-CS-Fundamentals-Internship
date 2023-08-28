@@ -63,7 +63,7 @@ The study of computer science is the study of algorithms. At its core, computer 
 This course will focus on devising, analyzing, and, testing algorithms. We are choosing to focus on these three aspects because they are the skills most often evaluated during technical interviews for junior software developer roles. Validating algorithms is beyond the scope of this course, but feel free to follow your curiosity!
 
 ## Devising and Testing Algorithms
-Devising algorithms is really just problem solving. So how do we approach solving a new, knotty problem? What steps can we take when we sit down in front of a programming problem and... have no idea what to do? This lesson describes a systematic approach to problem solving. Notice the similarity to Problem Solving Exercises in the classroom portion of Ada and their equivalent, Interview Practice Questions, in the Thursdays at Ada portion. In follow-up lessons, we will practice using Big-O notation to compare multiple approaches to the same problem.  
+Devising algorithms is really just problem solving. So how do we approach solving a new, knotty problem? What steps can we take when we sit down in front of a programming problem and... have no idea what to do? This lesson describes a systematic approach to problem solving. Notice the similarity to Problem Solving Exercises in the classroom portion of Ada and their equivalent, Interview Practice Questions, in the current unit portion. In follow-up lessons, we will practice using Big-O notation to compare multiple approaches to the same problem.  
 
 
 ## Vocabulary and Synonyms
@@ -500,7 +500,7 @@ By making problem solving a process we can reduce stress and improve our ability
 
 ## Should I Be Concerned if I Couldn't Come Up with a Solution Myself?
 
-As you move through the Thursdays at Ada curriculum, you will be asked to attempt many interview practice problems, many of which you may not be able to solve quickly or independently. 
+As you move through the unit curriculum, you will be asked to attempt many interview practice problems, many of which you may not be able to solve quickly or independently. 
 
 That's okay! Part of the learning process for interviewing includes attempting and 'failing' problems, especially when you're first learning new material. Your progress may be slow and incremental. If you need to use provided and/or outside resources to come to a full solution, focus on understanding the _techniques_ used in the solution. You can bring these techniques with you to help solve future programming problems. 
 

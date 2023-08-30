@@ -1,7 +1,7 @@
 # Class Discussions
 
 ## C18 Recordings
-The following videos are from the class discussions from C18. There are two classrooms, Tigons and Ligers. While the material taught to the two classes was the same, there may be different questions asked by students in the classes.
+The following videos are the live session recordings of C18’s Tigons and Ligers classrooms. Though the same material was taught to the two classes, there may be different questions asked by students in each class.
 
 ### Ligers
 #### Topic Introduction

@@ -2,7 +2,7 @@
 
 The following are video webinars designed to help reinforce negotiation techniques and strategies.  This is to help you all arrive at the best deals possible for entry-level developers.
 
-The required videos are must-watch prior to a negotiation lesson on a later Thursdays @ Ada.
+The required videos are must-watch prior to the negotiation lesson held in a session later this unit.
 
 - Required Videos (in order)
   - [Why we need negotiations training](https://player.mediaamp.io/p/U8-EDC/7xghIAXCClvt/select/media/ZpcYXJ8n_d53) (5:30)

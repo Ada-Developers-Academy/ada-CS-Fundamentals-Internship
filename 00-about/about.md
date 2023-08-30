@@ -21,12 +21,12 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 - [Career Services Class Lesson Recordings](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=2887f2f4-b902-4379-8a39-adf101338f83)
 
 
-### Thursdays at Ada Quick Links
+### Unit Quick Links
 
 #### General Resources
 - [Internship Guide](https://drive.google.com/file/d/1mAkodI0l6nZBFwpX3tRQG1bNEb7C3tS2/view?usp=share_link)
-- [Thursdays at Ada Guide](https://drive.google.com/file/d/1GCwVbRDpdeAagMan-XIPRScxgHr4b7tR/view?usp=sharing)
-- [Thursdays at Ada Section Assignments](https://drive.google.com/file/d/1VC7A6J3MV3tbBJUdmW_KwngVfNrM9r_z/view?usp=share_link)
+- [Unit Guide](https://drive.google.com/file/d/1GCwVbRDpdeAagMan-XIPRScxgHr4b7tR/view?usp=sharing)
+- [Unit Section Assignments](https://drive.google.com/file/d/1VC7A6J3MV3tbBJUdmW_KwngVfNrM9r_z/view?usp=share_link)
 - [Ada Intern Resource Library](https://drive.google.com/drive/folders/1PgOMAmsgIkNEumuJvJmGQJ_uH5rIhCh6?usp=sharing)
 - [CS Fundamentals Office Hours Guide](https://docs.google.com/document/d/12gi9oNXoXWvpJPANPbKE_KAvCJ9dwVNSkXmht5H0M84/edit?usp=sharing)
 - [CSM Internship Office Hours | Visitor Expectations](https://drive.google.com/file/d/1Hvyi-KmveH81CH3EoJNnhJYuzOimn4dQ/view?usp=share_link)
@@ -36,12 +36,12 @@ All the CS Fundamentals and Career Services online sessions are recorded in Pano
 - [Mock Interview Question Bank](https://docs.google.com/document/d/1SmKIpGL_z_IXhgLiaGAf3kPc_bApgH1LtIGcXVoKUHE/edit#)
 
 #### Ligers
-- [Ligers Thursdays at Ada Overview Calendar](https://calendar.google.com/calendar/u/0?cid=Y18wZmVlNmQxZWFhNzM4YWVlNzM5YTRkZjZmNmRjN2YzNzFmNmExMDkxYWFjMzlkODBhM2YzMjkyNDBlN2I4ZDBlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
+- [Ligers Unit Overview Calendar](https://calendar.google.com/calendar/u/0?cid=Y18wZmVlNmQxZWFhNzM4YWVlNzM5YTRkZjZmNmRjN2YzNzFmNmExMDkxYWFjMzlkODBhM2YzMjkyNDBlN2I4ZDBlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 - [Ligers CS Fundamentals Detailed Class Schedule](https://docs.google.com/document/d/14UwD9Er-pqmEgcEh1efBihnR-dgeSWhPE0K0N8KU1Wo/edit?usp=share_link)
 - [Ligers Personal Study Plan Guide](https://docs.google.com/document/d/19RsoW-SDkUapg0CQuTbCLKaUHuPGDFs6jh85QsjSTJs/edit?usp=sharing)
 
 #### Tigons
-- [Tigons Thursdays at Ada Overview Calendar](https://calendar.google.com/calendar/u/0?cid=Y19jYmZjN2VkMGRkMjkxY2M3MGNjMGM1NzljYzkxNzY4MzZhMTQ0MWJlYTk1MWRlMTc4ODc3NGE5ZDA0OTI0MTBmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
+- [Tigons Unit Overview Calendar](https://calendar.google.com/calendar/u/0?cid=Y19jYmZjN2VkMGRkMjkxY2M3MGNjMGM1NzljYzkxNzY4MzZhMTQ0MWJlYTk1MWRlMTc4ODc3NGE5ZDA0OTI0MTBmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 - [ Tigons CS Fundamentals Detailed Class Schedule](https://docs.google.com/document/d/1qQ9FzZ-w0Tep3KENv3knBzXXKmIhCX2il8362ixGWvk/edit?usp=share_link)
 - [Tigons Personal Study Plan Guide](https://docs.google.com/document/d/1pwa85WrRYpqs6rVNPSqOB6QZo-BH4tQcItQ_k99gSkc/edit?usp=sharing)
 

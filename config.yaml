@@ -1,8 +1,8 @@
 ---
 Standards:
   -
-    Title: About Thursdays at Ada
-    Description: About TAA, Quick Links, Expectations for our sessions
+    Title: About
+    Description: Norms, About, Quick Links
     UID: 88fccfa1-fe50-4434-8834-6efdf422f247
     SuccessCriteria:
       - success criteria
@@ -10,14 +10,14 @@ Standards:
       -
         Type: Lesson
         UID: bcc6309e-3453-4aea-9b22-ef8e09c2b09e
-        Path: /00-about-thursdays-at-ada/norms.md
+        Path: /00-about/norms.md
       -
         Type: Lesson
         UID: 0d492a6b-c9d8-492d-910e-219ff5ea80ae
-        Path: /00-about-thursdays-at-ada/about-thursdays-at-ada.md
+        Path: /00-about/about.md
   -
     Title: Your Study Plan
-    Description: Thursdays at Ada Study Plan, Submit Study Plan
+    Description: Study Plan, Submit Study Plan
     UID: fa32f461-a844-4c4a-bd9b-d683a883fb00
     SuccessCriteria:
       - success criteria

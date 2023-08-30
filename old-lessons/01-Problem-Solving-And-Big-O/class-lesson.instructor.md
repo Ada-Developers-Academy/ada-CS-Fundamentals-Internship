@@ -7,7 +7,7 @@ The problem solving class lesson has a few objectives, not all related to the cu
 - Non-CS Fun Goals
   - Establish classroom expectations and norms
   - Students must complete 7 of 8 projects
-  - Attendance is required for Thursdays at Ada
+  - Attendance requirements
   - Let students know about office hours, from instructors and TAs
   - Review the Calendar
 - CS Fun Goals Make sure students can:
@@ -23,7 +23,7 @@ Start the lesson by welcoming students to the class and note attendance (Note fo
 
 ### List Classroom Expectations
 
-- Review the [Ada Norms Doc](../00-about-thursdays-at-ada/norms.md).
+- Review the [Ada Norms Doc](../00-about/norms.md).
   - Areas of focus:
     - Calendar
     - Office Hours

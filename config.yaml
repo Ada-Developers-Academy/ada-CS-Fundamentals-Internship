@@ -113,6 +113,10 @@ Standards:
         Type: Lesson
         UID: 19b1fbf3-60b6-4a60-895c-7de1b9afe923
         Path: /02-linked-lists/06-linked-list-activity.md
+      -
+        Type: Lesson
+        UID: 2c227840-f6ff-4022-a16f-25a3eabf1d41
+        Path: /02-linked-lists/07-linked-lists-class-discussions.md
   -
     Title: Binary Search Trees
     Description: Binary Search Trees, Balancing Trees, Serializing with Tree Traversal, Resources

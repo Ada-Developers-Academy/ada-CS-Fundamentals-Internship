@@ -23,7 +23,7 @@ Path B will allow you to dedicate most of your first two months solely to intern
 
 Path B will introduce all topics to you by the end of internship and allow you to complete all CS Fundamentals Graduation requirements with a week long buffer by the deadline. You will review each new topic and accompanying problem set by the review session. By graduation, you may feel that you need additional review of the CS Fun topics but should have a solid foundation to conduct your review independently.
 
-If you are able to read through the new topic material (without completing the problem set questions) during your first two months of internship, we would highly recommend you do so so that the topics are not completely unfamiliar when you start intensive work on CS Fundamentals material.
+If you are able to read through the new topic material (without completing the problem set questions) during your first two months of internship, we would highly recommend you do so, that way that the topics are not completely unfamiliar when you start intensive work on CS Fundamentals material.
 
  ### Path C
  Choose your own completion dates by filling out and submitting [your personal study plan](https://docs.google.com/document/d/1uCUKu9sZLUSbxsUVobnf8d2EaudXIQxqFpSRhhYE2jU/edit?usp=sharing)

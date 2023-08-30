@@ -4,7 +4,7 @@
   * We expect interns to choose to engage with whichever live unit content they find most helpful for their learning needs.
 * CS Fundamentals assignments are a required part of your continuing education and graduation requirements. 
   * **You need to complete 80% (4/5) of problem sets for CS Fundamentals**. 
-  * **You need to complete 100% (5/5) of Interview Practice Questions for CS Fundamentals**.
+  * **You need to complete 100% (5/5) of Problem Solving Exercises for CS Fundamentals**.
   * **You need to complete 5 peer-to-peer mock interviews for CS Fundamentals**.
   * New topics and problem sets are released at least two weeks before the live session date
   * New projects are released at least four weeks before the Plan A proposed completion date

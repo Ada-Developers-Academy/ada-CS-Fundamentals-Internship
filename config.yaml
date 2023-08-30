@@ -148,6 +148,10 @@ Standards:
         Type: Lesson
         UID: 06dea201-6230-4967-b98f-2403ab11479a
         Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity.md
+      -
+        Type: Lesson
+        UID: f5fc7ed6-5231-4667-a64f-aee2ff4d6652
+        Path: /03-Binary-Search-Trees/06-Binary-Search-Trees-Class-Discussions.md
   -
     Title: Graphs
     Description: Graphs, Representing Graphs, Graphs Algorithms - Breadth First Search, Graph Algorithms - Depth First Search, Resources

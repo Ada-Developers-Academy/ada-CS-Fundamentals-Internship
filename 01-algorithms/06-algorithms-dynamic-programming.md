@@ -1,4 +1,12 @@
-# Dynamic Programming
+# Optional: Dynamic Programming
+
+### !callout-info
+
+## Optional Lesson
+
+This lesson is optional due to its incomplete status. Please feel free to seek out additional resources to augment the material in this lesson.
+
+### !end-callout
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=06de5ab7-88ef-495d-a313-ad440033b00c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 

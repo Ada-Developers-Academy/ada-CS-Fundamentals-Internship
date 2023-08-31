@@ -5,3 +5,13 @@
 # include a config.yaml in your repo following the same conventions as this auto-generated file.
 # A user-created config.yaml will have priority over the auto-generated one.
 
+Standards:
+- Title: Archive
+  UID: e727b00944f81e1d0a95c12886ac4641
+  Description: Archive
+  SuccessCriteria:
+  - success criteria
+  ContentFiles:
+  - Type: Lesson
+    Path: /archive/zero-sum-subarray.md
+    UID: 14ff81b4af9bd4498f923740877c9b9a

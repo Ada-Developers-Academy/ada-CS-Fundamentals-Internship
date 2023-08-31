@@ -2,6 +2,22 @@
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=06222ed2-1765-4cd5-9424-afe80148c8c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
+### !callout-star
+
+## Practical Applications!
+
+Some common practical applications of Djikstra's Algorithm can be found below. As you learn more, try to imagine how it could be used to implement the following:
+
+- Digital Mapping Services
+- Social Networking applications
+- Telephone Networks
+- IP Routing
+- Flight Scheduling
+
+In an interview setting, you may be asked to implement Djikstra's Algorithm to find the shortest path between two nodes of an existing graph or graph-like structure.
+
+### !end-callout
+
 ## Overview 
 
 We have observed that a breadth first search traversal allows us to find the shortest path between any two nodes in an unweighted graph. In an unweighted graph, the length of a path is equal to the number of the edges in the path.

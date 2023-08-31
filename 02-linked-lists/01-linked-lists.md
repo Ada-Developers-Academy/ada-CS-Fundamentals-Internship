@@ -11,6 +11,28 @@ By the end of this lesson students should be able to:
 - Design an object oriented singly linked list
 - Write methods to perform a variety of tasks on singly and doubly linked lists
 
+### !callout-star
+
+## Practical Applications!
+
+Some common practical applications of linked lists can be found below. As you learn more, try to imagine how linked lists could be used to implement the following:
+
+- Image Viewer: Flipping through a series of photos.
+- Web Browser Navigation: Accessing the previous and next URLs.
+- Music Player: Providing the ability to skip to the next song.
+- Undo/Redo Functionality: Providing the ability to undo previous actions.
+- Traffic Lights: Systems to control the traffic light cycle.
+
+In an interview setting, you may be asked to use linked lists to do the following:
+
+- Reverse a linked list.
+- Rotate a linked list.
+- Find the nth node of a linked list.
+- Remove duplicates from a linked list.
+  
+
+### !end-callout
+
 ## Overview
 
 Before diving into linked lists, let's remind ourselves how arrays work. An array is an ordered, linear collection of data where each element sits next to the previous element in memory.  Because each element is of uniform size and adjacent to its neighboring element, with some basic math, the interpreter or compiler can jump to any element in the array immediately:  The interpreter takes the memory address of the element at index 0 of the array and adds the size of each element plus the index number of the sought element.  

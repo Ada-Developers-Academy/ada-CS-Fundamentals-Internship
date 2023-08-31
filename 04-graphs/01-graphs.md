@@ -12,6 +12,26 @@ By the end of this lesson we should be able to:
   - Breadth First Search
   - Depth First Search
 
+### !callout-star
+
+## Practical Applications!
+
+Some common practical applications of graphs can be found below. As you learn more, try to imagine how graphs could be used to implement the following:
+
+- Mapping Services (Google Maps): Building transportation systems.
+- Social Media: Graphing connections between users.
+- Operating Systems: Use graphs to allocate resources.
+- World wide web: Graphing connections between web pages.
+
+In an interview setting, you may be asked to use graphs to do the following:
+
+- Perform a depth first or breadth first traversal on a graph.
+- Find a number of islands within a given matrix.
+- Find whether a specific path exists.
+- Detect cycles in a directed graph.
+
+### !end-callout
+
 ## Overview
 
 Graphs are a linked abstract data structure in computer science represented by a set of _nodes_ connected by references called _edges_. Like binary search trees, graphs are a non-linear data structure. However, graphs are more general than linked lists or binary search trees. Unlike binary search trees where each node can have an edge to at most two other child nodes, each node in a graph can be connected to any number of other nodes. Not every node in the graph has to have the same number of edges.

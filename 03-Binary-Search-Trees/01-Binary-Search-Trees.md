@@ -17,6 +17,26 @@ Students should be able to:
     - Depth first traversals: pre-order, in-order, post-order
     - Breadth first traversal
 
+### !callout-star
+
+## Practical Applications!
+
+Some common practical applications of binary search trees can be found below. As you learn more, try to imagine how binary search trees could be used to implement the following:
+
+- Search Algorithms
+- Compressing Data
+- RSA Encryption
+- Decision Trees
+
+In an interview setting, you may be asked to use binary search trees to do the following:
+
+- Construct a balanced BST from a given data set.
+- Find the nth smallest or nth largest element in a BST.
+- Find the Lowest Common Ancestor (LCA) of two nodes in a BST.
+
+
+### !end-callout
+
 
 ## Overview
 

@@ -69,6 +69,10 @@ Standards:
         Type: Lesson
         UID: 0f52cf8b-80de-4c9f-9b98-53047d37b0a2
         Path: /01-algorithms/08-algorithms-activity.md
+      -
+        Type: Lesson
+        UID: 3e63e944-118b-4904-96d7-ce35e0734f98
+        Path: /01-algorithms/09-algorithms-class-discussion.md
   -
   
     Title: Linked Lists
@@ -109,6 +113,10 @@ Standards:
         Type: Lesson
         UID: 19b1fbf3-60b6-4a60-895c-7de1b9afe923
         Path: /02-linked-lists/06-linked-list-activity.md
+      -
+        Type: Lesson
+        UID: 2c227840-f6ff-4022-a16f-25a3eabf1d41
+        Path: /02-linked-lists/07-linked-lists-class-discussions.md
   -
     Title: Binary Search Trees
     Description: Binary Search Trees, Balancing Trees, Serializing with Tree Traversal, Resources
@@ -140,6 +148,10 @@ Standards:
         Type: Lesson
         UID: 06dea201-6230-4967-b98f-2403ab11479a
         Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity.md
+      -
+        Type: Lesson
+        UID: f5fc7ed6-5231-4667-a64f-aee2ff4d6652
+        Path: /03-Binary-Search-Trees/06-Binary-Search-Trees-Class-Discussions.md
   -
     Title: Graphs
     Description: Graphs, Representing Graphs, Graphs Algorithms - Breadth First Search, Graph Algorithms - Depth First Search, Resources
@@ -171,6 +183,10 @@ Standards:
         Type: Lesson
         UID: 96fcef62-30b0-4be7-8a63-c4002a53b0e2
         Path: /04-graphs/06-graphs-activity.md
+      -
+        Type: Lesson
+        UID: f5a53e36-300b-4568-9301-08963aad977f
+        Path: /04-graphs/07-graphs-class-discussions.md
   -
     Title: Dijkstra's Algorithm
     Description: Graph Data Structures & Algorithms - Dijkstra's
@@ -194,3 +210,7 @@ Standards:
         Type: Lesson
         UID: b11a0602-959e-42a2-9670-e7d126e9d98c
         Path: /05-dijkstras/04-dijkstras-activity.md
+      -
+        Type: Lesson
+        UID: 99db9e58-5ab4-489c-a240-9c67195c7f82
+        Path: /05-dijkstras/05-dijkstras-class-discussions.md

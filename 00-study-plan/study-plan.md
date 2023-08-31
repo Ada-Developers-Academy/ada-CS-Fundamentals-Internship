@@ -12,7 +12,7 @@
 There are three basic paths to complete the unit requirements.
 
  ### Path A
-Path A keeps pace with CS Fundamentals live sessions and will ensure you have covered all topics by the end of the third month of internship which is when many folks choose to actively begin their job search. Path A follows the pattern of learning a new CS Fundamentals topic and completing an interview practice question every two weeks. 
+Path A keeps pace with CS Fundamentals live sessions and will ensure you have covered all topics by the end of the third month of internship which is when many folks choose to actively begin their job search. Path A follows the pattern of learning a new CS Fundamentals topic and completing a problem solving exercise every two weeks. 
 
 Path A also includes ample time to review topics during the last two months of internship and practice applying them. Following Path A, we hope students will feel very solid on all unit topics by graduation and will be able to independently apply them. 
 

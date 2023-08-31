@@ -9,7 +9,7 @@
 Some common practical applications of Djikstra's Algorithm can be found below. As you learn more, try to imagine how it could be used to implement the following:
 
 - Digital Mapping Services
-- Social Networking applications
+- Social Networking Applications
 - Telephone Networks
 - IP Routing
 - Flight Scheduling

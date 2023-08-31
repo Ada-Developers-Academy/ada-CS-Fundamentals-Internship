@@ -21,7 +21,7 @@ Some common practical applications of graphs can be found below. As you learn mo
 - Mapping Services (Google Maps): Building transportation systems.
 - Social Media: Graphing connections between users.
 - Operating Systems: Use graphs to allocate resources.
-- World wide web: Graphing connections between web pages.
+- World Wide Web: Graphing connections between web pages.
 
 In an interview setting, you may be asked to use graphs to do the following:
 

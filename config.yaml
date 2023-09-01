@@ -32,7 +32,7 @@ Standards:
         Path: /00-study-plan/study-plan.checkpoint.md
   -
     Title: Algorithmic Approaches
-    Description: Introduction to Algorithms, Analysis of Algorithms, Divide and Conquer, Recursion, Dynamic Programming (Optional)
+    Description: Introduction to Algorithms, Analysis of Algorithms, Recursion Review, Divide and Conquer, ...
     UID: ccdccab2-b7f3-42d8-977d-955a58ce9d05
     SuccessCriteria:
       - success criteria

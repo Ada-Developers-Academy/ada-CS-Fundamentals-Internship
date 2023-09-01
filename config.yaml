@@ -1,35 +1,16 @@
 ---
 Standards:
   -
-    Title: About
-    Description: Norms, About, Quick Links
-    UID: 88fccfa1-fe50-4434-8834-6efdf422f247
+    Title: Introduction
+    Description: Introduction
+    UID: 7c1d840f-06c8-4dc5-a10a-8fdf61f99c8f
     SuccessCriteria:
       - success criteria
     ContentFiles:
       -
         Type: Lesson
-        UID: bcc6309e-3453-4aea-9b22-ef8e09c2b09e
-        Path: /00-about/norms.md
-      -
-        Type: Lesson
-        UID: 0d492a6b-c9d8-492d-910e-219ff5ea80ae
-        Path: /00-about/about.md
-  -
-    Title: Your Study Plan
-    Description: Study Plan, Submit Study Plan
-    UID: fa32f461-a844-4c4a-bd9b-d683a883fb00
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
-      -
-        Type: Lesson
-        UID: d5a97102-5509-443f-94fb-1238f3491105
-        Path: /00-study-plan/study-plan.md
-      -
-        Type: Checkpoint
-        UID: 70b97077-11e3-42fa-a5df-c54603cef704
-        Path: /00-study-plan/study-plan.checkpoint.md
+        UID: c831a8e5-20d5-42df-883e-bb0f4deb0e1c
+        Path: /00-intro/intro.md
   -
     Title: Algorithmic Approaches
     Description: Introduction to Algorithms, Analysis of Algorithms, Divide and Conquer, Recursion, Dynamic Programming

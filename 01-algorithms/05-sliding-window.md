@@ -1,5 +1,7 @@
 # Optional: Sliding Window Technique
 
+### !callout
+
 ## Optional Lesson
 
 This lesson is optional because the Sliding Window technique is less commonly required in technical interview contexts.

@@ -1,5 +1,11 @@
 # Optional: Sliding Window Technique
 
+## Optional Lesson
+
+This lesson is optional because the Sliding Window technique is less commonly required in technical interview contexts.
+
+### !end-callout
+
 ## Overview
 
 Within the broader category of dynamic programming, there are further techniques that can help us solve specific types of dynamic programming problems.

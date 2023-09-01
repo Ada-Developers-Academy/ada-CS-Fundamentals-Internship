@@ -32,7 +32,7 @@ Standards:
         Path: /00-study-plan/study-plan.checkpoint.md
   -
     Title: Algorithmic Approaches
-    Description: Introduction to Algorithms, Analysis of Algorithms, Divide and Conquer, Recursion, Dynamic Programming
+    Description: Introduction to Algorithms, Analysis of Algorithms, Recursion Review, Divide and Conquer, ...
     UID: ccdccab2-b7f3-42d8-977d-955a58ce9d05
     SuccessCriteria:
       - success criteria
@@ -55,12 +55,12 @@ Standards:
         Path: /01-algorithms/04-algorithms-divide-conquer.md
       -
         Type: Lesson
-        UID: 54496b4c-78bc-46ba-92b4-53ccee97e41f
-        Path: /01-algorithms/05-algorithms-dynamic-programming.md
+        UID: d623f94b-71bc-414b-b138-a4b0264aefcf
+        Path: /01-algorithms/05-sliding-window.md
       -
         Type: Lesson
-        UID: d623f94b-71bc-414b-b138-a4b0264aefcf
-        Path: /01-algorithms/06-sliding-window.md
+        UID: 54496b4c-78bc-46ba-92b4-53ccee97e41f
+        Path: /01-algorithms/06-algorithms-dynamic-programming.md
       -
         Type: Lesson
         UID: e7ac6f0e-1186-4060-8be5-29e46b2fe352

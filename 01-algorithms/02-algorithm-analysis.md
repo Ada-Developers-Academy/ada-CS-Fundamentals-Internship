@@ -152,16 +152,13 @@ def binary_search(test_array, value):
     low = 0
     high = len(test_array) - 1
     while low <= high:
-        mid = (low + high)//2
+        mid = (low + high) // 2
         if test_array[mid] > value:
             high = mid - 1
         elif test_array[mid] < value:
             low = mid + 1
         else:
             return mid
-
-        if test_array[low] == value:
-            return low
 
     return None
 ```
@@ -192,16 +189,13 @@ def binary_search(numbers, value):
     low = 0
     high = len(numbers) - 1
     while low <= high:
-        mid = (low + high)//2
+        mid = (low + high) // 2
         if numbers[mid] > value:
             high = mid - 1
         elif numbers[mid] < value:
             low = mid + 1
         else:
             return mid
-
-        if numbers[low] == value:
-            return low
 
     return None
 ```
@@ -235,7 +229,7 @@ In general:
 
 #### Other Time Complexities
 
-We will occassionally encounter algorithms that have other time complexities. Later in the course we will encounter algorithms which have exponential and factorial time complexities. Algorithms with these time complexities run extremely slow at even moderate inputs and for large inputs are effectively useless.
+We will occasionally encounter algorithms that have other time complexities. Later in the course we will encounter algorithms which have exponential and factorial time complexities. Algorithms with these time complexities run extremely slow at even moderate inputs and for large inputs are effectively useless.
 
 [![Time complexity chart](images/problem-solving__big-o-cheat-sheet.png)](https://www.bigocheatsheet.com/)
 
@@ -415,12 +409,12 @@ def subtotals_list(numbers):
 
 ##### !question
 
-Consider the following solutions to a problem.  Which one is the best?
+Consider the following solutions to a problem. Assume the inputs `s` and `t` are strings and the functions return a boolean value. Which one is the best?
 
 *Code Sample: Solution 1*
 
 ```py
-def isAnagram(self, s: str, t: str) -> bool:
+def isAnagram(s, t):
     s_list = []
     t_list = []
     s_list[:0] = s
@@ -438,7 +432,7 @@ def isAnagram(self, s: str, t: str) -> bool:
 *Code Sample: Solution 2*
 
 ```py
-def isAnagram(self, s: str, t: str) -> bool:
+def isAnagram(s, t):
     s_freq_map = {}
     t_freq_map = {}
     if len(s) != len(t):
@@ -512,7 +506,7 @@ def sum_up(numbers):
     return total
 ```
 
-This function requires 2 numeric variables to store the total and the current number. We can say that the function requires 2 (i.e. *constant space*) to run or `O(1)`. The amount of memory used does not change as the length of `numbers` increases.
+This function requires 2 numeric variables to store the total and the current number. We can say that the function has a space requirement of 2 (i.e. *constant space*) to run or `O(1)`. The amount of memory used does not change as the length of `numbers` increases.
 
 On the other hand the following function requires a list to store double all the numbers.
 
@@ -525,7 +519,7 @@ def double_numbers(numbers):
 
 This function created a new list of numbers proportional in size to the input. So the space complexity is `O(n)`.
 
-Now try to estimate time complexity for the following function.
+Now try to estimate the space complexity for the following functions.
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -554,9 +548,6 @@ def mystery_function(test_array, value):
             low = mid + 1
         else:
             return mid
-
-        if test_array[low] == value:
-            return low
 
     return None
 ```
@@ -696,7 +687,7 @@ def count_up(n):
     print(n)
 ```
 
-This is because the Python interpreter needs to save every active function call on something called the *call stack* with all of it's local variables etc.
+This is because the Python interpreter needs to save every active function call on something called the *call stack* with all of its local variables etc.
 
 ![Call Stack diagram](images/problem-solving__call-stack.svg)
 
@@ -706,7 +697,7 @@ We'll discuss how the recursive call stack affects space complexity more in futu
 
 ## Summary
 
-Big O is a standard way to measure how much the time an algorithm takes and how much memory an algorithm requires to run as the input size increases. This allows us to compare different solutions to measure them against each other. Big O is helpful in selecting the proper algorithm to use for a problem.
+Big O is a standard way to measure changes in how much time and memory an algorithm requires to run as the input size increases. This allows us to compare different solutions to measure them against each other. Big O is helpful in selecting the proper algorithm to use for a problem.
 
 Some general rules to use when thinking about time and space complexity:
 

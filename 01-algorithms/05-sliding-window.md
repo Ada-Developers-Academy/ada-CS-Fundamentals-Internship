@@ -8,11 +8,19 @@ This lesson is optional because the Sliding Window technique is less commonly re
 
 ### !end-callout
 
+### !callout-warning
+
+## Topic Order
+
+This lesson originally followed the Dynamic Programming topic. However, we have moved it up, as this technique is a bit more concrete to discuss than general Dynamic Programming, and we feel this is useful to look at even if you elect to skip the Dynamic Programming topic. Unfortunately, some of the phrasing in this topic assumes that you have already read the Dynamic Programming topic, but it's fine to read this topic on its own.
+
+### !end-callout
+
 ## Overview
 
 Within the broader category of dynamic programming, there are further techniques that can help us solve specific types of dynamic programming problems.
 
-One useful strategy is called the **sliding window technique**. The sliding window technique is a strategy used to simplify time and space complexity when solving a problem that asks us to find some subsequence that satisifies a given set of conditions inside of a larger sequence.
+One useful strategy is called the **sliding window technique**. The sliding window technique is a strategy used to simplify time and space complexity when solving a problem that asks us to find some subsequence that satisfies a given set of conditions inside of a larger sequence.
 
 ## Understanding the Sliding Window Technique
 
@@ -29,7 +37,7 @@ We can make our window as small or large as we would like to solve a problem, bu
 ![Comparing Contiguous and NonContiguous Subsequences](images/contiguous-v-noncontiguous.png)
 
 ### When to Apply the Sliding Window Technique
-What types of data can the sliding window technique be applied to? When deciding.
+What types of data can the sliding window technique be applied to?
 
 #### Contiguous Stream of Data
 When determining whether the sliding window technique is an appropriate approach for a given problem, the first thing we want to consider is what type of data we will be looking at. Our input should be a contiguous, linear, and iterable set of data stored such that we can create a window over it.
@@ -38,7 +46,7 @@ For example, we could perform the sliding window technique on an array, because 
 
 In the example below, the input array is `arr = [4, 3, 12, 4, -1]`
 
-Our window is initally `window = [4, 3, 12]` or `window = [0:2]`. If we use variables to store where the array slice should start and stop, each time we want to slide our window, all we need to do is increment each of our start and stop variables by 1. 
+Our window is initially `window = [4, 3, 12]` or `window = [0:2]`. If we use variables to store where the array slice should start and stop, each time we want to slide our window, all we need to do is increment each of our start and stop variables by 1. 
 
 ![Sliding Window with an Integer Array](images/sliding-window-integer-array.png)
 
@@ -179,7 +187,7 @@ b|
 ##### !end-answer
 
 ##### !explanation 
-The time complexity is O(n) because if k is 1, we will loop through our for loop n times.
+The time complexity is O(n) because each of the n values in our array is added into (and removed from) the running total at most once. That is, our approach iterates through the array of values once. This is true regardless of the window size k.
 ##### !end-explanation 
 
 ### !end-challenge
@@ -339,8 +347,8 @@ Feeling stuck? Take a look at the video solution below!
 
 A sample solution could be:
 
-  ```py
-  def minimum_sub_list_length(numbers, target):
+```py
+def minimum_sub_list_length(numbers, target):
     '''
     INPUT: list of positive numbers, and target a positive integer
     OUTPUT: the minimal length of a contiguous sublist of the given input list which adds up to the given integer.
@@ -375,7 +383,7 @@ A sample solution could be:
     if min_length_sublist == len(numbers) + 1:
         return None
     return min_length_sublist
-  ```
+```
 ##### !end-explanation
 
 ### !end-challenge
@@ -386,51 +394,52 @@ If interested, take a look at how the sliding window solution above compares to 
 
 <details style="max-width: 700px; margin: auto;">
   <summary>Click here to see a sample solution</summary>
-    ```py
-    def minimum_sub_list_length(numbers, target):
-        '''
-        INPUT: list of positive numbers, and target a positive integer
-        OUTPUT: the minimal length of a contiguous sublist of the given input list which adds up to the given integer.
-        Return the length of the smallest contiguous sublist which adds up to the given integer or 
-        return None if there is no such sublist.
-        '''
-        # if the target sum is 0, we can reach the sum simply by not adding any elements to the sublist
-        if target == 0:
-            # so we return that the length of the minimum sublist is 0 (an empty list)
-            return 0
-        
-        # initialize the minimum length to be the length of the initial length plus one
-        min_length = len(numbers) + 1
+
+```py
+def minimum_sub_list_length(numbers, target):
+    '''
+    INPUT: list of positive numbers, and target a positive integer
+    OUTPUT: the minimal length of a contiguous sublist of the given input list which adds up to the given integer.
+    Return the length of the smallest contiguous sublist which adds up to the given integer or 
+    return None if there is no such sublist.
+    '''
+    # if the target sum is 0, we can reach the sum simply by not adding any elements to the sublist
+    if target == 0:
+        # so we return that the length of the minimum sublist is 0 (an empty list)
+        return 0
     
-        for index in range(0, len(numbers)):
-            current_sum = numbers[index]
-            current_index = index + 1
-            while current_index < len(numbers) and \
-                    current_sum + numbers[current_index] <= target:
-                current_sum += numbers[current_index]
-                current_index += 1
-            
-            if current_sum == target and current_index - index < min_length:
-                min_length = current_index - index
+    # initialize the minimum length to be the length of the initial length plus one
+    min_length = len(numbers) + 1
+
+    for index in range(0, len(numbers)):
+        current_sum = numbers[index]
+        current_index = index + 1
+        while (current_index < len(numbers) and 
+                current_sum + numbers[current_index] <= target):
+            current_sum += numbers[current_index]
+            current_index += 1
         
-        if min_length == len(numbers) + 1:
-            return None
-        
-        return min_length
-    ```
+        if current_sum == target and current_index - index < min_length:
+            min_length = current_index - index
+    
+    if min_length == len(numbers) + 1:
+        return None
+    
+    return min_length
+```
 </details>
 
 <!-- available callout types: info, success, warning, danger, secondary, star  -->
 ### !callout-info
 
 ## Why Do We Need Kadane's Algorithm?
-You may recall that in the dynamic programming lesson, we asked you to solve a very similar problem to the one above: maximum . The key difference was that in that array non-positive numbers were allowed.
+You may recall that in the dynamic programming lesson, we asked you to solve a very similar problem to the one above: maximum contiguous subarray. The key difference was that in that array non-positive numbers were allowed.
 
-<break>
+<br />
 
 Try using the algorithm we developed for the problem above on this input array: `[-1, -4, 0, 5, 3, 2, 1]`. Assume the `target` is 5. The sliding window assumes that the sum of the window increases with each shift to the right, but because of the presence of negative numbers in some cases the sum decreases. The right edge of our window will end up past the element at index 3, `5` before we ever start shifting the left edge of our window. Thus we will never catch index 3 as its own valid subarray adding up to the target value.
 
-<break>
+<br />
 
 It is possible to modify the sliding window technique to work with non-positives, but Kadane's algorithm is easier and more efficient!
 ### !end-callout

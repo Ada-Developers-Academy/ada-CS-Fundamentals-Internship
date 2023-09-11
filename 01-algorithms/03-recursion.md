@@ -117,8 +117,8 @@ Struggling with recursion? If you are trying but struggling to come up with a re
 
 * type: multiple-choice
 * id: 1a935cf3-a8c9-4dd1-875f-66ec29241aae
-* title: `hello_repeat_recursive` base case
- * points: 1
+* title: hello_repeat_recursive base case
+* points: 1
 <!-- * topics: [python, pandas] (Checkpoints only. optional the topics for analyzing points) -->
 
 ##### !question
@@ -170,8 +170,8 @@ The answer is b because we stop calling `hello_repeat_recursive` and exit our fu
 
 * type: multiple-choice
 * id: f16197e8-b45a-416c-a7a3-00243da2a6e6
-* title: `hello_repeat_recursive` recursive case
- * points: 1
+* title: hello_repeat_recursive recursive case
+* points: 1
 <!-- * topics: [python, pandas] (Checkpoints only. optional the topics for analyzing points) -->
 
 ##### !question
@@ -216,7 +216,7 @@ The answer is c because we call `hello_repeat_recursive` on a smaller input.
 
 ## Expanding Our Recursion Toolbox
 
-There are a variety of subtechniques that can help us devise recursive solutions to a wider array of problems.
+There are a variety of sub-techniques that can help us devise recursive solutions to a wider array of problems.
 
 ### Combining Results
 
@@ -290,6 +290,8 @@ The call stack is a stack data structure that stores function calls. When we inv
 ## What's a stack?
 
 A **stack** is a special type of array in which items are inserted and removed from the array like a stack of plates. When we insert a new plate onto the stack, we add it to the top of the stack. When we remove a plate, it also comes off the top of the stack. 
+
+<br />
 
 Think of the end of the array as the top of the stack - new elements are appended to the end of the array and removed elements are taken from the end of the array. We never insert or remove elements from any other index in the array. 
 
@@ -367,7 +369,7 @@ def binary_search(numbers, target):
     # must be less than or equal to target value
     else:
         # perform binary search again on last half of numbers
-        return binary_search(numbers[middle_index +1:], target)        
+        return binary_search(numbers[middle_index+1:], target)        
 ```
 
 Play around with this code yourself: [recursive binary search](https://replit.com/@adadev/binarysearch#main.py)
@@ -378,7 +380,7 @@ Play around with this code yourself: [recursive binary search](https://replit.co
 
 However with this function, we also have two recursive cases:
 - If the value at the middle of the list is bigger than the value we are searching for, we want to run `binary_search` again on the _left_ half of the list
-- If the value at the middle of the list is less than to the value we are searching for, we want to run `binary_search` gain on the _right_ half of the list
+- If the value at the middle of the list is less than to the value we are searching for, we want to run `binary_search` again on the _right_ half of the list
 
 Multiple recursive cases allow us to select which subproblem we recurse on in different scenarios. We no longer have to follow the same recursive pattern with every recursive function call as we did with `sum_zero_to_n` and `fibonacci`. 
 
@@ -391,7 +393,8 @@ If we pass in the first half of `numbers`, then the indices of each value in our
 
 <details>
     <summary>Boolean Binary Search Implementation</summary>
-    <pre><code>
+
+```py
 def binary_search(numbers, target):
     if not numbers:
         return False
@@ -401,8 +404,8 @@ def binary_search(numbers, target):
     elif numbers[middle_index] > target:
         return binary_search(numbers[:middle_index], target)
     else:
-        return binary_search(numbers[middle_index +1:], target)
-    </code></pre>
+        return binary_search(numbers[middle_index+1:], target)
+```
 </details>
 
 How can we pass along the original indices of our `numbers` array with each recursive call? One method would be to alter our function to take in two extra parameters. Instead of passing in a spliced section of `numbers` to each recursive call, we could instead pass in all of `numbers` but tell it we only want to look for our `target` integer within some `start_index` and some `end_index`. 
@@ -432,14 +435,14 @@ def binary_search(numbers, target, start_index, end_index):
             # target must be to the left of current middle_index
             # perform binary search, reduce the part of numbers we are searching to
             # numbers[start_index: middle_index + 1]
-            return binary_search(numbers, target, start_index, middle_index+1)
+            return binary_search(numbers, target, start_index, middle_index-1)
         # otherwise number we are looking for is
         # smaller than value at current midpoint
         else:
             # target must be to the right of current middle_index
             # perform binary search, reduce the part of numbers we are searching to
             # numbers[middle_index - 1: end_index]
-            return binary_search(numbers, target, middle_index-1, end_index)        
+            return binary_search(numbers, target, middle_index+1, end_index)        
 ```
 
 In this new variation of binary search,  our initial call to `binary search` should pass in `0` for `start_index` and the last index in our input array `numbers` for `end_index` so that our function searches the entirety of `numbers`. 
@@ -496,21 +499,20 @@ Going back to our example of `sum_zero_to_n`, the iterative solution makes just 
 
 <details>
 <summary>Iterative Implementation</summary>
-<pre>
-<code>
+
+```py
 def sum_zero_to_n_iterative(n):
     sum = 0
     for num in range(n+1):
         sum += num
     return sum
-</pre>
-</code>
+```
 </details>
 
 <details>
-<summary>Recursive Implementaiton</summary>
-<pre>
-<code>
+<summary>Recursive Implementation</summary>
+
+```py
 def sum_zero_to_n_recursive(n):
     # base case
     if n == 0:
@@ -518,8 +520,7 @@ def sum_zero_to_n_recursive(n):
     # recursive case
     else:
         return n + sum_zero_to_n_recursive(n-1)
-</code>
-</pre>
+```
 </details>
 
 When considering the Big O of recursive algorithms, we should always remember to account for the size of the recursive call stack. 

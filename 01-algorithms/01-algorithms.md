@@ -53,7 +53,7 @@ The study of computer science is the study of algorithms. At its core, computer 
   - This is the art of proving the correctness of an algorithm for all possible inputs
   - This is very similar to a mathematical proof
 - **Analyzing** algorithms
-  - This is identifying the efficency of an algorithm using time and space complexity
+  - This is identifying the efficiency of an algorithm using time and space complexity
 - **Testing** algorithms
   - This is really debugging the algorithm  
   - When the algorithm is tested, it is run on sample data. If the tests produce unexpected output, the error causing the unexpected output needs to be debugged
@@ -118,7 +118,7 @@ We should also look for any terminology that is unfamiliar to us (say if we're n
 
 ## What if Google isn't allowed?
 
-If you are in an interview setting and Google isn't allowed, ask your interviewer! While it may feel nervewracking to admit you are unfamiliar with a term (or multiple terms), asking for clarification can also signal that you are a clear communicator, collaborative, and detail-oriented.
+If you are in an interview setting and Google isn't allowed, ask your interviewer! While it may feel nerve-racking to admit you are unfamiliar with a term (or multiple terms), asking for clarification can also signal that you are a clear communicator, collaborative, and detail-oriented.
 
 ### !end-callout
 
@@ -211,7 +211,7 @@ Write your solution and then look below to see a sample solution.
 * id: 4dc81336-1c2d-421e-8fe8-27326736b2e3
 * title: Duplicates within K Problem
 * points: 1
-* topics: python, lists, hashtables
+* topics: python, lists, hash tables
 
 ##### !question
 
@@ -253,7 +253,7 @@ class TestPython1(unittest.TestCase):
   def test_nominal_truthy_case(self):
     self.assertEqual(True,duplicates_within_k([1, 0, 2, 1, 3, 4], 5))
 
-  def test_nominal_falsey_case(self):
+  def test_nominal_falsy_case(self):
     self.assertEqual(False, duplicates_within_k([1, 0, 2, 3, 4, 1], 4))
 
   def test_duplicate_exactly_k_spaces_away_returns_true(self):
@@ -288,7 +288,7 @@ Still feeling stuck? Try watching the video walkthrough of a sample solution bel
 A sample solution could be:
 
 ```py
-  def duplicates_within_k(numbers, k):
+def duplicates_within_k(numbers, k):
     '''
     INPUT: list of integers and integer k
     OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
@@ -298,33 +298,31 @@ A sample solution could be:
 
     # if the input list has less than two elements or k is zero
     if lst_length < 2 or k == 0:
-      # return false, there cannot be duplicates
-      return False
-    
+        # return false, there cannot be duplicates
+        return False
+
     # loop through indices of list
     for i in range(lst_length):
-      # initialize a second pointer to track end of subarray
-      j = i + 1
-      # initialize a variable to k
-      # will help make sure our subarray stays within size k + 1
-      dist_remaining = k
-      
-      # while we are within k distance from i
-      # and j is not out of bounds of list
-      while dist_remaining > 0 and j < lst_length:
-        # if elements at index i and j are the same
-        if numbers[i] == numbers[j]:
-          # a duplicate within k distance exists
-          return True
-        # otherwise increment j to increase subarray size
-        j += 1
-        # decrement dist_remaining so subarray will stay within
-        # k distance from i
-        dist_remaining -= 1
-    # if we loop through all subarrays and have not found a duplicate
-    # return False
+        # initialize a second pointer to track end of subarray
+        j = i + 1
+        # initialize a variable to k
+        # will help make sure our subarray stays within size k + 1
+        dist_remaining = k
+        
+        # while we are within k distance from i
+        # and j is not out of bounds of list
+        while dist_remaining > 0 and j < lst_length:
+            # if elements at index i and j are the same
+            if numbers[i] == numbers[j]:
+                # a duplicate within k distance exists
+                return True
+            # otherwise increment j to increase subarray size
+            j += 1
+            # decrement dist_remaining so subarray will stay within
+            # k distance from i
+            dist_remaining -= 1
+    # we looped through all subarrays and didn't find a duplicate
     return False
-
 ```
 
 
@@ -337,7 +335,8 @@ A sample solution could be:
 
   The solution below works, but as we will see later below, it is not optimal.  We can do better.
 
-  ```py  def duplicates_within_k(numbers, k):
+```py
+def duplicates_within_k(numbers, k):
     '''
     INPUT: list of integers and integer k
     OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
@@ -347,41 +346,39 @@ A sample solution could be:
 
     # if the input list has less than two elements or k is zero
     if lst_length < 2 or k == 0:
-      # return false, there cannot be duplicates
-      return False
+        # return false, there cannot be duplicates
+        return False
     
     # loop through indices of list
     for i in range(lst_length):
-      # initialize a second pointer to track end of subarray
-      j = i + 1
-      # initialize a variable to k
-      # will help make sure our subarray stays within size k + 1
-      dist_remaining = k
-      
-      # while we are within k distance from i
-      # and j is not out of bounds of list
-      while dist_remaining > 0 and j < lst_length:
-        # if elements at index i and j are the same
-        if numbers[i] == numbers[j]:
-          # a duplicate within k distance exists
-          return True
-        # otherwise increment j to increase subarray size
-        j += 1
-        # decrement dist_remaining so subarray will stay within
-        # k distance from i
-        dist_remaining -= 1
-    # if we loop through all subarrays and have not found a duplicate
-    # return False
+        # initialize a second pointer to track end of subarray
+        j = i + 1
+        # initialize a variable to k
+        # will help make sure our subarray stays within size k + 1
+        dist_remaining = k
+        
+        # while we are within k distance from i
+        # and j is not out of bounds of list
+        while dist_remaining > 0 and j < lst_length:
+            # if elements at index i and j are the same
+            if numbers[i] == numbers[j]:
+                # a duplicate within k distance exists
+                return True
+            # otherwise increment j to increase subarray size
+            j += 1
+            # decrement dist_remaining so subarray will stay within
+            # k distance from i
+            dist_remaining -= 1
+    # we looped through all subarrays and didn't find a duplicate
     return False
-
-  ```
+```
 </details>
 
 This solution works and is a relatively direct straight forward approach. This is often called a **brute force** solution.
 
 ### Simplify/Refactor
 
-The first big challenge in software development is to _produce working code_. If we still have time after producing working code, we should consider opportunites to simplify or refactor (improve) our solution.
+The first big challenge in software development is to _produce working code_. If we still have time after producing working code, we should consider opportunities to simplify or refactor (improve) our solution.
 
 In the sample solution above we are using a nested loop to repeatedly traverse the list. The outer loop tracked the starting index of our subarrays and the inner loop tracked the ending index of our subarrays. This solution isn't very time efficient because we examine the same elements of the list repeatedly.
 
@@ -398,19 +395,19 @@ Ideally, it would be nice to find all subarrays by only making a single loop thr
 
 What if we flipped our approach so that instead of first confirming we are within a subarray of length k and then checking whether it contains duplicates, we instead track the indices of every value in our array and use arithmetic to see if any value with more than two instances is less than k?
 
-For this approach, we could pair elements in the array with the indices at which they occur using a dictionary. We know dictionaries are also called hashtables, and that hashtables have very fast look-up times!
+For this approach, we could pair elements in the array with the indices at which they occur using a dictionary. We know dictionaries are also called hash tables, and that hash tables have very fast look-up times!
 
 Say we have an input list `[1, 0, 2, 1, 3, 4]` and k value of 5. We could generate the dictionary:
 ```python
 {
   0: [1],
-  1 : [0, 3],
-  2 : [2],
+  1: [0, 3],
+  2: [2],
   3: [4],
   4: [5]
 }
 ```
-In the dictionary above the key is an element occuring in the input list and the value is a list of indices at which that element occurs.
+In the dictionary above the key is an element occurring in the input list and the value is a list of indices at which that element occurs.
 
 We can see that the key 1 has multiple indices paired with it - 0 and 3 - indicating that it occurs in our input list at least twice.
 
@@ -427,10 +424,10 @@ In our refactor we can start by creating a dictionary that maps sums to indices.
 Then we can repeat this algorithm for each index in the list:
 
 1. Check if the element already exists in the dictionary
-2.  If the element is already in the dictionary, we've found a duplicate. 
+2. If the element is already in the dictionary, we've found a duplicate. 
 3. Find the difference between our current index and the index already in the dictionary for that value
-4.  If the difference is less than or equal to `k`, return `True`
-5.  Otherwise, add the current element-index pair to the dictionary
+4. If the difference is less than or equal to `k`, return `True`
+5. Otherwise, add the current element-index pair to the dictionary
 
 Note that this improves on our proposed refactor even more! Instead of creating the dictionary first, and then checking for duplicates within the dictionary we check for duplicates as we iterate through the list.
 
@@ -442,10 +439,8 @@ Instead of storing a list of all indices associated with a value, we only store 
   <summary>Click here to see a sample solution</summary>
 
   A detailed walkthrough of this solution is included in the last video lesson.
-
-  ```py
-    
-  def duplicates_within_k(numbers, k):
+```py
+def duplicates_within_k(numbers, k):
     '''
     INPUT: list of integers and integer k
     OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
@@ -453,29 +448,28 @@ Instead of storing a list of all indices associated with a value, we only store 
 
     # if the input list has less than two elements or k is zero
     if len(numbers) < 2 or k == 0:
-      # return false, there cannot be duplicates
-      return False
+        # return false, there cannot be duplicates
+        return False
 
     # create a dictionary to store (element, index) pairs
     elt_to_idx_map = {}
 
     # loop through indices and values of input list
     for index, element in enumerate(numbers):
-      # if the element has been seen previously
-      if element in elt_to_idx_map:
-        # if the difference between current index
-        # and index already in the dictionary 
-        # is less than or equal to k
-        if index - elt_to_idx_map[element] <= k:
-          # there exists a duplicate within distance k
-          return True
-      # pair most recently seen index with element in dictionary
-      elt_to_idx_map[element] = index
+        # if the element has been seen previously
+        if element in elt_to_idx_map:
+            # if the difference between current index
+            # and index already in the dictionary 
+            # is less than or equal to k
+            if index - elt_to_idx_map[element] <= k:
+                # there exists a duplicate within distance k
+                return True
+        # pair most recently seen index with element in dictionary
+        elt_to_idx_map[element] = index
 
     # there are no duplicates within distance k
-    return False
-        
-  ```
+    return False        
+```
 </details>
 
 This solution now makes only one pass through the list, meaning as the input array grows, the solution will perform better compared to our original solution. The video lesson contains a more detailed walkthrough of the sample refactored solution above.
@@ -501,6 +495,8 @@ By making problem solving a process we can reduce stress and improve our ability
 ## Should I Be Concerned if I Couldn't Come Up with a Solution Myself?
 
 As you move through the unit curriculum, you will be asked to attempt many interview practice problems, many of which you may not be able to solve quickly or independently. 
+
+<br/>
 
 That's okay! Part of the learning process for interviewing includes attempting and 'failing' problems, especially when you're first learning new material. Your progress may be slow and incremental. If you need to use provided and/or outside resources to come to a full solution, focus on understanding the _techniques_ used in the solution. You can bring these techniques with you to help solve future programming problems. 
 

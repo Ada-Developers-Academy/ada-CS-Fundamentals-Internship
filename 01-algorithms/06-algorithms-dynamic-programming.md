@@ -317,17 +317,17 @@ In the image above, the largest contiguous sum subarray is the subarray from ind
 ##### !placeholder
 ```py
 def max_contiguous_sum(arr):
-  '''
-  INPUT: 1-dimensional array with integers which can be either positive or negative
-  OUTPUT: int, which is the maximum contiguous subarray sum
+    '''
+    INPUT: 1-dimensional array with integers which can be either positive or negative
+    OUTPUT: int, which is the maximum contiguous subarray sum
 
-  Example input:
-  [-2, -3, 4, -1, -2, 1, 5, -3]
+    Example input:
+    [-2, -3, 4, -1, -2, 1, 5, -3]
 
-  Example output:
-  7 (image above shows which elements add up to this sum)
-  '''
-  pass
+    Example output:
+    7 (image above shows which elements add up to this sum)
+    '''
+    pass
 ```
 
 ##### !end-placeholder
@@ -409,23 +409,23 @@ Still feeling stuck? Watch a video explanation of the solution below.
 An example solution is detailed below:
 ```py
 def max_contiguous_sum(arr):
-  if len(arr) == 0:
-    return 0
+    if len(arr) == 0:
+        return 0
 
-  max_so_far = float('-inf')
-  max_ending_here = 0
+    max_so_far = float('-inf')
+    max_ending_here = 0
 
-  size = len(arr)
+    size = len(arr)
 
-  for i in range(0, size):
-    max_ending_here = max_ending_here + arr[i]
-    if (max_so_far < max_ending_here):
-      max_so_far = max_ending_here
-      
-    if max_ending_here < 0:
-      max_ending_here = 0
-        
-  return max_so_far
+    for i in range(0, size):
+        max_ending_here = max_ending_here + arr[i]
+        if (max_so_far < max_ending_here):
+            max_so_far = max_ending_here
+
+        if max_ending_here < 0:
+            max_ending_here = 0
+
+    return max_so_far
 ```
 ##### !end-explanation 
 

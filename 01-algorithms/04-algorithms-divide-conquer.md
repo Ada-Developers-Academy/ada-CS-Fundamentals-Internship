@@ -130,18 +130,18 @@ Given an integer array, find the minimum and maximum element present in it by ma
 
 ##### !placeholder
 ```py
-def min_max(arr):
-  '''
-  INPUT: 1-dimensional array with integers which can be either positive or negative
-  OUTPUT: Tuple where the first element is the minimum element in the array and the second element is the maximum element in the array.
+def min_max(nums):
+    '''
+    INPUT: 1-dimensional array with integers which can be either positive or negative
+    OUTPUT: Tuple where the first element is the minimum element in the array and the second element is the maximum element in the array.
 
-  Example input:
-  [7, 1, 8, 5, 10, 4, 2, 6]
+    Example input:
+    [7, 1, 8, 5, 10, 4, 2, 6]
 
-  Example output:
-  (1, 10)
-  '''
-  pass
+    Example output:
+    (1, 10)
+    '''
+    pass
 ```
 
 ##### !end-placeholder
@@ -272,17 +272,17 @@ We would like to find the smallest missing non-negative element inside of the ar
 ##### !placeholder
 ```py
 def smallest_missing_num(nums):
-  '''
-  INPUT: 1-dimensional array with integers 
-  OUTPUT: The integer which represents the smallest missing non-negative element inside of the array. If the array contains all of the elements, return the smallest number following the length of the array.
+    '''
+    INPUT: 1-dimensional array with integers 
+    OUTPUT: The integer which represents the smallest missing non-negative element inside of the array. If the array contains all of the elements, return the smallest number following the length of the array.
 
-  Example input:
-  [0, 1, 2, 6, 9, 11, 15]
+    Example input:
+    [0, 1, 2, 6, 9, 11, 15]
 
-  Example output:
-  3
-  '''
-  pass
+    Example output:
+    3
+    '''
+    pass
 ```
 
 ##### !end-placeholder
@@ -438,7 +438,7 @@ d|
 
 #### !explanation
 
-The answer is (low + high) // 2 because the index calculated using that expression is the index of the middle element. For example, if the lower bound is 2 and the upper bound is 16, the middle element between indices 2 and 16 is the element in index 8. 
+The answer is (low + high) // 2 because the index calculated using that expression is the index of the middle element. For example, if the lower bound is 2 and the upper bound is 16, the middle element between indices 2 and 16 is the element in index 9. 
 
 #### !end-explanation 
 

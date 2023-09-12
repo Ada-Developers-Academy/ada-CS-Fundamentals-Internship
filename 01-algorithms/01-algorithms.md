@@ -321,7 +321,7 @@ def duplicates_within_k(numbers, k):
             # decrement dist_remaining so subarray will stay within
             # k distance from i
             dist_remaining -= 1
-    # we looped through all subarrays and didn't find a duplicate,
+    # we looped through all subarrays and didn't find a duplicate
     return False
 ```
 
@@ -369,7 +369,7 @@ def duplicates_within_k(numbers, k):
             # decrement dist_remaining so subarray will stay within
             # k distance from i
             dist_remaining -= 1
-    # we looped through all subarrays and didn't find a duplicate,
+    # we looped through all subarrays and didn't find a duplicate
     return False
 ```
 </details>

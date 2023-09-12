@@ -289,42 +289,40 @@ A sample solution could be:
 
 ```py
 def duplicates_within_k(numbers, k):
-  '''
-  INPUT: list of integers and integer k
-  OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
-  '''
-  # get length of input list
-  lst_length = len(numbers)
+    '''
+    INPUT: list of integers and integer k
+    OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
+    '''
+    # get length of input list
+    lst_length = len(numbers)
 
-  # if the input list has less than two elements or k is zero
-  if lst_length < 2 or k == 0:
-    # return false, there cannot be duplicates
+    # if the input list has less than two elements or k is zero
+    if lst_length < 2 or k == 0:
+        # return false, there cannot be duplicates
+        return False
+
+    # loop through indices of list
+    for i in range(lst_length):
+        # initialize a second pointer to track end of subarray
+        j = i + 1
+        # initialize a variable to k
+        # will help make sure our subarray stays within size k + 1
+        dist_remaining = k
+        
+        # while we are within k distance from i
+        # and j is not out of bounds of list
+        while dist_remaining > 0 and j < lst_length:
+            # if elements at index i and j are the same
+            if numbers[i] == numbers[j]:
+                # a duplicate within k distance exists
+                return True
+            # otherwise increment j to increase subarray size
+            j += 1
+            # decrement dist_remaining so subarray will stay within
+            # k distance from i
+            dist_remaining -= 1
+    # we looped through all subarrays and didn't find a duplicate,
     return False
-  
-  # loop through indices of list
-  for i in range(lst_length):
-    # initialize a second pointer to track end of subarray
-    j = i + 1
-    # initialize a variable to k
-    # will help make sure our subarray stays within size k + 1
-    dist_remaining = k
-    
-    # while we are within k distance from i
-    # and j is not out of bounds of list
-    while dist_remaining > 0 and j < lst_length:
-      # if elements at index i and j are the same
-      if numbers[i] == numbers[j]:
-        # a duplicate within k distance exists
-        return True
-      # otherwise increment j to increase subarray size
-      j += 1
-      # decrement dist_remaining so subarray will stay within
-      # k distance from i
-      dist_remaining -= 1
-  # if we loop through all subarrays and have not found a duplicate
-  # return False
-  return False
-
 ```
 
 
@@ -337,8 +335,8 @@ def duplicates_within_k(numbers, k):
 
   The solution below works, but as we will see later below, it is not optimal.  We can do better.
 
-  ```py
-  def duplicates_within_k(numbers, k):
+```py
+def duplicates_within_k(numbers, k):
     '''
     INPUT: list of integers and integer k
     OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
@@ -348,34 +346,32 @@ def duplicates_within_k(numbers, k):
 
     # if the input list has less than two elements or k is zero
     if lst_length < 2 or k == 0:
-      # return false, there cannot be duplicates
-      return False
+        # return false, there cannot be duplicates
+        return False
     
     # loop through indices of list
     for i in range(lst_length):
-      # initialize a second pointer to track end of subarray
-      j = i + 1
-      # initialize a variable to k
-      # will help make sure our subarray stays within size k + 1
-      dist_remaining = k
-      
-      # while we are within k distance from i
-      # and j is not out of bounds of list
-      while dist_remaining > 0 and j < lst_length:
-        # if elements at index i and j are the same
-        if numbers[i] == numbers[j]:
-          # a duplicate within k distance exists
-          return True
-        # otherwise increment j to increase subarray size
-        j += 1
-        # decrement dist_remaining so subarray will stay within
-        # k distance from i
-        dist_remaining -= 1
-    # if we loop through all subarrays and have not found a duplicate
-    # return False
+        # initialize a second pointer to track end of subarray
+        j = i + 1
+        # initialize a variable to k
+        # will help make sure our subarray stays within size k + 1
+        dist_remaining = k
+        
+        # while we are within k distance from i
+        # and j is not out of bounds of list
+        while dist_remaining > 0 and j < lst_length:
+            # if elements at index i and j are the same
+            if numbers[i] == numbers[j]:
+                # a duplicate within k distance exists
+                return True
+            # otherwise increment j to increase subarray size
+            j += 1
+            # decrement dist_remaining so subarray will stay within
+            # k distance from i
+            dist_remaining -= 1
+    # we looped through all subarrays and didn't find a duplicate,
     return False
-
-  ```
+```
 </details>
 
 This solution works and is a relatively direct straight forward approach. This is often called a **brute force** solution.
@@ -443,10 +439,8 @@ Instead of storing a list of all indices associated with a value, we only store 
   <summary>Click here to see a sample solution</summary>
 
   A detailed walkthrough of this solution is included in the last video lesson.
-
-  ```py
-    
-  def duplicates_within_k(numbers, k):
+```py
+def duplicates_within_k(numbers, k):
     '''
     INPUT: list of integers and integer k
     OUTPUT: Boolean indicating whether there is are duplicate elements in the list within k distance
@@ -454,29 +448,28 @@ Instead of storing a list of all indices associated with a value, we only store 
 
     # if the input list has less than two elements or k is zero
     if len(numbers) < 2 or k == 0:
-      # return false, there cannot be duplicates
-      return False
+        # return false, there cannot be duplicates
+        return False
 
     # create a dictionary to store (element, index) pairs
     elt_to_idx_map = {}
 
     # loop through indices and values of input list
     for index, element in enumerate(numbers):
-      # if the element has been seen previously
-      if element in elt_to_idx_map:
-        # if the difference between current index
-        # and index already in the dictionary 
-        # is less than or equal to k
-        if index - elt_to_idx_map[element] <= k:
-          # there exists a duplicate within distance k
-          return True
-      # pair most recently seen index with element in dictionary
-      elt_to_idx_map[element] = index
+        # if the element has been seen previously
+        if element in elt_to_idx_map:
+            # if the difference between current index
+            # and index already in the dictionary 
+            # is less than or equal to k
+            if index - elt_to_idx_map[element] <= k:
+                # there exists a duplicate within distance k
+                return True
+        # pair most recently seen index with element in dictionary
+        elt_to_idx_map[element] = index
 
     # there are no duplicates within distance k
-    return False
-        
-  ```
+    return False        
+```
 </details>
 
 This solution now makes only one pass through the list, meaning as the input array grows, the solution will perform better compared to our original solution. The video lesson contains a more detailed walkthrough of the sample refactored solution above.

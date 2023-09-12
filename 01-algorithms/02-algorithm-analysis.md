@@ -120,16 +120,16 @@ def duplicates_within_k(numbers, k):
     lst_length = len(numbers)
 
     if lst_length < 2 or k == 0:
-      return False
+          return False
     
     for i in range(lst_length):
-      j = i + 1
-      dist_remaining = k
-      while dist_remaining > 0 and j < lst_length:
-        if numbers[i] == numbers[j]:
-          return True
-        j += 1
-        dist_remaining -= 1
+        j = i + 1
+        dist_remaining = k
+        while dist_remaining > 0 and j < lst_length:
+            if numbers[i] == numbers[j]:
+                return True
+            j += 1
+            dist_remaining -= 1
     return False
 ```
 

@@ -9,8 +9,10 @@ Our goal is to practice using Dijkstra's Algorithm to solve shortest/least costl
 As a class we will introduce the interview problem, discuss test cases, why Dijkstra's is a good fit for solving this problem, and possible modifications we may need to make to Dijkstra's to solve this problem.
 
 Follow along in the following Replit as we livecode the function in class: 
-* [Cheapest Flight Ligers Livecode](https://replit.com/@adadev/Cheapest-Flight-Ligers-Livecode)
-* [Cheapest Flight Tigons Livecode](https://replit.com/@adadev/Cheapest-Flight-Tigons-Livecode)
+* [Cheapest Flight Livecode Start](https://replit.com/@adadev/Cheapest-Flight-Livecode-Start)
+<!--
+* [C19 Cheapest Flight Livecode Solution](#)
+-->
 
 ### Breakout Rooms - Minimum Effort Path Pseudocode
 
@@ -18,6 +20,10 @@ In small groups of 3-4 students, pseudocode a solution to the Minimum Effort Pat
 
 **One student** should *fork* the following Repl and share the collaboration link with the rest of the team.  [Minimum Effort Path Activity Repl](https://replit.com/@adadev/Minimum-Effort-Path-Activity)
 
+<!--
+Solution:
+* [C19 Small Group Solution](#)
+-->
 
 #### Exercise
 

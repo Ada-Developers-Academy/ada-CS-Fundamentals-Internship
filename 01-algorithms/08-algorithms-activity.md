@@ -10,9 +10,7 @@ Afterwards, you will work in groups to complete an iterative solution using Dyna
 
 Follow along in the following Replit as we livecode a recursive solution with and without Dynamic Programming: [Newman-Conway Recursively](https://replit.com/@adadev/Newman-Conway-Recursive)
 
-<!--
-* [C19 Newman-Conway Recursive Livecode Solution](#)
--->
+* [C19 Newman-Conway Recursive Livecode Solution](https://replit.com/@adadev/C19-Newman-Conway-Recursive-Solution)
 
 ### Small Group Work
 
@@ -24,7 +22,5 @@ Follow along in the following Replit as we livecode a recursive solution with an
 
 Fork the following Replit to work on in small groups: [Newman-Conway Iteratively with DP](https://replit.com/@adadev/Newman-Conway-Iterative)
 
-<!--
 Solution:
-* [C19 Small Group Solution](#)
--->
+* [C19 Small Group Solution](https://replit.com/@adadev/Newman-Conway-Iterative-Solution)

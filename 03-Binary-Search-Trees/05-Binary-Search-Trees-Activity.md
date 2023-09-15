@@ -7,9 +7,10 @@ We will go over how to implement a recursive height function for Binary Search T
 ### Class Livecode
 
 Follow along in the following Replit as we livecode the function in class: 
-* [BST Height Ligers Livecode](https://replit.com/@adadev/BST-Height-Ligers-Livecode)
-* [BST Height Tigons Livecode](https://replit.com/@adadev/BST-Height-Tigons-Livecode)
-
+* [BST Height Livecode Start](https://replit.com/@adadev/BST-Height-Livecode-Start)
+<!--
+* [C19 BST Height Livecode Solution](#)
+-->
 
 ### Small Group Work: Kth Smallest Element
 
@@ -22,3 +23,8 @@ For your small group activity,  you will work on implementing 'Kth Smallest Elem
 - After small group work, we will come back together as a class to work through a solution together, as time allows. Groups may ask questions, share where they got stuck, and/or share out their solutions.
 
 Fork the following Replit to work on in small groups: [Kth Smallest Element in BST](https://replit.com/@adadev/BST-Kth-Smallest-Element-Activity)
+
+<!--
+Solution:
+* [C19 Small Group Solution](#)
+-->

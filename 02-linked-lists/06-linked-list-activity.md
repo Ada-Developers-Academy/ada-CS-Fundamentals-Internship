@@ -2,16 +2,17 @@
 
 ## Rotate a Linked List
 
-We will go over the driving fuction in class.
+We will go over the driving function in class.
 
 Afterwards, you will work in groups to fill out the helper functions used in the driving function. Tests are added to the Replit to help you test if your helper functions work correctly.
 
 ### Class Livecode
 
 Follow along in the following Replit as we livecode the driving function in class: 
-* [Rotate Linked List Ligers Livecode](https://replit.com/@adadev/Rotate-Linked-List-Ligers-Livecode)
-* [Rotate Linked List Tigons Livecode](https://replit.com/@adadev/Rotate-Linked-List-Tigons-Livecode)
-
+* [Rotate Linked List Livecode Start](https://replit.com/@adadev/Rotate-Linked-List-Livecode-Start)
+<!--
+* [C19 Rotate Linked List Livecode Solution](#)
+-->
 
 ### Small Group Work
 
@@ -22,3 +23,8 @@ Follow along in the following Replit as we livecode the driving function in clas
 - After small group work, we will come back together as a class to work through a solution together, as time allows. Groups may ask questions, share where they got stuck, and/or share out their solutions.
 
 Fork the following Replit to work on in small groups: [Rotate Linked List w/ Helpers Blank](https://replit.com/@adadev/Rotate-Linked-List-Helpers-Blank)
+
+<!--
+Solution:
+* [C19 Small Group Solution](#)
+-->

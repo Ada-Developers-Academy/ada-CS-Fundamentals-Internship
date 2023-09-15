@@ -7,9 +7,10 @@ We will go over how to implement a solution for the Number of Provinces problem.
 ### Class Livecode
 
 Follow along in the following Replit as we livecode the function in class: 
-* [Number of Provinces Ligers Livecode](https://replit.com/@adadev/Number-of-Provinces-Ligers-Livecode)
-* [Number of Provinces Tigons Livecode](https://replit.com/@adadev/Number-of-Provinces-Tigons-Livecode)
-
+* [Number of Provinces Livecode Start](https://replit.com/@adadev/Number-of-Provinces-Livecode-Start)
+<!--
+* [C19 Number of Provinces Livecode Solution](#)
+-->
 
 ### Small Group Work: Graph Variations Activities
 
@@ -25,3 +26,8 @@ Fork one of the following Replits to work on in small groups:
 * [Convert Graph](https://replit.com/@adadev/Convert-Graph-Activity)
 * [DFS with Adjacency Matrix](https://replit.com/@adadev/dfs-with-adjacency-matrix)
 * [Repeat BFS](https://replit.com/@adadev/Repeat-BFS-Activity)
+
+<!--
+Solution:
+* [C19 Small Group Solution](#)
+-->

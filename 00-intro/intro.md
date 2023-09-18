@@ -12,3 +12,6 @@ For more information about the structure and expectations of the post-classroom 
 ### Resources
 
 - [Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals?authuser=1)
+- [PSE Grading Request Form](https://form.asana.com/?k=s_JorjEM5mBvzcDtfw8yJg&d=181459410160484)
+    - Please keep in mind grading is limited to instructor capacity. We will attempt to grade your PSE within a week of submitting this form.
+    - Please submit one form per assignment.

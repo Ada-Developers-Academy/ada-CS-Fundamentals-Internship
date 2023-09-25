@@ -158,16 +158,20 @@ Standards:
         Path: /04-graphs/04-dfs.md
       -
         Type: Lesson
+        UID: 99cede61-070b-4d37-904c-ea12aba787b5
+        Path: /04-graphs/05-application.md
+      -
+        Type: Lesson
         UID: b7554bcb-53aa-4db8-b447-1c2e4145b1e0
-        Path: /04-graphs/05-graphs-resources.md
+        Path: /04-graphs/06-graphs-resources.md
       -
         Type: Lesson
         UID: 96fcef62-30b0-4be7-8a63-c4002a53b0e2
-        Path: /04-graphs/06-graphs-activity.md
+        Path: /04-graphs/07-graphs-activity.md
       -
         Type: Lesson
         UID: f5a53e36-300b-4568-9301-08963aad977f
-        Path: /04-graphs/07-graphs-class-discussions.md
+        Path: /04-graphs/08-graphs-class-discussions.md
   -
     Title: Dijkstra's Algorithm
     Description: Graph Data Structures & Algorithms - Dijkstra's

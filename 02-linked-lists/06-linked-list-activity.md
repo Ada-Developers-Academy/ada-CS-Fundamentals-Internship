@@ -10,9 +10,8 @@ Afterwards, you will work in groups to fill out the helper functions used in the
 
 Follow along in the following Replit as we livecode the driving function in class: 
 * [Rotate Linked List Livecode Start](https://replit.com/@adadev/Rotate-Linked-List-Livecode-Start)
-<!--
-* [C19 Rotate Linked List Livecode Solution](#)
--->
+* [C19 Rotate Linked List Livecode Solution](https://replit.com/@adadev/C19-Rotate-Linked-List-Livecode-Solution)
+
 
 ### Small Group Work
 
@@ -24,7 +23,6 @@ Follow along in the following Replit as we livecode the driving function in clas
 
 Fork the following Replit to work on in small groups: [Rotate Linked List w/ Helpers Blank](https://replit.com/@adadev/Rotate-Linked-List-Helpers-Blank)
 
-<!--
+
 Solution:
-* [C19 Small Group Solution](#)
--->
+* [C19 Small Group Solution](https://replit.com/@adadev/Rotate-Linked-List-Instructor-Solution)

@@ -64,6 +64,8 @@ maze_c = [
 ]
 ```
 
+One point to note is that the representations above do not explicitly indicate the start and end of the maze. We could add additional information to the representation to indicate the start and end (perhaps the start and end could be marked with "S" and "E" characters), but for now, we'll assume that information will be provided to us separately, such as tuples indicating the row and column of the start and end positions.
+
 ### Representing a Maze as a Graph
 
 ### Building a Path

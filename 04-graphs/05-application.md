@@ -64,5 +64,34 @@ maze_c = [
 ]
 ```
 
+### Representing a Maze as a Graph
+
+### Building a Path
+
+### Limitations
+
+### Complexity
+
+## Map Coloring
+
+### Problem Statement
+
+### Representing Maps as Graphs
+
+### Coloring Nodes
+
+### Backtracking
+
+### Limitations
+
+### Complexity
+
+### Alternative Approaches
+
+### Scheduling and Resource Allocation Problems
+
+## Summary
+
+
 
 

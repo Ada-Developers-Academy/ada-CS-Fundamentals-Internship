@@ -18,4 +18,51 @@ For the moment, let's restrict our attention to something slightly smaller than 
 
 Thus far, we have only considered the _mechanics_ of searching algorithms, and the resulting order they would visit the nodes in a graph. Now, we will examine how we can use our ability to visit the nodes of a graph to discover a through the maze. To do so, we will need to consider how to represent the terrain of the maze, how to represent the maze as a graph, and how to modify our search algorithms to find a path through the maze.
 
+### Maze Representation
+
+There's no universal standard for how to describe a maze to a computer. The requirements of the description will vary based on the features of the maze. Is it curvy? Is it boxy (more formally we might say rectilinear)? Is it multi-level (overlapping)?
+
+![Three rectilinear mazes. Maze A is 3 by 3 with a simple path through. Maze B is 10 by 5 with a slightly more circuitous path. Maze C is 30 by 10 with a complex path.](images/graphs_application_mazes.png)  
+*Fig. Three rectilinear mazes of varying complexity.*
+
+We'll keep things uncomplicated and restrict our mazes to a single level, rectilinear maze. There will be a single starting location, and single exit. We could use text, an image, or even a 3D model to describe the maze, but for our purposes, text will be the easiest to work with.
+
+Consider the first maze depicted above. We can describe it as a series of rows and columns, where each cell is either a wall or a passage. We could use the following structure to describe the maze:
+
+```py
+maze_a = [
+    "  #",
+    "# #",
+    "#  ",
+]
+```
+
+Each character represents a cell in the maze. A space represents a passage, and a `#` represents a wall. The first row of the maze is represented by the first string in the list, the second row by the second string, and so on.
+
+The other mazes can also be represented with this structure as shown below:
+
+```py
+maze_b = [
+    "    #     ",
+    " ## # # # ",
+    " #  # ### ",
+    " #### #   ",
+    "      # # ",
+]
+
+maze_c = [
+    "      #         #            #",
+    "##### # ####### # ########## #",
+    "## ## #       # #            #",
+    "## ## #### #### ###### #######",
+    "         # #        ## # #    ",
+    "## ## #### #### ### ## # ## # ",
+    "## ####### #### #         # # ",
+    "              # ### ## # ## # ",
+    "## ####### ######## ## # ## # ",
+    "## #       #        ## #    # ",
+]
+```
+
+
 

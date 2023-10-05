@@ -68,6 +68,119 @@ One point to note is that the representations above do not explicitly indicate t
 
 ### Representing a Maze as a Graph
 
+To find a path through the maze, we could absolutely work directly with the maze representation above. But it would be more convenient to convert the maze into a graph representation first. While this may seem more complicated, the benefit is that it allows us to separate the concern of processing this data representation from the concern of searching the graph.
+
+In some ways, the graph representation is _already_ a graph, though in a non-standard layout. Each location acts as a node, and each has up to 4 neighbors (excluding diagonals) to its adjacent locations. But there are some complications.
+
+First, the adjacency information exists only implicitly. Given a location `(r, c)`, we need to inspect each of the four adjacent locations by calculating them from the current location. Locations on the edges of the maze will have fewer than four neighbors, and locations in the corners will have only two neighbors. We could account for this while also looking for a path through the maze (we need to account for this one way or another), but addressing this first will make the search algorithm simpler.
+
+Second, when turning the maze representation into a graph, we only need to represent the actual passage areas of the maze. A path through the maze cannot pass through walls, meaning the walls are not relevant to the search, and so we can ignore them. This will make the graph representation smaller and easier to work with.
+
+To address these issues, we will create a new graph representation of the maze. In previous examples, we have used a string or a number to identify each node in our adjacency information. In this case, we will use a tuple of two numbers, representing the row and column of the location in the maze. We will still use a dictionary to represent the adjacency information. The keys of the dictionary will be the nodes, and the values will be a list of the nodes that are adjacent to the node represented by the key. In other words, we will construct an adjacency list representation of the maze corridors.
+
+![Three representations of the 3 by 3 maze presented earlier. The grid representation represents the walls and corridors spatially. The node representation labels each corridor by location, and connects each to the immediately reachable adjacent corridors. Here, the nodes are arranged in the same shape as the original maze, though they could just as readily have been arranged in a straight line. The adjacency list depicts how we would expect the nodes to be represented using a python dictionary as described.](images/graphs_application_maze_to_graph.png)  
+*Fig. Representing a maze as (a) a grid, (b) a collection of nodes, and as (c) an adjacency list. A lot of the code programmers write relates to converting among various data representations.*  
+
+<br />
+
+<details style="max-width: 700px; margin: auto;">
+  <summary>Click here to see the adjacency list source as text.</summary>
+
+```py
+graph = {
+    (0, 0): [(0, 1)],
+    (0, 1): [(0, 0), (1, 1)],
+    (1, 1): [(0, 1), (2, 1)],
+    (2, 1): [(1, 1), (2, 2)],
+    (2, 2): [(2, 1)],
+}
+```
+
+</details>
+
+There are a few ways we could process the grid representation. Assuming we write a function `convert_maze_to_graph` that takes a maze grid `maze` as input and returns an adjacency list of nodes, represented by a tuple of its row and column, and the list of adjacent nodes, think about what the steps to convert the maze to a graph might be. Then take a look at our steps!
+
+<br />
+
+<details style="max-width: 700px; margin: auto;">
+  <summary>Click here to see our steps!</summary>
+
+1. Create an empty dictionary to hold the adjacency information.
+2. Iterate over each row in the maze.
+3. Iterate over each column in the maze.
+4. If the current cell is a wall, skip it, since the path cannot pass through a wall.
+5. Otherwise, create a tuple representing the current cell `(r, c)`.
+6. Create an empty list to hold the adjacent nodes.
+7. For each of the four directions (up, right, down, left):
+    1. Calculate the row and column of the adjacent cell.
+    2. If the adjacent cell is out of bounds or a wall, skip it.
+    3. Otherwise, create a tuple representing the adjacent cell.
+    4. Add the tuple to the list of adjacent nodes.
+8. Add the tuple and list of adjacent nodes to the dictionary.
+9. Return the dictionary.
+
+</details>
+
+Using those steps as a guide, think about how to write the function. Then take a look at our implementation! Notice that each of the direction checks is a little complex since we need to handle the case of the adjacent cell being out of bounds. We could simplify this by using a helper function to look up the value of the cell at the given row and column. If the row or column is out of bounds, we can treat it as though it were a wall. Then our main direction-handling code can be simplified to just checking whether or not the cell is a wall.
+
+<br />
+
+<details style="max-width: 700px; margin: auto;">
+  <summary>Click here to see our implementation!</summary>
+
+```py
+# constants representing the walls and corridor
+MAZE_WALL = "#"
+MAZE_CORRIDOR = " "
+
+# Builds an adjacency-list based graph from a grid-based maze representation.
+def convert_maze_to_graph(maze):
+    graph = {}
+
+    # iterate over all the cells in the grid
+    for r in range(len(maze)):
+        for c in range(len(maze[0])):
+            # skip this cell if it's not a corridor
+            if maze[r][c] != MAZE_CORRIDOR:
+                continue
+
+            cell = (r, c)
+
+            # Which directions can we move in?
+            # Check each of the 4 locations by using a delta row and delta 
+            # column pair. Delta typically refers to a change in a value, so 
+            # here, dr is the delta row, the change in value of the row, and dc 
+            # is the delta column, the change in value of the column.
+            directions = []
+            for dr, dc in ((-1, 0), (0, 1), (1, 0), (0, -1)):
+                loc = (cell[0] + dr, cell[1] + dc)  # neighbor location
+
+                # Use a helper to get the location value, treating invalid 
+                # locations (outside the grid) as though they were walls
+                if cell_lookup(maze, loc[0], loc[1]) == MAZE_CORRIDOR:
+                    # Add this computed location to the valid directions from
+                    # current cell
+                    directions.append(loc)
+
+            graph[cell] = directions
+
+    return graph
+
+# Helper method to safely get the value for the cell at the supplied row and
+# columns. Invalid locations (outside the grid) are treated as walls.
+def cell_lookup(maze, r, c):
+    if r < 0 or r >= len(maze):
+        return MAZE_WALL
+    
+    row = maze[r]
+    if c < 0 or c >= len(row):
+        return MAZE_WALL
+    
+    return row[c]
+```
+
+</details>
+
 ### Building a Path
 
 ### Limitations

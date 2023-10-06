@@ -183,6 +183,27 @@ def cell_lookup(maze, r, c):
 
 ### Building a Path
 
+Now that we have a graph representation of the maze, we already know everything we need to determine whether we _can_ reach the end of the maze. We can use any of the search algorithms we have already seen to determine whether there is a path from the start to the end of the maze. Assuming we're told the start and the end node locations, then if we start searching through the graph from the start node and eventually visit the end node, there is a path! But what if we want to know _what_ the path is?
+
+The next lesson topic will cover finding the shortest path through a graph using breadth first search with some intermediate calculations. But for now, let's consider how we might find _any_ path through the maze. In order to do so, lets use a variation of depth first search that keeps track of the path it has taken so far. Depth first search is convenient since the route it takes through the graph follows a single path at a time. We can use this to our advantage by keeping track of the path it has taken so far, and then adding the current node to the path before continuing the search. If we reach the end of the maze, we will have a path from the start to the end.
+
+There is one complication. Mazes have dead ends. What should we do with if we have been tracking our path, but then encounter a dead end? We could simply stop the search, but that would mean we would never find a path through the maze. Instead, we need to **backtrack**. We need to remove the last node from the path, and then continue the search from the previous node. If we reach a dead end again, we need to backtrack again. We need to keep backtracking until we find a node that has an unvisited neighbor. Then we can continue the search from that node.
+
+A recursive depth first search works very well for this situation. As we recurse our way through the graph, we can add the current node to our path. If we reach a dead end (a node with no unvisited neighbors), we can remove the node from the end of the path, then `return` to the previous node, where can resume iterating over _its_ neighbors.
+
+The backtracking step here would make an iterative depth first search more challenging, as when we pop the next node off the stack of pending nodes, we don't know whether it's a sibling of the current node or a previous node, making it difficult to know how many nodes to pop from the path. By adding and removing nodes from the path as part of a recursive call, we always know whether we are backtracking. An iterative approach would still be _possible_, but we may need to track different information to make it work.
+
+<!-- available callout types: info, success, warning, danger, secondary, star  -->
+### !callout-info
+
+## Iterative Depth First Path Finding
+
+After the next Learn topic, we'll have some additional ideas about what information could be tracked to make an iterative depth first search work. For a challenge, try to implement an iterative depth first search that finds a path through the maze. You can use the recursive version as a guide, but you'll either need to track additional data, or construct the path in a different way.
+
+### !end-callout
+
+If we reach the end of the maze, we can return the path, and the search will unwind, returning the path from the previous node, and so on, until we reach the start of the maze, and our full path is returned.
+
 ### Limitations
 
 ### Complexity

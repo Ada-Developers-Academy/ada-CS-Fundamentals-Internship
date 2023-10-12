@@ -1,15 +1,15 @@
 # Livecode & Activity
 
-## Number of Provinces
+## Bipartition Graph
 
-We will go over how to implement a solution for the Number of Provinces problem.
+We will go over how to implement a solution for the Bipartition Graph problem.
 
 ### Class Livecode
 
 Follow along in the following Replit as we livecode the function in class: 
-* [Number of Provinces Livecode Start](https://replit.com/@adadev/Number-of-Provinces-Livecode-Start)
+* [Bipartition Graph Livecode Start](https://replit.com/@adadev/Bipartition-Graph-Livecode-Start)
 <!--
-* [C19 Number of Provinces Livecode Solution](#)
+* [C19 Bipartition Graph Livecode Solution](#)
 -->
 
 ### Small Group Work: Graph Variations Activities

@@ -211,24 +211,6 @@ If we reach the end of the maze, we can return the path, and the search will unw
 
 ### Complexity
 
-## Map Coloring
-
-### Problem Statement
-
-### Representing Maps as Graphs
-
-### Coloring Nodes
-
-### Backtracking
-
-### Limitations
-
-### Complexity
-
-### Alternative Approaches
-
-### Scheduling and Resource Allocation Problems
-
 ## Summary
 
 

@@ -215,6 +215,458 @@ For the moment, we don't recommend spending too much time delving into these oth
 
 If we reach the end of the maze, we can return the path, and the search will unwind, returning the path from the previous node, and so on, until we reach the start of the maze, and our full path is returned.
 
+Let's try implementing this! Since we're going to use a recursive strategy to implement our depth first search, we'll need to write a helper function that takes the additional parameters we need to track the path. We'll also need to keep track of which nodes we have already visited, so that we don't get stuck in an infinite loop. We'll use a set to track the visited nodes, since it's fast to check whether a node is in a set. So let's start with the following function:
+
+```py
+def find_graph_path(graph, start, end):
+    visited = set()  # use set for O(1) `in` lookups
+    path = []  # list we'll use to track our path through the graph
+    return find_graph_path_helper(graph, start, end, visited, path)
+```
+
+In this code, `find_graph_path` is the entry to our recursive calls. It's responsible for initializing the visited set and the path list. It then calls the helper function `find_graph_path_helper`, which will do the actual work of searching the graph. The helper function takes the graph, the start and end nodes, the visited set, and the path list as parameters. It will return the path list. If we can't find a path, it will return `None`.
+
+This leaves us with the task of writing the helper function. Remember that we're basing our approach on recursive depth first search, so it can be useful to think through the steps of how we accomplish depth first search to start with, and then think about where we need to make changes to track the path. Think about what steps we need in order to traverse the graph and track the path. Then take a look at our steps!
+
+<br />
+
+<details style="max-width: 700px; margin: auto;">
+  <summary>Click here to see our steps! New steps are marked with ➡️.</summary>
+
+1. If the node we're about to visit has already been visited, we know this path doesn't lead to a solution. We return `None` to inform the caller of this.
+2. Mark this node as visited by adding it to the `visited` set.
+3. ➡️ Assume the node will be a part of our path through the maze by adding it to the path list.
+4. ➡️ If the node is the end that we were looking for, we're done! Return the path that we constructed.
+5. Otherwise, we haven't found the end yet. Iterate over each of the neighbors of the current node.
+   1. Try recursively calling our helper with the neighbor as the new start node.
+   2. If a path can be found, this call will return the path. If no path can be found, it will return `None`.
+   3. ➡️ If we got back a path, we're done! Return the path up the call chain
+   4. Iterate over the remaining neighbors.
+6. ➡️ If we make it through all the neighbors without finding a path then the current node is not part of the path. Remove it from the end of the path list.
+7. ➡️ Return `None` to indicate that we didn't find a path through this node. This will allow the caller to continue iterating over the neighbors of the previous node. Since we removed this node from the path list, the subsequent recursive calls will not consider this node as part of the path.
+
+</details>
+
+The main difference in how we search through the graph is that now, we don't need to visit every node. As soon as we find the end node, we can stop searching and start returning. Otherwise, the general approach is the same as depth first search, save that we need to keep track of the path we have taken so far. We add it to the path list before checking the neighbors, and remove it from the path list if we don't find a path through the current node.
+
+Using those steps as a guide, think about how to write the function. Then take a look at our implementation! Notice that checking the directions around each node has the complication of needing to handle the case of the adjacent cell being out of bounds. We could simplify our main code by using a helper function to look up the value of the cell at the given row and column. If the row or column is out of bounds, we can treat it as though it were a wall. Then our main direction-handling code can be simplified to just checking whether or not the cell is a wall.
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: code-snippet
+* language: python3.9
+* id: 1f401a36-8109-45c6-b2d9-f738cd3ea239
+* title: Maze Solving Recursive Helper
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
+<!-- * test_file: [/path/to/file.txt] (External test file, replaces 'tests' section) -->
+<!-- * setup_file: [/path/to/file.txt] (External setup file, replaces 'setup' section) -->
+
+##### !question
+
+Implement the function `find_graph_path_helper` that takes a `graph`, a `start` node, an `end` node, a set of `visited` nodes, and a list of nodes representing the `path` so far.
+
+The function should return a list of nodes representing the path from the start to the end. If no path can be found, the function should return `None`.
+
+Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
+
+##### !end-question
+
+##### !placeholder
+
+```py
+def find_graph_path_helper(graph, start, end, visited, path):
+    pass
+```
+
+##### !end-placeholder
+
+##### !tests
+
+```py
+import unittest
+from main import *
+
+MAZE_WALL = "#"
+MAZE_CORRIDOR = " "
+
+def convert_maze_to_graph(maze):
+    graph = {}
+
+    for r in range(len(maze)):
+        for c in range(len(maze[0])):
+            if maze[r][c] != MAZE_CORRIDOR:
+                continue
+
+            cell = (r, c)
+
+            directions = []
+            for dr, dc in ((-1, 0), (0, 1), (1, 0), (0, -1)):
+                loc = (cell[0] + dr, cell[1] + dc)
+
+                if cell_lookup(maze, loc[0], loc[1]) == MAZE_CORRIDOR:
+                    directions.append(loc)
+
+            graph[cell] = directions
+
+    return graph
+
+def cell_lookup(maze, r, c):
+    if r < 0 or r >= len(maze):
+        return MAZE_WALL
+    
+    row = maze[r]
+    if c < 0 or c >= len(row):
+        return MAZE_WALL
+    
+    return row[c]
+
+def find_graph_path(graph, start, end):
+    visited = set()
+    path = []
+    return find_graph_path_helper(graph, start, end, visited, path)
+
+class TestPython1(unittest.TestCase):
+    def test_path_through_degenerate_maze(self):
+        maze = [" "]
+        start = (0, 0)
+        end = (0, 0)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertEqual(path, [(0, 0)])
+
+    def test_path_through_small_maze(self):
+        maze = [
+            "  #",
+            "# #",
+            "#  ",
+            ]
+        start = (0, 0)
+        end = (2, 2)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertEqual(path, [(0, 0), (0, 1), (1, 1), (2, 1), (2, 2)])
+
+    def test_path_through_small_up_branch_maze(self):
+        maze = [
+            "#  ",
+            "  #",
+            "#  ",
+            ]
+        start = (1, 0)
+        end = (0, 2)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertEqual(path, [(1, 0), (1, 1), (0, 1), (0, 2)])
+
+    def test_path_through_small_maze_with_no_solution(self):
+        maze = [
+            "  #",
+            "###",
+            "#  ",
+            ]
+        start = (0, 0)
+        end = (2, 2)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertIsNone(path)
+
+    def test_path_through_small_down_branch_maze(self):
+        maze = [
+            "#  ",
+            "  #",
+            "#  ",
+            ]
+        start = (1, 0)
+        end = (2, 2)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertEqual(path, [(1, 0), (1, 1), (2, 1), (2, 2)])
+        
+    def test_path_through_medium_branch_maze(self):
+        maze = [
+            "    #     ",
+            " ## # # # ",
+            " #  # ### ",
+            " #### #   ",
+            "      # # ",
+            ]
+        start = (0, 0)
+        end = (4, 9)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertEqual(path, [
+            (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), 
+            (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), 
+            (3, 5), (2, 5), (1, 5), (0, 5), 
+            (0, 6), (0, 7), (0, 8), (0, 9), 
+            (1, 9), (2, 9), (3, 9), (4, 9), 
+            ])
+        
+    def test_path_through_large_branch_maze(self):
+        maze = [
+            "      #         #            #",
+            "##### # ####### # ########## #",
+            "## ## #       # #            #",
+            "## ## #### #### ###### #######",
+            "         # #        ## # #    ",
+            "## ## #### #### ### ## # ## # ",
+            "## ####### #### #         # # ",
+            "              # ### ## # ## # ",
+            "## ####### ######## ## # ## # ",
+            "## #       #        ## #    # ",
+            ]
+        start = (0, 0)
+        end = (9, 29)
+
+        path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+        self.assertEqual(path, [
+            (0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 5), 
+            (2, 5), (3, 5), (4, 5), (4, 4), (4, 3), (4, 2), (5, 2), 
+            (6, 2), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), 
+            (7, 8), (7, 9), (7, 10), (6, 10), (5, 10), (4, 10), (3, 10), 
+            (2, 10), (2, 9), (2, 8), (2, 7), (1, 7), (0, 7), (0, 8), 
+            (0, 9), (0, 10), (0, 11), (0, 12), (0, 13), (0, 14), (0, 15), 
+            (1, 15), (2, 15), (3, 15), (4, 15), (4, 16), (4, 17), (4, 18), 
+            (4, 19), (5, 19), (6, 19), (6, 20), (6, 21), (6, 22), (6, 23), 
+            (6, 24), (7, 24), (8, 24), (9, 24), (9, 25), (9, 26), (9, 27), 
+            (8, 27), (7, 27), (6, 27), (5, 27), (4, 27), (4, 28), (4, 29), 
+            (5, 29), (6, 29), (7, 29), (8, 29), (9, 29)
+            ])
+```
+
+##### !end-tests
+
+##### !hint
+Though the tests show the text representation of each maze, they will be converted into a graph before being passed to your function. You can assume that the start and end nodes will be valid locations in the maze.
+##### !end-hint
+
+##### !hint
+For the smaller mazes, you may wish to convert them to graphs by hand to help you visualize the graph representation. Try not to let the very large result path of the final maze intimidate you. Focus on the smaller mazes, which can be more easily visualized. The larger maze is included to help you test your code against a more complex maze, but as long as you can solve the smaller mazes, you should be able to solve the larger one as well.
+
+The next hint contains the steps from above, presented more closely to how they might be implemented in code. You may wish to try implementing the function without looking at the steps first, but if you get stuck, you can refer to the steps for guidance.
+##### !end-hint
+
+##### !hint
+```py
+def find_graph_path_helper(graph, start, end, visited, path):
+    # if we already visited the start node
+        # return None
+
+    # mark the start node as visited
+
+    # add the start node to the path
+
+    # if the start node is the end node
+        # return the path
+
+    # iterate over each of the neighbors of the start node
+        # recursively call our helper with the neighbor as the new start node
+        # if we got back a path
+            # return the path
+
+    # remove the start node from the end of the path
+
+    # return None
+```
+
+The next hint presents our implementation.
+##### !end-hint
+
+##### !hint
+```py
+def find_graph_path_helper(graph, start, end, visited, path):
+    # If the node we're about to visit has already been visited, we know this
+    # path doesn't lead to a solution
+    if start in visited:
+        return None
+    
+    # mark this node as now visited
+    visited.add(start)
+
+    # NEW - provisionally consider this node as part of the path
+    path.append(start)
+
+    # NEW - If the node is the end that we were looking for, we're done! Return
+    # the path that we constructed. This differs from basic depth first search
+    # which traverses through the entire graph. Here, we can stop as soon as we
+    # find the end node.
+    if start == end:
+        return path
+    
+    # If we reach this point, the node was not the end, but it may have
+    # neighbors for us to visit.
+    for move in graph[start]:
+        # Don't bother traversing to a node that's already been visited. This
+        # check isn't strictly necessary, but it can save a few recursive calls.
+        if move in visited:
+            continue
+
+        # Try to find a path from this adjacent node to the end. NEW - If a 
+        # path can be found, this call will return the path. If no path can be 
+        # found, it will return None.
+        found_path = find_graph_path_helper(graph, move, end, visited, path)
+
+        # NEW - If we got a path back, we're done. Continue returning the path
+        # up the call chain.
+        if found_path:
+            return path
+        
+    # NEW - If we make it through all the neighbors without having found a path
+    # (we would have returned before reaching this code) then the current node
+    # is not part of the path.
+    path.pop()
+
+    # NEW - We didn't find a path through this node, so return None
+    return None
+```
+##### !end-hint
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, hidden, students click to view) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<br>
+<details style="max-width: 700px; margin: auto;">
+<summary>Click here to see the tests that will be run against your code</summary>
+
+Note that you are only implementing `find_graph_path_helper`. The `find_graph_path` and `convert_maze_to_graph` functions are provided for you with the implementations shown in the lesson. If you wish to work on this challenge outside of Learn (e.g., in VS Code), you'll need to copy over those functions as well.
+
+```py
+def test_path_through_degenerate_maze():
+    maze = [" "]
+    start = (0, 0)
+    end = (0, 0)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path == [(0, 0)]
+
+def test_path_through_small_maze():
+    maze = [
+        "  #",
+        "# #",
+        "#  ",
+        ]
+    start = (0, 0)
+    end = (2, 2)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path == [(0, 0), (0, 1), (1, 1), (2, 1), (2, 2)]
+
+def test_path_through_small_maze_with_no_solution():
+    maze = [
+        "  #",
+        "###",
+        "#  ",
+        ]
+    start = (0, 0)
+    end = (2, 2)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path is None
+
+def test_path_through_small_up_branch_maze():
+    maze = [
+        "#  ",
+        "  #",
+        "#  ",
+        ]
+    start = (1, 0)
+    end = (0, 2)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path == [(1, 0), (1, 1), (0, 1), (0, 2)]
+
+def test_path_through_small_down_branch_maze():
+    maze = [
+        "#  ",
+        "  #",
+        "#  ",
+        ]
+    start = (1, 0)
+    end = (2, 2)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path == [(1, 0), (1, 1), (2, 1), (2, 2)]
+    
+def test_path_through_medium_branch_maze():
+    maze = [
+        "    #     ",
+        " ## # # # ",
+        " #  # ### ",
+        " #### #   ",
+        "      # # ",
+        ]
+    start = (0, 0)
+    end = (4, 9)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path == [
+        (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), 
+        (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), 
+        (3, 5), (2, 5), (1, 5), (0, 5), 
+        (0, 6), (0, 7), (0, 8), (0, 9), 
+        (1, 9), (2, 9), (3, 9), (4, 9), 
+        ]
+    
+def test_path_through_large_branch_maze():
+    maze = [
+        "      #         #            #",
+        "##### # ####### # ########## #",
+        "## ## #       # #            #",
+        "## ## #### #### ###### #######",
+        "         # #        ## # #    ",
+        "## ## #### #### ### ## # ## # ",
+        "## ####### #### #         # # ",
+        "              # ### ## # ## # ",
+        "## ####### ######## ## # ## # ",
+        "## #       #        ## #    # ",
+        ]
+    start = (0, 0)
+    end = (9, 29)
+
+    path = find_graph_path(convert_maze_to_graph(maze), start, end)
+
+    assert path == [
+        (0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 5), 
+        (2, 5), (3, 5), (4, 5), (4, 4), (4, 3), (4, 2), (5, 2), 
+        (6, 2), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), 
+        (7, 8), (7, 9), (7, 10), (6, 10), (5, 10), (4, 10), (3, 10), 
+        (2, 10), (2, 9), (2, 8), (2, 7), (1, 7), (0, 7), (0, 8), 
+        (0, 9), (0, 10), (0, 11), (0, 12), (0, 13), (0, 14), (0, 15), 
+        (1, 15), (2, 15), (3, 15), (4, 15), (4, 16), (4, 17), (4, 18), 
+        (4, 19), (5, 19), (6, 19), (6, 20), (6, 21), (6, 22), (6, 23), 
+        (6, 24), (7, 24), (8, 24), (9, 24), (9, 25), (9, 26), (9, 27), 
+        (8, 27), (7, 27), (6, 27), (5, 27), (4, 27), (4, 28), (4, 29), 
+        (5, 29), (6, 29), (7, 29), (8, 29), (9, 29)
+        ]
+```
+
+</details>
+
+<br />
+
 ### Limitations
 
 ### Complexity

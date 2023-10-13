@@ -121,6 +121,9 @@ There are a few ways we could process the grid representation. Assuming we write
 
 </details>
 
+![A grid laid over the top-left corner marked (A) shows that the space to the left and above are invalid (outside the maze representation), while the spaces to the right and below are valid. A grid laid over a space along the top edge marked (B) shows that only the space above is invalid.](images/graphs_application_maze_corner_edge.png)  
+*Fig. (A) has no location above or to the left in our maze representation. (B) has no location above it. Locations in the other corners and along the other edges have similar restrictions. We must inspect all of the neighbor locations, looking for a passage or a wall, and use that information to build a graph of the connected passage areas.*
+
 Using those steps as a guide, think about how to write the function. Then take a look at our implementation! Notice that checking the directions around each node has the complication of needing to handle the case of the adjacent cell being out of bounds. We could simplify our main code by using a helper function to look up the value of the cell at the given row and column. If the row or column is out of bounds, we can treat it as though it were a wall. Then our main direction-handling code can be simplified to just checking whether or not the cell is a wall.
 
 <br />

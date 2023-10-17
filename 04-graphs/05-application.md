@@ -681,6 +681,24 @@ Another point to keep in mind about this approach is that the path returned woul
 
 ### Complexity
 
+Our approach is based on recursive depth first search. As such, the core part of our algorithm `find_graph_path_helper` will have the same time complexity as depth first search. We will visit each node in the graph once, and for each node, we will iterate over its neighbors. If we have N nodes in the graph, and E edges connecting the nodes, then the time complexity will be O(N + E). The work we do adding (and potentially removing) nodes from the path are all constant time operations, so they don't affect the overall time complexity.
+
+In the general case, we would need to consider the number of edges in the graph. But in our particular use case, we know that the number of edges will be no more than 4 times the number of nodes. So while a general analysis would be O(N + E), we can simplify it to O(N + 4N), which simplifies to O(N).
+
+Analysis of `find_graph_path_helper` follows basically the same reasoning for the space complexity. Observing that our approach is based on depth first search, we know that the space complexity will be O(N) for the call stack. We also have the visited set, which will contain at most N nodes, so the space complexity will be O(N) for the visited set. The path list will as well contain at most N nodes, so the space complexity will be O(N) for the path list. The total space complexity will be O(N) + O(N) + O(N), which simplifies to O(N).
+
+To get the overall complexity of the algorithm, we still need to consider the complexity of the `convert_maze_to_graph` function. We first convert the maze into a graph and then search through the graph for a path. So if we figure out the complexity of both parts, then add them together (since the are performed sequentially), that gives us the overall complexities.
+
+`convert_maze_to_graph` iterates over each cell in the maze, and for each cell, it iterates over each of the four directions. The time complexity will be O(N) for the number of cells in the maze, and O(1) for the number of directions. The total time complexity will be O(N) * O(1), which simplifies to O(N).
+
+If the number of directions were somehow variable, this would look more like regular graph searching itself with O(N + E) time complexity, with E being the total number of cell connections. But since the number of directions is fixed, we can treat it as a constant.
+
+Since the input to `convert_maze_to_graph` is a 2-dimensional array, it can be tempting to think that the time complexity is O(N^2) since we use a nested loop to process the data, but this is not the case. The input is a 2-dimensional array, but the number of cells in the maze is not N^2. Rather, the number of cells is the number of rows times the number of columns, which is R * C, where R is the number of rows and C is the number of columns. So we could describe the time complexity as O(R * C), which is still not the same as O(N^2). But it's also fine to stick with calling N the total number of cells in the maze, which is R * C, and say that the time complexity is O(N). It really comes down to whether it's more useful to think about the problem in terms of the total amount of data (N), or the shape of the data (R * C).
+
+For the space complexity of `convert_maze_to_graph`, the 2-dimensional array is passed in, so that's not space allocated by our code. Our function works by building up a dictionary representing the graph, which will contain at most N nodes. Therefore, the space complexity will be O(N). Again, as with the time complexity, we could allow for the possibility of a variable number of directions, which would make the space complexity O(N + E), but since the number of directions is fixed, we can treat it as a constant.
+
+In total, for converting the maze to a graph and then searching the graph for a path, the time complexity will be O(N) + O(N), which simplifies to O(N). The space complexity will also be O(N) + O(N), which simplifies to O(N). Not too shabby!
+
 ## Summary
 
 

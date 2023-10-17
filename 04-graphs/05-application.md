@@ -669,6 +669,16 @@ def test_path_through_large_branch_maze():
 
 ### Limitations
 
+In general, this approach works quite well! If there is a path through the maze, this will find it! But if there had been multiple valid paths through the maze, _which_ path it would have returned would be implementation-dependent. This is why all of the test cases were constructed so that there was only a single path through the maze.
+
+In the case of there being multiple possible paths, what makes the returned path so dependent on a particular implementation? To answer this, we need to think about the order in which a particular approach will explore the graph. Since we based our implementation upon depth first search, we know that it will walk down a path as far as it can before backtracking. But which path will it take?
+
+The path depends on the order of the neighbors in the adjacency list, which we built when wwe converted the maze from the original grid representation. The sample code added the neighbors in the order of north, east, south, west. As the solver explores the graph, for each visited node it's as though at each intersection it checks the available directions in the same order: north, east, south, west. If we had added them in a different order, we would have explored the maze in a different order, and possibly found a different path.
+
+If we had used iterative depth first search or breadth first search (making appropriate modifications to our logic to work with those approaches), this too would have affected the order in which we explored the maze, and hence, the path that we found.
+
+Another point to keep in mind about this approach is that the path returned would not necessarily be the shortest path through the maze. As discussed, it's only the first path that was found. If we absolutely needed the shortest path, we would need to use a different approach, such as breadth first search.  Assuming we made appropriate changes that would allow us to apply breadth first search, our code would return _a_ shortest path, but if there were multiple shortest paths through the maze, the order we expand the nodes would still have an impact on _which_ shortest path was returned, just as with depth first search.
+
 ### Complexity
 
 ## Summary

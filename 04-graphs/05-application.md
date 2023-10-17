@@ -701,6 +701,4 @@ In total, for converting the maze to a graph and then searching the graph for a 
 
 ## Summary
 
-
-
-
+In this lesson, we applied the concepts of graphs to a real-world problem: finding a path through a maze. We started by representing the maze as a grid, and then converted it into a graph. We then used a recursive depth first search to find a path through the maze. Though the core of the algorithm remained the same, we needed to make some modifications to track the path as we searched the graph. When using graph searching to solve problems, it is very common to pass along some extra data to keep track of our progress towards a solution. The specific additional data and how we update it will vary according to what the problem is looking for.

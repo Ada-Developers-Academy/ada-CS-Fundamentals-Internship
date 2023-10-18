@@ -10,13 +10,13 @@ Rarely do we need to search through a graph just for the sake of searching. Inst
 
 ## Maze Solving
 
-Some of graph examples we have already seen involved places. Each node represented a city and each edge represented a road or other mode of transportation between the two connected cities. But why restrict ourselves to the scale of cities?
+Some of the graph examples we have already seen involved places. Each node represented a city and each edge represented a road or other mode of transportation between the two connected cities. But why restrict ourselves to the scale of cities?
 
-We could make the graph nodes represent city blocks, intersections, or even arbitrarily small areas of space, such as every 1 square meter area of floor in our home. Areas with no obstructions between them (such as a wall) could then be connected by edges. In this way we could build a graph representation of the entire world, or at least a small part of it.
+We could make the graph nodes represent city blocks, intersections, or even arbitrarily small areas of space, such as every 1 square meter area of floor in our home. Areas with no obstructions (such as a wall) between them could then be connected by edges. In this way we could build a graph representation of the entire world, or at least a small part of it.
 
 For the moment, let's restrict our attention to something slightly smaller than the entire world. We could use a graph to represent a maze, where each node represents a small location in the maze and each edge represents a path between two locations. Representing the maze this way, we could solve the maze by searching for a path of connected nodes from the start of the maze to the end.
 
-Thus far, we have only considered the _mechanics_ of searching algorithms, and the resulting order they would visit the nodes in a graph. Now, we will examine how we can use our ability to visit the nodes of a graph to discover a path through the maze. To do so, we will need to consider how to represent the terrain of the maze, how to represent the maze as a graph, and how to modify our search algorithms to find a path through the maze.
+Thus far, we have only considered the _mechanics_ of searching algorithms, and the resulting order they would visit the nodes in a graph. Now, we will examine how we can use our ability to search through the nodes of a graph to discover a path through the maze. To do so, we will need to consider how to represent the terrain of the maze, how to represent the maze as a graph, and how to modify our search algorithms to find a path through the maze.
 
 ### Maze Representation
 
@@ -25,7 +25,7 @@ There's no universal standard for how to describe a maze to a computer. The requ
 ![Three rectilinear mazes. Maze A is 3 by 3 with a simple path through. Maze B is 10 by 5 with a slightly more circuitous path. Maze C is 30 by 10 with a complex path.](images/graphs_application_mazes.png)  
 *Fig. Three rectilinear mazes of varying complexity.*
 
-We'll keep things uncomplicated and restrict our mazes to a single level, rectilinear maze. There will be a single starting location, and single exit. We could use text, an image, or even a 3D model to describe the maze, but for our purposes, text will be the easiest to work with.
+We'll keep things less complicated and restrict our mazes to a single level, rectilinear maze. There will be a single starting location, and single exit. We could use text, an image, or even a 3D model to describe the maze, but for our purposes, text will be the easiest to work with.
 
 Consider the first maze depicted above. We can describe it as a series of rows and columns, where each cell is either a wall or a passage. We could use the following structure to describe the maze:
 
@@ -98,7 +98,7 @@ graph = {
 
 </details>
 
-There are a few ways we could process the grid representation. Assuming we write a function `convert_maze_to_graph` that takes a maze grid `maze` as input and returns an adjacency list of nodes, represented by a tuple of its row and column, and the list of adjacent nodes, think about what the steps to convert the maze to a graph might be. Then take a look at our steps!
+There are a few ways we could process the grid representation. Assuming we write a function `convert_maze_to_graph` that takes a maze grid `maze` as input and returns an adjacency list of nodes, each node represented by a tuple of its row and column, and the list of adjacent nodes, think about what the steps to convert the maze to a graph might be. Then take a look at our steps!
 
 <br />
 
@@ -121,8 +121,8 @@ There are a few ways we could process the grid representation. Assuming we write
 
 </details>
 
-![A grid laid over the top-left corner marked (A) shows that the space to the left and above are invalid (outside the maze representation), while the spaces to the right and below are valid. A grid laid over a space along the top edge marked (B) shows that only the space above is invalid.](images/graphs_application_maze_corner_edge.png)  
-*Fig. (A) has no location above or to the left in our maze representation. (B) has no location above it. Locations in the other corners and along the other edges have similar restrictions. We must inspect all of the neighbor locations, looking for a passage or a wall, and use that information to build a graph of the connected passage areas.*
+![A grid laid over the top-left corner marked (A) shows that the spaces to the left and above are invalid (outside the maze representation), while the spaces to the right and below are valid. A grid laid over a space along the top edge marked (B) shows that only the space above is invalid.](images/graphs_application_maze_corner_edge.png)  
+*Fig. (A) has no location above or to the left in our maze representation. (B) has no location above it. Locations in the other corners and along the other edges have similar restrictions. We must inspect all of the neighboring locations, looking for a passage or a wall, and use that information to build a graph of the connected passage areas.*
 
 Using those steps as a guide, think about how to write the function. Then take a look at our implementation! Notice that checking the directions around each node has the complication of needing to handle the case of the adjacent cell being out of bounds. We could simplify our main code by using a helper function to look up the value of the cell at the given row and column. If the row or column is out of bounds, we can treat it as though it were a wall. Then our main direction-handling code can be simplified to just checking whether or not the cell is a wall.
 
@@ -193,12 +193,12 @@ A later topic will cover finding the shortest path through a graph using breadth
 
 Let's use depth first search, modifying it slightly so that we can keep track of the path we have taken so far. Recursive depth first search is a convenient choice, since the calls it makes while moving through the graph follow a single path at a time. We can use this to our advantage by keeping track of the path it has taken so far, and then adding the current node to the path before continuing the search. If we reach the end of the maze, we will have a path from the start to the end. In contrast, breadth first search or iterative depth first search track a list of pending nodes. Each pending node may belong to a different path, so it would be more challenging to keep track of the path taken so far.
 
-There is still one complication. Mazes have dead ends. What should we do with if we have been tracking our path, but then encounter a dead end? We could simply stop the search, but that would mean we would never find a path through the maze. Instead, we need to **backtrack**. We need to remove the last node from the path, and then continue the search from the previous node. If we reach a dead end again, we need to backtrack again. We need to keep backtracking until we find a node that has an unvisited neighbor. Then we can continue the search from that node.
+There is still one complication. Mazes have dead ends. What should we do if we have been tracking our path, but then encounter a dead end? We could simply stop the search, but that would mean we would never find a path through the maze. Instead, we need to **backtrack**. We need to remove the last node from the path, and then continue the search from the previous node. If we reach a dead end again, we need to backtrack again. We need to keep backtracking until we find a node that has an unvisited neighbor. Then we can continue the search from that node.
 
 ![A small maze that may require backtracking to solve. The node representation is animated according to how nodes are visited, and the visited and path lists are displayed.](images/graphs_application_maze_backtrack.webp)  
-*Fig. A small maze with a dead end, requiring backtracking to move back to the last decision point where the next unvisited node can be reached. The grid representation depicts the exploration path as an arrow, and the red portion is where backtracking occurs. The node representation shows the how the visited list and path are tracked as the end is searched for.*  
+*Fig. A small maze with a dead end, requiring backtracking to move back to the last decision point where the next unvisited node can be reached. The grid representation depicts the exploration path as an arrow, and the red portion is where backtracking occurs. The node representation shows how the visited list and path are tracked as the end is searched for.*  
 
-A recursive depth first search works very well for this situation. As we recurse our way through the graph, we can add the current node to our path. If we reach a dead end (a node with no unvisited neighbors), we can remove the node from the end of the path, then `return` to the previous node, where can resume iterating over _its_ neighbors.
+A recursive depth first search works very well for this situation. As we recurse our way through the graph, we can add the current node to our path. If we reach a dead end (a node with no unvisited neighbors), we can remove the node from the end of the path, then `return` to the previous node, where we can resume iterating over _its_ neighbors.
 
 <!-- available callout types: info, success, warning, danger, secondary, star  -->
 ### !callout-info
@@ -240,16 +240,16 @@ This leaves us with the task of writing the helper function. Remember that we're
 5. Otherwise, we haven't found the end yet. Iterate over each of the neighbors of the current node.
    1. Try recursively calling our helper with the neighbor as the new start node.
    2. If a path can be found, this call will return the path. If no path can be found, it will return `None`.
-   3. ➡️ If we got back a path, we're done! Return the path up the call chain
+   3. ➡️ If we get back a path, we're done! Return the path up the call chain
    4. Iterate over the remaining neighbors.
 6. ➡️ If we make it through all the neighbors without finding a path then the current node is not part of the path. Remove it from the end of the path list.
 7. ➡️ Return `None` to indicate that we didn't find a path through this node. This will allow the caller to continue iterating over the neighbors of the previous node. Since we removed this node from the path list, the subsequent recursive calls will not consider this node as part of the path.
 
 </details>
 
-The main difference in how we search through the graph is that now, we don't need to visit every node. As soon as we find the end node, we can stop searching and start returning. Otherwise, the general approach is the same as depth first search, save that we need to keep track of the path we have taken so far. We add it to the path list before checking the neighbors, and remove it from the path list if we don't find a path through the current node.
+Notice that now when we search through the graph we may not need to visit every node. As soon as we find the end node, we can stop searching and start returning. Otherwise, the general approach is the same as depth first search, save that we need to keep track of the path we have taken so far. We add it to the path list before checking the neighbors, and remove it from the path list if we don't find a path through the current node.
 
-Using those steps as a guide, think about how to write the function. Then take a look at our implementation! Notice that checking the directions around each node has the complication of needing to handle the case of the adjacent cell being out of bounds. We could simplify our main code by using a helper function to look up the value of the cell at the given row and column. If the row or column is out of bounds, we can treat it as though it were a wall. Then our main direction-handling code can be simplified to just checking whether or not the cell is a wall.
+Using the steps above as a guide, think about how to write the function. Try to implement `find_graph_path_helper` in the following challenge. The challenge has progressive hints. Keep clicking through them to reveal a version of the steps above arranged more like pseudocode. And if you get stuck, the final hint has a suggested implementation available for you to study.
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -271,7 +271,7 @@ Implement the function `find_graph_path_helper` that takes a `graph`, a `start` 
 
 The function should return a list of nodes representing the path from the start to the end. If no path can be found, the function should return `None`.
 
-Spend no more then 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
+Spend no more than 15 minutes working through this independently. Use the hints below or reach out for help if you are still feeling stuck after 15 minutes.
 
 ##### !end-question
 
@@ -673,7 +673,7 @@ In general, this approach works quite well! If there is a path through the maze,
 
 In the case of there being multiple possible paths, what makes the returned path so dependent on a particular implementation? To answer this, we need to think about the order in which a particular approach will explore the graph. Since we based our implementation upon depth first search, we know that it will walk down a path as far as it can before backtracking. But which path will it take?
 
-The path depends on the order of the neighbors in the adjacency list, which we built when wwe converted the maze from the original grid representation. The sample code added the neighbors in the order of north, east, south, west. As the solver explores the graph, for each visited node it's as though at each intersection it checks the available directions in the same order: north, east, south, west. If we had added them in a different order, we would have explored the maze in a different order, and possibly found a different path.
+The path depends on the order of the neighbors in the adjacency list, which we built when we converted the maze from the original grid representation. The sample code added the neighbors in the order of north, east, south, west. As the solver explores the graph, for each visited node it's as though at each intersection it checks the available directions in the same order: north, east, south, west. If we had added them in a different order, we would have explored the maze in a different order, and possibly found a different path.
 
 If we had used iterative depth first search or breadth first search (making appropriate modifications to our logic to work with those approaches), this too would have affected the order in which we explored the maze, and hence, the path that we found.
 
@@ -685,17 +685,17 @@ Our approach is based on recursive depth first search. As such, the core part of
 
 In the general case, we would need to consider the number of edges in the graph. But in our particular use case, we know that the number of edges will be no more than 4 times the number of nodes. So while a general analysis would be O(N + E), we can simplify it to O(N + 4N), which simplifies to O(N).
 
-Analysis of `find_graph_path_helper` follows basically the same reasoning for the space complexity. Observing that our approach is based on depth first search, we know that the space complexity will be O(N) for the call stack. We also have the visited set, which will contain at most N nodes, so the space complexity will be O(N) for the visited set. The path list will as well contain at most N nodes, so the space complexity will be O(N) for the path list. The total space complexity will be O(N) + O(N) + O(N), which simplifies to O(N).
+Our analysis of `find_graph_path_helper` follows basically the same reasoning for the space complexity. Observing that our approach is based on depth first search, we know that the space complexity will be O(N) for the call stack. We also have the visited set, which will contain at most N nodes, so the space complexity will be O(N) for the visited set. The path list will as well contain at most N nodes, so the space complexity will be O(N) for the path list. The total space complexity will be O(N) + O(N) + O(N), which simplifies to O(N).
 
-To get the overall complexity of the algorithm, we still need to consider the complexity of the `convert_maze_to_graph` function. We first convert the maze into a graph and then search through the graph for a path. So if we figure out the complexity of both parts, then add them together (since the are performed sequentially), that gives us the overall complexities.
+To get the overall complexity of the algorithm, we still need to consider the complexity of the `convert_maze_to_graph` function. We first convert the maze into a graph and then search through the graph for a path. So if we figure out the complexity of both parts, then add them together (since they are performed sequentially), that gives us the overall complexity.
 
 `convert_maze_to_graph` iterates over each cell in the maze, and for each cell, it iterates over each of the four directions. The time complexity will be O(N) for the number of cells in the maze, and O(1) for the number of directions. The total time complexity will be O(N) * O(1), which simplifies to O(N).
 
-If the number of directions were somehow variable, this would look more like regular graph searching itself with O(N + E) time complexity, with E being the total number of cell connections. But since the number of directions is fixed, we can treat it as a constant.
+If the number of directions were somehow variable, this would look more like regular graph searching with O(N + E) time complexity, with E being the total number of cell connections. But since the number of directions is fixed, we can treat it as a constant.
 
 Since the input to `convert_maze_to_graph` is a 2-dimensional array, it can be tempting to think that the time complexity is O(N^2) since we use a nested loop to process the data, but this is not the case. The input is a 2-dimensional array, but the number of cells in the maze is not N^2. Rather, the number of cells is the number of rows times the number of columns, which is R * C, where R is the number of rows and C is the number of columns. So we could describe the time complexity as O(R * C), which is still not the same as O(N^2). But it's also fine to stick with calling N the total number of cells in the maze, which is R * C, and say that the time complexity is O(N). It really comes down to whether it's more useful to think about the problem in terms of the total amount of data (N), or the shape of the data (R * C).
 
-For the space complexity of `convert_maze_to_graph`, the 2-dimensional array is passed in, so that's not space allocated by our code. Our function works by building up a dictionary representing the graph, which will contain at most N nodes. Therefore, the space complexity will be O(N). Again, as with the time complexity, we could allow for the possibility of a variable number of directions, which would make the space complexity O(N + E), but since the number of directions is fixed, we can treat it as a constant.
+For the space complexity of `convert_maze_to_graph`, the 2-dimensional array is passed in, and therefore does not contribute to the space complexity. Our function works by building up a dictionary representing the graph, which will contain at most N nodes. Therefore, the space complexity will be O(N). Again, as with the time complexity, we could allow for the possibility of a variable number of directions, which would make the space complexity O(N + E), but since the number of directions is fixed, we can treat it as a constant.
 
 In total, for converting the maze to a graph and then searching the graph for a path, the time complexity will be O(N) + O(N), which simplifies to O(N). The space complexity will also be O(N) + O(N), which simplifies to O(N). Not too shabby!
 

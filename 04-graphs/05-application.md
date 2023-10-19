@@ -25,7 +25,7 @@ There's no universal standard for how to describe a maze to a computer. The requ
 ![Three rectilinear mazes. Maze A is 3 by 3 with a simple path through. Maze B is 10 by 5 with a slightly more circuitous path. Maze C is 30 by 10 with a complex path.](images/graphs_application_mazes.png)  
 *Fig. Three rectilinear mazes of varying complexity.*
 
-We'll keep things less complicated and restrict our mazes to a single level, rectilinear maze. There will be a single starting location, and single exit. We could use text, an image, or even a 3D model to describe the maze, but for our purposes, text will be the easiest to work with.
+We'll keep things less complicated and restrict our mazes to a single level, rectilinear maze. There will be a single starting location, and a single exit. We could use text, an image, or even a 3D model to describe the maze, but for our purposes, text will be the easiest to work with.
 
 Consider the first maze depicted above. We can describe it as a series of rows and columns, where each cell is either a wall or a passage. We could use the following structure to describe the maze:
 

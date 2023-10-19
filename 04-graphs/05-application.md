@@ -121,10 +121,14 @@ There are a few ways we could process the grid representation. Assuming we write
 
 </details>
 
-![A grid laid over the top-left corner marked (A) shows that the spaces to the left and above are invalid (outside the maze representation), while the spaces to the right and below are valid. A grid laid over a space along the top edge marked (B) shows that only the space above is invalid.](images/graphs_application_maze_corner_edge.png)  
-*Fig. (A) has no location above or to the left in our maze representation. (B) has no location above it. Locations in the other corners and along the other edges have similar restrictions. We must inspect all of the neighboring locations, looking for a passage or a wall, and use that information to build a graph of the connected passage areas.*
+We need to be careful to perform out of bounds checks when inspecting the directions around each location. If we don't explicitly handle this, a couple of things could go wrong. We could end up checking negative indices, which would erroneously "wrap around" to check the row or column at the end of our data. We could also end up checking indices that are too large, resulting in an `IndexError`.
 
-Using those steps as a guide, think about how to write the function. Then take a look at our implementation! Notice that checking the directions around each node has the complication of needing to handle the case of the adjacent cell being out of bounds. We could simplify our main code by using a helper function to look up the value of the cell at the given row and column. If the row or column is out of bounds, we can treat it as though it were a wall. Then our main direction-handling code can be simplified to just checking whether or not the cell is a wall.
+![A grid laid over the top-left corner marked (A) shows that the spaces to the left and above are invalid (outside the maze representation), while the spaces to the right and below are valid. A grid laid over a space along the top edge marked (B) shows that only the space above is invalid.](images/graphs_application_maze_corner_edge.png)  
+*Fig. The green circles show locations that we can successfully inspect relative to the labeled grid cells. The red Xs show locations that we cannot inspect since they lie outside the actual data. Since (A) is in the top-left corner, it has no location above or to the left in our maze representation. (B) has no location above it because it is along the top edge. Locations in the other corners and along the other edges have similar restrictions.*
+
+One way we can avoid cluttering up the conversion logic with bounds checking is to create a helper function to look up the value of a cell at the given row and column. If the row or column is out of bounds, we could treat it as though it were a wall. Then our main direction-handling code can be simplified to just check whether or not the adjacent cell is a wall.
+
+With these considerations in mind, think about how to write the conversion logic. Then take a look at our implementation!
 
 <br />
 

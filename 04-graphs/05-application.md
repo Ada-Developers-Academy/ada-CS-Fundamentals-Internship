@@ -510,16 +510,19 @@ def find_graph_path_helper(graph, start, end, visited, path):
     
     # If we reach this point, the node was not the end, but it may have
     # neighbors for us to visit.
-    for move in graph[start]:
+    for neighbor in graph[start]:
         # Don't bother traversing to a node that's already been visited. This
         # check isn't strictly necessary, but it can save a few recursive calls.
-        if move in visited:
+        if neighbor in visited:
             continue
 
-        # Try to find a path from this adjacent node to the end. NEW - If a 
-        # path can be found, this call will return the path. If no path can be 
-        # found, it will return None.
-        found_path = find_graph_path_helper(graph, move, end, visited, path)
+        # Try to find a path from this neighbor to the end. The neighbor will 
+        # be the start of the next call to find a path. If we can find a path 
+        # to the end starting from a neighbor of this node, then we can find a 
+        # path to the end from this node itself. NEW - If a path can be found, 
+        # this call will return the path. If no path can be found, it will 
+        # return None.
+        found_path = find_graph_path_helper(graph, neighbor, end, visited, path)
 
         # NEW - If we got a path back, we're done. Continue returning the path
         # up the call chain.

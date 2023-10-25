@@ -8,9 +8,8 @@ We will go over how to implement a solution for the Bipartition Graph problem.
 
 Follow along in the following Replit as we livecode the function in class: 
 * [Bipartition Graph Livecode Start](https://replit.com/@adadev/Bipartition-Graph-Livecode-Start)
-<!--
-* [C19 Bipartition Graph Livecode Solution](#)
--->
+* [C19 Bipartition Graph Livecode Solution](https://replit.com/@adadev/Bipartition-Graph-Livecode-C19)
+* [Bipartition Graph Expanded Solution](https://replit.com/@adadev/Bipartition-Graph-Instructor-Solution)
 
 ### Small Group Work: Graph Variations Activities
 
@@ -27,7 +26,7 @@ Fork one of the following Replits to work on in small groups:
 * [DFS with Adjacency Matrix](https://replit.com/@adadev/dfs-with-adjacency-matrix)
 * [Repeat BFS](https://replit.com/@adadev/Repeat-BFS-Activity)
 
-<!--
-Solution:
-* [C19 Small Group Solution](#)
--->
+Solutions:
+* [Convert Graph](https://replit.com/@adadev/Convert-Graph-Activity-Solution)
+* [DFS with Adjacency Matrix](https://replit.com/@adadev/dfs-with-adjacency-matrix-solution)
+* [Repeat BFS](https://replit.com/@adadev/Repeat-BFS-Activity-Solution)

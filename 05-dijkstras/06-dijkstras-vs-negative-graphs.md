@@ -105,7 +105,8 @@ costs/distances:
 
 ![Dijkstra vs.Negative Graph-6](images/negative-6.png)
 
-Step 5. The next node in our priority queue is Node C. Like before, we will take a look at all of Node C’s unvisited neighbors and calculate the actual cost of visiting. As we can notice, Node C actually does not have any unvisited nodes and therefore leaves us with nothing to update.
+Step 5. The next node in our priority queue is Node C. Like before, we will take a look at all of Node C’s unvisited neighbors and calculate the actual cost of visiting. As we can notice, Node C does not have any unvisited nodes and therefore leaves us with nothing to update.
+
 This brings our algorithm to an end and leaves us with the following result. 
 
 ```py

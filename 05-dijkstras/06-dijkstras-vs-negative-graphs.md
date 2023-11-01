@@ -83,7 +83,7 @@ costs/distances:
 
 ![Dijkstra vs.Negative Graph-5](images/negative-5.png)
 
-Step 4. We now look at the next node at the top of our priority queue, Node B (cost of 2). We will estimate the accumulated cost of reaching Node B’s neighboring nodes, based on the cost we calculated for reaching Node B, plus the cost to reach its neighbors. Node B has a single unvisited neighbor, Node C, and the edge to reach it has a cost of -100. The -100 cost of that edge to C, added to the cost it took to reach Node B (2) results in an estimated cost to Node C of -98. We can update our cost for Node C with our new found estimate, and since we are now done visiting Node B, we can add Node B to our visited nodes. Finally, we add Node C to our priority queue.
+Step 4. We now look at the next node at the top of our priority queue, Node B (cost of 2). We will estimate the accumulated cost of reaching Node B’s neighboring nodes, based on the cost we calculated for reaching Node B, plus the cost to reach its neighbors. Node B has a single unvisited neighbor, Node C, and the edge to reach it has a cost of -100. The -100 cost of that edge to C, added to the cost it took to reach Node B (2) results in an estimated cost to Node C of -98. We can update our cost for Node C with our newfound estimate, and since we are now done visiting Node B, we can add Node B to our visited nodes. Finally, we add Node C to our priority queue.
 
 ```py
 current: B 

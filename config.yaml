@@ -134,7 +134,7 @@ Standards:
         UID: f5fc7ed6-5231-4667-a64f-aee2ff4d6652
         Path: /03-Binary-Search-Trees/06-Binary-Search-Trees-Class-Discussions.md
   -
-    Title: Graphs
+    Title: Graphs Pt. 1
     Description: Graphs, Representing Graphs, Graphs Algorithms - Breadth First Search, Graph Algorithms - Depth First Search, Resources
     UID: b0d74464-2678-44a8-a4ff-dc74350e7114
     SuccessCriteria:
@@ -173,7 +173,7 @@ Standards:
         UID: f5a53e36-300b-4568-9301-08963aad977f
         Path: /04-graphs/08-graphs-class-discussions.md
   -
-    Title: Dijkstra's Algorithm
+    Title: Graphs Pt. 2
     Description: Graph Data Structures & Algorithms - Dijkstra's
     UID: 37e5c085-d3c7-4905-867e-90bd70a14ceb
     SuccessCriteria:
@@ -199,3 +199,7 @@ Standards:
         Type: Lesson
         UID: 99db9e58-5ab4-489c-a240-9c67195c7f82
         Path: /05-dijkstras/05-dijkstras-class-discussions.md
+      -
+        Type: Lesson
+        UID: 720fe4c8-78f4-11ee-b962-0242ac120002
+        Path: /05-dijkstras/06-dijkstras-vs-negative-graphs.md

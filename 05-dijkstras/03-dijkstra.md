@@ -711,5 +711,24 @@ For example, if we say the time complexity of Dijkstra's is O(V), we would say t
 
 Dijkstra's algorithm allows us to find the shortest distance path also known as the minimum cost path from any given start node to all other reachable nodes in the graph. Dijkstra's algorithm works on weighted graphs with non-negative edges. 
 
-The algorithm works by first overestimating the cost of reaching all nodes from the start node, and then iteratively relaxing those costs as it traverses each node in the graph. Its traversal prioritizes visiting nodes in the graph that are closer to the start node over nodes that are of a further distance to the start node.
+The algorithm works by first overestimating the cost of reaching all nodes from the start node, and then iteratively relaxing those costs as it traverses each node in the graph. Its traversal prioritizes visiting nodes in the graph that are closer to the start node over nodes that are of a further distance to the start node. Found below are general steps summarizing how to approach shortest path problems.
+
+### General Steps to Solving Shortest Path Problems
+
+1. Identify the graph representation given
+    1. If needed, convert the representation to either adjacency dictionary or adjacency matrix (for looping through neighbors in the algorithm later)
+2. Identify how you will traverse the graph
+3. Identify the priority and details we need to keep track of (distance, cost, etc)
+4. Set up distance dictionary (and/or visited set) and priority queue
+5. Loop through queue
+    1. Pop highest priority node off the queue
+        1. Store current node in a variable
+        2. Store priority (distance/cost) in a variable, if needed
+    2. If there is a destination node
+        1. Check if the current node is the destination node and return, if applicable
+    3. Loop through current node’s unvisited neighbors
+        1. Calculate the neighbor’s priority and extra details to keep track of
+        2. Push the current node’s neighbor onto the priority queue
+6. Return the desired result
+
 

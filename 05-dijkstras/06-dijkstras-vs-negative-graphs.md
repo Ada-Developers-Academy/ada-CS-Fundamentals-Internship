@@ -16,7 +16,7 @@ Let's walk through an example of Dijkstra’s Algorithm being implemented on a s
 
 ![Dijkstra vs.Negative Graph-1](images/negative-1.png)
 
-Step 0. We start with a weighted graph. Notice that the weight on the edge connecting B to C is -100. The graph is directed however this is arbitrary.
+Step 0. We start with a weighted graph. Notice that the weight on the edge connecting B to C is -100. The graph is directed. However, this is arbitrary.
 
 ![Dijkstra vs.Negative Graph-2](images/negative-2.png)
 

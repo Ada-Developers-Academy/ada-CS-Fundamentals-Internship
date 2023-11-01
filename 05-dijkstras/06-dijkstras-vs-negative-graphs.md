@@ -59,7 +59,7 @@ costs/distances:
 ```
 ![Dijkstra vs.Negative Graph-4](images/negative-4.png)
 
-Step 3. The next step is to visit the node that is the closest to our start node, which is Node D due to the cost of visiting being 1, whereas Node B has a cost of 2. Here we would look at the cost of visiting all of Node D’s unvisited neighboring nodes. However, since Node D’s only neighbor is Node A, a node we’ve already visited, there are no costs to consider. 
+Step 3. The next step is to visit the node that is the closest to our start node, which is Node D. Node D has a cost of 1, whereas Node B has a cost of 2. Here we would compute the cost of visiting all of Node D’s unvisited neighboring nodes. However, since Node D’s only neighbor is Node A, a node we’ve already visited, there are no costs to consider. 
 
 Before moving to the next step let’s recall the “greedy” behavior of Dijkstra’s algorithm. Again, Dijkstra’s Algorithm operates under the assumption that the shortest path to a destination node from a start node is an accumulation of the shortest paths connecting intermediate neighboring nodes between the starting node and destination node.Since the cost of visiting Node D is the least costly path, Dijkstra's algorithm views Node D as the most locally optimal node to visit next. This results in Node D being added to the visited list, and the algorithm will keep running with the assumption that it has found the least costly path to Node D.
 

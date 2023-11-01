@@ -199,3 +199,7 @@ Standards:
         Type: Lesson
         UID: 99db9e58-5ab4-489c-a240-9c67195c7f82
         Path: /05-dijkstras/05-dijkstras-class-discussions.md
+      -
+        Type: Lesson
+        UID: 720fe4c8-78f4-11ee-b962-0242ac120002
+        Path: /05-dijkstras/06-dijkstras-vs-negative-graphs.md

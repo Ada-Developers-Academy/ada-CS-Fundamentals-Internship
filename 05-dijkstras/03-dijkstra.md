@@ -726,7 +726,7 @@ The algorithm works by first overestimating the cost of reaching all nodes from 
         2. Store priority (distance/cost) in a variable, if needed
     2. If there is a destination node
         1. Check if the current node is the destination node and return, if applicable
-    3. Loop through current node’s neighbors
+    3. Loop through current node’s unvisited neighbors
         1. Calculate the neighbor’s priority and extra details to keep track of
         2. Push the current node’s neighbor onto the priority queue
 6. Return the desired result

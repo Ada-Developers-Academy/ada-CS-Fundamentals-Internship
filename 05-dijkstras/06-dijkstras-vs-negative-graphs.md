@@ -4,7 +4,7 @@
 
 ## Optional Lesson
 
-This lesson is optional because it is not necessary to learn Dijkstra's Algorithm. However, it is does lend a hand in understanding the algorithm.
+This lesson is optional because it is not necessary to learn Dijkstra's Algorithm. However, it does lend a hand in understanding the algorithm.
 
 ### !end-callout
 

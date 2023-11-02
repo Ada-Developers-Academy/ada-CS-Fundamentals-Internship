@@ -43,18 +43,18 @@ Step 2. Given that Node A is the only node to have a finite distance it moves to
 current: A 
 
 visited nodes: 
-    - A 
+	- A 
 
 priority queue: 
-    - A
-    - D
-    - B
+	- A
+	- D
+	- B
 
-costs/distances: 
-    - A: 0 
-    - B: 2
-    - C: ∞ 
-    - D: 1
+costs/distances:
+	- A: 0
+	- B: 2
+	- C: ∞ 
+	- D: 1
 ```
 ![Dijkstra vs.Negative Graph-4](images/negative-4.png)
 
@@ -66,17 +66,17 @@ Before moving to the next step let’s recall the “greedy” behavior of Dijks
 current: D 
 
 visited nodes: 
-    - A
-    - D 
+	- A
+	- D 
 
-Priority queue:
-    - B
+priority queue:
+	- B
 
 costs/distances: 
-    - A: 0 
-    - B: 2
-    - C: ∞ 
-    - D: 1
+	- A: 0 
+	- B: 2
+	- C: ∞ 
+	- D: 1
 
 ```
 
@@ -88,18 +88,18 @@ Step 4. We now look at the next node at the top of our priority queue, Node B (c
 current: B 
 
 visited nodes: 
-    - A
-    - D
-    - B 
+	- A
+	- D
+	- B 
 
-Priority queue:
-    - C
+priority queue:
+	- C
 
 costs/distances: 
-    - A: 0 
-    - B: 2
-    - C: -98 
-    - D: 1
+	- A: 0 
+	- B: 2
+	- C: -98 
+	- D: 1
 ```
 
 ![Dijkstra vs.Negative Graph-6](images/negative-6.png)
@@ -110,16 +110,16 @@ This brings our algorithm to an end and leaves us with the following result.
 
 ```text
 visited nodes: 
-    - A
-    - D
-    - B
-    - C
+	- A
+	- D
+	- B
+	- C
 
 costs/distances: 
-    - A: 0 
-    - B: 2
-    - C: -98 
-    - D: 1
+	- A: 0 
+	- B: 2
+	- C: -98 
+	- D: 1
 ```
 But wait, we can clearly see that the least costly path from Node A to Node D is through Nodes B and C! That is correct, however since Dijkstra’s Algorithm operates under the assumption that each local choice we make is the most optimal choice, Node D was visited early in the traversal when it appeared to be the next lowest cost node to visit after Node A. The cost we estimated at the time it was visited became its calculated cost. Even though we found a lower cost path later, the negative edge causes the greedy assumption "the path we find first will be the cheapest" to become violated. Because Node D had already been visited, the edge to Node D along this later, cheaper path would not be considered. This is why Dijkstra’s Algorithm can possibly fail when implemented on graphs with negative weights.
 

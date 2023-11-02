@@ -4,7 +4,7 @@
 
 ## Optional Lesson
 
-This lesson is optional because it is not necessary to learn Dijkstra's Algorithm. However, it is does lend a handing in understanding the algorithm.
+This lesson is optional because it is not necessary to learn Dijkstra's Algorithm. However, it is does lend a hand in understanding the algorithm.
 
 ### !end-callout
 
@@ -24,11 +24,10 @@ Step 1. We identify our start node, Node A, and set the cost to travel from the 
 
 ```text
 priority queue:
-	- A
+    - A
 
 visited:
 	
-
 costs/distances:
     - A: 0 
     - B: ∞ 
@@ -47,9 +46,9 @@ visited nodes:
     - A 
 
 priority queue: 
- 	- A
-	- D
-	- B
+    - A
+    - D
+    - B
 
 costs/distances: 
     - A: 0 

@@ -10,9 +10,7 @@ As a class we will introduce the interview problem, discuss test cases, why Dijk
 
 Follow along in the following Replit as we livecode the function in class: 
 * [Cheapest Flight Livecode Start](https://replit.com/@adadev/Cheapest-Flight-Livecode-Start)
-<!--
-* [C19 Cheapest Flight Livecode Solution](#)
--->
+* [Cheapest Flight Solution](https://replit.com/@adadev/Cheapest-Flight-Instructor-Solution#dijkstra/cheapest_flight.py)
 
 ### Breakout Rooms - Minimum Effort Path Pseudocode
 
@@ -20,10 +18,9 @@ In small groups of 3-4 students, pseudocode a solution to the Minimum Effort Pat
 
 **One student** should *fork* the following Repl and share the collaboration link with the rest of the team.  [Minimum Effort Path Activity Repl](https://replit.com/@adadev/Minimum-Effort-Path-Activity)
 
-<!--
 Solution:
-* [C19 Small Group Solution](#)
--->
+* [C19 Livecode Solution](https://replit.com/@adadev/Minimum-Effort-Path-Activity-C19-Live-Code#main.py)
+* [Alternate Solution](https://replit.com/@adadev/Minimum-Effort-Path-Activity-Solution#main.py)
 
 #### Exercise
 

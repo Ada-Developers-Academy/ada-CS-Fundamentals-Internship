@@ -6,17 +6,7 @@
 
 This lesson is intended to serve as an abbreviated walkthrough of the divide and conquer approach.
 
-This lesson does not require prior knowledge about the divide and conquer technique, however you are encouraged to re-read the Divide and Conquer lesson under the Algorithmic Strategies topic provided during classroom* if you require more details about any of the review topics mentioned here.
-
-If you did not have an opportunity to learn about these algorithms previously, you are invited to follow your curiosity and research any topics with which you are unfamiliar. Any topics that were not covered in classroom will be clearly indicated.
-
-### !callout-info
-
-## *Didn't review Divide and Conquer in Classroom?
-
-No problem! Keep reading and you'll get a description of the most pertinent algorithms. However, further research may be required if deeper knowledge or example implementations are desired.
-
-### !end-callout
+This lesson does not require prior knowledge about the divide and conquer technique, however you are encouraged to re-read the Divide and Conquer lesson under the Algorithmic Strategies topic provided during classroom if you require more details about any of the review topics mentioned here.
 
 ## Overview
 

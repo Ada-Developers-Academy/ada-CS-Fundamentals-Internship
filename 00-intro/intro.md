@@ -11,7 +11,7 @@ For more information about the structure and expectations of the post-classroom 
 
 ### Resources
 
-- [Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals?authuser=1)
+- [Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/adacorehub/homework-projects/cs-fundamentals)
     - This site has access to resources such as:
         - Classroom & Live Session Recordings
         - Classroom, Office Hours, & Events calendars

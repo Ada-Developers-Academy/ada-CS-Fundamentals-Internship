@@ -237,7 +237,7 @@ In an adjacency matrix `adj_matrix`, what would a value of `False` for `adj_matr
 
 ##### !hint
 
-The value at `adj_matrix[0][0]` indicates whether there is a node from Node 0 to Node 0.
+The value at `adj_matrix[0][0]` indicates whether there is an edge from Node 0 to Node 0.
 
 ##### !end-hint
 

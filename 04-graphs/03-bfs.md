@@ -109,7 +109,7 @@ a|
 ##### !end-answer
 
 <!-- other optional sections -->
-###### !hint 
+##### !hint 
 Feeling stuck? Try documenting what is in the list of visited nodes as you walk through the pseudocode line by line.
 
 Breadth First Search Pseudocode:
@@ -126,7 +126,7 @@ Breadth First Search Pseudocode:
                 - Add the neighbor to the list of visited nodes
     - Return the list of visited nodes
 ```
-###### !end-hint
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
@@ -193,7 +193,7 @@ d|
 ##### !end-answer
 
 <!-- other optional sections -->
-###### !hint 
+##### !hint 
 Feeling stuck? Try documenting what is in the list of visited nodes as you walk through the pseudocode line by line.
 
 Breadth First Search Pseudocode:
@@ -210,7 +210,7 @@ Breadth First Search Pseudocode:
                 - Add the neighbor to the list of visited nodes
     - Return the list of visited nodes
 ```
-###### !end-hint
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation 
 
@@ -247,7 +247,7 @@ There is an edge from Chicago to Seattle but there is no edge from Seattle to Ch
 
 ##### !question
 
-Write a function returning a list of elements representing a breadth first search of the items in the graph represented by `self.adjacency_list`. The traversal should begin with `start_node`. 
+Write a function returning a list of elements representing a breadth first search of the items in the graph represented by `self.adjacency_dict`. The traversal should begin with `start_node`. 
 
 The function should return a list of all nodes reachable from `start_node` in the order they were traversed. If the graph is empty, the function should return an empty list. 
 
@@ -263,8 +263,8 @@ class Graph:
     # The graph is stored in an adjacency dictionary where each key 
     # represents a node in the graph and each value in the dictionary
     # represents the corresponding key's list of edges
-    def __init__(self, adjacency_dict = {}):
-        self.adjacency_dict = adjacency_dict
+    def __init__(self, adjacency_dict=None):
+        self.adjacency_dict = adjacency_dict if adjacency_dict else {}
 
     def bfs(self, start_node):
         pass

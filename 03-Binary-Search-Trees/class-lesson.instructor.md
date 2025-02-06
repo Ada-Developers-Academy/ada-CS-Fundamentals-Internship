@@ -62,4 +62,4 @@ Iterate through the breakout rooms answering questions as you go.
 ## Solution Examples
 
 Solutions:
-- [Solution to DFS activity](https://replit.com/@adadev/bst-dfs-practice-solution)
+- [Solution to DFS activity is in the `solution` branch](https://github.com/Ada-Activities/bst-dfs-practice)

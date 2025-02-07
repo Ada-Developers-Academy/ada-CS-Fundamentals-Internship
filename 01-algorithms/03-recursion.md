@@ -372,7 +372,7 @@ def binary_search(numbers, target):
         return binary_search(numbers[middle_index+1:], target)        
 ```
 
-Play around with this code yourself: [recursive binary search](https://github.com/Ada-Activities/bst-dfs-practice)
+Play around with this code yourself: [recursive binary search](https://github.com/Ada-Activities/recursive-binary-search)
 
  Notice that once again we have two base cases:
  - We receive an empty list, in which case it is not possible to break down the problem into further subproblems and it is obvious that the integer `target` is not in the list

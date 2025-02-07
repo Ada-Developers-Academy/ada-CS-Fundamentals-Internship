@@ -25,4 +25,5 @@ Fork one of the following repos to work on in small groups:
 * [Convert Graph](https://github.com/Ada-Activities/convert_graph_activity)
 * [DFS with Adjacency Matrix](https://github.com/Ada-Activities/dfs-with-adjacency-matrix)
 * [Repeat BFS](https://github.com/Ada-Activities/repeat-bfs-activity/)
-  * Check out the `solution` branch in each repo to see a version of a working implementation
+
+Check out the `solution` branch in each repo to see a version of a working implementation

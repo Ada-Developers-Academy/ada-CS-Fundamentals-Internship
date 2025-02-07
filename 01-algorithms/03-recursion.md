@@ -85,8 +85,8 @@ def hello_repeat_recursive(num):
         </td>
     </tr>
     <tr>
-        <td> Try it yourself: <a href = "https://replit.com/@adadev/hellorepeatiterative">hello repeat iterative</a></td>
-        <td> Try it yourself: <a href = "https://replit.com/@adadev/hellorepeatrecursive">hello repeat recursive</a></td>
+        <td> Try it yourself: <a href = "https://github.com/Ada-Activities/hello-repeat-iterative">hello repeat iterative</a></td>
+        <td> Try it yourself: <a href = "https://github.com/Ada-Activities/hello-repeat-recursive">hello repeat recursive</a></td>
     </tr>
 </table>
 
@@ -372,7 +372,7 @@ def binary_search(numbers, target):
         return binary_search(numbers[middle_index+1:], target)        
 ```
 
-Play around with this code yourself: [recursive binary search](https://replit.com/@adadev/binarysearch#main.py)
+Play around with this code yourself: [recursive binary search](https://github.com/Ada-Activities/recursive-binary-search)
 
  Notice that once again we have two base cases:
  - We receive an empty list, in which case it is not possible to break down the problem into further subproblems and it is obvious that the integer `target` is not in the list

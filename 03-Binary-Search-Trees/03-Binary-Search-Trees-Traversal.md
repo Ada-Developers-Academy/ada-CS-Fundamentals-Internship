@@ -514,7 +514,7 @@ preorder_helper(self, current_node, explored_nodes):
 
 ```
 
-If you are curious, you can try implementing inorder, preorder, and postorder by forking the following replit: [BST Traversal Practice](https://replit.com/@adadev/bst-dfs-practice#binary_search_trees/dfs.py)
+If you are curious, you can try implementing inorder, preorder, and postorder by forking the following repo: [BST Traversal Practice](https://github.com/Ada-Activities/bst-dfs-practice)
 
 Otherwise, take a look at the full implementations of our three depth first traversals below. Notice how similar the code is for each.
 

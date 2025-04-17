@@ -84,7 +84,7 @@ A binary search tree maintains O(log n) time to find, add, and remove elements, 
 * language: python3.6
 * id: a8078856-e772-4e3f-9267-6bbeb006ee5d
 * title: Binary Search Tree Recursive Height
-* points: 1
+* points: 0
 
 ##### !question
 
@@ -219,7 +219,7 @@ An example of a working implementation:
 * language: python3.6
 * id: e6e5ea66-d55f-4fc0-bc6f-eeda3f8106bd
 * title: Binary Search Tree Recursive Removal
-* points: 1
+* points: 0
 
 ##### !question
 

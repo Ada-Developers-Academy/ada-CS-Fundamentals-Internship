@@ -937,7 +937,7 @@ def min_node(self, root):
 * type: paragraph
 * id: b4148882-340f-40e2-87c0-0b2b1265fc49
 * title: Binary Search Trees Reflection
-* points: 1
+* points: 0
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question

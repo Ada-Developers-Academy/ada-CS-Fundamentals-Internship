@@ -175,7 +175,7 @@ If we add the neighbors of the start node to the stack in the order they are lis
 * type: multiple-choice
 * id: e012797e-0060-4484-b3b4-245fa4152228
 * title: BFS, DFS, Either, or Neither?
-* points: 0
+* points: 1
 
 ##### !question
 
@@ -211,7 +211,7 @@ The correct answer is B because it is faster and more efficent to reach nodes de
 * type: multiple-choice
 * id: b8569433-61d6-48e0-afa2-5b28e3e9facf
 * title: BFS, DFS, Either, or Neither?
-* points: 0
+* points: 1
 
 ##### !question
 

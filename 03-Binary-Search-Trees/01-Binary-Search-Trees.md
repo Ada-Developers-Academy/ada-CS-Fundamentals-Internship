@@ -829,53 +829,58 @@ An example of a working implementation:
 
 
 ### Deletion
-Deleting a node from a binary search tree is a little more complex than either searching for or inserting a node, because we need to ensure that when we remove the node the resulting tree still maintains the property that all left children are smaller than their parent nodes and all right children are larger than their parent nodes.
+Deleting a node from a binary search tree is a little more complex than either searching for or inserting a node. For a deletion, we need to ensure that when we remove the node the resulting tree still maintains the property that all left children are smaller than their parent nodes and all right children are larger than their parent nodes.
 
 To delete a node from a binary search tree:
 1. We must first find the node to delete. 
-  1. To find the node, we can use the same recursive technique we've used with `find` and `add` to traverse the root node's subtrees. 
+   - To find the node, we can use the same recursive technique we've used with `find` and `add` to traverse the root node's subtrees. 
 2. Once we find the node, we can delete it by:
-  1. Replacing the node's `key` and `value` with those from the correct child's node's values for this position. 
-  2. Removing the reference of the child node from which we copied values.
+   - Replacing the node's `key` and `value` with those from the correct child node's values for this position. 
+   - Removing the reference of the child node from which we copied values.
 
-```
-delete method:
-  Base Case:
-  - If the root is None, return None
+Check out the pseudocode below for an approach to the delete method:
+```txt
+Base Case:
+   - If the root is None, return None
 
-  Recursive Case:
-  - If the key is less than the current node's key:
-      - Set current node’s left child to the result of calling the delete function on current node's left subtree.
-  - If the key is greater than the current node's key:
-      - Set current node’s right child to the result of calling the delete function on current node's right subtree.
-  - If the key matches the current node’s key, we have found the node to delete:
-      - If the current node doesn't have a left subtree
-          - Return the right subtree
-      - If the current node doesn't have a right subtree
-          - Return the left subtree
-      - If the current node has both left and right subtrees:
-          - Find the minimum node in the right subtree 
-              - Starting from the right subtree node, traverse the left nodes. The minimum node will be in last leaf of the left subtree of the node we started from.
-          - Replace the key and value of the current node with the key and value of the minimum node found in the previous step
-          - Remove the minimum node we found in the right subtree of the current node so we don’t have a duplicated node. Use the recursive delete function to remove the minimum node. 
-  - Return the current node
+Recursive Case:
+   - If the key is less than the current node's key:
+       - Set current node’s left child to the result of calling the delete function on current node's left subtree.
+
+   - If the key is greater than the current node's key:
+       - Set current node’s right child to the result of calling the delete function on current node's right subtree.
+
+   - If the key matches the current node’s key, we have found the node to delete:
+       - If the current node doesn't have a left subtree
+           - Return the right subtree
+
+       - If the current node doesn't have a right subtree
+           - Return the left subtree
+
+       - If the current node has both left and right subtrees:
+           - Find the minimum node in the right subtree 
+               - Starting from the right subtree node, traverse the left nodes. The minimum node will be in last leaf of the left subtree of the node we started from.
+           - Replace the key and value of the current node with the key and value of the minimum node found in the previous step
+           - Remove the minimum node we found in the right subtree of the current node so we don’t have a duplicated node. Use the recursive delete function to remove the minimum node. 
+
+   - Return the current node
 ```
 
 As an optional extra challenge, you can attempt to implement `delete`  yourself in the [Resources lesson](./04-Binary-Search-Trees-Resources.md) of this topic. Our recursive solution to the `delete` method is below. 
+
+<br>
 
 <details>
 <summary> Binary Search Tree Deletion </summary>
 
 ```py
-# Helper function to find the minimum node in a tree
-# minimum node will be in last leaf in left subtree
-def min_node(self, root):
-    # traverse left subtree by replacing root with left subtree
-    while root.left:
-        root = root.left
+def delete(self, key):
+    # if the tree is empty, exit the function
+    if not self.root:
+        return
 
-    # return the key and the value of minimum node
-    return root.key, root.value
+    # call our recursive helper on the root
+    self.root = self.delete_helper(self.root, key)
 
 # Recursive helper function
 def delete_helper(self, current_root, key):
@@ -909,13 +914,15 @@ def delete_helper(self, current_root, key):
     # return the current node
     return current_root
 
-def delete(self, key):
-    # if the tree is empty, exit the function
-    if not self.root:
-        return
+# Helper function to find the minimum node in a tree
+# minimum node will be in last leaf in left subtree
+def min_node(self, root):
+    # traverse left subtree by replacing root with left subtree
+    while root.left:
+        root = root.left
 
-    # call our recursive helper on the root
-    self.root = self.delete_helper(self.root, key)
+    # return the key and the value of minimum node
+    return root.key, root.value
 ```
 </summary>
 </details>
@@ -930,7 +937,7 @@ def delete(self, key):
 * type: paragraph
 * id: b4148882-340f-40e2-87c0-0b2b1265fc49
 * title: Binary Search Trees Reflection
-* points: 0
+* points: 1
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question

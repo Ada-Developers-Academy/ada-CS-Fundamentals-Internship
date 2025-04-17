@@ -24,7 +24,7 @@ Some technical interview questions can be considered graph questions, but do not
 * type: multiple-choice
 * id: 19d55927-ee3a-47af-8888-ac2b7aaf3dd2
 * title: Representing a Graph with a List of Edges
-* points: 0
+* points: 1
 
 ##### !question
 
@@ -97,7 +97,7 @@ Answer D is the correct answer because all of the edges in the graph are represe
 * type: multiple-choice
 * id:  ccc3faa5-049d-4dd4-b751-95462a565098
 * title: Representing a graph with an adjacency matrix
-* points: 0
+* points: 1
 
 ##### !question
 
@@ -164,7 +164,7 @@ Row Z is all false because node Z does not share an edge with any other node.
 * type: multiple-choice
 * id: af6eb70d-b02c-4f2b-ae39-d945d97076e1
 * title: Representing a graph with an adjacency dictionary
-* points: 0
+* points: 1
 
 ##### !question
 

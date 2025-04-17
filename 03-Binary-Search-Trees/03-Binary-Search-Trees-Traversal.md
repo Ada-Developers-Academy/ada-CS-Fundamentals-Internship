@@ -659,7 +659,7 @@ In the lesson, we examined different methods to traverse a tree.  Unlike a linke
 * type: paragraph
 * id: 34de5a16-365c-47e5-bba1-e7970c65623e
 * title: Binary Search Trees Reflection
-* points: 0
+* points: 1
 <!-- * topics: [python, pandas] (Checkpoints only, optional the topics for analyzing points) -->
 
 ##### !question

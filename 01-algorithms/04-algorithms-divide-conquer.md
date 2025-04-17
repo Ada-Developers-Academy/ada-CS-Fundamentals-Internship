@@ -108,7 +108,7 @@ You may notice similarities between this algorithm and the Merge Sort algorithm 
 * language: python3.6
 * id: f08a392c-ccb2-463f-b085-ed3050c5adc4
 * title: Minimum and Maximum Elements in an Array
-* points: 0
+* points: 1
 
 ##### !question
 
@@ -248,7 +248,7 @@ Spend *no more than 15 minutes* writing a modified binary search solution to the
 * language: python3.6
 * id: b124a149-3361-4359-9582-ec8eec166f14
 * title: Smallest Missing Element
-* points: 0
+* points: 1
 
 ##### !question
 

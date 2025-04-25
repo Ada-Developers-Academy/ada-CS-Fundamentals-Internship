@@ -310,12 +310,14 @@ class TestPython1(unittest.TestCase):
         self.empty_tree = TreeExtended()
         self.tree_with_nodes = tree_with_nodes()
         self.tree_with_dupe = tree_with_dupe()
+
     def tearDown(self) -> None:
         self.empty_tree = TreeExtended()
 
     def test_returns_none_for_empty_tree(self):
         self.empty_tree.delete(5)
         self.assertEqual([], self.empty_tree.inorder())
+
     def test_delete_does_not_crash_if_key_not_found(self):
         self.tree_with_nodes.delete(14)
         expected = [
@@ -336,6 +338,7 @@ class TestPython1(unittest.TestCase):
         self.empty_tree.add(5, "Peter")
         self.empty_tree.delete(5)
         self.assertEqual([], self.empty_tree.inorder())
+
     def test_can_remove_left_leaf(self):
         self.empty_tree.add(5, "Peter")
         self.empty_tree.add(3, "Mary")
@@ -355,6 +358,7 @@ class TestPython1(unittest.TestCase):
         }]
         self.empty_tree.delete(10)
         self.assertEqual(expected, self.empty_tree.inorder())
+
     def test_can_remove_node_with_two_children(self):
         self.empty_tree.add(5, "Peter")
         self.empty_tree.add(1, "Paul")
@@ -371,6 +375,7 @@ class TestPython1(unittest.TestCase):
         ]
         self.empty_tree.delete(5)
         self.assertEqual(expected, self.empty_tree.inorder())
+
     def test_can_find_inorder_successor(self):
         self.tree_with_nodes.delete(10)
         expected = [
@@ -412,6 +417,7 @@ class TestPython1(unittest.TestCase):
             }
         ]
         self.assertEqual(expected, self.tree_with_nodes.inorder())
+
     def test_can_delete_dupe(self):
         self.tree_with_dupe.delete(5)
         expected = [

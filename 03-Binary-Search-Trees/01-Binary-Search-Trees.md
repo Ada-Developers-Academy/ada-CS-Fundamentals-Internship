@@ -841,7 +841,7 @@ To delete a node from a binary search tree:
 Check out the pseudocode below for an approach to the delete method:
 ```txt
 Base Case:
-   - If the root is None, return None
+   - If the current root is None, return None
 
 Recursive Case:
    - If the key is less than the current node's key:

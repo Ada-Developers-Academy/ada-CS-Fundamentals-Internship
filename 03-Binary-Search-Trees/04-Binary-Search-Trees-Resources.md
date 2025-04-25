@@ -414,6 +414,21 @@ class TestPython1(unittest.TestCase):
             }
         ]
         self.assertEqual(expected, self.tree_with_dupe.inorder())
+    def test_delete_does_not_crash_if_key_not_found(self):
+        self.tree_with_nodes.delete(14)
+        expected = [
+            {"key": 1, "value": "Mary"},
+            {"key": 3, "value": "Paul"},
+            {"key": 5, "value": "Peter"},
+            {"key": 9, "value": "Mae"},
+            {"key": 10, "value": "Karla"},
+            {"key": 11, "value": "Jane"},
+            {"key": 12, "value": "Jenny"},
+            {"key": 13, "value": "Nate"},
+            {"key": 15, "value": "Ada"},
+            {"key": 25, "value": "Kari"}
+        ]
+        self.assertEqual(expected, self.tree_with_nodes.inorder())
     
 ```
 
@@ -462,15 +477,16 @@ An example of a working implementation:
 
 ```py
 def delete(self, key):
-    # if the tree is empty, exit the function
-    if not self.root:
-        return
-
     # call our recursive helper on the root
     self.root = self.delete_helper(self.root, key)
 
 # Recursive helper function
 def delete_helper(self, current_root, key):
+    # if the current node is None, the tree is empty 
+    # or the key could not be found
+    if not current_root:
+        return None
+
     # if key is less than current node's call delete on left subtree
     if key < current_root.key:
         current_root.left = self.delete_helper(current_root.left, key)

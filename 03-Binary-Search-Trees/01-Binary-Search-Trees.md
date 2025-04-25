@@ -875,15 +875,16 @@ As an optional extra challenge, you can attempt to implement `delete`  yourself 
 
 ```py
 def delete(self, key):
-    # if the tree is empty, exit the function
-    if not self.root:
-        return
-
     # call our recursive helper on the root
     self.root = self.delete_helper(self.root, key)
 
 # Recursive helper function
 def delete_helper(self, current_root, key):
+    # if the current node is None, the tree is empty 
+    # or the key could not be found
+    if not current_root:
+        return None
+
     # if key is less than current node's call delete on left subtree
     if key < current_root.key:
         current_root.left = self.delete_helper(current_root.left, key)

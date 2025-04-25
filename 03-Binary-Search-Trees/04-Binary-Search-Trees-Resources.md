@@ -312,10 +312,11 @@ class TestPython1(unittest.TestCase):
         self.tree_with_dupe = tree_with_dupe()
     def tearDown(self) -> None:
         self.empty_tree = TreeExtended()
+
     def test_returns_none_for_empty_tree(self):
         self.empty_tree.delete(5)
         self.assertEqual([], self.empty_tree.inorder())
-        def test_delete_does_not_crash_if_key_not_found(self):
+    def test_delete_does_not_crash_if_key_not_found(self):
         self.tree_with_nodes.delete(14)
         expected = [
             {"key": 1, "value": "Mary"},

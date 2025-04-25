@@ -310,12 +310,26 @@ class TestPython1(unittest.TestCase):
         self.empty_tree = TreeExtended()
         self.tree_with_nodes = tree_with_nodes()
         self.tree_with_dupe = tree_with_dupe()
-    
     def tearDown(self) -> None:
         self.empty_tree = TreeExtended()
     def test_returns_none_for_empty_tree(self):
         self.empty_tree.delete(5)
         self.assertEqual([], self.empty_tree.inorder())
+        def test_delete_does_not_crash_if_key_not_found(self):
+        self.tree_with_nodes.delete(14)
+        expected = [
+            {"key": 1, "value": "Mary"},
+            {"key": 3, "value": "Paul"},
+            {"key": 5, "value": "Peter"},
+            {"key": 9, "value": "Mae"},
+            {"key": 10, "value": "Karla"},
+            {"key": 11, "value": "Jane"},
+            {"key": 12, "value": "Jenny"},
+            {"key": 13, "value": "Nate"},
+            {"key": 15, "value": "Ada"},
+            {"key": 25, "value": "Kari"}
+        ]
+        self.assertEqual(expected, self.tree_with_nodes.inorder())
     
     def test_can_remove_single_root_node(self):
         self.empty_tree.add(5, "Peter")
@@ -414,21 +428,6 @@ class TestPython1(unittest.TestCase):
             }
         ]
         self.assertEqual(expected, self.tree_with_dupe.inorder())
-    def test_delete_does_not_crash_if_key_not_found(self):
-        self.tree_with_nodes.delete(14)
-        expected = [
-            {"key": 1, "value": "Mary"},
-            {"key": 3, "value": "Paul"},
-            {"key": 5, "value": "Peter"},
-            {"key": 9, "value": "Mae"},
-            {"key": 10, "value": "Karla"},
-            {"key": 11, "value": "Jane"},
-            {"key": 12, "value": "Jenny"},
-            {"key": 13, "value": "Nate"},
-            {"key": 15, "value": "Ada"},
-            {"key": 25, "value": "Kari"}
-        ]
-        self.assertEqual(expected, self.tree_with_nodes.inorder())
     
 ```
 

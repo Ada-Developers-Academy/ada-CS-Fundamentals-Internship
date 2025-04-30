@@ -829,84 +829,101 @@ An example of a working implementation:
 
 
 ### Deletion
-Deleting a node from a binary search tree is a little more complex than either searching for or inserting a node, because we need to ensure that when we remove the node the resulting tree still maintains the property that all left children are smaller than their parent nodes and all right children are larger than their parent nodes.
+Deleting a node from a binary search tree is a little more complex than either searching for or inserting a node. For a deletion, we need to ensure that when we remove the node the resulting tree still maintains the property that all left children are smaller than their parent nodes and all right children are larger than their parent nodes.
 
-To delete a node from a binary search tree we must first find the node to delete. To find the node, we can use the same recursive technique we've used with `find` and `add` to traverse the root node's subtrees. Once we find the node we can delete it by changing the parent and child nodes' references.
+To delete a node from a binary search tree:
+1. We must first find the node to delete. 
+   - To find the node, we can use the same recursive technique we've used with `find` and `add` to traverse the root node's subtrees. 
+2. Once we find the node, we can delete it by:
+   - Replacing the node's `key` and `value` with those from the correct child node's values for this position. 
+   - Removing the reference of the child node from which we copied values.
 
-```
-Method delete:
-    Base Case:
-        If the root is None, return None
-  
-    Recursive Case:
-        Otherwise, recur down the tree:
-            If the key is less than the current node's key, call the delete function on current node's left subtree.
+Check out the pseudocode below for an approach to the delete method:
+```txt
+Base Case:
+   - If the current root is None, return None
 
-            If the key is greater than the current node's key, call the delete function on current node's right subtree.
+Recursive Case:
+   - If the key is less than the current node's key:
+       - Set current node’s left child to the result of calling the delete function on current node's left subtree.
 
-            If the current node is the node to be deleted:
-                If current node's left child is None:
-                    return the right child
-                If current node's right child is None:
-                    return the left child
-                Otherwise:
-                    Find the minimum node in the right subtree
-                    Set the current node equal to the minimum node
-        Return the current node
+   - If the key is greater than the current node's key:
+       - Set current node’s right child to the result of calling the delete function on current node's right subtree.
+
+   - If the key matches the current node’s key, we have found the node to delete:
+       - If the current node doesn't have a left subtree
+           - Return the right subtree
+
+       - If the current node doesn't have a right subtree
+           - Return the left subtree
+
+       - If the current node has both left and right subtrees:
+           - Find the minimum node in the right subtree 
+               - Starting from the right subtree node, traverse the left nodes. The minimum node will be in last leaf of the left subtree of the node we started from.
+           - Replace the key and value of the current node with the key and value of the minimum node found in the previous step
+           - Remove the minimum node we found in the right subtree of the current node so we don’t have a duplicated node. Use the recursive delete function to remove the minimum node. 
+
+   - Return the current node
 ```
 
 As an optional extra challenge, you can attempt to implement `delete`  yourself in the [Resources lesson](./04-Binary-Search-Trees-Resources.md) of this topic. Our recursive solution to the `delete` method is below. 
+
+<br>
 
 <details>
 <summary> Binary Search Tree Deletion </summary>
 
 ```py
-# Helper function to find the minimum node in a tree
-def min_node(self, root):
-    # minimum node will be in last leaf in left subtree
-    # traverse left subtree
-    while root.left:
-        # continue traversal, by replacing root with left subtree
-        root = root.left
-    # return the key and the value of minimum node
-    return root.key, root.value
+def delete(self, key):
+    # call our recursive helper on the root
+    self.root = self.delete_helper(self.root, key)
 
 # Recursive helper function
 def delete_helper(self, current_root, key):
-    #if key is less than current node's
+    # if the current node is None, the tree is empty 
+    # or the key could not be found
+    if not current_root:
+        return None
+
+    # if key is less than current node's call delete on left subtree
     if key < current_root.key:
-        #call delete on left subtree
         current_root.left = self.delete_helper(current_root.left, key)
-    #if key is greater than current node's
+
+    # if key is greater than current node's call delete on right subtree
     elif key > current_root.key:
-        #call delete on right subtree
         current_root.right = self.delete_helper(current_root.right, key)
-    #if we found the node to delete
+
+    # if we found the node to delete
     else:
-        #if node doesn't have a left subtree
+        # if node doesn't have a left subtree, 
+        # return the right subtree
         if not current_root.left:
-            #return the right subtree
             return current_root.right
-        #if node doesn't have a right subtree
+
+        # if node doesn't have a right subtree, 
+        # return the left subtree
         elif not current_root.right:
-            # return right subtree
             return current_root.left
-        # if node has both left and right subtrees
-        # find the minimum node in the right subtree, and replace the deleted node with it
+
+        # if node has both left and right subtrees:
+        # find the minimum node in the right subtree, 
+        # and replace the deleted node with it
         current_root.key, current_root.value = self.min_node(current_root.right)
         # delete the minimum node in the right subtree
         current_root.right = self.delete_helper(current_root.right, current_root.key)
+
     # return the current node
     return current_root
 
-def delete(self, key):
-    # if the tree is empty
-    if not self.root:
-        # exit the function
-        return
+# Helper function to find the minimum node in a tree
+# minimum node will be in last leaf in left subtree
+def min_node(self, root):
+    # traverse left subtree by replacing root with left subtree
+    while root.left:
+        root = root.left
 
-    # call our recursive helper on the root
-    self.root = self.delete_helper(self.root, key)
+    # return the key and the value of minimum node
+    return root.key, root.value
 ```
 </summary>
 </details>

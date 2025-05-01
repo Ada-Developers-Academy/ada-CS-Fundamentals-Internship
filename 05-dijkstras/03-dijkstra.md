@@ -341,10 +341,57 @@ class TestPython1(unittest.TestCase):
             'previous': [None, 0, 1, 5, 5, 6, 7, 0, 7],
             'distances': [0, 4, 12, 25, 21, 11, 9, 8, 15]
         }
-
         answer = dijkstra(adjacency_matrix, 0)
 
-        self.assertEqual(answer, expected)
+        # Quick checks to confirm there is information for each node
+        self.assertEqual(len(expected["previous"]), len(answer["previous"]))
+        self.assertEqual(len(expected["distances"]), len(answer["distances"]))
+        self.assertEqual(expected["distances"], answer["distances"])
+
+        # Multiple valid paths exist, use the result to confirm by
+        # reconstructing the path based on the resulting previous nodes
+        are_paths_valid = self.check_result_paths_valid(adjacency_matrix, answer, 0)
+        self.assertTrue(are_paths_valid)
+
+    def check_result_paths_valid(self, graph, result, start):
+        previous = result['previous']
+        distances = result['distances']
+
+        for node in range(len(graph)):
+            # If start and end node are the same, 
+            # distance should be 0 and previous should be None
+            if node == start:
+                if distances[node] != 0 or previous[node] is not None:
+                    return False
+                continue
+
+            # If no path exists, previous should be None
+            if distances[node] == float('inf'):
+                if previous[node] is not None:
+                    return False
+                continue
+
+            # Reconstruct the path backward and compute total weight
+            current = node
+            total_weight = 0
+            visited = set()
+
+            while current != start:
+                prev = previous[current]
+                if prev is None:
+                    return False  # No complete path
+                if graph[prev][current] <= 0:
+                    return False  # Invalid edge
+                if current in visited:
+                    return False  # Detect cycle
+                visited.add(current)
+                total_weight += graph[prev][current]
+                current = prev
+
+            if total_weight != distances[node]:
+                return False  # Distance mismatch
+
+        return True
 
     def test_dijkstra_with_small_graph(self):
         #Arrange

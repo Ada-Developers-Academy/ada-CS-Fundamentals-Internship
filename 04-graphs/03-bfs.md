@@ -4,7 +4,26 @@
 
 ## Overview
 
-There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  In this topic, we will focus on two of the most common graph algorithms - Breadth First Search and Depth First Search - because they are very commonly seen in interviews and can be used to solve a wide array of problems.
+There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs. In this curriculum, we will focus on two of the most common graph algorithms:
+- Breadth First Search (BFS) 
+- Depth First Search (DFS)
+
+We are focusing on these two as they are very commonly seen in interviews and can be used to solve a wide array of problems.  
+
+## Benefits of Traversal Styles
+
+Before we dive into our first graph traversal algorithm, let's examine why we need multiple traversal algorithms. Let's say we want to find the shortest path between 2 nodes of an unweighted graph.
+
+Reflecting on what we learned about Breadth First Search and Depth First Search traversal from binary search trees:
+- a breadth first search will traverse the closest nodes first
+- a depth first search will travel as far along a path as it can before backtracking
+
+If we want to find the shortest path between nodes of an unweighted graph, then we want to visit the nodes closest to our starting node first to quickly find a path. This lends itself to a breadth first search, where the first path we find between the nodes will have to be the shortest. 
+- If we used DFS and searched to the end of a path before backtracking to closer nodes from the route, we will still find a route between the nodes, but the first path found is not guaranteed to be the shortest path. 
+
+
+
+
 
 ## Breadth First Search
 

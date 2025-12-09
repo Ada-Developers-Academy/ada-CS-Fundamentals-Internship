@@ -42,17 +42,20 @@ What types of data can the sliding window technique be applied to?
 #### Contiguous Stream of Data
 When determining whether the sliding window technique is an appropriate approach for a given problem, the first thing we want to consider is what type of data we will be looking at. Our input should be a contiguous, linear, and iterable set of data stored such that we can create a window over it.
 
-For example, we could perform the sliding window technique on an array, because we can create a `window` variable that holds some subset of the data using list slicing.
+For example, we could perform the sliding window technique on an array, because we can create a `window` representing some subset of the data by either:
+- using variables to track the start and stop indices of the window
+- creating a variable to represent the window that holds a subset of the array.
 
 In the example below, the input array is `arr = [4, 3, 12, 4, -1]`
 
-Our window is initially `window = [4, 3, 12]` or `window = [0:2]`. If we use variables to store where the array slice should start and stop, each time we want to slide our window, all we need to do is increment each of our start and stop variables by 1. 
+Our window is initially `[4, 3, 12]` which we could represent as `start = 0, end = 2` or by creating a variable that holds a subset of the array like `window = [4, 3, 12]`. 
+- If we use variables to store the indices where the array window should start and stop, each time we want to slide our window, all we need to do is increment each of our start and stop variables by 1. 
 
 ![Sliding Window with an Integer Array](images/sliding-window-integer-array.png)
 
-We could do the same thing with a string using string slicing. In fact, most problems that can be solved with the sliding window technique will involve either a string or an array. 
+We could do the same thing with a string, since strings are also an iterable data structure with linear, contiguous data. In fact, most problems that can be solved with the sliding window technique will involve either a string or an array. 
 
-It is also possible with some slight adjustments to perform the sliding window technique on a data structure such as a hashmap or a linked list, but accessing and storing values within the window may not be as straightforward because (at least in Python) we cannot slice a dictionary or linked list in the same way that we can a string or an array.
+It is also possible with some slight adjustments to perform the sliding window technique on a data structure such as a hashmap or a linked list, but accessing and storing values within the window may not be as straightforward because (at least in Python) we cannot as easily access a contiguous segment of their data in the same way that we can for a string or an array.
 
 A data structure like a graph would be difficult to using the sliding window technique on, because it is not a linear data structure. How would we place and slide our window? 
 

@@ -42,14 +42,11 @@ What types of data can the sliding window technique be applied to?
 #### Contiguous Stream of Data
 When determining whether the sliding window technique is an appropriate approach for a given problem, the first thing we want to consider is what type of data we will be looking at. Our input should be a contiguous, linear, and iterable set of data stored such that we can create a window over it.
 
-For example, we could perform the sliding window technique on an array, because we can create a `window` representing some subset of the data by either:
-- using variables to track the start and stop indices of the window
-- creating a variable to represent the window that holds a subset of the array.
+For example, we could perform the sliding window technique on an array, because we can create a `window` representing some subset of the data by using variables to track the start and stop indices of the window.
 
 In the example below, the input array is `arr = [4, 3, 12, 4, -1]`
 
-Our window is initially `[4, 3, 12]` which we could represent as `start = 0, end = 2` or by creating a variable that holds a subset of the array like `window = [4, 3, 12]`. 
-- If we use variables to store the indices where the array window should start and stop, each time we want to slide our window, all we need to do is increment each of our start and stop variables by 1. 
+Our window is initially `[4, 3, 12]` which we could represent as `start = 0, stop = 2`. If we use variables to store the indices where the array window should start and stop, each time we want to slide our window, all we need to do is increment each of our start and stop variables by 1. 
 
 ![Sliding Window with an Integer Array](images/sliding-window-integer-array.png)
 
@@ -65,7 +62,7 @@ In order for the sliding window technique to be applicable, the problem must als
 For example, say you are given an array of integers and asked to find all adjacent pairs of integers in the list that add up to a given sum. This could be solved using the sliding window technique. Our window would be of size two and we can check each adjacent pair by starting the left end of the window at index 0 and shifting our window by one each iteration until the right end of the window is at the last index in the array.
 
 ![Sliding Window on Adjacent Pair Sum Problem Animation](./images/sliding-integer-adjacent-pair-sum.gif)
-
+Note that in the image above, although it looks like Python slicing syntax is being used for the contents of `window`, we are not actually creating a slice. The image is presenting the bounds of the window in a concise format.
 
 However, if the problem were changed slightly and we were asked to instead find all  pairs of numbers in an array that add up to a given sum, adjacent or not, we could not use the sliding window technique. The elements we want to look at together wouldn't necessarily fit inside of a window.
 

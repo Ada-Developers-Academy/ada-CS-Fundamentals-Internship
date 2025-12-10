@@ -10,20 +10,24 @@ There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Gra
 
 We are focusing on these two as they are very commonly seen in interviews and can be used to solve a wide array of problems.  
 
-## Benefits of Traversal Styles
+## Exploring Traversal Styles
 
-Before we dive into our first graph traversal algorithm, let's examine why we need multiple traversal algorithms. Let's say we want to find the shortest path between 2 nodes of an unweighted graph.
+Before we dive into our first graph traversal algorithm, let's examine why we need multiple traversal algorithms. It could be easy to assume that any traversal that touches all nodes will meet our needs, but the order in which nodes are visited determines what we can conclude about a graph. 
 
-Reflecting on what we learned about Breadth First Search and Depth First Search traversal from binary search trees:
-- a breadth first search will traverse the closest nodes first
-- a depth first search will travel as far along a path as it can before backtracking
+Traversal strategies like breadth-first and depth-first are tools designed to expose patterns such as: 
+- reachability
+- shortest paths by edge count
+- connectivity
+- hierarchical structure
 
-If we want to find the shortest path between nodes of an unweighted graph, then we want to visit the nodes closest to our starting node first to quickly find a path. This lends itself to a breadth first search, where the first path we find between the nodes will have to be the shortest. 
-- If we used DFS and searched to the end of a path before backtracking to closer nodes from the route, we will still find a route between the nodes, but the first path found is not guaranteed to be the shortest path. 
+These patterns disappear when the traversal order is uncontrolled.
 
+We can think of a graph like a city we've never visited. We could make a random choice about which direction to turn at each intersection and eventually see every neighborhood, but the experience won’t help us deeply understand how the city actually fits together. 
+- In contrast, if we explore block by block outward from a starting point, or follow one road all the way before backtracking, we start to notice patterns about where things are located, and what neighborhoods connect and where.
 
+Graph traversals work very similarly. For example, a random order or adjacency list order might reach all nodes, but they tell us nothing about distance, structure, or how one part of the graph leads to another. Using a random traversal order we can’t tell which nodes were closer or farther from the start. An adjacency list order will reflect how the data happened to be stored rather than how the nodes relate to each other. 
 
-
+Purposeful traversal ensures the insights you extract are real properties of the graph, rather than artifacts of randomness or data formatting. Each traversal strategy reveals different kinds of data about the structure of a graph, and knowing these strategies better equips us to solve many kinds of graph problems.
 
 ## Breadth First Search
 

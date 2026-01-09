@@ -4,7 +4,30 @@
 
 ## Overview
 
-There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs.  In this topic, we will focus on two of the most common graph algorithms - Breadth First Search and Depth First Search - because they are very commonly seen in interviews and can be used to solve a wide array of problems.
+There is a huge [class of algorithms](https://en.wikipedia.org/wiki/Category:Graph_algorithms) involving graphs. In this curriculum, we will focus on two of the most common graph algorithms:
+- Breadth First Search (BFS) 
+- Depth First Search (DFS)
+
+We are focusing on these two as they are very commonly seen in interviews and can be used to solve a wide array of problems.  
+
+## Exploring Traversal Styles
+
+Before we dive into our first graph traversal algorithm, let's examine why we need multiple traversal algorithms. It could be easy to assume that any traversal that touches all nodes will meet our needs, but the order in which nodes are visited determines what we can conclude about a graph. 
+
+Traversal strategies like breadth-first and depth-first are tools designed to expose patterns such as: 
+- reachability
+- shortest paths by edge count
+- connectivity
+- hierarchical structure
+
+These patterns disappear when the traversal order is uncontrolled.
+
+We can think of a graph like a city we've never visited. We could make a random choice about which direction to turn at each intersection and eventually see every neighborhood, but the experience won’t help us deeply understand how the city actually fits together. 
+- In contrast, if we explore block by block outward from a starting point, or follow one road all the way before backtracking, we start to notice patterns about where things are located, and what neighborhoods connect and where.
+
+Graph traversals work very similarly. For example, a random order or adjacency list order might reach all nodes, but they tell us nothing about distance, structure, or how one part of the graph leads to another. Using a random traversal order we can’t tell which nodes were closer or farther from the start. An adjacency list order will reflect how the data happened to be stored rather than how the nodes relate to each other. 
+
+Purposeful traversal ensures the insights you extract are real properties of the graph, rather than artifacts of randomness or data formatting. Each traversal strategy reveals different kinds of data about the structure of a graph, and knowing these strategies better equips us to solve many kinds of graph problems.
 
 ## Breadth First Search
 

@@ -19,10 +19,6 @@ Standards:
       - success criteria
     ContentFiles:
       -
-        Type: Lesson
-        UID: 87e39abe-e6aa-4889-ae49-e0653686104d
-        Path: /00-study-plan/study-plan.md
-      -
         Type: Checkpoint
         UID: b5b601ec-4795-442d-b91e-81c046df35f5
         Path: /00-study-plan/study-plan.checkpoint.md

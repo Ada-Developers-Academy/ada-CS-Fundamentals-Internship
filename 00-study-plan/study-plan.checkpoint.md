@@ -11,7 +11,7 @@
 Submit a link to your [Unit 4 Study Plan](https://docs.google.com/document/d/1jsbRky5daMcA4cNOnWQlRzwVVGom6-iy5_bEVlfTT24/edit?usp=sharing). 
 - Please check the file permissions on your study plan to ensure it's viewable by others before submission.
 
-Please check out [the Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/adacorehub/homework-projects/cs-fundamentals) for further details and current information specific to your cohort.
+Please check out [the Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals) for further details and current information specific to your cohort.
 
 ##### !end-question
 ##### !placeholder

@@ -4,7 +4,7 @@ We recognize that each intern will have a different internship experience where 
 
 To ensure that everyone recognizes the scope of work in Unit 4 and has a plan in place to spread the unit coursework over their internship, we ask all students to submit a study plan with proposed completion dates for each of the required elements. 
 
-Please check out [the Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/adacorehub/homework-projects/cs-fundamentals) for further details and current information specific to your cohort.
+Please check out [the Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals) for further details and current information specific to your cohort.
 
 ## Filling out the plan
 

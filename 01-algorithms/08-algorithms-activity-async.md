@@ -14,9 +14,19 @@ While we will not be facilitating group work time, please feel free to organize 
 
 There are several approaches for implementing a solution to the Newan-Conway Sequence problem. We could write an iterative solution using dynamic programming or a recursive solution with or without dynamic programming as well. 
 
-Fork and clone the [Newman Conway Sequence Iterative](https://github.com/Ada-Activities/newman-conway-iterative) repository. Implement an iterative solution using dynamic programming to generate a list of the first N numbers of Newman-Conway's Sequence. You can find more details in the repository. 
+Implement an iterative solution using dynamic programming to generate a list of the first N numbers of Newman-Conway's Sequence. Fork and clone the [Newman Conway Sequence Iterative](https://github.com/Ada-Activities/newman-conway-iterative) repo. 
+
+You can find more details and tests to help you test whether your implementation works correctly
 
 As always, if you are feeling stuck, we invite you to come to office hours, ask questions in Slack in #study-hall, or consult an AI tool to help you brainstorm an approach without providing a solution.
+
+### Independent or Small Group Work
+
+Feel free to complete this activity independently or in small groups. If you are working in a small group, have one person fork and clone the repository so that you can all work together on the implementation. Invite the other members of your group to the repo so that you can all push changes to the same repo and see each other's work.
+
+- Time box no more than twenty minutes to implement an iterative solution using dynamic programming to the chosen problem using pseudocode or Python.
+- If your entire group is feeling stuck, start by brainstorming what kind of loop you may want to use in your solution. Consider the base cases, how you can add the base cases to the memo (for the memoization) and the end condition for your loop.
+- Explain what is making you feel stuck and try to work through your questions with others!
 
 ### Solution
 

@@ -1,37 +1,26 @@
 # Study Plan
 
- Unit deadlines are flexible. We recognize that each intern will have a different internship experience where some may experience greater intensity at the beginning of internship, others may experience a heavier workload at the end of internship, and others may experience something in between.
+We recognize that each intern will have a different internship experience where some may experience greater intensity at the beginning of internship, others may experience a heavier workload at the end of internship, and others may experience something in between. As such, we are flexible with when folks complete their Unit 4 materials during internship.
 
- To ensure that you recognize the scope of work we are asking you to complete and have a plan in place to complete the unit coursework, we ask that you submit a study plan with proposed completion dates for each of the required elements.
- 
- See more details about each plan in your section specific study guide:
- - [Ligers Study Plan Guide](https://docs.google.com/document/d/19RsoW-SDkUapg0CQuTbCLKaUHuPGDFs6jh85QsjSTJs/edit?usp=sharing)
- - [Tigons Study Plan Guide](https://docs.google.com/document/d/1pwa85WrRYpqs6rVNPSqOB6QZo-BH4tQcItQ_k99gSkc/edit?usp=sharing)
+To ensure that everyone recognizes the scope of work in Unit 4 and has a plan in place to spread the unit coursework over their internship, we ask all students to submit a study plan with proposed completion dates for each of the required elements. 
 
- ## Completion Options
-There are three basic paths to complete the unit requirements.
+Please check out [the Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals) for further details and current information specific to your cohort.
 
- ### Path A
-Path A keeps pace with CS Fundamentals live sessions and will ensure you have covered all topics by the end of the third month of internship which is when many folks choose to actively begin their job search. Path A follows the pattern of learning a new CS Fundamentals topic and completing a problem solving exercise every two weeks. 
+## Filling out the plan
 
-Path A also includes ample time to review topics during the last two months of internship and practice applying them. Following Path A, we hope students will feel very solid on all unit topics by graduation and will be able to independently apply them. 
+Details of the Unit 4 requirements will have been shared in the Unit 4 kickoff and are listed at the top of the study plan template (linked below). The study plan template provides week by week placeholders that folks can fill out to create a schedule for tackling the Unit 4 materials that will work for their internship and workload. 
 
-Accelerate students: we recommend that you choose Path A or a modified version of it as your internship is shorter. Keep in mind that you have covered Linked Lists, Binary Search Trees, and Graphs already. 
+As you fill out your study plan and prepare to turn it in, please:
+- Reach out to your 1-1 with any questions about your personal study plan.
+- Check the file permissions on your study plan and ensure it is viewable by others before submission. 
+- Submit a link to your study plan in Learn within a week of the Unit 4 kickoff meeting.
 
- ### Path B
-Path B will allow you to dedicate most of your first two months solely to internship. We do recommend keeping up with career development sessions as they occur since preparation for career development sessions is optional and you do have facilitated time for unit coursework set aside. We also recommend you complete one mock interview on a topic from the classroom phase early on to familiarize yourself with the format. 
+[Link to Study Plan Template](https://docs.google.com/document/d/1jsbRky5daMcA4cNOnWQlRzwVVGom6-iy5_bEVlfTT24/edit?usp=sharing)
 
-Path B will introduce all topics to you by the end of internship and allow you to complete all CS Fundamentals Graduation requirements with a week long buffer by the deadline. You will review each new topic and accompanying problem set by the review session. By graduation, you may feel that you need additional review of the CS Fun topics but should have a solid foundation to conduct your review independently.
+## Need to Change your Study Plan?
 
-If you are able to read through the new topic material (without completing the problem set questions) during your first two months of internship, we would highly recommend you do so, that way that the topics are not completely unfamiliar when you start intensive work on CS Fundamentals material.
+We expect that many interns will need to adjust their initial study plan. If you are altering any milestones we ask that you update your study plan and reach out to your 1-1 instructor, to give the instructional team awareness of your progress and schedule changes. 
 
- ### Path C
- Choose your own completion dates by filling out and submitting [your personal study plan](https://docs.google.com/document/d/1uCUKu9sZLUSbxsUVobnf8d2EaudXIQxqFpSRhhYE2jU/edit?usp=sharing)
+## Unit 4 Deadline 
 
- ## Need to Change your Study Plan?
-We expect that most interns will need to adjust their initial study plan. If you are altering any milestones we ask that you update your study plan and fill out the milestone extension form, to give the instructional team awareness of your progress:
-[Milestone Extension Form](https://docs.google.com/forms/d/e/1FAIpQLSeBxKIJUhkQ9li3ZOmsSnqlQ38xnBhLEYO8Bnh2CkJkf8i3Ww/viewform?usp=sf_link)
-
- ## Final Deadline 
- 
- All unit work must be submitted to Learn by Friday, July 21st at 11:59 PM. 
+All Unit 4 work must be submitted to Learn by Friday of the last week of internship. 

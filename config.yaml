@@ -12,6 +12,17 @@ Standards:
         UID: c831a8e5-20d5-42df-883e-bb0f4deb0e1c
         Path: /00-intro/intro.md
   -
+    Title: Submit Study Plan
+    Description: Create and submit your Unit 4 Study Plan
+    UID: 9a0ddc53-aa81-4880-8fa1-b243fbff2c15
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Checkpoint
+        UID: b5b601ec-4795-442d-b91e-81c046df35f5
+        Path: /00-study-plan/study-plan.checkpoint.md
+  -
     Title: Algorithmic Approaches
     Description: Introduction to Algorithms, Analysis of Algorithms, Recursion Review, Divide and Conquer, ...
     UID: ccdccab2-b7f3-42d8-977d-955a58ce9d05

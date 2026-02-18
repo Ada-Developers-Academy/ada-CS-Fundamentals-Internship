@@ -20,7 +20,7 @@ In the following repo, implement a function `possible_bipartition` that determin
 ## Graph Variations
 
 - Spend twenty minutes implementing a solution for each of the following repos. 
-- As always, if you are feeling stuck, we invite you to come to office hours, ask questions in Slack in #study-hall, or consult an AI tool to help you brainstorm an approach without providing a solution.
+- As always, if you are feeling stuck, we invite you to come to office hours, ask questions in Slack in `#study-hall`, or consult an AI tool to help you brainstorm an approach without providing a solution.
 
 
 Fork one of the following repos to work on in small groups: 

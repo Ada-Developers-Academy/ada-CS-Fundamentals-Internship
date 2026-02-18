@@ -10,7 +10,11 @@ Standards:
       -
         Type: Lesson
         UID: c831a8e5-20d5-42df-883e-bb0f4deb0e1c
-        Path: /00-intro/intro.md
+        Path: /00-intro/intro-live.md
+      -
+        Type: Lesson
+        UID: 29924803-96e7-4460-be80-5ca78480bdee
+        Path: /00-intro/intro-async.md
   -
     Title: Algorithmic Approaches
     Description: Introduction to Algorithms, Analysis of Algorithms, Recursion Review, Divide and Conquer, ...
@@ -49,7 +53,11 @@ Standards:
       -
         Type: Lesson
         UID: 0f52cf8b-80de-4c9f-9b98-53047d37b0a2
-        Path: /01-algorithms/08-algorithms-activity.md
+        Path: /01-algorithms/08-algorithms-activity-live.md
+      -
+        Type: Lesson
+        UID: 54a01a9a-0f24-48f7-97ab-9d55f4da06dc
+        Path: /01-algorithms/08-algorithms-activity-async.md
       -
         Type: Lesson
         UID: 3e63e944-118b-4904-96d7-ce35e0734f98

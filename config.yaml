@@ -112,7 +112,11 @@ Standards:
       -
         Type: Lesson
         UID: 19b1fbf3-60b6-4a60-895c-7de1b9afe923
-        Path: /02-linked-lists/06-linked-list-activity.md
+        Path: /02-linked-lists/06-linked-list-activity-live.md
+      -
+        Type: Lesson
+        UID: 60969afa-ab45-49b5-ad78-b2f25c1274ea
+        Path: /02-linked-lists/06-linked-list-activity-async.md
       -
         Type: Lesson
         UID: 2c227840-f6ff-4022-a16f-25a3eabf1d41
@@ -147,7 +151,11 @@ Standards:
       -
         Type: Lesson
         UID: 06dea201-6230-4967-b98f-2403ab11479a
-        Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity.md
+        Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity-Live.md
+      -
+        Type: Lesson
+        UID: 6bed9f6e-2c70-4ed3-b0c7-e761db525eee
+        Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity-Async.md
       -
         Type: Lesson
         UID: f5fc7ed6-5231-4667-a64f-aee2ff4d6652

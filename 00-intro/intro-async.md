@@ -9,6 +9,16 @@ CS Fundamentals is a continuation of the data structure and algorithms-focused C
 
 For more information about the structure and expectations of the post-classroom CS Fundamentals material, please visit the post-classroom CS Fundamentals Site.
 
+### !callout-info
+
+## Unit 4 is Asynchronous
+
+You may see reference to previously used language related to the classroom or working in small groups throughout the content in Learn, in recordings, or in the repositories that are linked in the lessons. Unit 4 is now entirely self-directed and asynchronous. This means that you will work through the materials, problem sets, and any additional practice exercises at your own pace and you should disregard any reference to the classroom or working in groups. 
+
+While we will not be facilitating group work time, please feel free to organize amongst yourselves and work on Unit 4 or review your solutions to any problems together.
+
+### !end-callout
+
 ### Resources
 
 - [Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals)

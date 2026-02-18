@@ -1,18 +1,8 @@
 # Additional Practice
 
-### !callout-info
-
-## Unit 4 is Asynchronous
-
-You may see reference to previously used language related to the classroom or working in small groups throughout the content in Learn, in recordings, or in the repositories that are linked in the lessons. Unit 4 is now entirely self-directed and asynchronous. This means that you will work through the materials, problem sets, and any additional practice exercises at your own pace and you should disregard any reference to the classroom or working in groups. 
-
-While we will not be facilitating group work time, please feel free to organize amongst yourselves and work on Unit 4 or review your solutions to any problems together.
-
-### !end-callout
-
 ## Newman-Conway Sequence
 
-There are several approaches for implementing a solution to the Newan-Conway Sequence problem. We could write an iterative solution using dynamic programming or a recursive solution with or without dynamic programming as well. 
+There are several approaches for implementing a solution to the Newman-Conway Sequence problem. We could write an iterative solution using dynamic programming or a recursive solution with or without dynamic programming as well. 
 
 Implement an iterative solution using dynamic programming to generate a list of the first N numbers of Newman-Conway's Sequence. Fork and clone the [Newman Conway Sequence Iterative](https://github.com/Ada-Activities/newman-conway-iterative) repo. 
 

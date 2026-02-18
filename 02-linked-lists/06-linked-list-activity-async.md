@@ -6,11 +6,15 @@ Consider the operations and implementation necessary to rotate a linked list, th
 
 Tests are included in the repo to help you test whether your helper functions work correctly.
 
+As always, if you are feeling stuck, we invite you to come to office hours, ask questions in Slack in #study-hall, or consult an AI tool to help you brainstorm an approach without providing a solution.
+
 ### Class Livecode Recording
 
-Follow along with the Class Discussions recording in the following repo as we livecode the `rotate_list` function in class: 
+Follow along with the [Class Discussions](./07-linked-lists-class-discussions.md) recording in the following repo as we livecode the `rotate_list` function in class: 
 * [Rotate Linked List](https://github.com/Ada-Activities/rotate_linked_lists)
 * Check out the `solution` branch in the repo to see a completed implementation of both the livecode and activity
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=53490d78-0856-4002-9215-afce01547022&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 The repo `main` branch does not include the implementation of `rotate_list`. Try coding it along with the recording as you think about the steps needed to rotate a linked list. Before moving on to main activity work, you can either copy in the `rotate_list` implementation from the `solution` branch or from the section below.
 
@@ -52,8 +56,10 @@ Feel free to complete this activity independently or in small groups. If you are
 
 - Time box no more than twenty minutes per function implementing a solution to the two helper functions using pseudocode or Python. 
 - If you feel stuck, start by thinking about how you would solve the helper functions using pen and paper.
-- Feel free to post to #study-hall! Explain what is making you feel stuck and try to work through your questions with others!
+- Explain what is making you feel stuck and try to work through your questions with others!
 
-### Wrap Up
+### Solution
 
-After the activity time box has elapsed, you can check your work with the repo tests and by looking at the `solution` branch in the repo.
+After you have had a chance to work on your own solution(s) for the `add_first` and `get_last_two_nodes` functions, check out the `solution` branch to see our working implementation:
+
+* [Rotate Linked List Solution](https://github.com/Ada-Activities/rotate_linked_lists/blob/solution)

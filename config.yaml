@@ -209,7 +209,12 @@ Standards:
       -
         Type: Lesson
         UID: b11a0602-959e-42a2-9670-e7d126e9d98c
-        Path: /05-dijkstras/04-dijkstras-activity.md
+        Path: /05-dijkstras/04-dijkstras-activity-live.md
+      -
+        -
+        Type: Lesson
+        UID: a9836eaa-ab79-47f5-8692-b6e9dc345ec5
+        Path: /05-dijkstras/04-dijkstras-activity-async.md
       -
         Type: Lesson
         UID: 99db9e58-5ab4-489c-a240-9c67195c7f82

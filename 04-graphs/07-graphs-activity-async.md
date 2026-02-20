@@ -29,4 +29,4 @@ Check out the `solution` branch in each repo to see a version of a working imple
 
 ## Previous Recordings 
 
-To see all the recordings related to Algorithmic Approaches, please consult the [Class Discussion](./08-graphs-class-discussions.md) section of this topic.
+To see all the recordings related to Graphs Pt. 1, please consult the [Class Discussion](./08-graphs-class-discussions.md) section of this topic.

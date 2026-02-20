@@ -63,3 +63,7 @@ Feel free to complete this activity independently or in small groups. If you are
 After you have had a chance to work on your own solution(s) for the `add_first` and `get_last_two_nodes` functions, check out the `solution` branch to see our working implementation:
 
 * [Rotate Linked List Solution](https://github.com/Ada-Activities/rotate_linked_lists/blob/solution)
+
+## Previous Recordings 
+
+To see all the recordings related to Linked Lists, please consult the [Class Discussion](./07-linked-lists-class-discussions.md) section of this topic.

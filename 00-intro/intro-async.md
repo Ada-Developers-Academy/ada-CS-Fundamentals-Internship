@@ -21,7 +21,7 @@ While we will not be facilitating group work time, please feel free to organize 
 
 ### Resources
 
-- [Post-Classroom CS Fundamentals Site](https://sites.google.com/adadevelopersacademy.org/post-classroom/unit-4/cs-fundamentals)
+- Visit your cohort's Ada Core Hub site to learn more about Unit 4. 
     - This site has access to resources such as:
         - Classroom & Live Session Recordings
         - Classroom, Office Hours, & Events calendars

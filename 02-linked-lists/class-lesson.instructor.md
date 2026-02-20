@@ -22,7 +22,7 @@ Given that this is the first CS Fundamentals session, spend some time motivating
 
 Conduct a problem set review. Students can ask general questions about lesson content as well as request review of specific problems in the problem set. 
 
-Then follow the 1st part of the [activity](./06-linked-list-activity.md) reviewing where linked lists are useful (when you need to add/remove to the front/rear of a list).  
+Then follow the 1st part of the activity in either the [async activity](./06-linked-list-activity-async.md) or [live activity](./06-linked-list-activity-live.md) lesson, reviewing where linked lists are useful (when you need to add/remove to the front/rear of a list).  
 
 ## Livecode - 20 minutes
 

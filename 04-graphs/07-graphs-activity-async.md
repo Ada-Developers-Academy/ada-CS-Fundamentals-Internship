@@ -4,9 +4,9 @@
 
 Feel free to complete this additional practice independently or in small groups. If you are working in a small group, have one person fork and clone the repository so that you can all work together on the implementation. Invite the other members of your group to the repo so that you can all push changes to the same repo and see each other's work.
 
-- Time box no more than twenty minutes to implement a solution to each of the following repos.
-- If your entire group is feeling stuck, start by brainstorming what kind of loop you may want to use in your solution. Consider the base cases, how you can add the base cases to the memo (for the memoization) and the end condition for your loop.
-- Explain what is making you feel stuck and try to work through your questions with others!
+- Time box no more than twenty minutes per function implementing a solution to the two helper functions using pseudocode or Python. 
+- If you feel stuck, start by thinking about how you would solve the helper functions using pen and paper.
+- Feel free to post to `#study-hall`! Explain what is making you feel stuck and try to work through your questions with others!
 
 ## Class Livecode Recording: Bipartition Graph
 

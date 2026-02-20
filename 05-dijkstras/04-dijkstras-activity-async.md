@@ -6,7 +6,7 @@ Feel free to complete this additional practice independently or in small groups.
 
 - Time box no more than twenty minutes per function implementing a solution to the two helper functions using pseudocode or Python. 
 - If you feel stuck, start by thinking about how you would solve the helper functions using pen and paper.
-- Feel free to post to #study-hall! Explain what is making you feel stuck and try to work through your questions with others!
+- Feel free to post to `#study-hall`! Explain what is making you feel stuck and try to work through your questions with others!
 ## Class Livecode Recording: Cheapest Flight
 
 Follow along with the Class Discussions recording as we livecode the function in class: 

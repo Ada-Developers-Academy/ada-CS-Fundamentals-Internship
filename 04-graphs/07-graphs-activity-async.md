@@ -14,8 +14,7 @@ Follow along with the Class Discussions recording as we livecode the function in
 * [Bipartition Graph](https://github.com/Ada-Activities/bipartition_graph_livecode)
   * Check out the `solution` branch in the repo to see a version of the Livecode implementation
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e21cfde-e368-4f81-9ae5-b0a6015ccf97" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e21cfde-e368-4f81-9ae5-b0a6015ccf97&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Graph Variations
 

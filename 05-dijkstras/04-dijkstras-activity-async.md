@@ -26,5 +26,5 @@ Once you finish, try implementing your pseudocode and getting all of the tests t
 
 ## Previous Recordings 
 
-To see all the recordings related to Algorithmic Approaches, please consult the [Class Discussion](./05-dijkstras-class-discussions.md) section of this topic.
+To see all the recordings related to Graphs Pt. 2, please consult the [Class Discussion](./05-dijkstras-class-discussions.md) section of this topic.
 

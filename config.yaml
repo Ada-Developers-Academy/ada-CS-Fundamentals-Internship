@@ -193,8 +193,12 @@ Standards:
         Path: /04-graphs/06-graphs-resources.md
       -
         Type: Lesson
+        UID: 2a237140-b3ff-4628-958e-2b0a00b18d84
+        Path: /04-graphs/07-graphs-activity-async.md
+      -
+        Type: Lesson
         UID: 96fcef62-30b0-4be7-8a63-c4002a53b0e2
-        Path: /04-graphs/07-graphs-activity.md
+        Path: /04-graphs/07-graphs-activity-live.md
       -
         Type: Lesson
         UID: f5a53e36-300b-4568-9301-08963aad977f
@@ -221,7 +225,11 @@ Standards:
       -
         Type: Lesson
         UID: b11a0602-959e-42a2-9670-e7d126e9d98c
-        Path: /05-dijkstras/04-dijkstras-activity.md
+        Path: /05-dijkstras/04-dijkstras-activity-live.md
+      -
+        Type: Lesson
+        UID: a9836eaa-ab79-47f5-8692-b6e9dc345ec5
+        Path: /05-dijkstras/04-dijkstras-activity-async.md
       -
         Type: Lesson
         UID: 99db9e58-5ab4-489c-a240-9c67195c7f82

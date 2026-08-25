@@ -20,6 +20,7 @@
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/apWeefCWAKI?list=PLKdbpk5JpLIA&index=5">CSF0101-5 Solve or Reduce the Problem and Refactor Intro</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/NpGBBgYAv8M?list=PLKdbpk5JpLIA&index=6">CSF0101-6 Duplicates Within K Refactor Walkthrough</a></li>
   </ol>
+  <p><a href="https://www.youtube.com/watch?v=oW7k7v1hCHs&list=PLKdbpk5JpLIA&index=1" target="_blank">View in external player</a></p>
 </details>
 
 ## Learning Goals

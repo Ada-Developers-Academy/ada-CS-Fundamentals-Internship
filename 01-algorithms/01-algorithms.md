@@ -1,6 +1,26 @@
 # Introduction to Algorithms
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=97e5271b-1f70-4acf-ae40-afb1005116f5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=6T-UvWAgkNmQLhQT&list=PLKdbpk5JpLIA"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/oW7k7v1hCHs?list=PLKdbpk5JpLIA&index=1">CSF0101-1 Intro and Learning Goals</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/YnYNgAWK_AU?list=PLKdbpk5JpLIA&index=2">CSF0101-2 What is an Algorithm and Areas of Study</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/_fFdg0ZURCY?list=PLKdbpk5JpLIA&index=3">CSF0101-3 Devising and Testing an Algorithm</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/4Fcccaet4LI?list=PLKdbpk5JpLIA&index=4">CSF0101-4 Breaking Down the Problem</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/apWeefCWAKI?list=PLKdbpk5JpLIA&index=5">CSF0101-5 Solve or Reduce the Problem and Refactor Intro</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/NpGBBgYAv8M?list=PLKdbpk5JpLIA&index=6">CSF0101-6 Duplicates Within K Refactor Walkthrough</a></li>
+  </ol>
+</details>
 
 ## Learning Goals
 
@@ -279,7 +299,15 @@ class TestPython1(unittest.TestCase):
 Start by solving each subproblem. Then see if you combine the solutions to each subproblem to come up with an overall solution. 
 
 Still feeling stuck? Try watching the video walkthrough of a sample solution below:
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0300a58b-3411-466b-89b4-afb1000e153b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/eoGboV-_GFg?si=aEr5tGJz1UBkjC1t"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint 
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->

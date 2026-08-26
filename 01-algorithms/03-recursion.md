@@ -13,12 +13,12 @@
   <summary>Lesson playlist (expand to review)</summary>
   <ol>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/oUjJ4Q4gtyQ?list=PLMzZlzuqPOu0&index=1">CSF0103-1 Recursion Review</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/J-gR9eDIdLE?list=PLMzZlzuqPOu0&index=1">CSF0103-2 Combining Results</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/JzTiQsTzih8?list=PLMzZlzuqPOu0&index=1">CSF0103-3 The Call Stack</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/bew0oMmMuRM?list=PLMzZlzuqPOu0&index=1">CSF0103-4 Multiple Base Cases</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/rvy2QVIGehU?list=PLMzZlzuqPOu0&index=1">CSF0103-5 Multiple Recursive Cases</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/aEWT4lTKYVA?list=PLMzZlzuqPOu0&index=1">CSF0103-6 Recursive Helper Functions</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/bJGe6FqltLA?list=PLMzZlzuqPOu0&index=1">CSF0103-7 Call Stack and Memory</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/J-gR9eDIdLE?list=PLMzZlzuqPOu0&index=2">CSF0103-2 Combining Results</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/JzTiQsTzih8?list=PLMzZlzuqPOu0&index=3">CSF0103-3 The Call Stack</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/bew0oMmMuRM?list=PLMzZlzuqPOu0&index=4">CSF0103-4 Multiple Base Cases</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/rvy2QVIGehU?list=PLMzZlzuqPOu0&index=5">CSF0103-5 Multiple Recursive Cases</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/aEWT4lTKYVA?list=PLMzZlzuqPOu0&index=6">CSF0103-6 Recursive Helper Functions</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/bJGe6FqltLA?list=PLMzZlzuqPOu0&index=7">CSF0103-7 Call Stack and Memory</a></li>
   </ol>
   <p><a href="https://www.youtube.com/watch?v=oUjJ4Q4gtyQ&list=PLMzZlzuqPOu0&index=1" target="_blank">View in external player</a></p>
 </details>

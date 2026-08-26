@@ -341,7 +341,15 @@ class TestChallenge(unittest.TestCase):
 #### !hint 
 Feeling stuck? Take a look at the video solution below! 
 <br>
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3815b463-50b3-45df-9e06-af380186ca4f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/kg0sT-liVS4?si=RZPtY8oMCJJY5XnU"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 #### !end-hint
 ##### !explanation

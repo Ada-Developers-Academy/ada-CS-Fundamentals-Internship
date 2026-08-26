@@ -13,8 +13,8 @@
 ## Resources
 ### Past Video Lessons
 The following video lessons are from past cohorts and cover some of the same materials covered in this lesson. Keep in mind some of the material has diverged. 
--  [Problem Solving Playlist](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=0471a830-aa32-4937-bb42-ae4c0144813e)
--  [Algorithms (Divide & Conquer, Greedy, & Dynamic Programming)](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2619c3c1-e6d5-48a1-a199-aad7014dcc4e)
+-  [Problem Solving Playlist](https://www.youtube.com/watch?v=bOfoJXkZoFw&list=PLCC8uT11e6ko)
+-  [Algorithms (Divide & Conquer, Greedy, & Dynamic Programming)](https://youtu.be/_NQHUYmyBJE?si=_gKaXnmgOWuJhTOo)
 
 ### Past Slide Decks
 - [C16 Algorithms Slides](https://docs.google.com/presentation/d/1V4ycrfl3dbL0IbRHqK3ytU45VyMJQNHhyxpc3Ti2e28/edit?usp=sharing)

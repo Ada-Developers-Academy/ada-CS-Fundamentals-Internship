@@ -1,6 +1,27 @@
 # Analysis of Algorithms
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=aa72b06b-7af5-4ac7-8e60-afb20057bdf0&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=r8OlMuqjePEFfaTe&list=PLT9j9IWh2LX0"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/k6mzbRZ223o?list=PLT9j9IWh2LX0&index=1">CSF0102-1 Analysis of Algorithms Intro and Overview</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/WcQ3xe61lko?list=PLT9j9IWh2LX0&index=2">CSF0102-2 Constant Time Complexity</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/sQ6WcDYFM_k?list=PLT9j9IWh2LX0&index=3">CSF0102-3 Linear Time Complexity</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/9amCpWfBlmU?list=PLT9j9IWh2LX0&index=4">CSF0102-4 Quadratic Time Complexity</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/pJuRmVqCoX0?list=PLT9j9IWh2LX0&index=5">CSF0102-5 Logarithmic Time Complexity</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/UpcNMdGbGgA?list=PLT9j9IWh2LX0&index=6">CSF0102-6 Space Complexity and Summary</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=k6mzbRZ223o&list=PLT9j9IWh2LX0&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 

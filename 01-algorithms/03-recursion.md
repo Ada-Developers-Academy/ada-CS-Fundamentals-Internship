@@ -1,5 +1,27 @@
 # Recursion Review
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=40e2e5cc-dcfb-40f3-b321-afb30054067c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=lYmExDfnMILdFE55&list=PLMzZlzuqPOu0"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/oUjJ4Q4gtyQ?list=PLMzZlzuqPOu0&index=1">CSF0103-1 Recursion Review</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/J-gR9eDIdLE?list=PLMzZlzuqPOu0&index=2">CSF0103-2 Combining Results</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/JzTiQsTzih8?list=PLMzZlzuqPOu0&index=3">CSF0103-3 The Call Stack</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/bew0oMmMuRM?list=PLMzZlzuqPOu0&index=4">CSF0103-4 Multiple Base Cases</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/rvy2QVIGehU?list=PLMzZlzuqPOu0&index=5">CSF0103-5 Multiple Recursive Cases</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/aEWT4lTKYVA?list=PLMzZlzuqPOu0&index=6">CSF0103-6 Recursive Helper Functions</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/bJGe6FqltLA?list=PLMzZlzuqPOu0&index=7">CSF0103-7 Call Stack and Memory</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=oUjJ4Q4gtyQ&list=PLMzZlzuqPOu0&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
  - Review recursion

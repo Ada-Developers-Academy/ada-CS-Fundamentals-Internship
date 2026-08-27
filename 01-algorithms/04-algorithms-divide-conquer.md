@@ -2,7 +2,26 @@
 
 ## Learning Goals
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=7e1e6107-d0c4-4224-b27f-afb30003e32e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=RWJnY9C91nqsBEpX&list=PLATcQmpC_kl4"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/OpyM4HxNl3c?list=PLATcQmpC_kl4&index=1">CSF0104-1 Overview of Divide and Conquer and Review of Past Algorithms</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/T3pAMj1LEuk?list=PLATcQmpC_kl4&index=2">CSF0104-2 Minimum and Maximum in Array</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/uoZFlIWksac?list=PLATcQmpC_kl4&index=3">CSF0104-3 Smallest Missing Element</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/UIKZ2VPCPME?list=PLATcQmpC_kl4&index=4">CSF0104-4 Check for Understanding and Wrap Up</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=OpyM4HxNl3c&list=PLATcQmpC_kl4&index=1" target="_blank">View in external player</a></p>
+</details>
 
 This lesson is intended to serve as an abbreviated walkthrough of the divide and conquer approach.
 

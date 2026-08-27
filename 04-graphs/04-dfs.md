@@ -16,7 +16,7 @@
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/H02OgEsdt48?list=PLDYmWaZjMaRw&index=1">Graph Algorithms Depth First Search Overview Example Walkthrough CSF0404 1</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/n7sCfcOdpqk?list=PLDYmWaZjMaRw&index=2">Depth First Search Pseudocode Applications CSF0404 2</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/eDCcvIfpyIU?list=PLDYmWaZjMaRw&index=3">Recursive Depth First Search Pseudocode CSF0404 3
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/6d1Wpa1FP_0?list=PLDYmWaZjMaRw&index=3">Choosing Between Traversal Algorithms CSF0404 4</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/6d1Wpa1FP_0?list=PLDYmWaZjMaRw&index=4">Choosing Between Traversal Algorithms CSF0404 4</a></li>
   </ol>
   <p><a href="https://www.youtube.com/watch?v=H02OgEsdt48&list=PLDYmWaZjMaRw" target="_blank">View in external player</a></p>
 </details>

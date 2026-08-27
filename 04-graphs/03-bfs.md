@@ -1,6 +1,24 @@
 # Graph Algorithms - Breadth First Search
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=84e804c0-571e-4fc0-9709-afdb0139f1f5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=rEzxz8lDaiMzquYV&amp;list=PLc_mNDDjwRdk"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/T8n5XaEI6Qg?list=PLc_mNDDjwRdk&index=1">Graphs Learning Goals Overview CSF0401 1</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/qhz0W-6QK9c?list=PLc_mNDDjwRdk&index=2">Directed/Undirected and Weighted/Unweighted Graphs CSF0401 2</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/StIifGla4wY?list=PLc_mNDDjwRdk&index=3">How to Represent a Graph CSF0401 3</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=T8n5XaEI6Qg&list=PLc_mNDDjwRdk" target="_blank">View in external player</a></p>
+</details>
 
 ## Overview
 
@@ -378,7 +396,15 @@ Refer to the pseudocode included earlier in the topic to guide your implementati
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=dcf4d64d-984d-463d-894d-afdb01474797&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/2OLxnm1r36w?si=NdeURSt0wGH0mJA8"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ### !end-hint
 

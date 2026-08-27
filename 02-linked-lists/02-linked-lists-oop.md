@@ -1,6 +1,24 @@
 # Object Oriented Design of a Linked List
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=983ae6ba-cbfd-4992-a678-afb801846780&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=rz3SDI-VBvGFCP3O&list=PLKsyzjx9walE"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/mHLj4CFeSAQ?list=PLKsyzjx9walE&index=1">Encapsulation & Node Class</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/focRArY4WvE?list=PLKsyzjx9walE&index=2">Linked List Class</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/3eC0DFGkBJ4?list=PLKsyzjx9walE&index=3">Linked List Methods</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=mHLj4CFeSAQ&list=PLKsyzjx9walE&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 - Define encapsulation
@@ -102,8 +120,16 @@ class TestPython1(unittest.TestCase):
 In addition to the `value` and `next` attributes, nodes in a doubly linked list should also maintain a reference to the _previous_ node in the list.
 
 Feeling stuck? Check this video walkthrough of the solution.
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=57b9ed93-d9ca-4f09-a5aa-aef90130df5e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/1Q5VxfztqDc?si=BoJOoxTP3kyTH9Jr"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
 
 ##### !end-hint 
 
@@ -187,8 +213,16 @@ class TestPython1(unittest.TestCase):
 In addition to a head pointer, doubly linked lists typically maintain a tail pointer.
 
 Feeling stuck? Check this video walkthrough of the solution.
-
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=ae392a8d-3aa1-4beb-9671-aef90132016d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/5lGwUGC8l_c?si=spRc88MkT_hj4Oio"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
 
 ##### !end-hint
 

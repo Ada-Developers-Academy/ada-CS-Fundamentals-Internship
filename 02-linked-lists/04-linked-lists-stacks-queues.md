@@ -1,6 +1,24 @@
 # Applications of Linked Lists
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a73926ae-b5b2-4585-a66e-afba01372ede&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=9A8SnWbRmMto9utj&list=PLDFx9OomMzXQ"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/hT3egc8ZTWM-E8?list=PLDFx9OomMzXQ&index=1">Applications of Linked Lists & ADTs</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/eddWgJtfF2o?list=PLDFx9OomMzXQ&index=2">Stacks</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/FgGa1Pc4zbQ?list=PLDFx9OomMzXQ&index=3">Queues</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=hT3egc8ZTWM&list=PLDFx9OomMzXQ&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Overview
 
@@ -180,7 +198,3 @@ With a doubly linked list that maintains a tail pointer, we can enqueue and dequ
 ### !end-challenge
 
 <!-- ======================= END CHALLENGE ======================= -->
-<!-- ======================= END CHALLENGE ======================= -->
-
-
-

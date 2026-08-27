@@ -1,6 +1,24 @@
 # Supplemental Concepts & Resources
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4e47b8a3-4417-43d8-9f6a-afba015bb38c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=dBUcEDU5JVZxvRQb&list=PLKo_MHDTA1k4"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/iJv0TOiTUjI-E8?list=PLKo_MHDTA1k4&index=1">Pointers & References
+</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/HJgs8o9pEac?list=PLKo_MHDTA1k4&index=2">Memory Leaks</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=iJv0TOiTUjI&list=PLKo_MHDTA1k4&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Pointers & References
 
@@ -63,8 +81,5 @@ void removeFirst(struct node **headRef) {
 ```
 
 ## Resources
-- [Past Linked List Video Lessons](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=b1664c7e-f95e-40f5-971f-ad9000fe85d8)
-- [Past Stacks & Queues Video Lessons (in depth)](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=b987fd8f-b63c-479a-a679-ad93018aecaa)
 - [Past Slide Deck Used](https://docs.google.com/presentation/d/1lJ8WJnA6qRlHAIaRAjim3kiL4nRBWT5qvFGQQIB4EL4/edit?usp=sharing)
 - [Linked Lists from Geeks for Geeks](https://www.geeksforgeeks.org/data-structures/linked-list/) - Lots of articles & practice problems
-- [Stanford Linked List Basics](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)

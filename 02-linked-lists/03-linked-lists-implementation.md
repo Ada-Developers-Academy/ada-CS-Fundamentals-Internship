@@ -1,6 +1,25 @@
 # Linked List Methods
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=79af82f9-ef65-4b3c-899d-afba011a220b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=mkEU2141KwPI_T-6&list=PLY30lAGWeBQM"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/ylVK6yrb-E8?list=PLY30lAGWeBQM&index=1">Linked List Methods Overview & Adding a Node</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/xKcfdAmbqbo?list=PLY30lAGWeBQM&index=2">Traversing Linked Lists</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/nXAlsbcXHYM?list=PLY30lAGWeBQM&index=3">Removing a Node from a Linked List</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/8-4VWTx6OhY?list=PLY30lAGWeBQM&index=4">Linked List Methods Summary</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=ylVK6yrb-E8&list=PLY30lAGWeBQM&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Overview
 
@@ -112,8 +131,16 @@ class TestPython1(unittest.TestCase):
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=23ebdac4-d6cb-4673-9467-aef3013568cd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
+<iframe
+  src="https://www.youtube.com/embed/13uQhh5p1Mg"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
 ### !end-hint
 
 ### !explanation
@@ -330,7 +357,16 @@ Create a `current` pointer that initially points to the `head` node to help you 
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=4f88bc07-bed3-4720-85a2-aef601438444&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/LXK5qlfR8mI"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
 
 ##### !end-hint
 
@@ -585,7 +621,16 @@ In the nominal case, where the list already has some number of nodes, consider u
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=60f22d0f-5fc5-4054-9cc0-aef6014384ac&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/pOmWlbLhv_Y"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
 
 ##### !end-hint
 
@@ -831,7 +876,17 @@ Remember that doubly linked lists maintain a tail pointer! How can we use the ta
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=14965c22-76ad-4be8-985c-aef60143840c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/_w_MdbekZmA"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
 ##### !end-hint
 
 ##### !explanation 

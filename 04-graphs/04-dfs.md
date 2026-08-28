@@ -1,6 +1,25 @@
 # Graph Algorithms - Depth First Search
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=6e2b199d-f7d8-4899-b750-afdc000581be&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/H02OgEsdt48?si=R9Pa_N55TCPkONe4"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/H02OgEsdt48?list=PLDYmWaZjMaRw&index=1">Graph Algorithms Depth First Search Overview Example Walkthrough CSF0404 1</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/n7sCfcOdpqk?list=PLDYmWaZjMaRw&index=2">Depth First Search Pseudocode Applications CSF0404 2</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/eDCcvIfpyIU?list=PLDYmWaZjMaRw&index=3">Recursive Depth First Search Pseudocode CSF0404 3
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/6d1Wpa1FP_0?list=PLDYmWaZjMaRw&index=4">Choosing Between Traversal Algorithms CSF0404 4</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=H02OgEsdt48&list=PLDYmWaZjMaRw" target="_blank">View in external player</a></p>
+</details>
 
 ## Overview
 
@@ -354,7 +373,15 @@ Use the pseudocode included above this problem to guide your implementation. Obs
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f8e4f1df-e53d-46f1-943e-afdb014753e4&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/KsNCeJk6N0I?si=s6l2Z7TJFjOxcF9w"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ### !end-hint 
 
@@ -647,7 +674,15 @@ Use the pseudocode above to guide your implementation.
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=881ab632-e3a6-4648-ba03-afdb01475791&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/r53EOYOwoYc?si=zLO26RZ1_ssH_BHC"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint 
 

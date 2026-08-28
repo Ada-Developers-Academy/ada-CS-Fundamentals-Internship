@@ -1,7 +1,14 @@
 # Representing Graphs Practice
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1b0ff0b7-47eb-4103-b6c7-afda01268591&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
+<iframe
+  src="https://www.youtube.com/embed/2NbZ5qK8w3c?si=8bH5diJdgdtTvtHH"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ## Graphs and Technical Interviews
 

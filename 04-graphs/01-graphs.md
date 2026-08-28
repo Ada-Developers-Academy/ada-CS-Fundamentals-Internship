@@ -1,6 +1,28 @@
 # Graphs
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=0e2dd921-018a-4cb6-ba67-afd60139ac45&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=OnRPoVXMRhnSfVxN&amp;list=PLB_yKnK_fQuE"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/hm6EQE1JpAI?list=PLB_yKnK_fQuE&index=1">Graphs Learning Goals Overview CSF0401 1</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/kA7_r6jmCVI?list=PLB_yKnK_fQuE&index=2">Directed/Undirected and Weighted/Unweighted Graphs CSF0401 2</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/J3G5t14db-A?list=PLB_yKnK_fQuE&index=3">How to Represent a Graph CSF0401 3</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/PtD-IoZRrhU?list=PLB_yKnK_fQuE&index=4">List of Edges CSF0401 4</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/p4h4J9MWK-A?list=PLB_yKnK_fQuE&index=5">Adjacency Matrices CSF0401 5</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/Dd-bqJGF6eo?list=PLB_yKnK_fQuE&index=6">Adjacency Lists CSF0401 6</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/obw45dkBMMw?list=PLB_yKnK_fQuE&index=7">Graphs Summary CSF0401 7</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=hm6EQE1JpAI&list=PLB_yKnK_fQuE&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 

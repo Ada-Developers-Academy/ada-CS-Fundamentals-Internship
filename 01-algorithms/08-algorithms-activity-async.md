@@ -30,7 +30,7 @@ After you have had a chance to work on your own solution(s) to the Newman-Conway
 If you would like to review a livecode walkthrough of the recursive dynamic programming approach, please see the recording below. To see all the recordings related to Algorithmic Approaches, please consult the [Class Discussion](./09-algorithms-class-discussion.md) section of this topic.
 
 <iframe
-  src="https://www.youtube.com/embed/7N2jD6j9d8c?si=JCUSxq_U-_J9Oord"
+  src="https://www.youtube.com/embed/Y_PYFQrK4Ic?si=tP5Zr5yFpsvxf0b3"
   height="405"
   width="720"
   style="border: 1px solid #464646;"

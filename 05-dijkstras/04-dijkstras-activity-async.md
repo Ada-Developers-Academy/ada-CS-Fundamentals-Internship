@@ -13,7 +13,15 @@ Follow along with the Class Discussions recording as we livecode the function in
 * [Cheapest Flight Livecode Start](https://github.com/Ada-Activities/cheapest-flight)
   * Check out the `solution` branch in the repo to see a version of the Livecode implementation
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=92eb7cca-3a77-4e8f-a656-aff8015091d5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/_B9AMDdtVEY?si=MafF74BQL_iHuf0G"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ## Minimum Effort Path Pseudocode
 

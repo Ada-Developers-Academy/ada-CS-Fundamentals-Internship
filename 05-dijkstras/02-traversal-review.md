@@ -1,6 +1,28 @@
 # Breadth First Search & Depth First Search Review
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ba690cac-996d-4ed7-85d1-afe801636229&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=3gCUDS0OF2PjcdZz&list=PLIHVjGPjuCOA"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/k1-7d3EhygE?list=PLIHVjGPjuCOA&index=1">CSF0502-1 Breadth First Search Review</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/1KWgo3VsIAM?list=PLIHVjGPjuCOA&index=2">CSF0502-2 Depth First Search Review</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/G0GxTY1mvhk?list=PLIHVjGPjuCOA&index=3">CSF0502-3 Breadth First Search to find the Shortest Path</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/5E5utFvmsd8?list=PLIHVjGPjuCOA&index=4">CSF0502-4 Why DFS Doesn't Find the Shortest Path</a></li>
+  </ol>
+  </ol>
+  </ol>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=k1-7d3EhygE&list=PLIHVjGPjuCOA&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 - Understand the patterns breadth first search and depth first search use to traverse a graph

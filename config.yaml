@@ -7,10 +7,10 @@ Standards:
     SuccessCriteria:
       - success criteria
     ContentFiles:
-      -
-        Type: Lesson
-        UID: c831a8e5-20d5-42df-883e-bb0f4deb0e1c
-        Path: /00-intro/intro-live.md
+      # -
+      #   Type: Lesson
+      #   UID: c831a8e5-20d5-42df-883e-bb0f4deb0e1c
+      #   Path: /00-intro/intro-live.md
       -
         Type: Lesson
         UID: 29924803-96e7-4460-be80-5ca78480bdee
@@ -61,10 +61,10 @@ Standards:
         Type: Lesson
         UID: e7ac6f0e-1186-4060-8be5-29e46b2fe352
         Path: /01-algorithms/07-algorithms-supplemental-resources.md
-      -
-        Type: Lesson
-        UID: 0f52cf8b-80de-4c9f-9b98-53047d37b0a2
-        Path: /01-algorithms/08-algorithms-activity-live.md
+      # -
+      #   Type: Lesson
+      #   UID: 0f52cf8b-80de-4c9f-9b98-53047d37b0a2
+      #   Path: /01-algorithms/08-algorithms-activity-live.md
       -
         Type: Lesson
         UID: 54a01a9a-0f24-48f7-97ab-9d55f4da06dc
@@ -109,10 +109,10 @@ Standards:
         Type: Lesson
         UID: 0d3a9473-199c-430d-bc55-43fc09fd50ff
         Path: /02-linked-lists/05-linked-lists-supplemental-concepts.md
-      -
-        Type: Lesson
-        UID: 19b1fbf3-60b6-4a60-895c-7de1b9afe923
-        Path: /02-linked-lists/06-linked-list-activity-live.md
+      # -
+      #   Type: Lesson
+      #   UID: 19b1fbf3-60b6-4a60-895c-7de1b9afe923
+      #   Path: /02-linked-lists/06-linked-list-activity-live.md
       -
         Type: Lesson
         UID: 60969afa-ab45-49b5-ad78-b2f25c1274ea
@@ -148,10 +148,10 @@ Standards:
         Type: Lesson
         UID: 1f189042-63dd-4075-9de9-4ca60a3fa5aa
         Path: /03-Binary-Search-Trees/04-Binary-Search-Trees-Resources.md
-      -
-        Type: Lesson
-        UID: 06dea201-6230-4967-b98f-2403ab11479a
-        Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity-Live.md
+      # -
+      #   Type: Lesson
+      #   UID: 06dea201-6230-4967-b98f-2403ab11479a
+      #   Path: /03-Binary-Search-Trees/05-Binary-Search-Trees-Activity-Live.md
       -
         Type: Lesson
         UID: 6bed9f6e-2c70-4ed3-b0c7-e761db525eee
@@ -195,10 +195,10 @@ Standards:
         Type: Lesson
         UID: 2a237140-b3ff-4628-958e-2b0a00b18d84
         Path: /04-graphs/07-graphs-activity-async.md
-      -
-        Type: Lesson
-        UID: 96fcef62-30b0-4be7-8a63-c4002a53b0e2
-        Path: /04-graphs/07-graphs-activity-live.md
+      # -
+      #   Type: Lesson
+      #   UID: 96fcef62-30b0-4be7-8a63-c4002a53b0e2
+      #   Path: /04-graphs/07-graphs-activity-live.md
       -
         Type: Lesson
         UID: f5a53e36-300b-4568-9301-08963aad977f
@@ -222,10 +222,10 @@ Standards:
         Type: Lesson
         UID: a0b4d6af-65fb-4d82-bd37-0f952f9c3b92
         Path: /05-dijkstras/03-dijkstra.md
-      -
-        Type: Lesson
-        UID: b11a0602-959e-42a2-9670-e7d126e9d98c
-        Path: /05-dijkstras/04-dijkstras-activity-live.md
+      # -
+      #   Type: Lesson
+      #   UID: b11a0602-959e-42a2-9670-e7d126e9d98c
+      #   Path: /05-dijkstras/04-dijkstras-activity-live.md
       -
         Type: Lesson
         UID: a9836eaa-ab79-47f5-8692-b6e9dc345ec5

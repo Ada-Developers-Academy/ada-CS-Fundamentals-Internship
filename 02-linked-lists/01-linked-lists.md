@@ -1,6 +1,24 @@
 # Linked Lists
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=bfff405a-8c23-4023-8dda-afb80157d99b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=HYWgRYhXnvj9TWLY&list=PLGLf0Xz_vGhY"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/adGykP8Q30I?list=PLGLf0Xz_vGhY&index=1">Linked Lists Overview</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/twFmg8gM5Mc?list=PLGLf0Xz_vGhY&index=2">Singly & Doubly Linked Lists</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/Xrs0_8J1cXg?list=PLGLf0Xz_vGhY&index=3">Advantages & Disadvantages of Linked Lists</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=adGykP8Q30I&list=PLGLf0Xz_vGhY&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 

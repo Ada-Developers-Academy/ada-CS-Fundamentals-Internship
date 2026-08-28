@@ -14,7 +14,16 @@ Follow along with the [Class Discussions](./07-linked-lists-class-discussions.md
 * [Rotate Linked List](https://github.com/Ada-Activities/rotate_linked_lists)
 * Check out the `solution` branch in the repo to see a completed implementation of both the livecode and activity
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=53490d78-0856-4002-9215-afce01547022&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/sJRCepKeaqU"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
 
 The repo `main` branch does not include the implementation of `rotate_list`. Try coding it along with the recording as you think about the steps needed to rotate a linked list. Before moving on to main activity work, you can either copy in the `rotate_list` implementation from the `solution` branch or from the section below.
 

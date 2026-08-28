@@ -13,9 +13,9 @@
 <details style="max-width: 720px; margin: auto;">
   <summary>Lesson playlist (expand to review)</summary>
   <ol>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/T8n5XaEI6Qg?list=PLc_mNDDjwRdk&index=1">Graphs Learning Goals Overview CSF0401 1</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/T8n5XaEI6Qg?list=PLc_mNDDjwRdk&index=1">Graph Algorithms Overview Breadth First Search CSF0403 1</a></li>
     <li><a target="lms_video_player" href="https://www.youtube.com/embed/qhz0W-6QK9c?list=PLc_mNDDjwRdk&index=2">Directed/Undirected and Weighted/Unweighted Graphs CSF0401 2</a></li>
-    <li><a target="lms_video_player" href="https://www.youtube.com/embed/StIifGla4wY?list=PLc_mNDDjwRdk&index=3">How to Represent a Graph CSF0401 3</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/StIifGla4wY?list=PLc_mNDDjwRdk&index=3">Looping through Neighbors CSF0403 3</a></li>
   </ol>
   <p><a href="https://www.youtube.com/watch?v=T8n5XaEI6Qg&list=PLc_mNDDjwRdk" target="_blank">View in external player</a></p>
 </details>

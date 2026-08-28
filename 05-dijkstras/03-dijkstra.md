@@ -1,6 +1,26 @@
 # Dijkstra's Algorithm
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=06222ed2-1765-4cd5-9424-afe80148c8c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=UEWUoQa6hxeP6fpn&list=PLMETFDO55mlA"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/BSwdx6p4AIo?list=PLMETFDO55mlA&index=1">CSF0503-1 Dijkstra's Algorithm Overview</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/19egJ5PJsEk?list=PLMETFDO55mlA&index=2">CSF0503-2 Dijkstra's Algorithm</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/yu1LPr6QXk8?list=PLMETFDO55mlA&index=3">CSF0503-3 Dijkstra's Pseudocode</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/4S_ezj9WzdU?list=PLMETFDO55mlA&index=4">CSF0503-4 Dijkstra's Time Complexity</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/tUXhlTA8cRE?list=PLMETFDO55mlA&index=5">CSF0503-5 Dijkstra's Space Complexity and Summary</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=BSwdx6p4AIo&list=PLMETFDO55mlA&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ### !callout-star
 
@@ -35,7 +55,15 @@ However, in the weighted graph, we see the shortest path from Node B to Node D t
 Because of the change in how we calculate shortest paths when weighted edges exist, we are not able to use breadth first search to find the shortest path in weighted graphs. We need a new algorithm: Dijkstra's. 
 
 ## Dijkstra's Algorithm
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=be4c815b-3566-474e-abc3-af2300403866&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/19egJ5PJsEk?si=2I_BUWjk1WiZMaTM"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 Dijkstra's algorithm takes a weighted graph and determines the least costly path from a specified start node to every other _reachable_ node in the graph.
 
@@ -535,7 +563,15 @@ When pushing an item to `heapq`, pass a tuple of the form `(priority, node_index
 
 
 Still feeling stuck? Watch the video solution walkthrough below. 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d511a32d-c85c-4994-9e73-af23004ca554&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/lN3Jxwz5bw0?si=cKAQGcK8oaldl3nc"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->

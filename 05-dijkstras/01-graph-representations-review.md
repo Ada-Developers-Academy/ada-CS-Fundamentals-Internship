@@ -1,6 +1,24 @@
 # Graph Representations Review
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4dc5b752-b78e-4639-9e12-afe8013083dd&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?si=3n6IkXe6GcLKLQeO&list=PLVAV1uGi2184"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/HBpwmNJPO-U?list=PLVAV1uGi2184&index=1">CSF0501-1 Graph Representations Review Overview</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/NGTJNN5l-q4?list=PLVAV1uGi2184&index=2">CSF0501-2 Representing Weighted Graphs</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/AwZcK-4S4FY?list=PLVAV1uGi2184&index=3">CSF0501-3 Hidden Graphs</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=HBpwmNJPO-U&list=PLVAV1uGi2184&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Overview of Graphs
 In the previous topic, we talked about graphs, how to represent them, and two algorithms for traversing graphs: breadth first search and depth first search. This topic will review and extend some key concepts from the previous topic. It will also introduce Dijkstra's algorithm which will allow us to solve a new subset of graph problems. 
@@ -97,7 +115,15 @@ Consider using the list of edges to draw out the graph on a piece of paper. Then
 
 Watch the graph be drawn:
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7d3983a7-0f67-4782-88d7-afe50161ada7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/BfBnl8d03Qk?si=qXGW1S3-lX_u1cix"
+  height="324"
+  width="576"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
@@ -110,7 +136,15 @@ In Option C, each row-column intersection can also be found in the list of edges
 
 See the video below for an example of translating the list of edges to an adjacency matrix. 
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8ae40a35-a45c-4424-977d-afe5015ea21e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/lGYbx0z3KzQ?si=yCP_CLREC_RLPlCc"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-explanation 
 

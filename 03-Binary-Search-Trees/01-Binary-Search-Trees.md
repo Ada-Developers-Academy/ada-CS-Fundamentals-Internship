@@ -1,6 +1,28 @@
 # Binary Search Trees
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a2007d27-80eb-4d19-a549-afcc004a1759&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?list=PLTkXK5PWo-eo"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/Njr0aFSX3jc?list=PLTkXK5PWo-eo&index=1">CSF0301-1 Binary Search Trees Learning Goals & Overview</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/okL9pnTWl7s?list=PLTkXK5PWo-eo&index=2">CSF0301-2 Consider a Non-Linear Data Structure</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/AL5SBP06l50?list=PLTkXK5PWo-eo&index=3">CSF0301-3 Binary Search Tree Classes</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/X2PgKDNHi2Q?list=PLTkXK5PWo-eo&index=4">BST0301-4 Search</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/Kch3KXRYwZY?list=PLTkXK5PWo-eo&index=5">BST0301-5 Insertion</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/-GArVkvkfQ0?list=PLTkXK5PWo-eo&index=6">CSF0301-6 Deletion</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/SyyRFsj94DE?list=PLTkXK5PWo-eo&index=7">BST Recursive Deletion</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=Njr0aFSX3jc&list=PLTkXK5PWo-eo&index=1" target="_blank">View in external player</a></p>
+</details>
 
 
 ## Learning Goals
@@ -405,7 +427,15 @@ Look at the recursive solution and try to translate each step into your iterativ
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7667104b-4c67-4d78-8f0d-af0e01444c23&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/X7obXrIrsKo"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint 
 ##### !explanation 
@@ -601,7 +631,15 @@ The `add` method is similar to the the `find` method - but your new node will al
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c6c5c389-4ef4-48d5-bcb3-af0e0141616e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/_3fEnQ-wrdk"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 ##### !end-hint 
 
 ##### !explanation
@@ -782,7 +820,15 @@ Try identifying your base and recursive cases in the iterative solution you just
 
 Still feeling stuck? Check this video walkthrough of the solution.
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=52a6dcd4-2dda-4a78-b7b6-af0e0142b465&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/3_ZKL7jU1lA"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint
 ##### !explanation 

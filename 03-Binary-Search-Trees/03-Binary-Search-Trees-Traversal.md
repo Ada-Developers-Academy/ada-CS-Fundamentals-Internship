@@ -1,6 +1,27 @@
 # Serializing with Tree Traversal
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=37bec376-7767-4cdb-81a6-afcd0154fd39&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?list=PLfgpPe9AFiwk"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/VQSABAYIUmU?list=PLfgpPe9AFiwk&index=1">CSF0303-1 Overview & Breadth First Search</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/aRf5ojld7D0?list=PLfgpPe9AFiwk&index=2">CSF0303-2 Depth First Traversals Part 1</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/IAZXe8XjtNQ?list=PLfgpPe9AFiwk&index=3">CSF0303-3 Depth First Traversals Part 2 (Preorder, Inorder, Postorder Walkthrough)</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/QceRcF8Tyqg?list=PLfgpPe9AFiwk&index=4">CSF0303-4 Depth First Traversal Part 3 (DFS & Stacks, Preorder Pseudocode)</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/FSAQs4NYU_Y?list=PLfgpPe9AFiwk&index=5">CSF0303-5 Depth First Traversals Part 4 (Preorder, Inorder, Postorder Code Walkthrough)</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/JYigTdr-5vg?list=PLfgpPe9AFiwk&index=6">CSF0303-6 Why So Many Methods & Serialization Space Complexity</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=VQSABAYIUmU&list=PLfgpPe9AFiwk&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 - Explain the different types of binary search tree traversals
@@ -279,7 +300,15 @@ class TestPython1(unittest.TestCase):
 <!-- other optional sections -->
 ##### !hint 
 Feeling stuck? Watch the video walkthrough of the solution below:
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=2785bbf7-1fe9-4e68-91d3-af89018a022c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="360" width="640" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/o8gwGV62K_s"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 ##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
@@ -610,7 +639,7 @@ Otherwise, take a look at the full implementations of our three depth first trav
 
 ## In-Depth DFS Code Walkthrough
 
-To see the code applied to an example problem, watch [Depth First Traversals Part 4 (Preorder, Inorder, Postorder Code walkthrough) - CSF0303-5](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4be6af0a-6847-434c-9a62-afcd01508186)
+To see the code applied to an example problem, watch [Depth First Traversals Part 4 (Preorder, Inorder, Postorder Code walkthrough) - CSF0303-5](https://youtu.be/FSAQs4NYU_Y)
 
 ### !end-callout
 

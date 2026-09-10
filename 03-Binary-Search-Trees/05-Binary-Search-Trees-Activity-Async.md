@@ -14,7 +14,15 @@ Follow along with the [Class Discussions](./06-Binary-Search-Trees-Class-Discuss
 * [BST Height](https://github.com/Ada-Activities/bst-height-livecode)
   * Check out the `solution` branch in the repo to see a version of the Livecode implementation
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=71b5c27e-492a-4c71-9c00-afdc014e5cca&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://youtube.com/embed/PffTHheNWjY"
+  height="360"
+  width="640"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 The repo `main` branch does not include the implementation of `height`. Try coding it along with the recording as you think about the steps needed to determine the height of a Binary Search Tree. Before moving on to main activity work, you can copy in the `height` implementation from the `solution` branch for your reference.
 

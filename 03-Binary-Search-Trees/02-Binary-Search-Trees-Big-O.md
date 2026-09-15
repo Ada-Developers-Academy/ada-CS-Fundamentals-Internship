@@ -1,6 +1,25 @@
 # Balancing Trees
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=c63daaac-decb-44ad-b239-afcd0008dbe7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/videoseries?list=PLE_JvdN-eUsw"
+  name="lms_video_player"
+  height="405"
+  width="720"
+  style="border: 1px solid #464646;"
+  allowfullscreen
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<details style="max-width: 720px; margin: auto;">
+  <summary>Lesson playlist (expand to review)</summary>
+  <ol>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/ezmy25xDe4Q?list=PLE_JvdN-eUsw&index=1">CSF0302-1 Overview & Intro Exercise</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/FuRf3KDRl_o?list=PLE_JvdN-eUsw&index=2">CSF0302-2 Balanced Trees & Unbalanced Trees</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/gn9ic8i2A9s?list=PLE_JvdN-eUsw&index=3">CSF0302-3 Tree Balance & Time & Space Complexity</a></li>
+    <li><a target="lms_video_player" href="https://www.youtube.com/embed/cNQxKhUfxWI?list=PLE_JvdN-eUsw&index=4">CSF0302-4 Summary & Big O Comparison</a></li>
+  </ol>
+  <p><a href="https://www.youtube.com/watch?v=ezmy25xDe4Q&list=PLE_JvdN-eUsw&index=1" target="_blank">View in external player</a></p>
+</details>
 
 ## Learning Goals
 - Explain the difference between balanced and unbalanced trees
